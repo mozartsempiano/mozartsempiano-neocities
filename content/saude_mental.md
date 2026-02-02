@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Saúde Mental
+imgPrincipal: /assets/img/refined_mental_healh.jpg
 ---
-
-![](/assets/img/refined_mental_healh.jpg)
 
 ## Para ler todos os dias
 

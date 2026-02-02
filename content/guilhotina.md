@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Guilhotina
+imgPrincipal: /assets/img/guillotine.jpg
 ---
-
-![](/assets/img/guillotine.jpg)
 
 > Instrumento que, por meio de uma lâmina afiada, era usado para decapitar os condenados à morte. Condenação à morte por decapitação.
 

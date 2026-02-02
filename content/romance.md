@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Romance
+imgPrincipal: /assets/img/paris_texas_01.jpg
+imgPrincipalCaption: Paris, Texas (1984)
 ---
-
-![](/assets/img/paris_texas_01.jpg "Paris, Texas (1984)")
 
 ## Limerência
 

@@ -1,12 +1,11 @@
 ---
 layout: default
 title: Home
+subtituloPagina: Meu nome é _Mozart_.
+imgPrincipal: /assets/img/fotografia/DSC_0009-small.jpg
+imgPrincipalCaption: Mel, 2023
 css: sobre.css
 ---
-
-# Meu nome é _Mozart_.
-
-![](/assets/img/fotografia/DSC_0009-small.jpg "Mel, 2023")
 
 <marquee>artista multimídia ▪ designer gráfico ▪ web designer ▪ editor de vídeo ▪ fotógrafo ▪ programador ▪ entusiasta de tecnologia ▪ amante de filmes ▪ sonhador ▪ viajante ▪ criatura noturna ▪ colecionador de memórias ▪ explorador de mundos ▪ curador de silêncios ▪ guardião de segredos invisíveis</marquee>
 

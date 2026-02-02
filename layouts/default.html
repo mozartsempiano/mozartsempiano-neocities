@@ -17,8 +17,18 @@
 			</nav>
 		</header>
 		<main>
-			<h1>{{ title }}</h1>
-			{{ content | markdownify }} {% include 'backlinks.html' %}
+			{% if imgPrincipal %}
+			<figure>
+				<img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+				{% if imgPrincipalCaption %}
+				<figcaption>{{ imgPrincipalCaption }}</figcaption>
+				{%endif%}
+			</figure>
+			{% endif %}
+			<h1 id="tituloPagina">{{ title }}</h1>
+			{% if subtitulo %}
+			<h2 id="subtituloPagina">{{ subtitulo }}</h2>
+			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %}
 		</main>
 
 		<footer class="page-footer">Copyright {{site.author}}</footer>

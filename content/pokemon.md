@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Pokémon
+imgPrincipal: /assets/img/pokemon/flying-artwork.png
 ---
-
-![](/assets/img/pokemon/flying-artwork.png)
 
 ## Jogos favoritos
 

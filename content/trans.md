@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Trans
+imgPrincipal: /assets/img/hermafrodito_dormindo.jpg
+imgPrincipalCaption: Hermafrodito Dormindo
 ---
-
-![](/assets/img/hermafrodito_dormindo.jpg "Hermafrodito Dormindo")
 
 - [DIY HRT Directory](https://diyhrt.wiki/transfem)
 

@@ -180,7 +180,7 @@ h1 {
 	font-size: 2em;
 }
 
-main > h1:first-of-type {
+main > h1#tituloPagina {
 	--cor-titulo: var(--clr-white);
 	--cor-underline: var(--clr-gray-a40);
 
@@ -241,6 +241,11 @@ main > h1:first-of-type {
 	100% {
 		opacity: 1;
 	}
+}
+
+main > h2#subtituloPagina {
+	font-size: 1rem;
+	font-weight: normal;
 }
 
 h2 {
@@ -324,8 +329,7 @@ main blockquote p:nth-child(2)::before {
 	content: "— ";
 }
 
-main > figure:nth-child(2),
-main > figure:first-child {
+main > figure:has(img#imgPrincipal) {
 	width: var(--width-img-main);
 	max-width: 100%;
 	height: auto;
@@ -337,8 +341,7 @@ main > figure:first-child {
 	/* outline: 1px solid var(--clr-white); */
 }
 
-main > figure:nth-child(2) figcaption,
-main > figure:first-child figcaption {
+main > figure:has(img#imgPrincipal) figcaption {
 	/* padding-left: var(--padding-body); */
 }
 

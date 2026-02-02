@@ -1,9 +1,8 @@
 ---
 layout: default
 title: mozartsempiano
+subtituloPagina: A Persona
 ---
-
-# A Persona
 
 ## Identidade visual
 

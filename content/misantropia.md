@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Misantropia
+imgPrincipal: /assets/img/care.jpg
 ---
-
-![](/assets/img/care.jpg)
 
 - **Misantropia - μῖσος (mísos, “ódio”) + ἄνθρωπος (ánthrōpos, “ser humano”):** A aversão, desconfiança ou desprezo em relação à humanidade como um todo. Quem nutre esse sentimento é chamado de misantropo.
 
