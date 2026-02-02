@@ -5,8 +5,6 @@ title: Saúde Mental
 
 ![](/assets/img/refined_mental_healh.jpg)
 
-# Saúde mental
-
 ## Para ler todos os dias
 
 - Não usar o Twitter como um diário.

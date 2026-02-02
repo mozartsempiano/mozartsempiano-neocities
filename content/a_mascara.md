@@ -3,8 +3,6 @@ layout: default
 title: A Máscara
 ---
 
-# A Máscara
-
 Desde criança, minha mãe sempre foi muito protetora e me impedia de consumir conteúdos que, segundo ela, não me trariam nada positivo. Isso incluia alguns desenhos animados, como Dragon Ball, onde o público de um torneio grita constantemente pelo nome “Satã”, um personagem aclamado no universo da série; As Terríveis Aventuras de Billy & Mandy, que exibe violência explícita apesar de ser voltado para crianças; ou também Coragem, o Cão Covarde, que, assim como os outros dois, nunca teve receio de ser muito real nas mensagens trazidas. O episódio “A Máscara”, lançado em 2002, é um ótimo exemplo disso, fugindo do tom cômico habitual do seriado e trazendo à tona temas como trauma, violência doméstica e relacionamentos abusivos.
 
 O episódio começa com Coragem dormindo do lado de fora de casa, quando uma figura mascarada se aproxima e, sem hesitação, o agride incontrolavelmente, soltando a frase “Cães são malvados”. Muriel, com sua natureza sempre acolhedora, a convida pra entrar e tomar uma xícara de chá. A visitante, chamada Kitty, pelo fato de ser uma gata antropomorfizada, se senta na mesa com Muriel, Eustácio e Coragem, e abre o jogo. Sua melhor amiga, Bunny, se apaixonou por Mad Dog, um cão gangster que a mantém sob controle com ameaças. Kitty tentou fugir com Bunny, mas foi expulsa de casa e ameaçada por Mad Dog. Esse trauma transforma Kitty em uma figura agressiva, projetando sua raiva em Coragem, que acaba se tornando o alvo de suas frustrações, agredindo-o novamente mais tarde.

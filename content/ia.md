@@ -3,8 +3,6 @@ layut: default
 title: IA
 ---
 
-# IA
-
 Não acho que toda inteligência artificial é inerentemente ruim, mas que o ser humano faz um uso terrível e maligno dela, usando-a em inúmeros contextos cuja implementação dela nunca sequer deveria ter sido considerada, como a arte ou o crime.
 
 ## Prompt Modo Absoluto

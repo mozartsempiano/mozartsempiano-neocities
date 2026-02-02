@@ -3,8 +3,6 @@ layout: default
 title: Limites
 ---
 
-# Limites
-
 Limites nunca são legais de se impôr, mas são importantes.
 
 - Não se sentir pressionado a responder mensagens de texto instantaneamente.

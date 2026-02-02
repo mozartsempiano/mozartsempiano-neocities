@@ -5,6 +5,4 @@ title: Música
 
 ![](/assets/img/music_board.webp "Boomerang III Live Looping Pedal")
 
-# Música
-
 oi

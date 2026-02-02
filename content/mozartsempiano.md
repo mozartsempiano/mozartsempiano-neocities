@@ -3,7 +3,7 @@ layout: default
 title: mozartsempiano
 ---
 
-# mozartsempiano, a Persona
+# A Persona
 
 ## Identidade visual
 

@@ -5,8 +5,6 @@ title: Romance
 
 ![](/assets/img/paris_texas_01.jpg "Paris, Texas (1984)")
 
-# Romance
-
 ## Limerência
 
 > The desire to be loved is the last illusion. Give it up and you will be free.

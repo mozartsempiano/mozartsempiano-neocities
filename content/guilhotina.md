@@ -5,8 +5,6 @@ title: Guilhotina
 
 ![](/assets/img/guillotine.jpg)
 
-# Guilhotina
-
 > Instrumento que, por meio de uma lâmina afiada, era usado para decapitar os condenados à morte. Condenação à morte por decapitação.
 
 Ela recebeu esse nome em homenagem ao médico francês Joseph-Ignace Guillotin, que, ironicamente, era contra a pena de morte. Ao perceber que ele não podia fazer as [pessoas](/misantropia) largarem a ideia da pena de morte, Guillotin tentou criar um mecanismo que permitisse uma morte rápida e, consequentemente, não tão dolorosa.

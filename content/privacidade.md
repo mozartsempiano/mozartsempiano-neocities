@@ -3,7 +3,7 @@ layout: default
 title: Privacidade
 ---
 
-# Alternativas para aplicativos e sites
+## Alternativas para aplicativos e sites
 
 - Gmail → <a href="https://mail.proton.me" target="_blank">Proton Mail</a>
 - Google Calendar → <a href="https://calendar.proton.me/" target="_blank">Proton Calendar</a>
@@ -13,4 +13,7 @@ title: Privacidade
 - Google Search → <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>
 - Google Translate → <a href="https://www.deepl.com/translator" target="_blank">DeepL</a>
 - WhatsApp → <a href="https://signal.org/" target="_blank">Signal</a>
+
+Mais alternativas:
+
 - <a href="https://switching.software/">switching.software</a>

@@ -3,8 +3,6 @@ layout: default
 title: Viagem
 ---
 
-# Viagem
-
 ## O que levar em uma viagem:
 
 - Toalha de banho

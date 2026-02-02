@@ -3,6 +3,9 @@ layout: default
 title: Programação
 ---
 
+- [DIY Web for Beginners](https://hnr.fyi/diy_websites/workshop/)
+- [The internet used to be fun](https://projects.kwon.nyc/internet-is-fun/)
+
 ## Visual Studio Code
 
 - **Ctrl + K, Ctrl + F** - Corrigir indentação

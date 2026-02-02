@@ -3,7 +3,7 @@ layout: default
 title: Budismo
 ---
 
-# Dokkōdō
+## Dokkōdō
 
 1. Aceite a vida como ela é.
    - As pessoas tendem a criar estresse para si mesmas ao desejar que as coisas e as circunstâncias fossem diferentes do que são. Em vez de se obcecar com o motivo pelo qual a vida deveria ser diferente, aceite-a pelo que ela é, aceite as coisas como elas são. Estresse, preocupações e ansiedades são uma parte natural da vida e, em vez de atacar seus sentimentos naturais, aceite-os e você se tornará mais forte.

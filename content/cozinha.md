@@ -3,8 +3,6 @@ layout: default
 title: Cozinha
 ---
 
-# Receitas
-
 ## Arroz
 
 1. 3 copos de arroz pra separar;
