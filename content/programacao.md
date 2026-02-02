@@ -3,9 +3,6 @@ layout: default
 title: Programação
 ---
 
-- [DIY Web for Beginners](https://hnr.fyi/diy_websites/workshop/)
-- [The internet used to be fun](https://projects.kwon.nyc/internet-is-fun/)
-
 ## Visual Studio Code
 
 - **Ctrl + K, Ctrl + F** - Corrigir indentação
@@ -22,3 +19,15 @@ Agora, programando em Node:
 
 `npx eleventy --serve`
 Pra abrir localhost:8080.
+
+## Links úteis
+
+### Geral
+
+- [QuickRef](https://quickref.me/) - Dicas e referências rápidas pra vários serviços
+
+### Desenvolvimento web
+
+- [DIY Web for Beginners](https://hnr.fyi/diy_websites/workshop/)
+- [The internet used to be fun](https://projects.kwon.nyc/internet-is-fun/)
+- [GRID](https://grid.malven.co/) - Colinha pra formatação de grids em CSS
