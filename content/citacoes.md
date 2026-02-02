@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Citações
-subtituloPagina: Coleção de citações
+subtitulo: Coleção de citações
 ---
 
 > Que é um poeta? Um homem infeliz que esconde profundas agonias no seu coração, mas cujos lábios estão conformados de tal modo que, quando o suspiro e o grito por eles fluem, soam como uma bela música... E os homens aglomeram-se em torno do poeta e dizem-lhe: 'depressa, canta outra vez', [o que] quer dizer, 'que novos sofrimentos martirizem a tua alma e que os lábios continuem a estar conformados como antes, pois o grito apenas nos angustiaria, mas a música é encantadora'.

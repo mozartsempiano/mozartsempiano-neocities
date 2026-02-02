@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-subtituloPagina: Meu nome é _Mozart_.
+subtitulo: Meu nome é _Mozart_.
 imgPrincipal: /assets/img/fotografia/DSC_0009-small.jpg
 imgPrincipalCaption: Mel, 2023
 css: sobre.css

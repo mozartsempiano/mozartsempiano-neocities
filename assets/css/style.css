@@ -243,7 +243,7 @@ main > h1#tituloPagina {
 	}
 }
 
-main > h2#subtituloPagina {
+main > h2#subtitulo {
 	font-size: 1rem;
 	font-weight: normal;
 }
@@ -334,7 +334,7 @@ main > figure:has(img#imgPrincipal) {
 	max-width: 100%;
 	height: auto;
 	margin: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem !important;
 	outline: 0;
 	text-align: center;
 	/* margin-left: calc(var(--padding-body) * -1); */
