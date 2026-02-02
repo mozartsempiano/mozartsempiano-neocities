@@ -24,7 +24,7 @@ imgPrincipal: /assets/img/refined_mental_healh.jpg
 - Regra dos 5 segundos → No momento em que você tiver vontade de fazer algo, você deve se mover fisicamente em até 5 segundos ou seu cérebro vai te parar.
 - As pessoas sentem sobre mim o que eu sinto em relação a mim mesmo.
 - Mais do que tentar me mudar, eu devo buscar ficar confortável com quem eu sou.
-- Eu mereço [amor](/romance) porque eu me amo.
+- Eu mereço [amor](/romance/) porque eu me amo.
 - Grande parte dos relacionamentos acabam, e tá tudo bem.
 - Não entrar em um modo de pensar escasso → "dentre 8 bilhões de pessoas eu só quero você" → eu acabo limitando minhas opções a fim de confortar o meu ego → eu devo saber o meu valor.
 - Não desabafar. Lide sozinho.
@@ -91,7 +91,7 @@ imgPrincipal: /assets/img/refined_mental_healh.jpg
 
 ## Coisas que me fazem sentir bem e que quero cultivar mais:
 
-- Andar de [bicicleta](/ciclismo) ou caminhar;
+- Andar de [bicicleta](/ciclismo/) ou caminhar;
 - Tomar sol;
 - Escrever pra mim mesmo ao invés de compartilhar com os outros;
 - Escrever mais, no geral, especialmente em um diário físico. Talvez começar um novo sketchbook.

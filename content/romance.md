@@ -148,4 +148,4 @@ Red Flags que não são negociáveis e, no primeiro sinal delas, dar no pé. Fic
 
 ### Posteriores:
 
-- [Cinema](/cinema) (NUNCA levar no 1º e 2º date porque é péssimo pra conhecer a pessoa e construir conexão)
+- [Cinema](/cinema/) (NUNCA levar no 1º e 2º date porque é péssimo pra conhecer a pessoa e construir conexão)
