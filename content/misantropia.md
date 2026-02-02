@@ -1,0 +1,20 @@
+---
+layout: default
+title: Misantropia
+---
+
+![](/assets/img/care.jpg)
+
+# Misantropia
+
+- **Misantropia - μῖσος (mísos, “ódio”) + ἄνθρωπος (ánthrōpos, “ser humano”):** A aversão, desconfiança ou desprezo em relação à humanidade como um todo. Quem nutre esse sentimento é chamado de misantropo.
+
+A cada dia que se passa, mais eu percebo que não me encaixo mais no meio de quem um dia já esteve tão perto, e mais confortável fico com a ideia de me isolar. As pessoas são egoístas, desleais, mentirosas, manipuladoras e cruéis, por mais que neguem.
+
+- **[Zumbis filosóficos](https://en.wikipedia.org/wiki/Philosophical_zombie):** um ser hipotético idêntico a um humano em corpo, cérebro e comportamento, mas sem qualquer experiência consciente interna.
+
+![](/assets/img/the_worm_that_turned.jpg)
+
+- **["Even a worm will turn"](https://en.wikipedia.org/wiki/Even_a_worm_will_turn):** expressão que significa que até mesmo as criaturas aparentemente dóceis ou passivas se revoltarão quando pressionadas ao extremo.
+
+![](/assets/img/clarice_lispector_the_hour_of_the_star.png "Clarice Lispector - A Hora da Estrela")

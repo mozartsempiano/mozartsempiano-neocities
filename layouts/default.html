@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/" class="page-header__logo" title="Go home">
+        <img src="/assets/img/favicon.png" alt="" />
+      </a>
+
+      <nav>
+        <!-- <a href="/sobre">Sobre</a> -->
+        <a href="/portfolio">Portfólio</a>
+        <a href="/outros">Outros</a>
+        <a href="/doar">Doar</a>
+      </nav>
+    </header>
+    <main>
+      <!-- <h1>{{title}}</h1> -->
+      {{ content | markdownify }} {% include 'backlinks.html' %}
+    </main>
+
+    <footer class="page-footer">Copyright {{site.author}}</footer>
+
+    <script src="/assets/js/preloader.js" defer></script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        import("/assets/js/dither.js").catch((err) => console.error("Erro ao carregar dither.js:", err));
+      });
+    </script> -->
+  </body>
+</html>
