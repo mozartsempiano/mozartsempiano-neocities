@@ -243,9 +243,18 @@ main > h1#tituloPagina {
 	}
 }
 
+main:has(h2#subtitulo) > h1#tituloPagina {
+	margin-bottom: 0.5rem !important;
+}
+
 main > h2#subtitulo {
 	font-size: 1rem;
 	font-weight: normal;
+	margin-top: 0;
+	color: var(--clr-gray-a50);
+}
+main > h2#subtitulo::after {
+	display: none;
 }
 
 h2 {
