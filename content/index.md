@@ -15,7 +15,7 @@ Cresci nos anos 2000 e sempre tive um apego especial à tecnologia daquela déca
 
 Sempre me fascinei por estéticas como [cassette futurism](/cassette_futurism/) e [[cyberpunk]], que imaginam futuros onde a tecnologia tomou outros caminhos. Sempre que possível, tento trazer um pouco disso pros meus projetos autorais. Além do design, também sou apaixonado por [filmes](/cinema/), [música](/musica/), fotografia e tudo que envolve arte.
 
-Você pode me contactar através do meu email [mozartmt@protonmail.com](mailto:mozartmt@protonmail.com).
+Você pode me contactar através do meu email **mozartmt ౷ protonmail · com**.
 
 ## Onde me encontrar
 
