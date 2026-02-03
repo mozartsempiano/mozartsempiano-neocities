@@ -86,8 +86,14 @@
 
     if (maxWidth && naturalW > maxWidth) {
       const ratio = naturalH / naturalW;
-      targetW = maxWidth;
-      targetH = Math.round(maxWidth * ratio);
+
+      if (img.id === "imgPrincipal") {
+        targetW = maxWidth; // imagem principal usa maxWidth completo
+      } else {
+        targetW = maxWidth / 2; // outras usam metade
+      }
+
+      targetH = Math.round(targetW * ratio);
     }
 
     const canvas = document.createElement("canvas");
