@@ -10,7 +10,7 @@ A cada dia que se passa, mais eu percebo que não me encaixo mais no meio de que
 
 - **[Zumbis filosóficos](https://en.wikipedia.org/wiki/Philosophical_zombie):** um ser hipotético idêntico a um humano em corpo, cérebro e comportamento, mas sem qualquer experiência consciente interna.
 
-![](/assets/img/the_worm_that_turned.jpg)
+![](/assets/img/the_worm_that_turned.jpg "“Even a worm will turn”")
 
 - **["Even a worm will turn"](https://en.wikipedia.org/wiki/Even_a_worm_will_turn):** expressão que significa que até mesmo as criaturas aparentemente dóceis ou passivas se revoltarão quando pressionadas ao extremo.
 
