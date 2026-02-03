@@ -140,9 +140,25 @@ main {
 }
 
 footer.page-footer {
-	text-align: center;
-	padding: 2.5rem;
+	text-align: left;
+	padding: 2.5rem 1rem;
+	font-size: 0.84rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer.page-footer a#scroll-top {
+	margin-left: auto;
+	height: 1.5rem;
+	width: 1.5rem;
 	font-size: 1rem;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background: var(--clr-white);
+	color: var(--clr-black-a0);
+	text-decoration: none;
 }
 
 .footnotes {
