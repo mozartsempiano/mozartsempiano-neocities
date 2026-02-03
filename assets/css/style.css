@@ -150,14 +150,18 @@ footer.page-footer {
 
 footer.page-footer a#scroll-top {
 	margin-left: auto;
-	height: 24px;
-	width: 24px;
-	display: inline-block;
+	height: 4vh;
+	width: 4vh;
+	min-height: 24px;
+	min-width: 24px;
+	aspect-ratio: 1/1;
 	text-align: center;
-	vertical-align: middle;
 	background: var(--clr-white);
 	color: var(--clr-black-a0);
 	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 footer.page-footer a#scroll-top svg {
@@ -165,8 +169,7 @@ footer.page-footer a#scroll-top svg {
 	width: 1rem;
 	min-height: 20px;
 	min-width: 20px;
-	transition: 0.4s;
-	fill: currentColor;
+	transition: 0.3s;
 }
 
 footer.page-footer a#scroll-top:hover svg {
