@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Romance
-imgPrincipal: /assets/img/paris_texas_01.jpg
-imgPrincipalCaption: Paris, Texas (1984)
+imgPrincipal: /assets/img/pierrot_le_fou.jpg
+imgPrincipalCaption: Pierrot le Fou (1965)
 ---
 
 ## Limerência
@@ -55,7 +55,7 @@ imgPrincipalCaption: Paris, Texas (1984)
 - Apontar uma situação em específico que não pode ser negada.
 - Explicar como isso fez eu me sentir.
 
-## Qualidades que quero em uma parceira:
+## Qualidades que quero em uma parceira
 
 - Todas as qualidades que busco em amizades, descritas anteriormente;
 - Gentileza;
@@ -64,11 +64,13 @@ imgPrincipalCaption: Paris, Texas (1984)
 
 ## Red Flags
 
+![](/assets/img/peanuts_love.jpg)
+
 Talvez a pessoa tenha sido tão machucada no passado que, inconscientemente, ela acaba tendo muito medo de se conectar verdadeiramente com alguém. Eu posso ter empatia e compaixão com ela, mas ainda devo impor limites e decidir o que é melhor pra mim, a fim de evitar um relacionamento tóxico no futuro. Honestidade, vulnerabilidade e consideração são fundamentais pra mim, e eu não devo aceitar entrar em um relacionamento que me ofereça menos que isso.
 
 kindness, compassion, growth
 
-### Nível baixo:
+### Nível baixo
 
 Red Flags que provavelmente são indicativos de problemas maiores, mas não necessariamente. São circunstanciais.
 
@@ -82,7 +84,7 @@ Red Flags que provavelmente são indicativos de problemas maiores, mas não nece
 
 5. Se auto-intitula "maluca", como se fosse algo pra se orgulhar.
 
-### Nível intermediário:
+### Nível intermediário
 
 Red Flags que são mais difíceis de conversar sobre, mas ainda são negociáveis. Depende do contexto e se a pessoa tá disposta a conversar sobre.
 
@@ -106,7 +108,7 @@ Red Flags que são mais difíceis de conversar sobre, mas ainda são negociávei
 
 10. Não compartilha experiências em relacionamentos passados. → Indica que a pessoa tem vergonha do próprio passado ou tá tentando manipular a minha percepção dela. → Não tá sendo aberta e honesta.
 
-### Nível alto:
+### Nível alto
 
 Red Flags que não são negociáveis e, no primeiro sinal delas, dar no pé. Ficar por mais tempo do que deveria vai acabar piorando a situação.
 
@@ -124,15 +126,13 @@ Red Flags que não são negociáveis e, no primeiro sinal delas, dar no pé. Fic
 
 7. Se eu não me sinto valorizado e sinto necessidade de demonstrar menos em algum momento, dá no pé.
 
-![](/assets/img/peanuts_love.jpg)
-
 > After all, you are just not the person they're comfortable with. You are your own person. Tell me, what the hell is wrong with that? They fuck with your head and it's true. You fuck with your head as well but that's another story. You have every right to do so. They don't. They are terrified of their own insufficiency and would gladly take it out on anyone around them. Why should you be concerned with that? You will now, quite predictably, sit down and overthink it. God damn it, just don't. Be perceptive. Know what your heart is about. Mind your own business. Let them go drown in plain stupidity. But do your thing. You can handle this.
 >
 > Albert Camus, [Notebooks](https://en.wikipedia.org/wiki/Notebooks_1951%E2%80%931959)
 
 ## Locais pra levar em date
 
-### 1º Date:
+### 1º Date
 
 - Café
 - Caminhar
@@ -140,12 +140,12 @@ Red Flags que não são negociáveis e, no primeiro sinal delas, dar no pé. Fic
 - Fazer compras
 - Bar ou pub
 
-### 2º Date:
+### 2º Date
 
 - Boliche
 - Jantar em casa
 - Zoológico
 
-### Posteriores:
+### Posteriores
 
 - [Cinema](/cinema/) (NUNCA levar no 1º e 2º date porque é péssimo pra conhecer a pessoa e construir conexão)

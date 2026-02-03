@@ -1,45 +1,50 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		{% include 'head.html' %}
-	</head>
-	<body>
-		<header class="page-header">
-			<a href="/index/" class="page-header__logo">
-				<img src="/assets/img/favicon.svg" alt="" />
-			</a>
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/index/" class="page-header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <circle cx="12" cy="2.4" r="2.4" />
+          <circle cx="20.4" cy="7.2" r="2.4" />
+          <circle cx="20.4" cy="16.8" r="2.4" />
+          <circle cx="12" cy="21.6" r="2.4" />
+          <circle cx="3.6" cy="16.8" r="2.4" />
+          <circle cx="3.6" cy="7.2" r="2.4" />
+        </svg>
+      </a>
 
-			<nav>
-				<a href="/index/">Sobre</a>
-				<a href="/portfolio/">Portfólio</a>
-				<a href="/outros/">Outros</a>
-				<a href="/doar/">Doar</a>
-			</nav>
-		</header>
-		<main>
-			{% if imgPrincipal %}
-			<figure>
-				<img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
-				{% if imgPrincipalCaption %}
-				<figcaption>{{ imgPrincipalCaption }}</figcaption>
-				{%endif%}
-			</figure>
-			{% endif %}
-			<h1 id="tituloPagina">{{ title }}</h1>
-			{% if subtitulo %}
-			<h2 id="subtitulo">{{ subtitulo }}</h2>
-			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %}
-		</main>
+      <nav>
+        <a href="/index/">Sobre</a>
+        <a href="/portfolio/">Portfólio</a>
+        <a href="/outros/">Outros</a>
+        <a href="/doar/">Doar</a>
+      </nav>
+    </header>
+    <main>
+      {% if imgPrincipal %}
+      <figure>
+        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+        {% if imgPrincipalCaption %}
+        <figcaption>{{ imgPrincipalCaption }}</figcaption>
+        {%endif%}
+      </figure>
+      {% endif %}
+      <h1 id="tituloPagina">{{ title }}</h1>
+      {% if subtitulo %}
+      <h2 id="subtitulo">{{ subtitulo }}</h2>
+      {%endif%} {{ content | markdownify }} {% include 'backlinks.html' %}
+    </main>
 
-		<footer class="page-footer">Copyright {{site.author}}</footer>
+    <footer class="page-footer">Copyright {{site.author}}</footer>
 
-		<script src="/assets/js/preloader.js" defer></script>
-		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				import("/assets/js/dither.js").catch((err) =>
-					console.error("Erro ao carregar dither.js:", err),
-				);
-			});
-		</script>
-	</body>
+    <script src="/assets/js/preloader.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        import("/assets/js/dither.js").catch((err) => console.error("Erro ao carregar dither.js:", err));
+      });
+    </script>
+  </body>
 </html>
