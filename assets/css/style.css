@@ -150,8 +150,8 @@ footer.page-footer {
 
 footer.page-footer a#scroll-top {
 	margin-left: auto;
-	height: 1rem;
-	width: 1rem;
+	height: 24px;
+	width: 24px;
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
@@ -163,7 +163,10 @@ footer.page-footer a#scroll-top {
 footer.page-footer a#scroll-top svg {
 	height: 1rem;
 	width: 1rem;
-	transition: 1s;
+	min-height: 20px;
+	min-width: 20px;
+	transition: 0.4s;
+	fill: currentColor;
 }
 
 footer.page-footer a#scroll-top:hover svg {
