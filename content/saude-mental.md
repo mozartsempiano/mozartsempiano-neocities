@@ -6,9 +6,9 @@ imgPrincipal: /assets/img/refined_mental_healh.jpg
 
 ## Para ler todos os dias
 
-- Não usar o Twitter como um diário.
-- Não tuitar nada que pareça uma indireta.
-- Não importa o quão sedento você esteja, você não pode beber de um poço envenenado.
+- Não use o Twitter como um diário.
+- Não tuite nada que pareça uma indireta.
+- Não importa o quão sedento você esteja, você nunca deve beber de um poço envenenado.
 - Foque onde há solo fértil. Não insista onde só tem pedra.
 - Aprenda a ouvir.
 - Não compartilhe demais e tão facilmente.
