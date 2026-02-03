@@ -28,6 +28,7 @@ Pra abrir localhost:8080.
 
 ### Desenvolvimento web
 
+- [W3Schools](https://www.w3schools.com/)
 - [DIY Web for Beginners](https://hnr.fyi/diy_websites/workshop/)
 - [The internet used to be fun](https://projects.kwon.nyc/internet-is-fun/)
 - [GRID](https://grid.malven.co/) - Colinha pra formatação de grids em CSS
