@@ -1,0 +1,8 @@
+<script src="/assets/js/preloader.js" defer></script>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		import("/assets/js/dither.js").catch((err) =>
+			console.error("Erro ao carregar dither.js:", err),
+		);
+	});
+</script>

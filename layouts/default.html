@@ -4,25 +4,7 @@
 		{% include 'head.html' %}
 	</head>
 	<body>
-		<header class="page-header">
-			<a href="/index/" class="page-header__logo">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					<circle cx="12" cy="2.4" r="2.4" />
-					<circle cx="20.4" cy="7.2" r="2.4" />
-					<circle cx="20.4" cy="16.8" r="2.4" />
-					<circle cx="12" cy="21.6" r="2.4" />
-					<circle cx="3.6" cy="16.8" r="2.4" />
-					<circle cx="3.6" cy="7.2" r="2.4" />
-				</svg>
-			</a>
-
-			<nav>
-				<a href="/index/">Sobre</a>
-				<a href="/portfolio/">Portfólio</a>
-				<a href="/outros/">Outros</a>
-				<a href="/doar/">Doar</a>
-			</nav>
-		</header>
+		{% include 'header.html' %}
 		<main>
 			{% if imgPrincipal %}
 			<figure>
@@ -38,31 +20,6 @@
 			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %}
 		</main>
 
-		<footer class="page-footer">
-			Copyright {{site.author}}
-			<a id="scroll-top" href="#top">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					stroke="var(--clr-black-a0)"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					class="lucide lucide-arrow-up-icon lucide-arrow-up"
-					viewBox="0 0 24 24"
-				>
-					<path d="m5 12 7-7 7 7m-7 7V5" />
-				</svg>
-			</a>
-		</footer>
-
-		<script src="/assets/js/preloader.js" defer></script>
-		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				import("/assets/js/dither.js").catch((err) =>
-					console.error("Erro ao carregar dither.js:", err),
-				);
-			});
-		</script>
+		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}
 	</body>
 </html>
