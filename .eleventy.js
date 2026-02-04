@@ -35,15 +35,17 @@ module.exports = function (eleventyConfig) {
 		return fs.statSync(page.inputPath).mtime;
 	});
 
-	eleventyConfig.addFilter("formatDateTime", (date) =>
-		date.toLocaleString("pt-BR", {
+	eleventyConfig.addFilter("formatDateTime", (date) => {
+		const d = date instanceof Date ? date : new Date(date);
+
+		return d.toLocaleString("pt-BR", {
 			day: "2-digit",
 			month: "long",
 			year: "numeric",
 			hour: "2-digit",
 			minute: "2-digit",
-		}),
-	);
+		});
+	});
 
 	// --- Custom renderer de imagens ---
 	(function addImageFigure(md) {
