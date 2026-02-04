@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Diário Midiático
+css: log.css
 ---
 
 ## Para assistir

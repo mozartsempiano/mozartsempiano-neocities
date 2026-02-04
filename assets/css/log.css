@@ -1,0 +1,58 @@
+table thead {
+	display: none;
+}
+
+table tbody {
+	gap: 26px;
+	display: flex;
+	flex-direction: column;
+	font-size: 1rem;
+}
+
+table tbody tr {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	border: 1px solid var(--clr-gray-a40);
+	padding: 4vh;
+}
+
+table tbody tr td {
+	width: fit-content;
+}
+
+/* Data */
+table tbody tr td:nth-child(1) {
+	font-size: 0.9rem;
+}
+
+/* Título */
+table tbody tr td:nth-child(2) {
+	font-weight: bold;
+}
+
+/* Ano */
+table tbody tr td:nth-child(3)::before {
+	content: "(";
+}
+table tbody tr td:nth-child(3)::after {
+	content: ")";
+}
+
+/* Nota */
+table tbody tr td:nth-child(4)::after {
+	content: "★";
+}
+
+/* Conteúdo */
+table tbody tr td:nth-child(6) {
+	width: 100%;
+	display: block;
+}
+
+/* Tags */
+table tbody tr td:nth-child(7) {
+	font-size: 0.84rem;
+	color: var(--clr-gray-a50);
+}
