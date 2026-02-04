@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Limites
+created: 2026-02-04T16h33
 ---
 
 Limites nunca são legais de se impôr, mas são importantes.

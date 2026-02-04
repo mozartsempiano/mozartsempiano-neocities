@@ -17,7 +17,19 @@
 			<h1 id="tituloPagina">{{ title }}</h1>
 			{% if subtitulo %}
 			<h2 id="subtitulo">{{ subtitulo }}</h2>
-			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %}
+			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %} {% if
+			created %}
+			<div id="postDates">
+				<span id="creationDate">
+					<b>Publicado em:</b> {{ created | formatDateTime }}
+				</span>
+				{% set updated = page | lastModified %} {% if updated > created %}
+				<span id="modifiedDate">
+					<b>Atualizado em:</b> {{ updated | formatDateTime }}
+				</span>
+				{% endif %}
+			</div>
+			{% endif %}
 		</main>
 
 		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}

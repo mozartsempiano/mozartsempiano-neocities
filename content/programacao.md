@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Programação
+created: 2026-02-04T16h33
 ---
 
 ## Visual Studio Code

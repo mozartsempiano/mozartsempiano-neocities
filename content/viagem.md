@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Viagem
+created: 2026-02-04T16h33
 ---
 
 ## O que levar em uma viagem:

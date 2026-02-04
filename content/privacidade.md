@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Privacidade
+created: 2026-02-04T16h33
 ---
 
 ## Alternativas para aplicativos e sites

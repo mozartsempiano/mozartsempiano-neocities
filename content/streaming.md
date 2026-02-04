@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Streaming
+created: 2026-02-04T16h33
 ---
 
 ## Links úteis
