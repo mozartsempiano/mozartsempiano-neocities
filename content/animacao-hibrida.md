@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Animação Híbrida
+created: 2026-02-03T10:45
 ---
 
 A **animação híbria** é um formato de [animação](/animacao/) que mistura duas ou mais técnicas distintas, como live action e desenho animado ou 2D e 3D.

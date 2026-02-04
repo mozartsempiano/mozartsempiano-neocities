@@ -35,16 +35,20 @@ module.exports = function (eleventyConfig) {
 		return fs.statSync(page.inputPath).mtime;
 	});
 
-	eleventyConfig.addFilter("formatDateTime", (date) => {
+	eleventyConfig.addFilter("formatDateCustom", (date) => {
 		const d = date instanceof Date ? date : new Date(date);
+		if (isNaN(d)) return "data inválida";
 
-		return d.toLocaleString("pt-BR", {
-			day: "2-digit",
-			month: "long",
-			year: "numeric",
-			hour: "2-digit",
-			minute: "2-digit",
-		});
+		const weekdays = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
+
+		const wd = weekdays[d.getDay()];
+		const dd = String(d.getDate()).padStart(2, "0");
+		const mm = String(d.getMonth() + 1).padStart(2, "0");
+		const yyyy = d.getFullYear();
+		const hh = String(d.getHours()).padStart(2, "0");
+		const min = String(d.getMinutes()).padStart(2, "0");
+
+		return `${wd} ${dd}.${mm}.${yyyy} ${hh}:${min} BRT`;
 	});
 
 	// --- Custom renderer de imagens ---
