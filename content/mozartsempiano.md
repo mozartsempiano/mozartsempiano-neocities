@@ -2,7 +2,7 @@
 layout: default
 title: mozartsempiano
 subtitulo: A Persona
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 ## Identidade visual

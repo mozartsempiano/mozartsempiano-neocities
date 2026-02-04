@@ -3,7 +3,7 @@ layout: default
 title: Romance
 imgPrincipal: /assets/img/pierrot_le_fou.jpg
 imgPrincipalCaption: Pierrot le Fou (1965)
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 ## Limerência

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cyberpunk
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 Cyberpunk é um subgênero da ficção científica que retrata futuros distópicos, dominados por megacorporações, onde tecnologia avançada coexiste com uma sociedade decadente, marginalização e opressão sistêmica.

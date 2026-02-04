@@ -2,7 +2,7 @@
 layout: default
 title: Pokémon
 imgPrincipal: /assets/img/pokemon/flying-artwork.png
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 ## Jogos favoritos

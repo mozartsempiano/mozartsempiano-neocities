@@ -1,7 +1,7 @@
 ---
 layut: default
 title: IA
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 Não acho que toda inteligência artificial é inerentemente ruim, mas que o ser humano faz um uso terrível e maligno dela, usando-a em inúmeros contextos cuja implementação dela nunca sequer deveria ter sido considerada, como a arte ou o crime.

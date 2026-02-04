@@ -1,7 +1,7 @@
 ---
 layout: default
 title: guizin_botson
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 **guizin_botson** é um bot para [Twitter](https://twitter.com/guizin_botson) e [Bluesky](https://bsky.app/guizin_botson.bsky.social), [programado](/programacao/) por [mim](/), que relembra tweets do [guizin Ohh +Brabo!!](https://web.archive.org/web/20210311044740/twitter.com/guizin_jeferson) (@guizin_jeferson), que desativou permanentemente sua conta na primeira metade de 2021.

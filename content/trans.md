@@ -3,7 +3,7 @@ layout: default
 title: Trans
 imgPrincipal: /assets/img/hermafrodito_dormindo.jpg
 imgPrincipalCaption: Hermafrodito Dormindo
-created: 2026-02-04T16h33
+created: 2026-02-04T16:33
 ---
 
 - [DIY HRT Directory](https://diyhrt.wiki/transfem)
