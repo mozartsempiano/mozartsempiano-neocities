@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
 		return fs.statSync(page.inputPath).mtime;
 	});
 
-	eleventyConfig.addFilter("formatDateCustom", (date) => {
+	eleventyConfig.addFilter("formatDateTime", (date) => {
 		const d = date instanceof Date ? date : new Date(date);
 		if (isNaN(d)) return "data inválida";
 
