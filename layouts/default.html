@@ -21,11 +21,11 @@
 			created %}
 			<div id="postDates">
 				<span id="creationDate">
-					<b>Publicado em:</b> {{ created | formatDateTime }}
+					<label>Publicado:</label> <span>{{ created | formatDateTime }}</span>
 				</span>
 				{% assign updated = page | lastModified %} {% if updated > created %}
 				<span id="modifiedDate">
-					<b>Atualizado em:</b> {{ updated | formatDateTime }}
+					<label>Modificado:</label> <span>{{ updated | formatDateTime }}</span>
 				</span>
 				{% endif %}
 			</div>
