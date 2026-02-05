@@ -8,4 +8,4 @@ created: 2026-02-04T16:33
 
 - [DIY HRT Directory](https://diyhrt.wiki/transfem)
 
-![](/assets/img/birdy_the_mighty.gif "Birdy the Mighty (鉄腕バーディー) (1996)")
+![>](/assets/img/birdy_the_mighty.gif "Birdy the Mighty (鉄腕バーディー) (1996)")

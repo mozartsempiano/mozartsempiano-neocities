@@ -6,10 +6,10 @@ created: 2026-02-04T16:33
 
 ## Atalhos Illustrator
 
-- Shape Builder - Shift + M
-- Width Tool - Shift + W
-- Eyedropper - I
-- Live Paint Bucket - K
+- Shape Builder - <kbd>Shift</kbd> + <kbd>M</kbd>
+- Width Tool - <kbd>Shift</kbd> + <kbd>W</kbd>
+- Eyedropper - <kbd>I</kbd>
+- Live Paint Bucket - <kbd>K</kbd>
 
 ## Links úteis
 

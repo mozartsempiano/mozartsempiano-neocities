@@ -1,9 +1,32 @@
 ---
 layout: default
 title: Videogames
-imgPrincipal: /assets/img/klonoa_ps1_controller.png
+imgPrincipal: /assets/img/videogames_dream.jpg
+imgPrincipalCaption: Manic Game Girl
 created: 2026-02-04T16:33
 ---
+
+## Favoritos
+
+- Alien: Isolation (2014)
+- Bomb Rush Cyberfunk (2023)
+- [Cyberpunk 2077](/cyberpunk-2077/) (2020)
+- Emily Is Away Too (2017)
+- Fallout: New Vegas (2010)
+- Fatum Betula (2020)
+- Hotline Miami (2012)
+- Inscryption (2021)
+- Klonoa: Door to Phantomile (1997)
+- Life is Strange (2015)
+- Life is Strange 2 (2018)
+- [Pokémon Black Version](/pokemon/) (2010)
+- Pokémon Black Version 2 (2012)
+- Pokémon HeartGold Version (2009)
+- Slime Rancher (2017)
+- [Sonic Adventure 2](/sonic/) (2001)
+- Star Wars: Battlefront II (2005)
+- Vampire Savior: The Lord of Vampire (1997)
+- The Wolf Among Us (2013)
 
 ## Links úteis
 

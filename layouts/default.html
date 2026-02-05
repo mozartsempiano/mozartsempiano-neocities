@@ -1,37 +1,34 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		{% include 'head.html' %}
-	</head>
-	<body>
-		{% include 'header.html' %}
-		<main>
-			{% if imgPrincipal %}
-			<figure>
-				<img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
-				{% if imgPrincipalCaption %}
-				<figcaption>{{ imgPrincipalCaption }}</figcaption>
-				{%endif%}
-			</figure>
-			{% endif %}
-			<h1 id="tituloPagina">{{ title }}</h1>
-			{% if subtitulo %}
-			<h2 id="subtitulo">{{ subtitulo }}</h2>
-			{%endif%} {{ content | markdownify }} {% include 'backlinks.html' %} {% if
-			created %}
-			<div id="postDates">
-				<span id="creationDate">
-					<label>Publicado:</label> <span>{{ created | formatDateTime }}</span>
-				</span>
-				{% assign updated = page | lastModified %} {% if updated > created %}
-				<span id="modifiedDate">
-					<label>Modificado:</label> <span>{{ updated | formatDateTime }}</span>
-				</span>
-				{% endif %}
-			</div>
-			{% endif %}
-		</main>
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body>
+    <div>
+      {% include 'header.html' %}
+      <main>
+        {% if imgPrincipal %}
+        <figure>
+          <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+          {% if imgPrincipalCaption %}
+          <figcaption>{{ imgPrincipalCaption }}</figcaption>
+          {%endif%}
+        </figure>
+        {% endif %}
+        <h1 id="tituloPagina">{{ title }}</h1>
+        {% if subtitulo %}
+        <h2 id="subtitulo">{{ subtitulo }}</h2>
+        {%endif%} {{ content | markdownify }} {% include 'backlinks.html' %} {% if created %}
+        <div id="postDates">
+          <span id="creationDate"> <label>Publicado:</label> <span>{{ created | formatDateTime }}</span> </span>
+          {% assign updated = page | lastModified %} {% if updated > created %}
+          <span id="modifiedDate"> <label>Modificado:</label> <span>{{ updated | formatDateTime }}</span> </span>
+          {% endif %}
+        </div>
+        {% endif %}
+      </main>
+    </div>
 
-		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}
-	</body>
+    {% include 'footer.html' %} {% include 'scripts_bottom.html' %}
+  </body>
 </html>
