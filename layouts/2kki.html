@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+	<head>
+		{% include 'head.html' %}
+
+		<style>
+			:root {
+				--b-radius: 0px;
+				--clr-primaria: #f0f1f5;
+				--clr-secundaria: #000;
+				--clr-disabled: #bf092f;
+			}
+
+			* {
+				image-rendering: pixelated !important;
+				margin: 0;
+				padding: 0;
+			}
+
+			::selection {
+				background: var(--clr-primaria);
+				color: var(--clr-secundaria);
+			}
+
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: var(--clr-secundaria);
+				font-family: var(--fonte-corpo);
+				font-size: 13px;
+			}
+
+			/* Div de fundo */
+			#bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("/assets/img/2kki_02.webp");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 0;
+				transition: opacity 5s ease;
+				filter: contrast(1.1) saturate(1.1);
+				animation: floating 6s ease-in-out infinite;
+			}
+
+			#bg.visible {
+				opacity: 1;
+			}
+
+			/* Iframe de som do trem */
+			#train-sound {
+				position: absolute;
+				width: 0;
+				height: 0;
+				border: none;
+			}
+
+			a {
+				cursor: pointer;
+			}
+
+			#controls {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+				z-index: 980;
+				display: flex;
+				gap: 6px;
+				animation: slideInFromLeft 0.8s ease-out;
+			}
+
+			button svg {
+				min-width: 20px;
+				min-height: 20px;
+				width: 20px;
+				height: 20px;
+				fill: currentColor;
+			}
+
+			#back-button,
+			.square-btn {
+				z-index: 999;
+				background-color: transparent;
+				color: var(--clr-primaria);
+				border: 1px solid #222;
+				border-radius: var(--b-radius);
+				height: 32px;
+				min-width: 32px;
+				padding: 0 8px;
+				font-size: 0.9em;
+				text-transform: lowercase;
+				font-family: var(--fonte-corpo);
+				cursor: pointer;
+				user-select: none;
+				transition: all 0.3s ease;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+				text-decoration: none;
+			}
+
+			.square-btn {
+				aspect-ratio: 1 / 1;
+			}
+
+			.square-btn:active {
+				animation: buttonPulse 0.6s ease-out;
+				transform: scale(0.95);
+			}
+
+			.square-btn svg {
+				transition: transform 0.2s ease;
+			}
+
+			.square-btn:hover svg {
+				transform: scale(1.1);
+			}
+
+			#back-button {
+				padding: 14px;
+			}
+
+			#back-button:hover {
+				background-color: var(--clr-main-a30);
+			}
+
+			/* Shared square button styles */
+			.square-btn {
+				position: relative;
+			}
+
+			#controls button.square-btn:hover,
+			.square-btn:hover {
+				background-color: var(--clr-main-a30);
+			}
+
+			/* Expand buttons reveal label to the right
+			      Base visual styles are provided by .square-btn; .expand-btn only controls expansion behavior */
+			.expand-btn {
+				gap: 0;
+				overflow: hidden;
+				white-space: nowrap;
+				transition:
+					max-width 0.28s cubic-bezier(0.2, 0.9, 0.3, 1),
+					background-color 0.2s;
+				max-width: 32px; /* collapsed square via max-width */
+				justify-content: center;
+			}
+
+			.expand-btn .icon {
+				display: inline-block;
+				font-size: 1.1em;
+				line-height: 1;
+			}
+
+			.expand-btn .label {
+				display: inline-block;
+				max-width: 0;
+				overflow: hidden;
+				opacity: 0;
+				transform: translateX(-6px);
+				transition:
+					max-width 0.28s ease,
+					opacity 0.22s ease,
+					transform 0.22s ease;
+			}
+
+			.expand-btn:hover {
+				max-width: 600px; /* large max-width, final width will be content width */
+				gap: 8px;
+				background-color: rgba(240, 241, 245, 0.04);
+				justify-content: flex-start;
+			}
+
+			.expand-btn:hover .label {
+				max-width: 400px;
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			.expand-btn.active {
+				background-color: var(--clr-main-a30);
+			}
+
+			/* Prevent YouTube players from interfering with button hover */
+			#player,
+			#train-player,
+			#train-container {
+				pointer-events: none;
+				position: fixed;
+				z-index: -1;
+			}
+
+			div.texto {
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				color: var(--clr-primaria);
+				background-color: transparent;
+				text-align: center;
+				max-width: 314px;
+				/* position: fixed;
+			     z-index: 999;
+			     bottom: 41px;
+			     left: 50%;
+			     transform: translateX(-50%); */
+			}
+
+			/*==================*/
+			/* Preloader */
+			/*==================*/
+
+			#bg-preloader {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("/assets/img/2kki_train_outside.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: bottom;
+				opacity: 0;
+				filter: contrast(1.1) saturate(1.1);
+				z-index: 0;
+				animation: twokki-fadein 4s ease forwards;
+				animation-delay: 0.5s;
+				image-rendering: pixelated;
+			}
+
+			#bg-preloader.visible {
+				opacity: 1;
+			}
+
+			#preloader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: var(--clr-secundaria); /* fallback */
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				z-index: 990;
+				overflow: hidden;
+			}
+
+			#preloader-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 26px;
+				line-height: 1.6em;
+				padding: 16px;
+			}
+
+			#preloader-content {
+				position: relative;
+				z-index: 1;
+			}
+
+			#play-button {
+				background: transparent;
+				border: 1px solid #222;
+				color: var(--clr-primaria);
+				font-size: 1.5em;
+				padding: 7px 19px;
+				cursor: pointer;
+				transition: border-color 0.3s ease;
+				font-family: var(--fonte-corpo);
+				text-transform: lowercase;
+				border-radius: var(--b-radius);
+				animation: glow 2s ease-in-out infinite alternate;
+			}
+
+			#play-button:hover {
+				border-color: var(--clr-primaria);
+			}
+
+			@keyframes twokki-fadein {
+				0% {
+					transform: translateY(16px);
+					opacity: 0;
+				}
+				70% {
+					opacity: 1;
+				}
+				100% {
+					transform: translateY(0px);
+					opacity: 1;
+				}
+			}
+
+			@keyframes floating {
+				0%,
+				100% {
+					transform: translateY(0px);
+				}
+				50% {
+					transform: translateY(-3px);
+				}
+			}
+
+			@keyframes slideInFromLeft {
+				0% {
+					transform: translateX(-100px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+			@keyframes buttonPulse {
+				0% {
+					box-shadow: 0 0 0 0 rgba(240, 241, 245, 0.4);
+				}
+				70% {
+					box-shadow: 0 0 0 8px rgba(240, 241, 245, 0);
+				}
+				100% {
+					box-shadow: 0 0 0 0 rgba(240, 241, 245, 0);
+				}
+			}
+
+			@keyframes glow {
+				0% {
+					box-shadow: 0 0 5px rgba(240, 241, 245, 0.2);
+				}
+				100% {
+					box-shadow: 0 0 15px rgba(240, 241, 245, 0.4);
+				}
+			}
+
+			#s-m-t-tooltip {
+				background-color: var(--clr-secundaria);
+				color: var(--clr-primaria);
+				border: 1px solid #222;
+				padding: 6px 10px;
+				border-radius: var(--b-radius);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="preloader-content">
+				<div class="texto">
+					Eu queria estar onde ninguém que eu conhecesse pudesse chegar.
+				</div>
+				<button id="play-button">partir</button>
+			</div>
+			<div id="bg-preloader"></div>
+		</div>
+
+		<div id="controls">
+			<button id="back-button" onclick="window.location.href = '/'">
+				Voltar
+			</button>
+
+			<button class="square-btn" onclick="prevTrack()" title="Anterior">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path
+						d="M224.93-224.93v-510.14h83v510.14h-83Zm510.14-24L376.35-480l358.72-231.07v462.14Z"
+					/>
+				</svg>
+			</button>
+			<button class="square-btn" onclick="nextTrack()" title="Próxima">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path
+						d="M652.07-224.93v-510.14h83v510.14h-83Zm-427.14-24v-462.14L583.65-480 224.93-248.93Z"
+					/>
+				</svg>
+			</button>
+			<button
+				id="mute-music"
+				class="square-btn"
+				onclick="toggleMusicMute()"
+				title="Silenciar música"
+				data-smt-title="Silenciar música"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path
+						d="M405.37-134.91q-62.27 0-105.88-43.62-43.62-43.61-43.62-105.88 0-62.27 43.62-105.89 43.61-43.61 105.88-43.61 18.31 0 34.88 4.78 16.58 4.78 31.62 12.35v-408.31h232.5v155h-149.5v385.68q0 62.27-43.62 105.88-43.61 43.62-105.88 43.62Z"
+					/>
+				</svg>
+			</button>
+			<button
+				id="mute-train"
+				class="square-btn"
+				onclick="toggleTrainMute()"
+				title="Silenciar trem"
+				data-smt-title="Silenciar trem"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path
+						d="M558.22-147.93V-227q85.76-23.48 138.88-93.61 53.12-70.14 53.12-159.15 0-89-53.62-158.38T558.22-734v-79.07q117.43 25.24 192.51 118.44Q825.8-601.43 825.8-481q0 120.43-74.57 214.13-74.58 93.7-193.01 118.94ZM134.2-376.87v-208.26h148.78l203.24-203.24v614.74L282.98-376.87H134.2Zm424.02 49.74v-307.74q46.07 21.12 72.83 62.4 26.75 41.27 26.75 91.95 0 49.72-26.75 91.02-26.76 41.3-72.83 62.37Zm-155-260.94-85.94 85.94H217.2v42.26h100.08l85.94 85.94v-214.14ZM315.09-482Z"
+					/>
+				</svg>
+			</button>
+		</div>
+
+		<div id="bg"></div>
+
+		<div id="player"></div>
+
+		<div id="train-container" style="display: none">
+			<div id="train-player"></div>
+		</div>
+
+		{% include 'scripts_bottom.html' %}
+		<script>
+			var playlist = [
+				"TNQhDgSNXrY",
+				"XQKsSNk9Fyc",
+				"3K3IgUugyCg",
+				"na9wmZDxzKI",
+				"NHeQocTKtTw",
+				"sd55sobl0ug",
+				"1h-uwjXF3Ck",
+				"ZsuUpbt4mM0",
+				"TSumhmMWZkU",
+				"FkEyUIzBtCo",
+				"8mvv18tQ3rg",
+			];
+			var shuffled = [];
+			var currentIndex = 0;
+			var player;
+			var trainPlayer;
+			var musicMuted = false;
+			var trainMuted = false;
+
+			function shuffle(array) {
+				let arr = array.slice();
+				for (let i = arr.length - 1; i > 0; i--) {
+					let j = Math.floor(Math.random() * (i + 1));
+					[arr[i], arr[j]] = [arr[j], arr[i]];
+				}
+				return arr;
+			}
+
+			// Clicar no botão inicia tudo
+			document
+				.getElementById("play-button")
+				.addEventListener("click", async () => {
+					document.getElementById("preloader").style.display = "none";
+
+					var tag = document.createElement("script");
+					tag.src = "https://www.youtube.com/iframe_api";
+					var fScriptTag = document.getElementsByTagName("script")[0];
+					fScriptTag.parentNode.insertBefore(tag, fScriptTag);
+
+					await sleep(1500);
+					document.getElementById("bg").classList.add("visible");
+				});
+
+			function sleep(time) {
+				return new Promise((resolve) => setTimeout(resolve, time));
+			}
+
+			function onYouTubeIframeAPIReady() {
+				shuffled = shuffle(playlist);
+				currentIndex = 0;
+				player = new YT.Player("player", {
+					height: "0",
+					width: "0",
+					videoId: shuffled[currentIndex],
+					playerVars: { autoplay: 1, mute: 0, controls: 0 },
+					events: {
+						onReady: onPlayerReady,
+						onStateChange: onPlayerStateChange,
+					},
+				});
+
+				// Trem em loop
+				trainPlayer = new YT.Player("train-player", {
+					height: "0",
+					width: "0",
+					videoId: "XjAxqeAMEo8",
+					playerVars: {
+						autoplay: 1,
+						loop: 1,
+						playlist: "XjAxqeAMEo8",
+						controls: 0,
+						modestbranding: 1,
+						rel: 0,
+					},
+					events: {
+						onReady: function (event) {
+							event.target.setVolume(3); // 0 a 100
+							const btnT = document.getElementById("mute-train");
+							const svg = btnT.querySelector("svg");
+							// Aplicar estado inicial de mute do trem
+							if (trainMuted) {
+								try {
+									event.target.mute();
+								} catch (e) {}
+								btnT.style.backgroundColor = "var(--clr-disabled)";
+								btnT.title = "Ativar trem";
+								btnT.setAttribute("data-smt-title", "Ativar trem");
+								// Aplicar SVG de mute
+								svg.innerHTML =
+									'<path d="M611.13-328.35 552.48-387l93-93-93-93 58.65-58.65 93 93 93-93L855.78-573l-93 93 93 93-58.65 58.65-93-93-93 93Zm-482.91-47.52v-208.26H277l203.48-203.24v614.74L277-375.87H128.22Zm269.26-211.2-86.18 85.94H211.22v42.26H311.3l86.18 85.94v-214.14ZM309.35-480Z"/>';
+							} else {
+								try {
+									event.target.unMute();
+								} catch (e) {}
+								btnT.style.backgroundColor = "";
+								btnT.title = "Silenciar trem";
+								btnT.setAttribute("data-smt-title", "Silenciar trem");
+								// Aplicar SVG normal
+								svg.innerHTML =
+									'<path d="M558.22-147.93V-227q85.76-23.48 138.88-93.61 53.12-70.14 53.12-159.15 0-89-53.62-158.38T558.22-734v-79.07q117.43 25.24 192.51 118.44Q825.8-601.43 825.8-481q0 120.43-74.57 214.13-74.58 93.7-193.01 118.94ZM134.2-376.87v-208.26h148.78l203.24-203.24v614.74L282.98-376.87H134.2Zm424.02 49.74v-307.74q46.07 21.12 72.83 62.4 26.75 41.27 26.75 91.95q0 49.72-26.75 91.02-26.76 41.3-72.83 62.37Zm-155-260.94-85.94 85.94H217.2v42.26h100.08l85.94 85.94v-214.14ZM315.09-482Z"/>';
+							}
+						},
+					},
+				});
+			}
+
+			function onPlayerReady(event) {
+				player.setVolume(8);
+				const btnM = document.getElementById("mute-music");
+				const svg = btnM.querySelector("svg");
+				// Aplicar estado inicial de mute da música
+				if (musicMuted) {
+					try {
+						event.target.mute();
+					} catch (e) {}
+					btnM.style.backgroundColor = "var(--clr-disabled)";
+					btnM.title = "Ativar música";
+					btnM.setAttribute("data-smt-title", "Ativar música");
+					// Aplicar SVG de mute
+					svg.innerHTML =
+						'<path d="m765.37-87.37-678-678L141-819l678 678-53.63 53.63ZM557.5-509.28l-83-83v-232.81H707v155H557.5v160.81ZM408-134.91q-62.15 0-105.83-43.18-43.67-43.17-43.67-106.32 0-63.16 43.67-106.33 43.68-43.17 105.83-43.17 19.33 0 35.39 2.78 16.07 2.78 32.11 7.35v-60.72l82 83v117.09q0 62.39-43.55 105.94-43.56 43.56-105.95 43.56Z"/>';
+				} else {
+					try {
+						event.target.unMute();
+					} catch (e) {}
+					btnM.style.backgroundColor = "";
+					btnM.title = "Silenciar música";
+					btnM.setAttribute("data-smt-title", "Silenciar música");
+					// Aplicar SVG normal
+					svg.innerHTML =
+						'<path d="M405.37-134.91q-62.27 0-105.88-43.62-43.62-43.61-43.62-105.88 0-62.27 43.62-105.89 43.61-43.61 105.88-43.61 18.31 0 34.88 4.78 16.58 4.78 31.62 12.35v-408.31h232.5v155h-149.5v385.68q0 62.27-43.62 105.88-43.61 43.62-105.88 43.62Z"/>';
+				}
+			}
+
+			function toggleMusicMute() {
+				musicMuted = !musicMuted;
+				if (!player) return;
+				const btnM = document.getElementById("mute-music");
+				const svg = btnM.querySelector("svg");
+				if (musicMuted) {
+					try {
+						player.mute();
+					} catch (e) {}
+					btnM.style.backgroundColor = "var(--clr-disabled)";
+					btnM.title = "Ativar música";
+					btnM.setAttribute("data-smt-title", "Ativar música");
+					// Trocar para SVG de mute
+					svg.innerHTML =
+						'<path d="m765.37-87.37-678-678L141-819l678 678-53.63 53.63ZM557.5-509.28l-83-83v-232.81H707v155H557.5v160.81ZM408-134.91q-62.15 0-105.83-43.18-43.67-43.17-43.67-106.32 0-63.16 43.67-106.33 43.68-43.17 105.83-43.17 19.33 0 35.39 2.78 16.07 2.78 32.11 7.35v-60.72l82 83v117.09q0 62.39-43.55 105.94-43.56 43.56-105.95 43.56Z"/>';
+				} else {
+					try {
+						player.unMute();
+					} catch (e) {}
+					btnM.style.backgroundColor = "";
+					btnM.title = "Silenciar música";
+					btnM.setAttribute("data-smt-title", "Silenciar música");
+					// Voltar para SVG normal
+					svg.innerHTML =
+						'<path d="M405.37-134.91q-62.27 0-105.88-43.62-43.62-43.61-43.62-105.88 0-62.27 43.62-105.89 43.61-43.61 105.88-43.61 18.31 0 34.88 4.78 16.58 4.78 31.62 12.35v-408.31h232.5v155h-149.5v385.68q0 62.27-43.62 105.88-43.61 43.62-105.88 43.62Z"/>';
+				}
+			}
+
+			function toggleTrainMute() {
+				trainMuted = !trainMuted;
+				if (!trainPlayer) return;
+				const btnT = document.getElementById("mute-train");
+				const svg = btnT.querySelector("svg");
+				if (trainMuted) {
+					try {
+						trainPlayer.mute();
+					} catch (e) {}
+					btnT.style.backgroundColor = "var(--clr-disabled)";
+					btnT.title = "Ativar trem";
+					btnT.setAttribute("data-smt-title", "Ativar trem");
+					// Trocar para SVG de mute
+					svg.innerHTML =
+						'<path d="M611.13-328.35 552.48-387l93-93-93-93 58.65-58.65 93 93 93-93L855.78-573l-93 93 93 93-58.65 58.65-93-93-93 93Zm-482.91-47.52v-208.26H277l203.48-203.24v614.74L277-375.87H128.22Zm269.26-211.2-86.18 85.94H211.22v42.26H311.3l86.18 85.94v-214.14ZM309.35-480Z"/>';
+				} else {
+					try {
+						trainPlayer.unMute();
+					} catch (e) {}
+					btnT.style.backgroundColor = "";
+					btnT.title = "Silenciar trem";
+					btnT.setAttribute("data-smt-title", "Silenciar trem");
+					// Voltar para SVG normal
+					svg.innerHTML =
+						'<path d="M558.22-147.93V-227q85.76-23.48 138.88-93.61 53.12-70.14 53.12-159.15 0-89-53.62-158.38T558.22-734v-79.07q117.43 25.24 192.51 118.44Q825.8-601.43 825.8-481q0 120.43-74.57 214.13-74.58 93.7-193.01 118.94ZM134.2-376.87v-208.26h148.78l203.24-203.24v614.74L282.98-376.87H134.2Zm424.02 49.74v-307.74q46.07 21.12 72.83 62.4 26.75 41.27 26.75 91.95q0 49.72-26.75 91.02-26.76 41.3-72.83 62.37Zm-155-260.94-85.94 85.94H217.2v42.26h100.08l85.94 85.94v-214.14ZM315.09-482Z"/>';
+				}
+			}
+
+			function onPlayerStateChange(event) {
+				if (event.data === YT.PlayerState.ENDED) {
+					currentIndex++;
+					if (currentIndex >= shuffled.length) {
+						shuffled = shuffle(playlist);
+						currentIndex = 0;
+					}
+					player.loadVideoById(shuffled[currentIndex]);
+				}
+			}
+
+			function nextTrack() {
+				currentIndex++;
+				if (currentIndex >= shuffled.length) {
+					shuffled = shuffle(playlist);
+					currentIndex = 0;
+				}
+				player.loadVideoById(shuffled[currentIndex]);
+			}
+
+			function prevTrack() {
+				currentIndex--;
+				if (currentIndex < 0) {
+					shuffled = shuffle(playlist);
+					currentIndex = shuffled.length - 1;
+				}
+				player.loadVideoById(shuffled[currentIndex]);
+			}
+		</script>
+	</body>
+</html>

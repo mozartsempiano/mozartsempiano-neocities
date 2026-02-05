@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		{% include 'head.html' %}
+
+		<style>
+			:root {
+				--cor-subtexto: lch(from var(--clr-white) calc(l + 5) c h);
+				--cor-contorno: var(--clr-black-a0);
+			}
+
+			* {
+				image-rendering: pixelated;
+				-webkit-font-smoothing: none;
+				-moz-osx-font-smoothing: grayscale;
+				box-sizing: border-box;
+				scroll-behavior: smooth;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-touch-callout: none;
+			}
+
+			body {
+				background-color: var(--clr-black-a0);
+				color: var(--clr-white);
+				position: relative;
+			}
+
+			.italico {
+				font-style: italic;
+			}
+
+			.negrito {
+				font-weight: bold;
+			}
+
+			.riscado {
+				text-decoration: line-through;
+			}
+
+			h1,
+			h2,
+			h3 {
+				font-family: "gabriele-d", serif;
+			}
+
+			h3 {
+				text-transform: uppercase;
+			}
+
+			h4 {
+				text-decoration: underline;
+				margin-bottom: 1em;
+			}
+
+			h1.titulo-diario {
+				text-transform: uppercase;
+				font-size: 2.5em;
+				margin: 0;
+				margin-bottom: 22px;
+				z-index: 10;
+			}
+
+			p#dream-count {
+				font-size: 0.9rem;
+				margin-bottom: 0;
+				margin-top: 12px;
+				display: inline-flex;
+				align-items: center;
+				gap: 0.7em;
+			}
+
+			p#dream-count svg {
+				min-width: 20px;
+				min-height: 20px;
+				width: 1.2em;
+				height: 1.2em;
+				fill: currentColor;
+			}
+
+			a:link,
+			a:visited,
+			a:active {
+				color: var(--clr-white);
+				text-decoration: underline dotted;
+			}
+
+			#sonhos-container {
+				width: 100%;
+				min-height: 100vh;
+				margin: 0 auto;
+				text-align: center;
+				text-shadow:
+					0 -1px var(--cor-contorno),
+					1px 0 var(--cor-contorno),
+					0 1px var(--cor-contorno),
+					-1px 0 var(--cor-contorno);
+				padding: 20px;
+				overflow-x: hidden;
+			}
+
+			#header {
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding: 10px;
+				text-align: left;
+				font-size: 0.96em;
+			}
+
+			#header a:hover {
+				text-decoration: underline solid;
+			}
+
+			.censurado {
+				letter-spacing: 0px;
+			}
+
+			hr {
+				border: none;
+				border-top: 1px dotted var(--clr-white);
+				background: none;
+				margin: 21px 0;
+				height: 0;
+			}
+
+			@keyframes lightFlicker {
+				0% {
+					box-shadow: 0 0 2px var(--clr-white);
+				}
+				100% {
+					box-shadow: 0 0 14px var(--clr-white);
+				}
+			}
+
+			img {
+				image-rendering: pixelated;
+			}
+
+			img#img-header {
+				/* max-width: 240px; */
+				margin-bottom: 0;
+			}
+
+			/* Calendar Styles */
+			#calendar-controls {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+				margin: 20px 0;
+				user-select: none;
+			}
+
+			#calendar-controls span#current-month-year {
+				width: 200px;
+				text-align: center;
+			}
+
+			#calendar-controls button {
+				background: transparent;
+				color: var(--clr-white);
+				border: none;
+				padding: 0 6px;
+				cursor: pointer;
+				font-size: 1.2em;
+				transition: color var(--transition-time);
+				text-shadow:
+					0 -1px var(--cor-contorno),
+					1px 0 var(--cor-contorno),
+					0 1px var(--cor-contorno),
+					-1px 0 var(--cor-contorno);
+				width: 24px;
+				height: auto;
+				aspect-ratio: 1/1;
+			}
+
+			body.rounded #calendar-controls button {
+				border-radius: 6px;
+			}
+
+			#calendar-controls button:hover {
+				color: var(--clr-white);
+			}
+
+			#calendar-container {
+				max-width: 480px;
+				margin: 0 auto;
+				padding: 20px;
+				letter-spacing: 0.15rem;
+				user-select: none;
+			}
+
+			#calendar-grid {
+				display: grid;
+				grid-template-columns: repeat(7, 1fr);
+				gap: 2px;
+				background: var(--clr-black-a10);
+				border: 1px solid var(--clr-white);
+				border-radius: var(--b-radius);
+				overflow: hidden;
+			}
+
+			body.rounded #calendar-grid {
+				border-radius: 0 0 8px 8px;
+			}
+
+			.calendar-day-header {
+				background: var(--clr-white);
+				color: var(--clr-white);
+				padding: 0.6rem 1.1rem;
+				text-align: center;
+				font-weight: bold;
+				text-shadow:
+					0 -1px var(--cor-contorno),
+					1px 0 var(--cor-contorno),
+					0 1px var(--cor-contorno),
+					-1px 0 var(--cor-contorno);
+			}
+
+			.calendar-day {
+				background: var(--clr-black-a0);
+				padding: 12px 8px;
+				text-align: center;
+				min-height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: default;
+				transition:
+					opacity calc(var(--transition-time) + 0.1s),
+					transform var(--transition-time);
+				border: 1px solid transparent;
+				aspect-ratio: 1/1;
+			}
+
+			.calendar-day.empty {
+				background: rgba(0, 0, 0, 0.1);
+			}
+
+			.calendar-day.future-day {
+				opacity: 0.25;
+				cursor: not-allowed;
+			}
+
+			.calendar-day.has-dream {
+				background: var(--clr-white);
+				cursor: pointer;
+				font-weight: bold;
+				border: 1px solid var(--clr-white);
+				text-shadow:
+					0 -1px var(--cor-contorno),
+					1px 0 var(--cor-contorno),
+					0 1px var(--cor-contorno),
+					-1px 0 var(--cor-contorno);
+			}
+
+			.calendar-day.has-dream:hover {
+				/* transform: scale(1.05); */
+				opacity: 0.8;
+			}
+
+			/* Modal Styles */
+			.modal {
+				position: fixed;
+				z-index: 9999;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(3px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+
+			.modal-content {
+				/* background-color: var(--clr-black-a0);
+	border: 1px solid var(--clr-white);
+	padding: 32px; */
+				border-radius: var(--b-radius);
+				width: 100%;
+				max-width: 600px;
+				max-height: 80vh;
+				overflow-y: auto;
+				position: relative;
+				text-shadow:
+					0 -1px var(--cor-contorno),
+					1px 0 var(--cor-contorno),
+					0 1px var(--cor-contorno),
+					-1px 0 var(--cor-contorno);
+				margin: 0;
+				background:
+					linear-gradient(var(--clr-black-a0), var(--clr-black-a0)) padding-box,
+					linear-gradient(
+							to bottom,
+							rgba(255, 255, 255, 0.25),
+							var(--clr-black-a0)
+						)
+						border-box;
+				border: 1px solid transparent;
+				padding: 42px 54px;
+			}
+
+			.modal-content h3 {
+				margin-top: 0;
+				color: var(--clr-white);
+				font-size: 1.5em;
+				text-transform: uppercase;
+			}
+
+			.modal-content p {
+				line-height: 1.6;
+				text-align: justify;
+			}
+
+			.modal-content p br {
+				display: block;
+				margin: 0.8em 0;
+				content: "";
+			}
+
+			/* Modal open/close animations */
+			.modal {
+				opacity: 1;
+				transition: opacity var(--transition-time-long)
+					cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			.modal.modal-fade-in {
+				animation: modalFadeIn var(--transition-time-long)
+					cubic-bezier(0.4, 0, 0.2, 1);
+				opacity: 1;
+			}
+			.modal.modal-fade-out {
+				animation: modalFadeOut var(--transition-time-long)
+					cubic-bezier(0.4, 0, 0.2, 1);
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			@keyframes modalFadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			@keyframes modalFadeOut {
+				from {
+					opacity: 1;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+
+			.close {
+				color: var(--clr-white);
+				float: right;
+				font-size: 1.25em;
+				font-weight: bold;
+				cursor: pointer;
+				position: absolute;
+				right: 16px;
+				top: 16px;
+				transition: color var(--transition-time);
+				user-select: none;
+			}
+
+			.close:hover {
+				color: var(--clr-white);
+			}
+
+			@media (max-width: 770px) {
+				#calendar-container {
+					padding: 10px;
+				}
+
+				.calendar-day {
+					min-height: 35px;
+					padding: 8px 4px;
+					font-size: 1rem;
+				}
+
+				.modal {
+					padding: 30px;
+				}
+
+				.modal-content {
+					width: 100%;
+					max-height: 90vh;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="sonhos-container">
+			<div id="header">
+				<a href="/">voltar</a>
+			</div>
+			<div
+				style="
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					height: auto;
+					margin: 16px 0;
+				"
+			>
+				<img id="img-header" src="/assets/img/cat_sleep_2.png" /><br />
+				<h1 class="titulo-diario wavy">Diário de Sonhos</h1>
+				<div id="calendar-controls">
+					<button id="prev-month">‹</button>
+					<span id="current-month-year"></span>
+					<button id="next-month">›</button>
+				</div>
+
+				<div id="calendar-container">
+					<div id="calendar-grid"></div>
+				</div>
+
+				<div id="dream-modal" class="modal" style="display: none">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<div id="dream-content"></div>
+					</div>
+				</div>
+				<p id="dream-count"></p>
+			</div>
+		</div>
+
+		{% include 'scripts_bottom.html' %}
+		<script type="module">
+			import { typeDreamText } from "/assets/js/dream-typewriter.js";
+		</script>
+		<script src="/assets/js/wavy-text.js" defer></script>
+		<script>
+			const DREAM_TYPE_SPEED = 31;
+		</script>
+		<script>
+			// Dados dos sonhos
+			const dreamData = {
+				2025: {
+					12: {
+						24: [
+							"Sonhei que eu tava dentro de um jogo de Pokémon de mundo aberto, em 3D, onde os jogadores podiam fazer armadilhas pra enfraquecer os Pokémon e pegá-los. Os Pokémon selvagens eram agressivos e, às vezes, os jogadores se juntavam pra derrotar alguns mais fortes. Uma hora, todos nos juntamos pra derrotar aquele Suicune dinossauro, Walking Wake.",
+						],
+						23: [
+							"Sonhei que reencontrei um site alternativo ao YouTube que eu tinha acessado há anos. Ele tinha passado por um rebranding e o que antes era uma plataforma usada pra postar edições engraçadas tinha virado um lugar onde as pessoas despejavam ódio e conteúdo edgy.<br>Vi um vídeo de um cara comentando sobre uma série chamada “GOGO”, “DODO” ou algo assim. Acho que ela tava estreando, e era protagonizada pelo Michael Cera e mais algum ator conhecido. Os dois interpretavam adolescentes edgy planejando um ataque à escola deles.",
+						],
+					},
+					11: {
+						19: [
+							"Sonhei que no dia seguinte participaria de uma corrida de ciclismo pra realizar um percurso fechado, passando por várias cidades, e eu tava muito animado. Tão animado, na verdade, que comecei a realmente acreditar que a corrida era real e fiquei decepcionado ao acordar e perceber que tinha que ir ao trabalho.<br>Lembro de, no sonho, vestir um jorts, uma camiseta de poliéster e meias brancas pra corrida. Peguei meu adaptador de válvula pra encher o pneu da bicicleta, fone de ouvido e documentos.",
+						],
+						5: [
+							"Sonhei que eu comecei a chamar a ████ de mamãe e ela entrou na brincadeira.",
+						],
+						4: [
+							"Sonhei que meu pai veio pra Bauru e a gente passeou e foi se reaproximando. Depois de uns dias aqui, ele começou a ficar folgado demais, usando meu PC na minha frente, mexendo na minha câmera, e isso me incomodava muito. Chamei a atenção dele e ele achou ruim, dizendo que tinha o direito de usar tudo por ser meu pai. Aquilo me enfureceu, e ele foi mostrando cada vez mais ser uma pessoa egoísta, folgada e horrível. Ele chegou a dizer que tinha usado meu PC até pra ver pornografia. Surtei, comecei a gritar e quebrar as coisas, expulsando ele de casa. <br>O vizinho me viu jogando ele pra fora e começou a jogar coisas do seu carrinho de compras em mim, provavelmente se defendendo pra eu não chegar perto dele também. Bati a porta, e minha mãe veio ver o que tinha acontecido, claramente nada surpresa por a gente não ter se dado bem mais uma vez.",
+						],
+					},
+					10: {
+						27: [
+							"Sonhei que dormi em cima do meu celular e quando acordei vi que havia dado repost sem querer em várias coisas estranhas no Instagram.",
+						],
+						16: [
+							"Sonhei que eu vivia num mundo de Minecraft personalizado. Sempre estava de noite e tinha uma neblina forte. Era um mundo quase inteiramente plano, com pouquíssima variação de relevo. Ele se gerava automaticamente e ficava em loop. Às vezes apareciam construções com uma estética meio medieval, feitas de madeira de pinheiro. Algumas casas estavam trancadas, outras abertas. Dentro delas, frequentemente tinham armadilhas, como fios de linha no chão pra serem pisados. Às vezes apareciam chefões dentro das casas, extremamente fortes, que perseguiam as pessoas até a morte. Pelo mapa, mesmo fora das casas, existiam criaturas que seguiam as pessoas eternamente. Era meio que um roguelike, onde todo mundo só buscava tesouro atrás de tesouro, tentando ver até onde conseguia ir.",
+						],
+						12: [
+							"Sonhei que uns alienígenas chegaram na Terra. Eles pareciam uns ratos gigantes e magrelos. Tinha também outro que lembrava a Morte de Hora de Aventura, com uma caveira de boi no lugar da cabeça. Ele ficava me vigiando de longe, esperando anoitecer pra atacar. Quando chegava a noite, todo mundo deveria entrar em casa e trancar todas as portas e janelas, senão ele entrava.",
+						],
+						11: ["Sonhei que me matei."],
+						8: [
+							"Sonhei que tava numa viagem e tinham algumas garotas querendo ficar comigo. ███ ███ █ ███ ███████, ███ █ █████ ██████, █ ███ █████ ███ ███ ██████. ████ ███ ███ █████ ███ █ ███, ███ ███ █████████ ████. A gente foi pedir hambúrguer num restaurante do Sonic pra comer juntos, mas tava demorando demais, então saí com a ███ pra outro canto. Pegamos uma saída de emergência só pra funcionários e acabamos nos corredores de um prédio residencial. A cidade era enorme e meio entulhada, com prédio em cima de prédio. Nos escondemos num cantinho do corredor, atrás de um vaso, pra ficar juntos, mas fomos pegos por um dos meus supervisores do trabalho, que veio dar bronca e perguntar o que a gente tava fazendo. Falei que 'nada'.",
+						],
+						6: [
+							"Sonhei que eu era uma garota e acabei indo parar num date com um cara que havia feito bullying comigo quando criança. Logo de cara mandei a real, dizendo que não ia rolar nada só porque ele era quem era.",
+						],
+						4: [
+							"Sonhei que fui a uma festa numa república com dois amigos. Não lembro muito bem quem eram. Lá, encontrei um cara que, dentro do sonho, havia sido meu primeiro ex—ele parecia uma mistura da ████████ com o ███████, mas acredito que deveria ser um substituto da primeira. Não quis ficar muito perto porque sabia que ele era doido, mas com o tempo fui caindo na conversa dele e acabei cedendo. Em certo momento, a gente foi pra um quartinho onde ficamos, e, de algum jeito, ele acabou me sequestrando. Fui parar na casa dele, que era tipo um covil do mal. Ele morava com outras pessoas, tão ruins quanto ele. Era bem remanescente da família do Leatherface. No fim, consegui escapar e saí correndo dali.",
+						],
+					},
+					9: {
+						22: [
+							"Sonhei que era um espião, fui furtar um laboratório de segurança máxima e tive que fingir ser a Tocanna quando fui descoberto.",
+						],
+						12: [
+							"Sonhei que morava num apartamento diferente com minha mãe e mais algumas pessoas que não lembro quem eram. A gente fez pizza e sanduíches numa grelha gigante que ficava dentro de casa, em cima de uma mesa de papel. Aos poucos, a mesa começou a pegar fogo, e fiquei preocupado, pedindo pra pegarem o extintor e apagarem. Minha mãe disse que não precisava. Fiz uma aposta de quinhentos reais com ela de que o apartamento ia pegar fogo, porque eu tinha certeza disso. Fiquei muito puto por causa da situação. Depois de um tempo, acordei, sem saber como terminava.",
+						],
+						10: [
+							"Sonhei que eu tinha ido morar no espaço, orbitando a Terra. Um dia apareceu um mecânico espacial, e aproveitei pra levar minha bike espacial pra ele mexer e tunar. A gente ficou conversando nos dois dias em que ele veio. Eu disse que tinha medo do espaço e que preferia a Terra, mas ele respondeu que preferia o espaço. Um dia acabei descendo pra Terra, mas logo que cheguei passei por situações ruins, e isso me fez voltar pro espaço, lembrando rapidamente do motivo que me fez sair de lá inicialmente. O mecânico então me disse que o espaço era melhor, porque ninguém poderia me limitar ou prender em um só lugar. Ele me disse que eu sempre teria a chance de recomeçar.",
+							"Sonhei que existiam umas minhocas com habilidades fora do comum. Algumas tinham olhos enormes e hipnotizantes, outras eram gigantes, e por aí vai. Acabei capturando uma, mas eu tinha muito medo.",
+						],
+						4: [
+							"Sonhei que eu tava num mundo de videogame onde cada jogador podia escolher um personagem da Marvel e fazer quests específicas de cada um. Só que os adultos, eu incluso, não queriam fazer quests, então a gente só ficava passeando e interagindo como se fosse um VRChat. As crianças ficavam irritadas, porque queriam jogar de verdade, mas os personagens já tavam ocupados. Também tinha a opção de jogar com um personagem genérico, sem nome. Uma criança acabou bolando um plano pra me matar e poder jogar com o meu personagem, o Venom. Ela ainda teve ajuda do Mount Gameplays. Esse mundo era meio caixinha, como Minecraft, e os blocos podiam evoluir quando combinados com outros iguais, virando versões mais fortes deles, tipo pistões mais fortes. O menino tentava usar isso a seu favor.",
+						],
+					},
+					8: {
+						29: [
+							"Sonhei que olhei pro céu e vi a Terra, como um reflexo. Depois vi um alienígena e ele tentou se comunicar comigo.",
+						],
+						12: [
+							"Sonhei que fui pra SP com a ████ e a gente dividiu um hotel. Ela queria sair com um cara estranhão de lá, que se enforcava e postava foto o fazendo. Fiquei com um pouco de desgosto, acho que também ciúme, e falei pra ela se valorizar.",
+						],
+						2: [
+							"Sonhei que eu tinha viajado no tempo e havia parado numa época de faroeste, então fiquei explorando por lá. Uma hora, um assassino chamado Jane Doe começou a me perseguir. Tinha cabelo comprido, óculos escuros, jaqueta e uma faca. A pegada é que ele sempre perseguia as vítimas calmamente, e ninguém sabia dizer se era homem ou mulher. No mesmo sonho, mas em outro ponto (não pergunte), sonhei com a ███ debatendo sobre como os 'doido do centro' têm medo de vender LSD que dure mais de 2 segundos de efeito, porque acaba muito rápido. Outra pessoa—não lembro quem—comentou que isso era por causa de alguma lei. Eu tava sonhando várias coisas desconexas ao mesmo tempo. Depois disso, sonhei que vi a ████ na timeline do Twitter, mesmo sem estar seguindo ela. Pelo visto, ela havia me dado unfollow. Ela tava com 400 e poucos seguidores, o que era incomum pra ela, já que é tão low profile. Vi que ela havia postado uma selfie, com centenas de likes, e uns caras estranhos comentando e dando em cima.",
+						],
+					},
+					7: {
+						28: [
+							"Sonhei que ia prestar vestibular e também ir a um show no mesmo dia — show este que na verdade consistia em assistir a um filme de Hora de Aventura num telão de estádio. Eu não tava muito a fim de ir a nenhum dos dois, só queria ficar em casa.",
+						],
+						24: [
+							"Sonhei que tinha viajado por dois dias pra um parque aquático. Eu tava num grupo do meu círculo de amigos com praticamente todo mundo, onde eu ia atualizando o pessoal. Do nada, minha ex mandou uma mensagem no grupo dizendo apenas o próprio nome dela e meio que cortou a brisa, mas deu pra perceber que não foi por mal. Tinha também um grupo à parte só dos rapazes, onde começaram a comentar e questionar o porquê dela ter feito isso. Eu fiquei um pouco inconformado com a mensagem dela. Tinha mais coisa no sonho, mas esqueci. Acho que eu tinha comprado uma espada também.",
+						],
+						17: [
+							"Sonhei que tinha ido pra SP e, na volta, passei por uma super ponte que tinha lá, com diversas lojas no caminho e um teto alto de vidro em cima. Parei pra comer um cachorro-quente.",
+						],
+						11: [
+							"Sonhei que tava fora de casa e, de repente, alguns policiais começaram a matar a população. Não eram todos, mas os que não participavam acabavam sendo mortos pelos ruins. Tentei voltar para a segurança da minha casa e, no caminho, fui encontrando ondas de corpos espalhados pelo chão. Em certos momentos, peguei armas que achei pelo caminho — primeiro uma pistola, depois um revólver — caso precisasse me defender. Quando cheguei no meu prédio, dei de cara com cadáveres de vizinhos que eu conhecia de outras ocasiões. Vi alguns sendo mortos na minha frente também. Algumas pessoas aproveitaram a falta de policiais para cometer crimes, inclusive assassinatos. Vi um vizinho matar uma mulher e a filha dela bem na minha frente. Enquanto subia as escadas do prédio, encontrei alguns sobreviventes e fomos nos protegendo uns aos outros, mesmo que só eu tivesse armas. A escadaria era bem diferente da vida real: longa, confusa, quase sem fim.<br>Quando finalmente cheguei no meu apartamento, destranquei a porta lentamente e chamei pelo nome da minha mãe, preocupado com ela. Meu banheiro tinha uma janela pro corredor, e vi a minha gata por ela. Quando abri a porta dele, vi minha outra gata dentro do banheiro, trancada. Tava tudo desorganizado, cheio de roupas e outras coisas espalhadas pelo chão. Fui me aproximando do quarto da minha mãe e, ao longo casa, tudo tava desorganizado. Abri a porta do quarto e não a vi. Na verdade, abri todas as portas da casa e não a encontrei. Depois disso acordei, sem ver ela.",
+						],
+					},
+					6: {
+						18: [
+							"Sonhei que tavam querendo me cancelar no Twitter por criar o <a href='https://x.com/guizin_botson' target='_blank'>guizin_botson</a>, juntar informações que o Guizin já havia deletado e repostar, como onde ele trabalhava, endereço, nome, etc.",
+						],
+						16: [
+							"Sonhei que estudava numa escola que tinha um layout quase idêntico ao da casa da minha avó. A sala de aula tinha um colchão no meio, que aparentemente era o meu lugar. O professor era o meu antigo professor da faculdade. Havia outras pessoas que eu conhecia da vida real como alunos, mas não lembro quem, e também algumas que nunca vi antes.<br>Acabei me envolvendo com algumas pessoas da sala, primeiro com uma garota que ficava me provocando no meio das aulas. Ela tinha cabelo vermelho escuro e curto, quase raspado, pele morena, meio bronzeada, e usava um shortinho azul claro e um top de biquíni laranja, apesar de aquilo ser, supostamente, uma escola.<br>Em outro momento, me envolvi com uma outra garota, que era trans. Quando alguns estudantes bullies de outra sala nos viram abraçados no colchão do meio da sala, começaram a rir, jogando pedras e, sem que eu percebesse na hora, até leites de caixa, por algum motivo. Depois, saíram correndo, e os alunos da nossa sala, junto com o professor, chegaram e viram a sala toda ferrada. Eles entenderam facilmente a situação quando notaram os bullies rindo do lado de fora.<br>Então chegou a diretora da escola, que nem havia aparecido antes no sonho, e comentou sobre a situação, dizendo que ia punir os bullies. Os alunos voltaram para a sala e começou a próxima aula.<br>A aluna de cabelo curtinho deitou comigo no colchão e voltou a me provocar, apontando pra uns pôsteres de educação sexual que tinham na sala e depois apontando pra ela mesma e pra mim. Eu gostava bastante dela.<br>Depois disso, eu acordei.",
+						],
+						15: [
+							"Sonhei que descobri que o Hitler não tinha morrido e, na verdade, tava escondido no prédio onde eu morava. Minha missão era matá‑lo. <br>Em um momento acabei descobrindo que havia uma base nazista escondida no prédio, que podia ser acessada se eu apertasse uma combinação específica de botões no elevador, então entrei e fui me esgueirando pelos corredores. Quando vi ele passando pelos corredores com uns outros soldados, saltei em cima dele com uma faca, mas ele desviou e me prenderam. Depois disso não lembro o que aconteceu. <br>Sei que acordei do sonho ainda dentro de outro sonho e quis contar pra todo mundo o que havia sonhado. Acordei com um monte de mensagens de um amigo meu, que não existe na vida real, pedindo pra eu descer na portaria e implorando pra eu deixar ele ficar uns dias comigo, dizendo que a polícia tava com ele. Eu não sabia muito bem o que fazer porque morava com a minha mãe. Como tinha acabado de acordar e estava meio tonto, por um momento confundi esse amigo com outro amigo meu da vida real, falei pra minha mãe que ele precisava ficar uns dias, e ela deixou. <br>Desci do prédio e, no elevador, fiquei pensando no sonho que tive. Pensei em apertar a combinação que vi no sonho, mas não o fiz porque precisava correr pra portaria. Ao sair do elevador, vi que o condomínio era gigante. Parecia mais um campus de faculdade e demorei uns dez minutos pra chegar a pé até a portaria, mesmo correndo. <br>Quando cheguei, meu amigo veio me abraçar. Ele tinha a cara exata da Bella Ramsey. Ele estava com outra amiga, sei que também tinha o rosto de uma atriz, mas não consigo identificar quem era. Ela também havia sido presa, e ambas estavam juntas de uns policiais. Os policiais vieram falar comigo dizendo que os dois precisavam de um lugar pra ficar e só seriam soltos se encontrassem um local. Expliquei a situação, que morava com a minha mãe, e tentei negociar, dizendo que eles podiam ficar só uns quatro dias comigo por causa disso. Depois acordei, não sei no que aquilo resultou.",
+						],
+						12: [
+							"Tive um sonho com a Jenna Ortega. Ela lavava carros vestida como uma personagem que ela havia interpretado em um filme, onde também lavava carros. Na verdade, no filme, esse papel tinha sido da mãe dela no passado (que no sonho também era atriz—acho que era a Winona Ryder, aliás). A Jenna começou a tirar vantagem disso pra iniciar esse negócio de lavagem de carros. Acho que a personagem original era animada, inclusive, e como era animada à mão, as pessoas tinham um carinho nostálgico por isso. Só que a versão da Jenna, agora mais moderna, era animada por computador, e isso gerava muita controvérsia.",
+							'Sonhei que conheci uma garota pessoalmente que era meu tipo ideal e ficava flertando comigo o tempo todo. O nome dela era Haley, e ela tinha uma voz meio rouca e um cabelo curto e loiro. Mas, apesar de demonstrar tanto interesse, ela se recusava a me passar o seu número. Acho que era porque não queria compromisso ou só queria preservar a própria paz. No sonho, essa aparentemente não era a primeira vez em que a gente se via, a gente já se conhecia de outro momento.<br>Inclusive, acho que a gente tava dividindo Uber e, durante o trajeto, ela ficou flertando bastante comigo. Quando chegamos, ela desceu no mesmo lugar que eu, mas saiu andando na minha frente enquanto eu continuava a pedir o seu número. Ela continuava me dando sinais de que tava interessada, mas não parava de me enrolar, como se estivesse se divertindo com aquilo. Aí, do nada, ela virou uma esquina e sumiu.<br>No mesmo sonho, em outro momento, entrei no Twitter e vi minha ex postando vários tweets meio desesperados, dando a entender que tava solteira, depois de um término com o último namorado dela—bem parecido com o que aconteceu quando a gente terminou também. Um dos tweets dizia algo tipo: "nem numa cidade em que não tem ninguém esse mlk me valoriza".',
+						],
+						11: [
+							"Sonhei que eu fazia parte de um grupo de mercenários assassinos numa cidade com arquitetura italiana. Um dia, um dos nossos colegas foi morto, e a responsável fazia parte de um grupo rival. A gente também tinha matado alguém do grupo dela uns dias antes, então era meio que uma troca.<br>A assassina era uma garota com quem eu saí uma vez na vida real, mas não deu muito certo, pra dizer o mínimo. Começamos a procurá-la pra nos vingar, mas ela tava muito bem escondida. Até que, eventualmente, fui eu quem a encontrou. Ela tava se refugiando num apartamento abandonado.<br>Só que, pelo que parecia, mesmo no contexto do sonho, eu já a conhecia do passado, e a gente acabou se envolvendo. Depois disso, voltei pro meu grupo, mas não podia contar que tinha encontrado ela, senão iriam querer matá-la. Ainda assim, continuei voltando pra ela escondido. A gente sempre se encontrava nesse mesmo apartamento abandonado, e fomos ficando cada vez mais próximo. Mas, ao mesmo tempo, as coisas começaram a ficar perigosas demais.",
+						],
+						10: [
+							'Tive um sonho bem estranho. Não tenho certeza se eu tava nele de fato, acho mais que eu tava assistindo tudo em terceira pessoa. O mundo lembrava bastante o jogo Forsaken Frontiers—provavelmente porque vi muitos vídeos de gameplay dele recentemente—e de outros jogos com um visual parecido.<br>O cenário era um elevador enorme, que parecia uma cabine quadrada de metrô. Tinha algumas cadeiras espalhadas, encostadas nas paredes, e acho que até uma TVzinha. Me lembrava os elevadores de Cyberpunk 2077, só que maior e com mais espaço. Inclusive, tinha um "motorista", mas ele nunca dizia nada. Pessoas iam entrando no elevador, e tinha uma criatura esquisita que se movia pelas paredes, vigiando todo mundo. Ela não precisava nem falar muito, só a sua presença já era uma ameaça, e as pessoas entendiam que tinham que ficar quietas. A criatura usava um traje fechado, tipo de minerador, cobrindo todo seu corpo, e também uma máscara de gás cobrindo completamente seu rosto. Nem dava pra ver a sua pele.<br>Pessoas subiam e desciam andares enquanto a criatura vigiava pra garantir que ninguém falasse nada. Uma hora, entrou um velho que começou a falar demais, até que a criatura o ameaçou e ele ficou apavorado. Isso acabou dando brecha pra que outras pessoas também começassem a conversar, porque ficaram confortáveis demais, inclusive o motorista. Foi aí que a criatura gritou, dando um tipo de rugido, e ameaçou todo mundo ali dentro. Depois foi direto até o motorista e disse: "Você esqueceu do que eu tinha te dito?". Na hora, o cara ficou totalmente em silêncio. Logo depois disso, acordei com o alarme tocando.',
+						],
+						8: [
+							'Sonhei que eu tava preso em uma simulação onde eu era um vampiro foda e minha missão era devorar todo mundo. No início, eu tinha a aparência de um humano, mas, conforme me alimentava, conseguia me transformar numa criatura parecida com a do Drácula no filme "A Última Viagem do Deméter". Eu ficava enorme e podia engolir as pessoas.<br>O cenário do sonho era uma ilha flutuante no meio do vazio. O céu era escuro e denso. A ambientação era bem futurista, com uma estética cyberpunk. Tinham várias cabines próximas umas das outras, cada uma com um grupo de pessoas com habilidades diferentes, que precisavam me caçar. Fui interagindo com elas e derrotando quem fosse possível no momento certo, tomando cuidado pra não ser detectado pelos outros.<br>Entre essas pessoas, tinha uma garota claramente inspirada no Hannibal, amarrada a uma maca de contenção. Uma hora, mesmo com desconfiança, os outros decidiram soltá-la. Ela carregava pra lá e pra cá uma panela enorme cheia de sangue, não sei por quê. Fui atrás dela, consegui fazê-la tropeçar e bebi todo o sangue da panela, e assim finalmente consegui me transformar por completo.',
+						],
+						7: [
+							"Sonhei que eu tava cozinhando com a minha mãe, só que o sal não tinha gosto nenhum. Teve uma hora que o botei um punhado de sal na boca e não consegui sentir nada.",
+						],
+						6: [
+							"Sonhei que eu tava num mundo estranho, que era uma mistura de Star Wars, Coragem, o Cão Covarde e Hotline Miami—o que é engraçado só de escrever. Não lembro muitos detalhes, infelizmente. Acho que era explícito que era tudo virtual ou um tipo de simulação. Pelo que me lembro, não tinha ninguém que eu conhecesse da vida real.<br>Eu morava com umas pessoas numa casa confusa, no meio do deserto, cheia de corredores apertados e salas pequenas, com decorações bem rústicas. Uma hora, surgiu um homem com um revólver. O nome dele era algo como O'Fish. Greasy O'Fish? Algo assim... parece o nome de um sanduíche. Ele começou a matar algumas das pessoas que moravam comigo, e, apesar de aquilo ser uma simulação, a morte era permanente. Eventualmente a gente confrontou ele e foi aí que percebemos o quão maluco ele era. Não tinha medo algum de morrer. Às vezes ele jogava roleta russa consigo mesmo só pra nos apavorar.<br>Não lembro muito bem o que aconteceu depois, mas acho que ele se aliou à gente pra derrotar outros invasores.",
+						],
+						4: [
+							"Sonhei que eu tava vivendo num filme de Terrifier. No começo, eu via o palhaço, mas ninguém acreditava em mim. Acho que, no sonho, só quem era o próximo a morrer conseguia ver ele. Me lembrou Premonição. Eu morria primeiro, mas o sonho resetava. Haviam mais três pessoas comigo que não consigo identificar. Acho que não as conheço. Depois, aprendi a enganar a morte, e ela pulou a minha vez, indo pra outra pessoa.",
+						],
+						3: [
+							"Esqueci 90% do sonho, mas acho que sonhei que o Jeremy Allen White tinha uma banda inspirada em Nirvana. Ele tinha um álbum com uma capa de fundo escuro e um bebê Kewpie em pé no centro. Mas, quando perguntavam pra ele sobre as músicas mais conhecidas do Nirvana, ele nem conhecia.",
+							"Depois, sonhei com o filme Premonição 1, mas no meu sonho era completamente diferente. Até os personagens eram outros. Não tinha nada a ver, mas ainda era Premonição 1.",
+							"Sonhei também que eu namorava a namorada de um amigo meu depois de eles terem terminado. Só que a gente não tinha muita química, e eu vivia com a sensação de que ela ainda sentia saudades dele quando tava comigo. Acabei indo a um tarólogo, e ele me disse que eu precisava deixar ela ir, sem que eu sequer precisasse contar explicitamente qual era o problema. Comecei a chorar, porque queria muito que desse certo. Do nada, uns caras entraram na sala e cortaram totalmente o clima. Depois disso, não lembro mais o que aconteceu. Por algum motivo, o Tom Cruise também tava no sonho e ele era meu amigo.",
+						],
+					},
+					5: {
+						31: [
+							"Sonhei que abri os comentários dos meus tuites e três bots comentaram no primeiro tuite que fiz. Fiquei muito triste com isso.",
+						],
+						26: [
+							'Sonhei que eu e minha ex fomos presos por tentar roubar um lugar. Acho que era um banco de uma faculdade, ou algo assim. Tinha mais gente com a gente, mas eles fugiram. Não tava muito claro se eu e ela ainda estávamos namorando, ou eu só não lembro, mas lembro de ficar com uma sensação estranha no peito quando vi ela. Não sei se era coisa do eu do sonho ou do eu da vida real.<br>Quem prendeu a gente foram dois policiais, e por algum motivo tinha um padre junto, mas em algum momento a gente perdeu ele de vista e ele sumiu. Eu ia sair com o ████, a ██████, o ██████ e não sei mais quem, depois do assalto, mas como fui preso, não tinha mais como. Então fiz uma última ligação pro ████ pra avisar.<br>Depois disso, os policiais levaram a gente. Um deles até esqueceu de colocar o cinto de segurança em mim de início, mas a gente já tava na estrada. Avisei, eles pararam no meio do caminho e colocaram. Meio que a gente ficou passeando um pouco antes de nos levarem pra cadeia ou pra algum julgamento.<br>Mais tarde, levaram a gente pra um lugar que eu não sei exatamente o que era. Era um espaço bem grande, tipo um campus... mas, assim, podia ser um zoológico, um parque aquático ou, de novo, uma faculdade. É engraçado dizer isso, mas realmente não tava claro pra mim. E aí, por coincidência, a gente encontrou o ████ e a galera lá. Eles viram que eu tinha sido preso de verdade. Acenei de longe pra eles.<br>Depois disso, chegou a hora do nosso julgamento. O "juiz" era o meu diretor da minha escola do ensino médio. Só que o julgamento era numa salinha, como se fosse uma diretoria. Era bem estranho. Primeiro foi a minha ex, enquanto eu fiquei esperando na entrada do "campus". Depois de um tempo eles saíram, e ela tava sem algemas, ou seja, tinha sido solta.<br>Aí foi minha vez, e ela foi junto comigo. No caminho, o diretor questionou o que tinha acontecido com o padre que tava com a gente, e perguntou se ele tinha ficado em "outro servidor". Falei que não sabia. A gente entrou na salinha... e aí eu acabei acordando, sem querer. Acho que foi com algum barulho dos meus gatos.',
+						],
+					},
+					3: {
+						21: [
+							'Sonhei que a gente tava num clube, mas não lembro muito bem os detalhes. Tava eu, o █████████, o █████, o Demolidor (Matt Murdock), por algum motivo, o ███ e mais gente que não lembro. Acho que o clube tinha uma temática de super-herói ou algo assim.<br>Em algum momento, vi um quadrinho largado por ali e fui avisar os caras do caixa. Eles disseram pra levar até eles, mas avisaram que, se eu encostasse com os dedos, ia ter que pagar. Então levei equilibrando na palma da mão, sem usar os dedos. Quando cheguei lá, falaram que isso não contava e que, mesmo assim, eu teria que pagar. E nem era ali que tinha que pagar, eu precisava levar o quadrinho pra uma banca do outro lado da cidade. Não fazia muito sentido.<br>Fiquei puto e comecei a discutir, dizendo que haviam me dito outra coisa antes, e que eu não ia pagar porque não queria nada daquilo. Eles não tavam nem aí e não queriam deixar eu, o █████████ e o █████ ir embora. Com o tempo, o pessoal foi saindo, e a gente ficou lá, cada vez mais esgotado e enlouquecendo, querendo ir embora.<br>Uma hora, do nada, achei um revólver no chão do clube. Já tava maluco e tive a ideia de ir até o caixa e apontar pra um dos caras, pra assustar. Todo mundo ficou bem assustado. Logo depois, achei uma ideia ainda melhor apontar pra mim mesmo. Lembrei que alguém já tinha feito algo assim e me contou, e pensei que precisava ser "mais louco do que o louco" pra que eles deixassem a gente sair.<br>O revólver tinha só uma bala, então comecei a jogar roleta russa comigo mesmo, bem na frente do caixa, ameaçando atirar se não deixassem a gente ir. Eles ficaram assustados, mas me desafiaram a continuar. Então atirei – mas ainda não era a bala. Fui repetindo o processo, gritando, completamente fora de mim, e a tensão foi aumentando. Até que, eventualmente, eles cederam e abriram a saída sem que a gente precisasse pagar pelo quadrinho. Caminhei até a porta, chamei o █████████ e o █████, e a gente foi embora. Acho que o Demolidor tinha saído um pouco antes.<br>Nenhum deles tinha sequer percebido o que eu tinha acabado de fazer e ficaram confusos do por quê deixaram a gente ir. Eu podia ter morrido, e ninguém nem percebeu. Isso me deixou um pouco triste.<br>Depois disso, a gente foi pro carro do Demolidor. O █████ queria muito dirigir, mas ninguém confiava nele no volante. Mesmo assim, ele já tinha ligado o carro e puxado o freio de mão, e resolveu tirar uma blusa enquanto o carro ainda tava ligado, e a blusa tampou a visão dele bem na hora que o carro começou a ir pra trás. Tive que estender rápido o braço do banco de trás e puxar o freio de mão pra que o carro não batesse. Depois disso, mandamos ele sair do volante, e ele ficou até sem graça, indo pro banco de trás.<br>No fim, o Demolidor assumiu a direção e, apesar de ser cego, parecia uma escolha melhor que o █████. Não lembro pra onde a gente ia, mas depois disso o sonho acabou.',
+						],
+						14: [
+							"Sonhei que fui scrollando por fotos antigas em que eu tava marcado no Twitter e percebi que a ████ tava marcada em várias fotos em comum de festas da faculdade, ou seja, a gente tinha ido nas mesmas festas, ficou um do lado do outro e nem sabia.",
+						],
+						6: [
+							"Não sei por que o cérebro faz a gente ficar lembrando de quem nos fez mal. Sonhei que a ███ tava nas replies de uns amigos meus, daí eu entrava no perfil dela e via que ela tinha feito um rebranding. Por algum motivo, a header era uma foto dela numa festa de aniversário, com um monte de gente da minha sala do ensino médio, e eu não havia sido convidado. Até meu grupo de amigos da época tava lá. Ainda não tinha o arroba do namorado novo na bio dela, como se ela estivesse escondendo.",
+						],
+					},
+				},
+				2024: {
+					10: {
+						23: [
+							"Sonhei que eu a ███ íamos ficar em um hotel na cidade dela antes de irmos pra São Paulo, então peguei ônibus pra ir pra lá, mas me perdi um pouco e, quando finalmente cheguei no hotel, ela me mandou uma mensagem, dizendo que havia acabado de embarcar no ônibus pra SP, então fiquei preso na cidade dela enquanto ela ia pra capital.",
+						],
+					},
+					9: {
+						30: [
+							"Tive um sonho com a ██████. Não lembro o que era, mas lembro que em algum momento ela me mandou mensagem e, do nada, ficou super carinhosa, quase que fazendo love bombing, e mandou figurinhas fofas que nunca manda.",
+							'Sonhei que estava na casa do Jurp, o rapper. Não lembro o que aconteceu, mas a gente tava de boa e eu fui expulso. Depois, invadi pelos fundos pra roubar alguma coisa, acho, só que me descobriram, então fingi que tava só querendo assustar eles (tinha mais gente e eles tavam jogando videogame, era tipo uma lan house nos fundos). Depois disso, não lembro o contexto, mas fui condenado à "pena de borderline", seja lá o que isso significa.',
+						],
+					},
+					8: {
+						26: [
+							"Sonhei que o █████ me deu softblock porque eu supostamente era 'monster fucker'.",
+						],
+					},
+				},
+			};
+
+			let currentDate = new Date();
+			const monthNames = [
+				"Janeiro",
+				"Fevereiro",
+				"Março",
+				"Abril",
+				"Maio",
+				"Junho",
+				"Julho",
+				"Agosto",
+				"Setembro",
+				"Outubro",
+				"Novembro",
+				"Dezembro",
+			];
+			const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+			function getEarliestDreamDate() {
+				let earliestYear = null;
+				let earliestMonth = null;
+
+				for (const year in dreamData) {
+					for (const month in dreamData[year]) {
+						if (Object.keys(dreamData[year][month]).length > 0) {
+							const yearNum = parseInt(year);
+							const monthNum = parseInt(month);
+
+							if (
+								earliestYear === null ||
+								yearNum < earliestYear ||
+								(yearNum === earliestYear && monthNum < earliestMonth)
+							) {
+								earliestYear = yearNum;
+								earliestMonth = monthNum;
+							}
+						}
+					}
+				}
+
+				return earliestYear && earliestMonth
+					? new Date(earliestYear, earliestMonth - 1, 1)
+					: null;
+			}
+
+			function hasMonthDreams(year, month) {
+				const yearStr = year.toString();
+				const monthStr = month.toString();
+				return (
+					dreamData[yearStr] &&
+					dreamData[yearStr][monthStr] &&
+					Object.keys(dreamData[yearStr][monthStr]).length > 0
+				);
+			}
+
+			function getTotalDreamCount() {
+				let totalDreams = 0;
+
+				for (const year in dreamData) {
+					for (const month in dreamData[year]) {
+						for (const day in dreamData[year][month]) {
+							const dreams = dreamData[year][month][day];
+							if (Array.isArray(dreams)) {
+								// Se é um array, contar o número de elementos
+								totalDreams += dreams.length;
+							} else {
+								// Se é uma string (formato antigo), contar como 1 sonho
+								totalDreams += 1;
+							}
+						}
+					}
+				}
+
+				return totalDreams;
+			}
+
+			function updateDreamCount() {
+				const dreamCountElement = document.getElementById("dream-count");
+				const totalDreams = getTotalDreamCount();
+				// SVG inline do ícone da lua
+				dreamCountElement.innerHTML = `
+      				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480.13-90.37q-80.42 0-151.38-30.83-70.96-30.82-123.67-83.43-52.71-52.61-83.47-123.61-30.76-70.99-30.76-151.6 0-121.78 69.4-221.89 69.4-100.12 184.51-143.86 12.5-5 24-4.38 11.5.62 20.18 8.12 8.04 6.74 11.54 17.62t3.74 26.38q-.02 82.13 29.36 153.48T519.98-516q53.62 53.37 124.58 82.22 70.96 28.85 152.55 29.54 14.76.48 26.87 5.09 12.11 4.61 18.85 12.64 7.5 8.68 8.01 19.43.51 10.75-4.2 23.69-43.53 114.93-143.9 183.98-100.38 69.04-222.61 69.04Zm0-78q85.2 0 158.96-43.39t113.52-117.11q-81.81-6.38-156.27-40.66-74.47-34.27-133.01-92.82-59.05-59.04-92.55-132.75-33.5-73.7-41.17-155.79-73.24 41.5-117 113.95-43.76 72.46-43.76 157.29 0 129.9 90.69 220.59t220.59 90.69Zm-16.8-293.98Zm109.58-188.89-67.58-66.35q-12.18-11.9-12.18-27.93 0-16.02 12.18-28.2l67.58-67.35q11.9-12.17 27.81-12.17 15.91 0 28.08 12.17l66.35 67.35q12.18 11.9 12.18 27.93t-12.18 28.2l-66.35 66.35q-11.9 12.17-27.8 12.17-15.91 0-28.09-12.17Zm191.95 98.84L744.23-573q-11.99-12.09-11.99-27.85 0-15.76 11.92-27.55L765-649.34q12.09-12.14 27.45-12.14t27.35 11.98l21.1 20.93q12.34 12.14 12.34 27.9 0 15.76-12.17 27.51l-21.1 20.59q-12.34 12.09-27.9 12.09-15.56 0-27.21-11.92Z"/></svg> ${totalDreams} sonhos registrados`;
+			}
+
+			function updateNavigationButtons(year, month) {
+				const nextButton = document.getElementById("next-month");
+				const prevButton = document.getElementById("prev-month");
+
+				// Verificar próximo mês com sonhos
+				let canGoNext = false;
+				let testYear = year;
+				let testMonth = month + 1;
+
+				const today = new Date();
+
+				for (let i = 0; i < 60; i++) {
+					// Procurar nos próximos 60 meses
+					if (testMonth > 11) {
+						testMonth = 0;
+						testYear++;
+					}
+
+					// Permitir navegar até o mês atual
+					const isCurrentOrPastMonth =
+						testYear < today.getFullYear() ||
+						(testYear === today.getFullYear() && testMonth <= today.getMonth());
+
+					if (!isCurrentOrPastMonth) break; // Não ir além do mês atual
+
+					if (hasMonthDreams(testYear, testMonth + 1)) {
+						canGoNext = true;
+						break;
+					}
+
+					testMonth++;
+				}
+
+				if (canGoNext) {
+					nextButton.style.opacity = "1";
+					nextButton.style.pointerEvents = "auto";
+				} else {
+					nextButton.style.opacity = "0";
+					nextButton.style.pointerEvents = "none";
+				}
+
+				// Verificar mês anterior com sonhos
+				let canGoPrev = false;
+				let prevTestYear = year;
+				let prevTestMonth = month - 1;
+
+				for (let i = 0; i < 60; i++) {
+					// Procurar nos 60 meses anteriores
+					if (prevTestMonth < 0) {
+						prevTestMonth = 11;
+						prevTestYear--;
+					}
+
+					if (hasMonthDreams(prevTestYear, prevTestMonth + 1)) {
+						canGoPrev = true;
+						break;
+					}
+
+					prevTestMonth--;
+				}
+
+				if (canGoPrev) {
+					prevButton.style.opacity = "1";
+					prevButton.style.pointerEvents = "auto";
+				} else {
+					prevButton.style.opacity = "0";
+					prevButton.style.pointerEvents = "none";
+				}
+			}
+
+			function createCalendar(year, month) {
+				const firstDay = new Date(year, month, 1);
+				const lastDay = new Date(year, month + 1, 0);
+				const startingDay = firstDay.getDay();
+				const monthLength = lastDay.getDate();
+
+				document.getElementById("current-month-year").textContent =
+					`${monthNames[month]} ${year}`;
+
+				// Atualizar visibilidade dos botões
+				updateNavigationButtons(year, month);
+
+				const grid = document.getElementById("calendar-grid");
+				grid.innerHTML = "";
+
+				// Header com dias da semana
+				dayNames.forEach((day) => {
+					const dayHeader = document.createElement("div");
+					dayHeader.className = "calendar-day-header";
+					dayHeader.textContent = day;
+					grid.appendChild(dayHeader);
+				});
+
+				// Dias em branco antes do primeiro dia do mês
+				for (let i = 0; i < startingDay; i++) {
+					const emptyDay = document.createElement("div");
+					emptyDay.className = "calendar-day empty";
+					grid.appendChild(emptyDay);
+				}
+
+				// Dias do mês
+				const today = new Date();
+				for (let day = 1; day <= monthLength; day++) {
+					const dayElement = document.createElement("div");
+					dayElement.className = "calendar-day";
+					dayElement.textContent = day;
+
+					// Verificar se o dia é futuro
+					const currentDayDate = new Date(year, month, day);
+					const isFutureDay = currentDayDate > today;
+
+					// Verificar se há sonho neste dia
+					const yearStr = year.toString();
+					const monthStr = (month + 1).toString();
+					const dayStr = day.toString();
+
+					if (isFutureDay) {
+						dayElement.classList.add("future-day");
+					} else if (
+						dreamData[yearStr] &&
+						dreamData[yearStr][monthStr] &&
+						dreamData[yearStr][monthStr][dayStr]
+					) {
+						dayElement.classList.add("has-dream");
+						dayElement.addEventListener("click", () =>
+							showDream(yearStr, monthStr, dayStr),
+						);
+					}
+
+					grid.appendChild(dayElement);
+				}
+			}
+
+			function showDream(year, month, day) {
+				const dreams = dreamData[year][month][day];
+				const modal = document.getElementById("dream-modal");
+				const content = document.getElementById("dream-content");
+
+				let headerHtml = `<h3>${day}/${month}/${year.slice(-2)}</h3>`;
+				content.innerHTML = headerHtml;
+				// Se houver múltiplos sonhos, anima cada título+parágrafo separadamente
+				if (Array.isArray(dreams) && dreams.length > 1) {
+					let index = 0;
+					function animateNextDream() {
+						if (index < dreams.length) {
+							// Adiciona o título
+							let h4 = document.createElement("h4");
+							h4.textContent = `Sonho ${index + 1}:`;
+							content.appendChild(h4);
+							// Adiciona o parágrafo animado
+							let p = document.createElement("p");
+							content.appendChild(p);
+							import("/assets/js/dream-typewriter.js")
+								.then((mod) => {
+									// Anima o texto e só chama o próximo após terminar + 2s
+									mod.typeDreamText(p, dreams[index], DREAM_TYPE_SPEED);
+									const animTime =
+										dreams[index].length * DREAM_TYPE_SPEED + 200;
+									const nextIndex = index + 1;
+									setTimeout(() => {
+										index++;
+										setTimeout(animateNextDream, 2000); // 2 segundos de intervalo
+									}, animTime);
+								})
+								.catch(() => {
+									p.textContent = dreams[index];
+									index++;
+									setTimeout(animateNextDream, 2000);
+								});
+						}
+					}
+					animateNextDream();
+				} else {
+					// Caso comum: só um sonho
+					let p = document.createElement("p");
+					content.appendChild(p);
+					import("/assets/js/dream-typewriter.js")
+						.then((mod) => {
+							mod.typeDreamText(
+								p,
+								Array.isArray(dreams) ? dreams[0] : dreams,
+								DREAM_TYPE_SPEED,
+							);
+						})
+						.catch(() => {
+							p.textContent = Array.isArray(dreams) ? dreams[0] : dreams;
+						});
+				}
+				modal.style.display = "flex";
+			}
+
+			function nextMonth() {
+				let testYear = currentDate.getFullYear();
+				let testMonth = currentDate.getMonth() + 1;
+
+				const today = new Date();
+
+				for (let i = 0; i < 60; i++) {
+					// Procurar nos próximos 60 meses
+					if (testMonth > 11) {
+						testMonth = 0;
+						testYear++;
+					}
+
+					// Permitir navegar até o mês atual
+					const isCurrentOrPastMonth =
+						testYear < today.getFullYear() ||
+						(testYear === today.getFullYear() && testMonth <= today.getMonth());
+
+					if (!isCurrentOrPastMonth) break; // Não ir além do mês atual
+
+					if (hasMonthDreams(testYear, testMonth + 1)) {
+						currentDate.setFullYear(testYear);
+						currentDate.setMonth(testMonth);
+						createCalendar(currentDate.getFullYear(), currentDate.getMonth());
+						break;
+					}
+
+					testMonth++;
+				}
+			}
+
+			function prevMonth() {
+				let testYear = currentDate.getFullYear();
+				let testMonth = currentDate.getMonth() - 1;
+
+				for (let i = 0; i < 60; i++) {
+					// Procurar nos 60 meses anteriores
+					if (testMonth < 0) {
+						testMonth = 11;
+						testYear--;
+					}
+
+					if (hasMonthDreams(testYear, testMonth + 1)) {
+						currentDate.setFullYear(testYear);
+						currentDate.setMonth(testMonth);
+						createCalendar(currentDate.getFullYear(), currentDate.getMonth());
+						break;
+					}
+
+					testMonth--;
+				}
+			}
+			document.addEventListener("DOMContentLoaded", function () {
+				// Inicializar calendário no mês atual
+				createCalendar(currentDate.getFullYear(), currentDate.getMonth());
+
+				// Atualizar contador de sonhos
+				updateDreamCount();
+
+				// Event listeners
+				document
+					.getElementById("next-month")
+					.addEventListener("click", nextMonth);
+				document
+					.getElementById("prev-month")
+					.addEventListener("click", prevMonth);
+
+				// Fechar modal
+				document.querySelector(".close").addEventListener("click", () => {
+					document.getElementById("dream-modal").style.display = "none";
+				});
+
+				// Fechar modal clicando fora
+				window.addEventListener("click", (event) => {
+					const modal = document.getElementById("dream-modal");
+					if (event.target === modal) {
+						modal.style.display = "none";
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

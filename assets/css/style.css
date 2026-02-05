@@ -751,6 +751,45 @@ ul > li::before {
 }
 
 /* ========================================= */
+/* Tables */
+/* ========================================= */
+
+html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
+	--offset: 3px;
+
+	border-collapse: collapse;
+	outline: 1px solid var(--clr-texto);
+	outline-offset: var(--offset);
+	margin-left: var(--offset);
+
+	max-height: 64vh;
+	min-height: 364px;
+	overflow-y: scroll;
+	display: inline-block;
+
+	thead tr th {
+		color: var(--clr-white);
+		pointer-events: none;
+		user-select: none;
+		font-family: var(--fonte-monospace);
+	}
+
+	tbody tr {
+		counter-increment: rowNumber;
+	}
+
+	tr > * {
+		padding: 0.5em 0.75em;
+		text-align: left;
+		border: 1px dotted currentColor;
+	}
+}
+
+table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
+	content: counter(rowNumber, decimal-leading-zero);
+}
+
+/* ========================================= */
 /* Responsividade para telas menores */
 /* ========================================= */
 

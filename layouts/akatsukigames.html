@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="/assets/js/theme-init.js"></script>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta
+			http-equiv="Cache-Control"
+			content="no-cache, no-store, must-revalidate"
+		/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta content="AkatsukiGames" property="og:title" />
+		<meta content="O seu mundo de games." property="og:description" />
+
+		<link
+			href="//fonts.googleapis.com/css?family=Marvel"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Play"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Lobster"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Shadows+Into+Light"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Droid+Sans:bold"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Droid+Serif:bold"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="//fonts.googleapis.com/css?family=Raleway:100"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/assets/img/akatsukigames/favicon_pain.png"
+		/>
+
+		<title>AkatsukiGames</title>
+
+		<link rel="stylesheet" href="/assets/css/fonts.css" />
+		<link rel="stylesheet" href="/assets/css/animations.css" />
+		<link rel="stylesheet" href="/assets/css/akatsukigames.css" />
+	</head>
+
+	<body>
+		<div class="author-commentary">
+			<button class="commentary-close-btn" aria-label="Fechar">×</button>
+			<p>
+				Esse foi um dos vários blogs que tive quando criança. Misturei minha
+				obsessão da infância por Naruto e videogames, e deu nisso. No início da
+				página tinha um chat do Xat, onde conheci muita gente ao longo dos anos,
+				em diversos blogs diferentes.
+			</p>
+			<p>
+				Peguei o template original e fiz uma série de alterações pra deixá-lo
+				como imagino que meu eu mais novo gostaria de ter feito na época, mas
+				ainda não tinha conhecimento suficiente de HTML pra isso. Tudo que eu
+				sabia fazer era procurar por "jpg" ou "png" no código e substituir as
+				imagens dos templates por outras que eu preferia, ou remover as que não
+				me agradavam. Tentei manter uma estética meio "começo dos anos 2010",
+				mantendo o máximo de fidelidade aos blogs da época... ou ao menos como
+				me lembro que eles eram.
+			</p>
+			<p>
+				Lembro que muitos sites eram cheios de degradês e desse efeito "glossy"
+				em tudo, e pra gente era o auge da modernidade. Acho que de certa forma
+				ainda tem seu charme.
+			</p>
+		</div>
+		<script>
+			(function () {
+				try {
+					var btn = document.querySelector(
+						".author-commentary .commentary-close-btn"
+					);
+					var box = document.querySelector(".author-commentary");
+					if (!btn || !box) return;
+					btn.addEventListener("click", function () {
+						box.classList.add("hidden");
+					});
+				} catch (e) {
+					/* fail silently */
+				}
+			})();
+		</script>
+		<div class="main-container">
+			<div class="site-background">
+				<div class="site-wrapper">
+					<div class="page-content">
+						<nav class="site-navigation">
+							<div class="navigation-section">
+								<div class="navigation-widget">
+									<ul class="nav-menu">
+										<li class="nav-item selected">
+											<a href="#">Início</a>
+										</li>
+										<li class="nav-item">
+											<a href="#">Sobre</a>
+										</li>
+										<li class="nav-item">
+											<a href="#">Parceria</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="social-links">
+								<span class="social-label">Subscribe:</span>
+								<img src="/assets/img/akatsukigames/rss.png" alt="RSS" />
+								<img
+									src="/assets/img/akatsukigames/twitter.png"
+									alt="Twitter"
+								/>
+								<img
+									src="/assets/img/akatsukigames/facebook.png"
+									alt="Facebook"
+								/>
+							</div>
+							<div class="search-container">
+								<form action="#" class="search-form" method="get">
+									<div class="search-content">
+										<input
+											class="search-input"
+											name="q"
+											size="24"
+											type="text"
+											value=""
+											placeholder="Buscar..."
+										/>
+										<input class="search-button" type="submit" value="" />
+									</div>
+								</form>
+							</div>
+						</nav>
+						<header class="site-header">
+							<img
+								src="/assets/img/akatsukigames/pain_render.png"
+								class="header-decoration"
+								alt="Pain"
+							/>
+							<div class="header-content">
+								<div class="header-text">
+									<div class="site-title-wrapper">
+										<h1 class="site-title">AkatsukiGames</h1>
+									</div>
+									<div class="site-description-wrapper">
+										<p class="site-description">O seu mundo de games.</p>
+									</div>
+								</div>
+							</div>
+							<div class="header-advertisement">
+								<div class="ad-widget">
+									<a href="/index.html"
+										><img
+											src="/assets/img/akatsukigames/banner_468x60.jpg"
+											alt="Banner publicitário"
+											width="468"
+											height="60"
+									/></a>
+								</div>
+							</div>
+						</header>
+						<div class="content-area">
+							<main class="main-content">
+								<section class="chat-section">
+									<div class="chat-widget">
+										<h2 class="widget-title">Xat AkatsukiGames</h2>
+										<div class="chat-content">
+											<iframe
+												src="https://xat.com/embed/chat.php#id=178349004&gn=AkatsukiGames"
+												width="100%"
+												height="486"
+												frameborder="0"
+												scrolling="no"
+												title="Chat AkatsukiGames"
+											></iframe>
+										</div>
+									</div>
+								</section>
+
+								<section class="blog-section">
+									<div class="blog-widget">
+										<div class="blog-posts-feed">
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														sábado, 22 de dezembro de 2012
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#"
+																	>Jogo Especial de Natal + Volta + Template
+																	Novo !</a
+																>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<p>
+																	Fala Galera ! Beleza? Aqui é o Dioji trazendo
+																	mais um Post ! Então galera.. eu não postava
+																	faz um bom Tempo porque estava em Aulas e
+																	Blablabla.. Estou de Férias faz um bom Tempo
+																	já, não estava postando nem nas Férias porque
+																	prefiro ficar jogando alguns jogos como
+																	Minecraft, MicroVolts e tal.. Mas então, estou
+																	voltando. Não vou estar postando sempre porque
+																	estou me dedicando a outras coisas como
+																	YouTube e Skype mais do que Blog. Hoje eu
+																	fiquei editando o Template do Blog, podem até
+																	conferir que está Novo ! Na minha Opnião ficou
+																	bem legal mesmo !
+																</p>
+																<p>
+																	Então vamos parar com BlaBlaBla e vamos ao que
+																	vocês estavam esperando ! Hoje eu estou
+																	trazendo um Jogo criado pela Marsh Games; e a
+																	FlashChaz, o jogo se chama Slay With Santa, ou
+																	seja; Mate com Papai Noel! Para jogá-lo clique
+																	na Imagem abaixo:
+																</p>
+																<div class="game-image-container">
+																	<img
+																		src="/assets/img/akatsukigames/slay_with_santa.jpg"
+																		alt="Slay With Santa game screenshot"
+																	/>
+																</div>
+																<div class="game-controls">
+																	<p>
+																		<strong
+																			>Setas controlam o Papai Noel.</strong
+																		>
+																	</p>
+																	<p><strong>[ Z ] Atira.</strong></p>
+																</div>
+																<p>
+																	<strong>Slay With Santa</strong>; é um jogo no
+																	qual Monstros como Zumbis, Olhos Alados, e
+																	tal.. invadiram a Fábrica do Papai Noel e
+																	comeram todos os presentes de Natal. Agora
+																	você tem que pegar os Presentes de volta com
+																	um rifle, atirando em todos os Monstros que vê
+																	! Os Monstros dropam Presentes quando você os
+																	mata ! O jogo tem <strong>4,4 MB.</strong
+																	><br />
+																	Espero que Gostem e Feliz Natal à Todos !
+																</p>
+																<p>' Tchau !</p>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2012-12-22T17:45:00-08:00"
+																				>17:45</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#"
+																			>Nenhum comentário</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">Natal</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														sexta-feira, 24 de agosto de 2012
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#">Aviso!</a>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<p>Olá pessoal.</p>
+																<p>
+																	Queria deixar o recado de que ninguém tem
+																	visitado o blog em muito tempo, então nem
+																	estou ligando mais para ele, pois ninguém quer
+																	postar, ninguém se oferece pra fazer um
+																	template, então por isso não estou quase nem
+																	aí mais pra ele. Não irei parar de postar nele
+																	e nem fecharei o blog, pelo menos pra sempre
+																	não. Vou fechá-lo até conseguirmos postadores,
+																	publicidade, parceiros e um bom template.
+																</p>
+																<p>
+																	É isso pessoal, pelos que ajudaram a fazer o
+																	blog crescer, eu agradeço muito mesmo de
+																	coração ;)
+																</p>
+																<p>-Dioji</p>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2012-08-24T18:53:00-07:00"
+																				>18:53</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#"
+																			>Nenhum comentário</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">Avisos</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														quarta-feira, 1 de agosto de 2012
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#">Como mudar a versão do Mine!</a>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<p>Fala galera!</p>
+																<p>
+																	Hoje vou ensinar como mudar a versão de seu
+																	Minecraft.
+																</p>
+																<p>
+																	Baixe o programa clicando
+																	<a href="#" class="download-link">AQUI!</a>
+																</p>
+																<p>
+																	1- Abra o programa "Minecraft Version Changer
+																	v13.0.msi" e baixe-o.
+																</p>
+																<p>
+																	2- Abra o Minecraft Version Changer que
+																	estiver com esse ícone:
+																</p>
+																<div class="tutorial-image">
+																	<img
+																		src="/assets/img/akatsukigames/mc_version_changer_icon.jpg"
+																		width="103"
+																		height="92"
+																		alt="Ícone do Minecraft Version Changer"
+																	/>
+																</div>
+																<p>
+																	3- Escolha a versão que deseja como na imagem
+																	a seguir:
+																</p>
+																<div class="tutorial-image">
+																	<img
+																		src="/assets/img/akatsukigames/mc_version_changer_interface.jpg"
+																		width="400"
+																		height="314"
+																		alt="Interface do Minecraft Version Changer"
+																	/>
+																</div>
+																<p>
+																	4- Clique em "Change Minecraft to selected
+																	version".
+																</p>
+																<p>5- Abra seu Minecraft.</p>
+																<p>
+																	Pronto! Seu Minecraft estará com a versão que
+																	você escolheu. Para deixar seu Minecraft na
+																	versão ATUAL, clique em "Force Minecraft to
+																	download latest version". Bem pessoal, espero
+																	que tenham gostado. Fui!
+																</p>
+																<div class="post-advertisement">
+																	<div class="ad-label">
+																		<strong>Publicidade:</strong>
+																	</div>
+																	<div class="ad-content">
+																		<a
+																			href="https://web.archive.org/web/20160211011817/https://piecetube.blogspot.com/"
+																			title="PieceTube - O seu mundo Otaku!"
+																		>
+																			<img
+																				src="/assets/img/akatsukigames/piecetube.png"
+																				alt="PieceTube banner"
+																			/>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2012-08-01T15:22:00-07:00"
+																				>15:22</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#"
+																			>Nenhum comentário</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">MineCraft</a>,
+																		<a href="#" rel="tag">Tutoriais</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														quinta-feira, 19 de julho de 2012
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#"
+																	>Naruto Shippuden - Shinobi Rumble - Download
+																	para Nintendo DS.</a
+																>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<div class="game-cover-image">
+																	<img
+																		src="/assets/img/akatsukigames/naruto_shinobi_rumble_cover.jpg"
+																		width="220"
+																		height="200"
+																		alt="Capa do jogo Naruto Shippuden Shinobi Rumble"
+																	/>
+																</div>
+																<p>
+																	Olá pessoal, aqui é o Dioji trazendo o
+																	Download de um dos jogos de Naruto Shippuden
+																	para Nintendo DS. Bem, eu to baixando ele
+																	então por enquanto eu não sei como se joga,
+																	mas eu li uma matéria sobre ele e parece bem
+																	legal. Dá pra perceber que o jogo é de Luta (
+																	óbvio ), você pode virar Naruto, Sasuke,
+																	Sakura, Sai, Jiraya, Orochimaru e outros dos
+																	personagens mais poderosos, a Akatsuki: Pain,
+																	Konan, Itachi, Deidara entre outros.
+																</p>
+																<div class="download-section">
+																	<a href="#" class="download-button"
+																		>Para fazer o Download clique aqui.</a
+																	>
+																</div>
+																<div class="game-screenshots">
+																	<h4>Imagens:</h4>
+																	<div class="screenshots-gallery">
+																		<img
+																			src="/assets/img/akatsukigames/naruto_shinobi_rumble_01.jpg"
+																			height="384"
+																			alt="Screenshot 1 do Naruto Shinobi Rumble"
+																		/>
+																		<img
+																			src="/assets/img/akatsukigames/naruto_shinobi_rumble_02.jpg"
+																			height="384"
+																			alt="Screenshot 2 do Naruto Shinobi Rumble"
+																		/>
+																		<img
+																			src="/assets/img/akatsukigames/naruto_shinobi_rumble_03.jpg"
+																			height="384"
+																			alt="Screenshot 3 do Naruto Shinobi Rumble"
+																		/>
+																	</div>
+																</div>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2012-07-19T11:03:00-07:00"
+																				>11:03</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#"
+																			>Nenhum comentário</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">Download</a>,
+																		<a href="#" rel="tag">Naruto</a>,
+																		<a href="#" rel="tag">Nintendo DS</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<!-- Esse post eu kibei do TecMundo na época kkkkkk -->
+											<!-- <div class="date-outer">
+                        <h2 class="date-header"><span>quarta-feira, 11 de janeiro de 2012</span></h2>
+
+                        <div class="date-posts">
+                          <div class="post-outer">
+                            <div class="post hentry">
+                              <a name="1249079396092827124"></a>
+                              <h3 class="post-title entry-title">
+                                <a href="#">Guia de Troféus e Conquistas &#8212; Naruto: Ultimate Ninja Storm 2</a>
+                              </h3>
+                              <div class="post-header">
+                                <div class="post-header-line-1"
+                                  ><span class="post-author vcard">
+                                    Postado por
+                                    <span class="fn">
+                                      <a href="#" itemprop="author" rel="author" title="Author profile">๖Dioji ×</a>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="post-body entry-content" id="post-body-1249079396092827124">
+                                <img
+                                  src="https://blogger.googleusercontent.com/assets/img/b/R29vZ2xl/AVvXsEgjeOWCfNhCcfhQz66wL8PG2lnhf-zCkY5QHTBiN77qPmUAjWTu71AlkL2PyIDayPb_kv17yEYKCbXx14EXWE8PLHUZeNTBsH-eDAEyL3CfWc6JkdiTUzvpnKWipd0lwcc1irzT2lK8_BNm/s400/img_normal.jpg"
+                                  style="
+                                    display: block;
+                                    margin: 0px auto 10px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    cursor: hand;
+                                    width: 400px;
+                                    height: 225px;
+                                  " />
+                                <p>1. Clear Prologue</p>
+                                <p>You've cleared the Prologue [Complete o prólogo]</p>
+                                <p>2. Clear Chapter One</p>
+                                <p>You've cleared Chapter One [Complete o Capítulo 1]</p>
+                                <p>3. Clear Chapter Two</p>
+                                <p>You've cleared Chapter Two [Complete o Capítulo 2]</p>
+                                <p>4. Clear Chapter Three</p>
+                                <p>You've cleared Chapter Three [Complete o Capítulo 3]</p>
+                                <p>5. Clear Chapter Four</p>
+                                <p>You've cleared Chapter Four [Complete o Capítulo 4]</p>
+                                <p>6. Clear Chapter Five</p>
+                                <p>You've cleared Chapter Five [Complete o Capítulo 5]</p>
+                                <p>7. Clear Chapter Six</p>
+                                <p>You've cleared Chapter Six [Complete o Capítulo 6]</p>
+                                <p>8. Clear Final Chapter</p>
+                                <p>You've cleared Final Chapter [Complete o Capítulo Final]</p>
+                                <p>9. Clear Fragment</p>
+                                <p>You've cleared Fragment [Complete o Capítulo "Fragment"]</p>
+                                <p>10. Naruto's Friends</p>
+                                <p
+                                  >You can now use members of Naruto's generation [Você pode usar agora os membros da "geração Naruto"]. Para abrir esse troféu
+                                  você precisa liberar os seguintes personagens com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Sai - 200,000</li>
+                                  <li>Kabuto - 220,000</li>
+                                </ul>
+                                <p>11. Naruto's Teachers</p>
+                                <p
+                                  >You can now use Kakashi, Yamato, Guy and Asuma [Você pode usar agora Kakashi, <br />Yamato, Guy e Asuma]. Para abrir esse
+                                  troféu você precisa liberar o seguinte personagem com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Yamato - 180,000</li>
+                                </ul>
+                                <p>12. Sand Village Friends</p>
+                                <p
+                                  >You can now use Gaara, Kankuro, Temari and Chiyo [Você pode usar agora Gaara, Kankuro, Temari e Chiyo]. Para abrir esse
+                                  troféu você precisa liberar o seguinte personagem com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Chiyo - 140,000</li>
+                                </ul>
+                                <p>13. The Legendary Sannin</p>
+                                <p
+                                  >You can now use Jiraiya, Tsunade and Orochimaru [Você pode usar agora Jiraiya, Tsunade e Orochimaru] Para abrir esse troféu
+                                  você precisa liberar os seguintes personagens com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Orochimaru - 240,000</li>
+                                  <li>Jiraiya - 440,000</li>
+                                  <li>Tsunade - 460,000</li>
+                                </ul>
+                                <p>14. Stealthy Akatsuki</p>
+                                <p
+                                  >You can now use all members of the Akatsuki [Você pode usar agora todos os membros da Akatsuki]. Para abrir esse troféu você
+                                  precisa liberar os seguintes personagens com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Deidara - 100,000</li>
+                                  <li>Kisame - 120,000</li>
+                                  <li>Sasori - 160,000</li>
+                                  <li>Hidan - 260,000</li>
+                                  <li>Kakuzu - 280,000</li>
+                                  <li>Itachi - 400,000</li>
+                                  <li>Konan - 480,000</li>
+                                  <li>Pain - 500,000</li>
+                                </ul>
+                                <p>15. Hebi on the Move</p>
+                                <p
+                                  >You can now use Sasuke, Suigetsu, Karin and Jugo [Você pode usar agora Sasuke, Suigetsu, Karin e Jugo]. Para abrir esse
+                                  troféu você precisa liberar os seguintes personagens com seus Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Suigetsu - 320,000</li>
+                                  <li>Karin - 340,000</li>
+                                  <li>Jugo - 360,000</li>
+                                </ul>
+                                <p>16. Assassin from Tekken 6</p>
+                                <p
+                                  >You can now use Lars [Agora você pode usar Lars]. Para abrir esse troféu você precisa liberar o seguinte personagem com seus
+                                  Storm Points:</p
+                                >
+                                <ul>
+                                  <li>Lars - 600,000</li>
+                                </ul>
+                                <p>17. All ninja assemble!</p>
+                                <p
+                                  >You can now use all characters [Agora você pode usar todos os personagens]. Para abrir esse troféu você precisa, além de
+                                  liberar todos os personagens pelos Storms Points, terminar o jogo e abrir o "Naruto Hokage Costume". Para abri-lo, vá até o
+                                  Mount Myoboku e investigue a estátua na casa dos sapos:</p
+                                >
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/WKDBBoDlOE8" frameborder="0" allowfullscreen></iframe>
+                                <p>18. Bell-Stealing Expert</p>
+                                <p>You've acquired S Rank in "The Bell-Stealing Drill" [Adquira o rank S em "The Bell-Stealing Drill"]</p>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/nHcL5kIP7Us" frameborder="0" allowfullscreen></iframe
+                                ><p>19 .Village Guardian</p>
+                                <p>You've acquired S Rank in "Sand and Art Blast" [Adquira o rank S em "Sand and Art Blast"]</p>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/4-w0xERF9TE" frameborder="0" allowfullscreen></iframe><br /><br />
+                                <p>20. At the mercy of Puppet Jutsu</p>
+                                <p>You've acquired S Rank in "Sakura Dances" [Adquira o rank S em "Sakura Dances"]</p>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/BMOuvUb-eX8" frameborder="0" allowfullscreen></iframe><br /><br />
+                                <p>21. Unstoppable Rampage</p>
+                                <p>You've acquired S Rank in "Forbidden Fury" [Adquira o rank S em "Forbidden Fury"]</p>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/qH8tjJjZEc0" frameborder="0" allowfullscreen></iframe><br /><br />
+                                <p>22. Difference in Growth</p>
+                                <p>You've acquired S Rank in "Showdown Between Best Friends" [Adquira o rank S em "Showdown Between Best Friends"]</p
+                                ><iframe width="560" height="315" src="//www.youtube.com/embed/PdNT_XLw-wI" frameborder="0" allowfullscreen></iframe
+                                ><p>23. Fourth Hokage's Back</p>
+                                <p>You've acquired S Rank in "Sturm und Drang" [Adquira o rank S em "Sturm und Drang"]</p>
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/GYgG4_y6vsM" frameborder="0" allowfullscreen></iframe
+                                ><p>24. Overflowing Hatred</p> <p>You've acquired S Rank in "The Two Uchiha" [Adquira o rank S em "The Two Uchiha"]</p
+                                ><iframe width="560" height="315" src="//www.youtube.com/embed/1vWArKFdF78" frameborder="0" allowfullscreen></iframe
+                                ><p>25. Overwhelming Sage</p>
+                                <p>You've acquired S Rank in "Battle Between the Sage God" [Adquira o rank S em "Battle Between the Sage God"]</p
+                                ><iframe width="560" height="315" src="//www.youtube.com/embed/0CVKLt8bJ_o" frameborder="0" allowfullscreen></iframe
+                                ><p>26. Vision of a New Wind</p> <p>You've acquired S Rank in "Earth Shatter" [Adquira o rank S em "Earth Shatter"]</p
+                                ><iframe width="560" height="315" src="//www.youtube.com/embed/rV-JiNxtS3s" frameborder="0" allowfullscreen></iframe
+                                ><br /><br />
+                                <p>27. The Unknowable Moment</p>
+                                <p>You've seen all secret factors [Veja todos os "secret factors"]</p>
+                                <p>28. Cursed dolls exterminated!</p>
+                                <p>You've retrieved all cursed dolls [Recupere todas as "cursed dolls"]</p
+                                ><iframe width="560" height="315" src="//www.youtube.com/embed/G1MJ1eSn9ok" frameborder="0" allowfullscreen></iframe
+                                ><p>29. Oink!!</p>
+                                <p>You've retrieved all Tonton's pearls [Recupere todas as pérolas da Tonton]</p>
+                                <p>30. Trial accomplished!</p>
+                                <p>You've cleared the 10 trials [Complete 10 desafios]</p>
+                                <p>31. Request Master</p>
+                                <p>You've cleared all requests [Complete todas as requisições].</p>
+                                <p>32. Ninja of Letters</p>
+                                <p>You've cleared all correspondence events [Complete todos os eventos por correspondência]</p>
+                                <p>33. All Friends Here!</p>
+                                <p>You've seen friendship events for everyone [Complete todos os eventos de amizade].</p>
+                                <p>34. Conquered all events!</p>
+                                <p>You've cleared all events [Complete todos os eventos]</p>
+                                <p>35. Nothing escapes you</p>
+                                <p>You've picked up 500 items [Pegue 500 itens]</p>
+                                <p>36. Wealth to move nations!</p>
+                                <p>Saved up 999999 Ryo [Acumule 999999 Ryo]</p>
+                                <p>37. Point Tycoon</p>
+                                <p>You've saved up 999999 Storm Points [Acumule 999999 Storm Points]</p>
+                                <p>38. I Love Ninja Tools!</p>
+                                <p>You've acquired all battle items [Adquira todos os itens de batalha].</p>
+                                <p>39. General Store Booming!</p>
+                                <p>You've collected all collection items [Colete todos os itens de coleção]</p>
+                                <p>40. The First Edit</p>
+                                <p>Edited a Ninja Info Card [Edite um cartão ninja de informação]</p>
+                                <p>41. Card Collector</p>
+                                <p>You've acquired all Ninja Info Cards [Adquira todos os cartões ninja de informação]</p>
+                                <p>42. Also Known As...</p>
+                                <p>You've gained 50 titles [Obtenha 50 títulos]</p>
+                                <p>43. Which name shall I use?</p>
+                                <p>You've acquired all titles [Obtenha todos os títulos].</p>
+                                <p>44. Message Ninja shocked!</p>
+                                <p
+                                  >You've collected all messenger birds [Obtenha todos os pássaros mensageiros]. Os pássaros podem ser encontrados nos seguintes
+                                  lugares:</p
+                                >
+                                <ul>
+                                  <li>Training Field</li>
+                                  <li>Desert of Wind</li>
+                                  <li>Tenchi Bridge</li>
+                                  <li>The Forest of Death</li>
+                                  <li>The Forest of Dead</li>
+                                  <li>Trees</li>
+                                  <li>The Forest of Quiet Movement</li>
+                                  <li>The Akatsuki Hideout (Land of Rivers)</li>
+                                  <li>The Hidden Leaf Forest</li>
+                                </ul>
+                                <p>45. Review Complete!</p>
+                                <p>You've seen all memories [Veja todas as memórias]</p>
+                                <p>46. Story Assembler</p>
+                                <p>Collected 100% of the stories [Obtenha 100% das histórias]</p>
+                                <p>47. Thanks for all your time!</p>
+                                <p>Your total play time is over 30 hours [Jogue 30 horas]</p>
+                                <p>48. On the Path to Ninja!</p>
+                                <p>You've won 1 time in online Ranked Match battles [Ganhe sua primeira batalha online rankeada]</p>
+                                <p>49. Dextrous Ninja</p>
+                                <p>You've won 10 times in online Ranked Match battles [Ganhe 10 batalhas online rankeadas]</p>
+                                <p>50. A perfect Storm Master</p>
+                                <p>You've acquired all trophies/achievements [Adquira todos os troféus/conquistas]</p>
+                                <div style="clear: both"></div>
+                              </div>
+                              <div class="post-footer">
+                                <div class="post-footer-line post-footer-line-1">
+                                  <span class="post-timestamp">
+                                    às
+                                    <a class="timestamp-link" href="#" title="Permanent link"
+                                      ><abbr class="published" itemprop="datePublished" title="2012-01-11T07:25:00-08:00">07:25</abbr></a
+                                    >
+                                  </span>
+                                  <span class="post-comment-link">
+                                    <a class="comment-link" href="#"> Um comentário: </a>
+                                  </span>
+                                  <span class="post-labels">
+                                    Relacionados a:
+                                    <a href="#" rel="tag">Guias</a>,
+                                    <a href="#" rel="tag">Naruto</a>
+                                  </span>
+                                </div>
+                                <div class="post-footer-line post-footer-line-2"></div>
+                                <div class="post-footer-line post-footer-line-3"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														sábado, 20 de agosto de 2011
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#">Letras grandes para transformice</a>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<div class="ascii-art">
+																	<p>
+																		noob=|¯¯| |¯| |¯¯¯| |¯¯¯| |¯¯¯) |_| __|
+																		|___| |___| |__¯)
+																	</p>
+																	<p>
+																		troll=|¯¯¯| |¯¯| |¯¯¯| |¯|_ |¯|_ ¯|_|¯ |¯¯\
+																		|___| |__| |___|
+																	</p>
+																	<p>
+																		LOL=|¯¯|__ /¯¯¯¯\ |¯¯|__ |____| \____/
+																		|____|
+																	</p>
+																	<p>
+																		lixo=|¯¯|__ |¯¯| \¯¯\/¯¯/ /¯¯¯\ |____| |__|
+																		/__/\__\ \___/
+																	</p>
+																	<p>
+																		fail=¯¯¯¯¯¯ |¯¯¯| ¯¯|¯¯ | |¯¯¯¯¯¯ |¯¯¯|
+																		__|__ |___
+																	</p>
+																	<p>
+																		narnia=l¯\l¯l../¯\.l¯¯).l¯\l¯ll¯l../¯\
+																		l_l\_l/_._\l_\_\l_l\_ll_l./__\
+																	</p>
+																</div>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2011-08-20T16:20:00-07:00"
+																				>16:20</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#">
+																			7 comentários</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">Transformice</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="blog-post">
+												<header class="post-date-header">
+													<h2 class="post-date">
+														sexta-feira, 19 de agosto de 2011
+													</h2>
+												</header>
+
+												<div class="post-content-wrapper">
+													<div class="post-container">
+														<div class="post-entry">
+															<h3 class="post-title">
+																<a href="#"
+																	>Jogo da semana - Infinite Tower RPG</a
+																>
+															</h3>
+															<div class="post-meta">
+																<span class="post-author">
+																	Postado por
+																	<a
+																		href="#"
+																		rel="author"
+																		title="Perfil do autor"
+																		>๖Dioji ×</a
+																	>
+																</span>
+															</div>
+															<div class="post-content">
+																<p>
+																	Pessoal, agora toda semana vai ter um jogo
+																	novo:
+																</p>
+																<div class="game-featured-image">
+																	<img
+																		src="/assets/img/akatsukigames/infinite_tower_rpg.jpg"
+																		alt="Infinite Tower RPG"
+																	/>
+																</div>
+															</div>
+															<footer class="post-footer">
+																<div class="post-footer-info">
+																	<span class="post-timestamp">
+																		às
+																		<a
+																			class="timestamp-link"
+																			href="#"
+																			title="Link permanente"
+																		>
+																			<time datetime="2011-08-19T15:25:00-07:00"
+																				>15:25</time
+																			>
+																		</a>
+																	</span>
+																	<span class="post-comments">
+																		<a class="comments-link" href="#"
+																			>Nenhum comentário</a
+																		>
+																	</span>
+																	<span class="post-tags"
+																		>Relacionados a:
+																		<a href="#" rel="tag">RPG</a>
+																	</span>
+																</div>
+															</footer>
+														</div>
+													</div>
+												</div>
+											</article>
+										</div>
+										<nav class="blog-pagination">
+											<span class="pagination-newer"> </span>
+											<span class="pagination-home"
+												><a href="#">Página inicial</a></span
+											>
+											<span class="pagination-older">
+												<a
+													class="older-posts-link"
+													href="#"
+													title="Postagens mais antigas"
+													>Postagens mais antigas</a
+												>
+											</span>
+										</nav>
+									</div>
+								</section>
+							</main>
+							<aside class="sidebar-wrapper">
+								<div class="sidebar-section">
+									<div class="followers-widget">
+										<h2 class="widget-title">Siga a AkatsukiGames</h2>
+										<div class="followers-content">
+											<div class="followers-count">
+												Seguidores (32)
+												<span
+													class="followers-navigation fake-link"
+													aria-label="Avançar"
+													role="button"
+													>Avançar
+												</span>
+											</div>
+											<div class="followers-grid" role="list">
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/deyvid_skate12.jpg"
+														alt="deyvid_skate12"
+														title="deyvid_skate12"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/♫♫รђµýล-кµи♫♫.jpg"
+														alt="♫♫รђµýล-кµи♫♫"
+														title="♫♫รђµýล-кµи♫♫"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Eliel Filho.jpg"
+														alt="Eliel Filho"
+														title="Eliel Filho"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Ricardo Lima.jpg"
+														alt="Ricardo Lima"
+														title="Ricardo Lima"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/wesley wesleyjunior_boy.jpg"
+														alt="wesley wesleyjunior_boy"
+														title="wesley wesleyjunior_boy"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/lucasangonese2011.jpg"
+														alt="lucasangonese2011"
+														title="lucasangonese2011"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Kattyzinha.gif"
+														alt="Kattyzinha"
+														title="Kattyzinha"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Gabriel.jpg"
+														alt="Gabriel"
+														title="Gabriel"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Isaa.jpg"
+														alt="Isaa :]"
+														title="Isaa :]"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Mah.jpg"
+														alt="Mah!"
+														title="Mah!"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/leonardo ortiz.jpg"
+														alt="leonardo ortiz"
+														title="leonardo ortiz"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Arthur.jpg"
+														alt="Arthur"
+														title="Arthur"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Marie.jpg"
+														alt="Marie"
+														title="Marie"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Vitoor.jpg"
+														alt="Vitoor"
+														title="Vitoor"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Bebela.jpg"
+														alt="~  Bebela"
+														title="~  Bebela"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/João.jpg"
+														alt="João"
+														title="João"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Murillo 16.jpg"
+														alt="Murillo 16"
+														title="Murillo 16"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/thuxd.jpg"
+														alt="thuxd"
+														title="thuxd"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Kaminari No Kuni.jpg"
+														alt="Kaminari No Kuni"
+														title="Kaminari No Kuni"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/Lucas Spetic.jpg"
+														alt="Lucas Spetic"
+														title="Lucas Spetic"
+													/>
+												</div>
+												<div class="follower-item">
+													<img
+														class="follower-avatar"
+														src="/assets/img/akatsukigames/Seguidores/FRANKDARK-ThigorMathos.jpg"
+														alt="•FRANK•DARK - Thigor◘Mathos"
+														title="•FRANK•DARK - Thigor◘Mathos"
+													/>
+												</div>
+											</div>
+											<div class="follow-button-container">
+												<span class="follow-button fake-link">Seguir</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+				<footer class="site-footer">
+					<div class="footer-content">
+						<div class="footer-credits">
+							©2012 <a href="#">AkatsukiGames</a>. Original Design by
+							<a href="http://www.cyberoptik.net">Chicago Web Design Company</a
+							>, Modified by
+							<a href="https://mozartsempiano.com/">mozartsempiano</a>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

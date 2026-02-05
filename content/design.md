@@ -33,3 +33,4 @@ created: 2026-02-04T16:33
 
 - [Chia Amisola](https://chia.design/)
 - [ARK Studio](https://www.ark.studio/)
+- [R▲](https://opacity.ru/)
