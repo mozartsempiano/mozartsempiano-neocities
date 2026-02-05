@@ -1,176 +1,205 @@
 (function injectDitherDuotoneAll() {
-  function getCssVariable(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+	const style = document.createElement("style");
+	style.id = "dither-style";
+	style.innerHTML = `
+  figure:has(img[src^="blob:"]) {
+    display: block;
   }
 
-  function hexToRgb(hex) {
-    hex = hex.replace("#", "");
-    if (hex.length === 3)
-      hex = hex
-        .split("")
-        .map((c) => c + c)
-        .join("");
-    const bigint = parseInt(hex, 16);
-    return {
-      r: (bigint >> 16) & 255,
-      g: (bigint >> 8) & 255,
-      b: bigint & 255,
-    };
+  figure:has(img[src$=".jpg"]),
+  figure:has(img[src$=".jpeg"]),
+  figure:has(img[src$=".webp"]),
+  figure:has(img[src$=".png"]) {
+    display: none;
   }
+  `;
+	document.head.appendChild(style);
 
-  // Pega direto do CSS
-  const DUOTONE_PALETTE = [hexToRgb(getCssVariable("--clr-white")), hexToRgb(getCssVariable("--clr-black-a0"))];
+	function getCssVariable(name) {
+		return getComputedStyle(document.documentElement)
+			.getPropertyValue(name)
+			.trim();
+	}
 
-  const BAYER_8X8 = [
-    [0, 32, 8, 40, 2, 34, 10, 42],
-    [48, 16, 56, 24, 50, 18, 58, 26],
-    [12, 44, 4, 36, 14, 46, 6, 38],
-    [60, 28, 52, 20, 62, 30, 54, 22],
-    [3, 35, 11, 43, 1, 33, 9, 41],
-    [51, 19, 59, 27, 49, 17, 57, 25],
-    [15, 47, 7, 39, 13, 45, 5, 37],
-    [63, 31, 55, 23, 61, 29, 53, 21],
-  ];
+	function hexToRgb(hex) {
+		hex = hex.replace("#", "");
+		if (hex.length === 3)
+			hex = hex
+				.split("")
+				.map((c) => c + c)
+				.join("");
+		const bigint = parseInt(hex, 16);
+		return {
+			r: (bigint >> 16) & 255,
+			g: (bigint >> 8) & 255,
+			b: bigint & 255,
+		};
+	}
 
-  function getLuminosity(r, g, b) {
-    return 0.299 * r + 0.587 * g + 0.114 * b;
-  }
+	// Pega direto do CSS
+	const DUOTONE_PALETTE = [
+		hexToRgb(getCssVariable("--clr-white")),
+		hexToRgb(getCssVariable("--clr-black-a0")),
+	];
 
-  function applyBayerDither2Colors(imageData) {
-    const pixels = imageData.data;
-    const width = imageData.width;
-    const height = imageData.height;
+	const BAYER_8X8 = [
+		[0, 32, 8, 40, 2, 34, 10, 42],
+		[48, 16, 56, 24, 50, 18, 58, 26],
+		[12, 44, 4, 36, 14, 46, 6, 38],
+		[60, 28, 52, 20, 62, 30, 54, 22],
+		[3, 35, 11, 43, 1, 33, 9, 41],
+		[51, 19, 59, 27, 49, 17, 57, 25],
+		[15, 47, 7, 39, 13, 45, 5, 37],
+		[63, 31, 55, 23, 61, 29, 53, 21],
+	];
 
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        const i = (y * width + x) * 4;
-        const r = pixels[i];
-        const g = pixels[i + 1];
-        const b = pixels[i + 2];
+	function getLuminosity(r, g, b) {
+		return 0.299 * r + 0.587 * g + 0.114 * b;
+	}
 
-        const luminosity = getLuminosity(r, g, b);
-        const threshold = BAYER_8X8[y % 8][x % 8];
-        const normalizedThreshold = (threshold / 64) * 255;
+	function applyBayerDither2Colors(imageData) {
+		const pixels = imageData.data;
+		const width = imageData.width;
+		const height = imageData.height;
 
-        const color = luminosity > normalizedThreshold ? DUOTONE_PALETTE[0] : DUOTONE_PALETTE[1];
-        if (pixels[i + 3] !== 0) {
-          pixels[i] = color.r;
-          pixels[i + 1] = color.g;
-          pixels[i + 2] = color.b;
-        }
-      }
-    }
+		for (let y = 0; y < height; y++) {
+			for (let x = 0; x < width; x++) {
+				const i = (y * width + x) * 4;
+				const r = pixels[i];
+				const g = pixels[i + 1];
+				const b = pixels[i + 2];
 
-    return imageData;
-  }
+				const luminosity = getLuminosity(r, g, b);
+				const threshold = BAYER_8X8[y % 8][x % 8];
+				const normalizedThreshold = (threshold / 64) * 255;
 
-  function getMaxWidthPx() {
-    const value = getComputedStyle(document.documentElement).getPropertyValue("--main-width").trim();
+				const color =
+					luminosity > normalizedThreshold
+						? DUOTONE_PALETTE[0]
+						: DUOTONE_PALETTE[1];
+				if (pixels[i + 3] !== 0) {
+					pixels[i] = color.r;
+					pixels[i + 1] = color.g;
+					pixels[i + 2] = color.b;
+				}
+			}
+		}
 
-    if (!value.endsWith("px")) return null;
-    return parseFloat(value);
-  }
+		return imageData;
+	}
 
-  function isSupportedImage(img) {
-    const src = img.currentSrc || img.src;
-    return /\.(png|jpe?g|webp)$/i.test(src);
-  }
+	function getMaxWidthPx() {
+		const value = getComputedStyle(document.documentElement)
+			.getPropertyValue("--main-width")
+			.trim();
 
-  function imageToCanvas(img) {
-    const maxWidth = getMaxWidthPx();
-    const naturalW = img.naturalWidth;
-    const naturalH = img.naturalHeight;
+		if (!value.endsWith("px")) return null;
+		return parseFloat(value);
+	}
 
-    let targetW = naturalW;
-    let targetH = naturalH;
+	function isSupportedImage(img) {
+		const src = img.currentSrc || img.src;
+		return /\.(png|jpe?g|webp)$/i.test(src);
+	}
 
-    if (maxWidth && naturalW > maxWidth) {
-      const ratio = naturalH / naturalW;
+	function imageToCanvas(img) {
+		const maxWidth = getMaxWidthPx();
+		const naturalW = img.naturalWidth;
+		const naturalH = img.naturalHeight;
 
-      if (img.id === "imgPrincipal") {
-        targetW = maxWidth; // imagem principal usa maxWidth completo
-      } else {
-        targetW = maxWidth / 2; // outras usam metade
-      }
+		let targetW = naturalW;
+		let targetH = naturalH;
 
-      targetH = Math.round(targetW * ratio);
-    }
+		if (maxWidth && naturalW > maxWidth) {
+			const ratio = naturalH / naturalW;
 
-    const canvas = document.createElement("canvas");
-    canvas.width = targetW;
-    canvas.height = targetH;
+			if (img.id === "imgPrincipal") {
+				targetW = maxWidth; // imagem principal usa maxWidth completo
+			} else {
+				targetW = maxWidth / 2; // outras usam metade
+			}
 
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0, targetW, targetH);
+			targetH = Math.round(targetW * ratio);
+		}
 
-    return canvas;
-  }
+		const canvas = document.createElement("canvas");
+		canvas.width = targetW;
+		canvas.height = targetH;
 
-  async function processImage(img) {
-    return new Promise((resolve, reject) => {
-      try {
-        const canvas = imageToCanvas(img);
-        const ctx = canvas.getContext("2d", { willReadFrequently: true });
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		const ctx = canvas.getContext("2d");
+		ctx.drawImage(img, 0, 0, targetW, targetH);
 
-        applyBayerDither2Colors(imageData);
-        ctx.putImageData(imageData, 0, 0);
+		return canvas;
+	}
 
-        canvas.toBlob((blob) => {
-          if (blob) resolve(blob);
-          else reject(new Error("Falha ao criar blob"));
-        }, "image/png");
-      } catch (error) {
-        reject(error);
-      }
-    });
-  }
+	async function processImage(img) {
+		return new Promise((resolve, reject) => {
+			try {
+				const canvas = imageToCanvas(img);
+				const ctx = canvas.getContext("2d", { willReadFrequently: true });
+				const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-  async function processAllImages() {
-    const images = Array.from(document.querySelectorAll("img")).filter(
-      (img) => !img.dataset.ditherProcessed && isSupportedImage(img),
-    );
+				applyBayerDither2Colors(imageData);
+				ctx.putImageData(imageData, 0, 0);
 
-    for (const img of images) {
-      try {
-        if (!img.complete) {
-          await new Promise((resolve, reject) => {
-            img.onload = resolve;
-            img.onerror = () => reject(new Error("Falha ao carregar imagem"));
-            setTimeout(() => reject(new Error("Timeout ao carregar imagem")), 10000);
-          });
-        }
+				canvas.toBlob((blob) => {
+					if (blob) resolve(blob);
+					else reject(new Error("Falha ao criar blob"));
+				}, "image/png");
+			} catch (error) {
+				reject(error);
+			}
+		});
+	}
 
-        if (img.naturalWidth === 0 || img.naturalHeight === 0) continue;
+	async function processAllImages() {
+		const images = Array.from(document.querySelectorAll("img")).filter(
+			(img) => !img.dataset.ditherProcessed && isSupportedImage(img),
+		);
 
-        const ditherBlob = await processImage(img);
-        img.src = URL.createObjectURL(ditherBlob);
-        img.dataset.ditherProcessed = "true";
-      } catch (e) {
-        console.error("Erro ao processar imagem:", e);
-        img.dataset.ditherProcessed = "error";
-      }
-    }
-  }
+		for (const img of images) {
+			try {
+				if (!img.complete) {
+					await new Promise((resolve, reject) => {
+						img.onload = resolve;
+						img.onerror = () => reject(new Error("Falha ao carregar imagem"));
+						setTimeout(
+							() => reject(new Error("Timeout ao carregar imagem")),
+							10000,
+						);
+					});
+				}
 
-  function run() {
-    processAllImages();
+				if (img.naturalWidth === 0 || img.naturalHeight === 0) continue;
 
-    const mo = new MutationObserver(() => {
-      processAllImages();
-    });
+				const ditherBlob = await processImage(img);
+				img.src = URL.createObjectURL(ditherBlob);
+				img.dataset.ditherProcessed = "true";
+			} catch (e) {
+				console.error("Erro ao processar imagem:", e);
+				img.dataset.ditherProcessed = "error";
+			}
+		}
+	}
 
-    mo.observe(document.documentElement || document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["src"],
-    });
-  }
+	function run() {
+		processAllImages();
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run);
-  } else {
-    run();
-  }
+		const mo = new MutationObserver(() => {
+			processAllImages();
+		});
+
+		mo.observe(document.documentElement || document.body, {
+			childList: true,
+			subtree: true,
+			attributes: true,
+			attributeFilter: ["src"],
+		});
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", run);
+	} else {
+		run();
+	}
 })();

@@ -29,6 +29,8 @@ title: Budismo
 8. Nunca se deixe entristecer por uma separação.
    - - Escolher pensar constantemente ou se deter na partida triste de amigos e entes queridos nos impede de seguir em frente com nossas vidas. Musashi acreditava que, como não havia maneira de trazer os mortos de volta, deveríamos permanecer no momento presente e escolher seguir adiante.
 
+![>](/assets/img/bitter.jpg)
+
 9. Ressentimento e reclamação não são apropriados nem para si mesmo nem para os outros.
    - As pessoas frequentemente tendem a reclamar quando surgem problemas, mas o ensinamento de Musashi era que isso pode prejudicar nossa força mental e nos manter presos ao passado. Em vez de reclamar, deixe que seus problemas passem por você enquanto sua mente permanece calma no momento.
 
@@ -65,4 +67,4 @@ title: Budismo
 
 21. Nunca se afaste do Caminho.
 
-![](/assets/img/bitter.jpg)
+![](/assets/img/vagabond_kind.jpg "Vagabond (1998-)")

@@ -27,6 +27,7 @@ created: 2026-02-04T16:33
 - Star Wars: Battlefront II (2005)
 - Vampire Savior: The Lord of Vampire (1997)
 - The Wolf Among Us (2013)
+- [Yume Nikki (2004)](/yume-nikki/)
 
 [Mais no Backloggd](https://backloggd.com/u/mozartsempiano/list/favoritos/)
 

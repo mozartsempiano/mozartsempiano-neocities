@@ -30,6 +30,8 @@ created: 2026-02-04T16:33
 - Não entrar em um modo de pensar escasso → "dentre 8 bilhões de pessoas eu só quero você" → eu acabo limitando minhas opções a fim de confortar o meu ego → eu devo saber o meu valor.
 - Não desabafar. Lide sozinho.
 
+![](/assets/img/time_will_pass.jpg)
+
 ## Como eu quero ser percebido e o que eu devo fazer pra alcançar isso?
 
 - Quase ninguém lembra das coisas que você disse, mas sobre como você fez eles se sentirem. As pessoas gostam de você se você as faz se sentirem importantes e valorizadas.
@@ -64,6 +66,8 @@ created: 2026-02-04T16:33
 - Aceitar a minha própria idiotice. Todos nós somos idiotas. É normal fracassar, aceite isso.
 
 ## Quem eu quero ser:
+
+![>](/assets/img/perceived.jpg)
 
 - Uma pessoa que seja calma, reservada e reflexiva, mesmo em momentos difíceis, que expressa seus sentimentos de maneira saudável.
 

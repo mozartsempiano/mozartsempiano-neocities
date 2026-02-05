@@ -18,6 +18,8 @@ Na pasta do site, abre servidor localhost:8000.
 
 ### Node.js
 
+![>](/assets/img/cowboy_bebop_ed_computer.gif "Cowboy Bebop (1998)")
+
 Agora, programando em [Node.js](https://nodejs.org/):
 
 `npx install`

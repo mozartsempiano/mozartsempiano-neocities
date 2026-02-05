@@ -215,6 +215,7 @@ h5 {
 	line-height: 1.15;
 	color: var(--clr-white);
 	letter-spacing: 0.1em;
+	overflow: hidden;
 }
 
 h1,
@@ -441,8 +442,8 @@ main figure {
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--padding-body) / 2);
-	/* margin-left: auto;
-  margin-right: auto; */
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 50%;
 	width: fit-content;
 }
@@ -727,6 +728,7 @@ ul > li {
 	position: relative;
 	padding-left: 1em;
 	padding-bottom: 0.25em;
+	overflow: hidden;
 }
 
 ul > li::before {
