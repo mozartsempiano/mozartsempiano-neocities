@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Música
-imgPrincipal: /assets/img/music_board.webp
+imgPrincipal: /assets/img/music_board.jpg
 imgPrincipalCaption: Boomerang III Live Looping Pedal
 created: 2026-02-04T16:33
 ---

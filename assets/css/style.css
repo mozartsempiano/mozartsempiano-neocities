@@ -128,13 +128,8 @@ main {
 	width: 100%;
 	height: auto;
 	max-width: var(--main-width);
-	gap: 0.5rem;
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	flex: 1;
+	direction: ltr;
 	/* margin-left: auto;
 	margin-right: auto; */
 }
@@ -189,6 +184,10 @@ footer.page-footer a#scroll-top:hover svg {
 	font-size: 0.8em;
 }
 
+.footnotes .footnote-backref {
+	user-select: none;
+}
+
 /* Typography */
 body > *,
 body main > *,
@@ -197,12 +196,12 @@ main q,
 main cite,
 main pre,
 main code {
-	margin-bottom: 1rem !important;
+	margin-bottom: 1.2rem !important;
+	line-height: 160%;
 	text-wrap: wrap;
 }
 
 main p {
-	line-height: 160%;
 	margin: 0;
 	text-align: justify;
 }
@@ -219,11 +218,11 @@ h5 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	font-weight: bold;
 }
 
-h3,
 h4,
 h5 {
 	font-weight: normal;
@@ -237,7 +236,7 @@ main > h1#tituloPagina {
 	--cor-titulo: var(--clr-white);
 	--cor-underline: var(--clr-gray-a40);
 
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: var(--cor-titulo);
 	margin: 0;
 	margin-bottom: 2rem !important;
@@ -246,7 +245,7 @@ main > h1#tituloPagina {
 	font-weight: bold;
 	text-wrap: wrap;
 	border-bottom: 1px solid var(--cor-underline);
-	padding-bottom: 1rem;
+	padding-bottom: 0.5rem;
 
 	/* &:before {
     content: "";
@@ -299,11 +298,15 @@ main > h1#tituloPagina {
 main:has(h2#subtitulo) > h1#tituloPagina {
 	margin-bottom: 0.5rem !important;
 }
+main:not(:has(h2#subtitulo)) > h1#tituloPagina {
+	margin-bottom: 2rem !important;
+}
 
 main > h2#subtitulo {
 	font-size: 1rem;
 	font-weight: normal;
 	margin-top: 0;
+	margin-bottom: 2rem !important;
 	color: var(--clr-gray-a50);
 }
 main > h2#subtitulo::after {
@@ -312,7 +315,7 @@ main > h2#subtitulo::after {
 
 h2 {
 	font-size: 1.4em;
-	margin-top: 1rem;
+	margin-top: 2.25rem;
 }
 h2::after {
 	content: "";
@@ -327,8 +330,7 @@ h2::after {
 
 h3 {
 	font-size: 1.2em;
-	font-size: 1em;
-	text-decoration: underline solid;
+	margin-top: 1.5rem;
 }
 
 h3.subtitulo {
@@ -343,6 +345,12 @@ h4 {
 
 small {
 	font-size: 0.8em;
+}
+
+kbd {
+	border: 1px solid;
+	padding: 0 0.2rem;
+	border-radius: 0.25rem;
 }
 
 /* Strikethrough */
@@ -439,6 +447,24 @@ main figure {
 	width: fit-content;
 }
 
+main figure:has(img[alt$=">"]) {
+	float: right;
+	margin: 2rem 0 2rem 2rem;
+}
+
+main figure:has(img[alt$="<"]) {
+	float: left;
+	margin: 2rem 2rem 2rem 0;
+}
+
+main figure:has(img[alt$="><"]) {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	float: none !important;
+}
+
 main img {
 	width: 100%;
 	height: auto;
@@ -461,6 +487,8 @@ main figcaption {
 	border: 1px solid #333;
 	padding: 1rem 1.4rem;
 	margin-top: 2rem;
+	display: inline-block;
+	width: 100%;
 }
 
 h1.backlinks-title {
@@ -518,16 +546,11 @@ main div#postDates {
 	line-height: initial;
 	color: var(--clr-gray-a50);
 	text-align: right;
+	width: 100%;
 }
 
 main div#postDates::before {
 	content: "//";
-}
-
-@media (max-width: 468px) {
-	header.page-header {
-		flex-direction: column;
-	}
 }
 
 /* ----------------------------------------------
@@ -600,8 +623,8 @@ a:active:not(.button) {
 main a:link:not(.button),
 main a:visited:not(.button),
 main a:active:not(.button) {
-	color: inherit;
-	background-color: var(--clr-gray-a20);
+	color: var(--clr-main-a30);
+	background-color: transparent;
 }
 
 a:has(p),
@@ -696,6 +719,10 @@ ul {
 	text-align: left;
 }
 
+ul:has(> li:nth-child(5)) {
+	column-count: 2;
+}
+
 ul > li {
 	position: relative;
 	padding-left: 1em;
@@ -734,16 +761,24 @@ ul > li::before {
 }
 
 @media (max-width: 1024px) {
-	main {
-		flex-direction: column;
-	}
 }
 
 @media (max-width: 770px) {
+	body {
+		padding: 12vh 6vw;
+	}
+
 	main {
 		max-width: 100%;
-		gap: 6px;
 		padding: 0;
+	}
+
+	header.page-header {
+		flex-direction: column;
+	}
+
+	ul {
+		column-count: 1;
 	}
 }
 

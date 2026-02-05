@@ -2,6 +2,8 @@
 layout: default
 title: Cyberpunk
 created: 2026-02-04T16:33
+imgPrincipal: /assets/img/blade-runner-02.jpg
+imgPrincipalCaption: Blade Runner (1982)
 ---
 
 Cyberpunk é um subgênero da ficção científica que retrata futuros distópicos, dominados por megacorporações, onde tecnologia avançada coexiste com uma sociedade decadente, marginalização e opressão sistêmica.
