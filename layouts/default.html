@@ -23,7 +23,7 @@
 				<span id="creationDate">
 					<label>Publicado:</label> <span>{{ created | formatDateTime }}</span>
 				</span>
-				{% assign updated = page | lastModified %} {% if updated > created %}
+				{% assign updated = page | lastModified %} {% if updated > created %} ::
 				<span id="modifiedDate">
 					<label>Modificado:</label> <span>{{ updated | formatDateTime }}</span>
 				</span>

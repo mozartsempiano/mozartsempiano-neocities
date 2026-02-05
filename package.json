@@ -8,11 +8,24 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.0",
-    "markdown-it": "^13.0.0",
+    "markdown-it": "^13.0.2",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-footnote": "^3.0.3"
   },
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0"
-  }
+  },
+  "description": "",
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozartsempiano/wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozartsempiano/wiki/issues"
+  },
+  "homepage": "https://github.com/mozartsempiano/wiki#readme"
 }

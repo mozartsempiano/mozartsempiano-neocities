@@ -20,6 +20,8 @@ module.exports = function (eleventyConfig) {
 			});
 		});
 
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
 	// --- Move páginas pro root ---
 	eleventyConfig.addGlobalData("eleventyComputed", {
 		permalink: (data) => {

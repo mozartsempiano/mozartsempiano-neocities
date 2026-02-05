@@ -146,6 +146,15 @@ footer.page-footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+footer.page-footer svg.lucide-copyright {
+	width: 1rem;
+	height: 1rem;
+	min-width: 16px;
+	min-height: 16px;
 }
 
 footer.page-footer a#scroll-top {
