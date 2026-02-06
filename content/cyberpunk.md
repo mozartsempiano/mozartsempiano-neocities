@@ -2,7 +2,7 @@
 layout: default
 title: Cyberpunk
 created: 2026-02-04T16:33
-imgPrincipal: /assets/img/blade-runner-02.jpg
+imgPrincipal: /assets/img/blade-runner-01.jpg
 imgPrincipalCaption: Blade Runner (1982)
 ---
 

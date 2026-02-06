@@ -2,13 +2,17 @@
 layout: default
 title: Animação Híbrida
 created: 2026-02-03T10:45
+imgPrincipal: /assets/img/animacao_hibrida/who_framed_roger_rabbit.jpg
+imgPrincipalCaption: Uma Cilada para Roger Rabbit (1988)
 ---
 
 A **animação híbria** é um formato de [animação](/animacao/) que mistura duas ou mais técnicas distintas, como live action e desenho animado ou 2D e 3D.
 
-A seguinte dissertação foi retirada do [meu Trabalho de Conclusão de Curso](/bate-papo-canino/).
+A seguinte dissertação foi retirada do [meu Trabalho de Conclusão de Curso](/bate-papo-canino/). Você pode ler ele por completo [aqui](/assets/pdf/TCC%20-%20Mozart%20Raul%20Mattar%20-%20Bate-Papo%20Canino.pdf).
 
 ## Origem
+
+![>](/assets/img/animacao_hibrida/alice_comedies.jpg "Alice Comedies (1923)")
 
 Segundo Faria, a evolução tecnológica no campo da animação tem revolucionado tanto a produção dessas obras quanto a experiência do público nos últimos anos.[^1] Atualmente, a fusão de diferentes mídias, como animação 2D, 3D, stop motion e live action, é uma tendência de mercado em relação à animação tradicional. Um conceito que vem ganhando atenção especial é o da animação híbrida, que envolve a integração de múltiplas técnicas animadas em uma única obra. É um fenômeno perceptível principalmente em obras a partir da década de 1980 até os dias atuais que se deve à evolução tecnológica nessa área.
 
@@ -18,11 +22,13 @@ Historicamente, o uso da hibridização entre live-action e animação pode ser 
 
 Nos anos 1980, a introdução de CGI (Computer Generated Imagery) abriu novas possibilidades para a hibridização e possibilitou a integração mais fluida entre animação 2D e 2D, com experimentos como o teste de John Lasseter para ‘Where the Wild Things Are’ (1983), baseado no livro infantil ‘Onde Vivem os Monstros’ (que, posteriormente, recebeu [uma adaptação live action](/onde-vivem-os-monstros/)), sendo um bom exemplo de uma dessas tentativas.
 
+![](/assets/img/animacao_hibrida/where_the_wild_things_are_hybrid.jpg "Tteste de ‘Where the Wild Things Are’ (1983)")
+
 ## Animação híbrida na contemporaneidade
 
-Na animação moderna, especialmente em [animes](/anime/) e em outras [séries](/series/) animadas, a fusão dos dois estilos tornou-se uma prática comum e que muitas vezes acaba se tornando imperceptível ao espectador comum. O filme ‘Homem-Aranha no Aranhaverso’ (2018) e a sua sequência ‘Homem-Aranha: Através do Aranhaverso’7 8 (2023) são exemplos contemporâneos que exploram essa combinação de uma forma nunca vista até então, misturando técnicas 2D e 3D para criar uma estética visual única, trazendo o estilo e a atmosfera dos quadrinhos para um tipo de mídia diferente.
+Na animação moderna, especialmente em [animes](/anime/) e em outras [séries](/series/) animadas, a fusão dos dois estilos tornou-se uma prática comum e que muitas vezes acaba se tornando imperceptível ao espectador comum. O filme ‘Homem-Aranha no Aranhaverso’ (2018) e a sua sequência ‘Homem-Aranha: Através do Aranhaverso’ (2023) são exemplos contemporâneos que exploram essa combinação de uma forma nunca vista até então, misturando técnicas 2D e 3D para criar uma estética visual única, trazendo o estilo e a atmosfera dos quadrinhos para um tipo de mídia diferente.
 
-‘Klaus’ (2019), é outro exemplo de filme que mistura elementos 2D e 3D. O9 longa segue o mesmo percurso de produção de uma animação 2D digital tradicional, onde inicialmente se fazem os rascunhos, em seguida há a limpeza das linhas, a aplicação de cores e, por fim, trabalha-se com a luz e as texturas, um passo que, normalmente, estaria reservado à animação 3D.
+‘Klaus’ (2019), é outro exemplo de filme que mistura elementos 2D e 3D. O longa segue o mesmo percurso de produção de uma animação 2D digital tradicional, onde inicialmente se fazem os rascunhos, em seguida há a limpeza das linhas, a aplicação de cores e, por fim, trabalha-se com a luz e as texturas, um passo que, normalmente, estaria reservado à animação 3D.
 
 A produção também se destacou pelo desenvolvimento do software KlaS (Klaus Light and Shadow), uma ferramenta criada exclusivamente para ser usada no desenvolvimento do filme. Com a ajuda de [inteligência artificial](/ia/), o programa permite a aplicação de luz e sombra tridimensionais sobre os personagens bidimensionais, criando uma estética tridimensional sem abandonar as raízes da animação 2D. Um outro software foi utilizado para a aplicação das texturas, de forma semelhante à descrita. O processo, no entanto, não é isento de erros e precisa que artistas confirmem e ajustem manualmente os detalhes feitos pela ferramenta. Ainda assim, o Klas acaba sendo uma ferramenta muito valiosa por poupar bastante tempo da equipe de produção, que, assim, consegue se dedicar mais ao processo criativo.
 
@@ -34,7 +40,7 @@ Segundo O’Hailey, o sucesso na hibridização pode ser medido pela invisibilid
 
 > Olhando através de todos eles, pode-se descobrir que existe uma medida que determina se a combinação 2D/3D foi bem-sucedida ou não. Como todos os especialistas em entretenimento visual que trabalham arduamente sabem (…), é bem-sucedido se o nosso trabalho for invisível. Se o nosso estilo visual criar uma imagem homogénea que transmita a emoção da história, se o nosso registo for bem executado e os pontos de contacto não se abanarem, (…), se o nosso trabalho não for visível e se a história for contada sem interrupção, então os nossos esforços têm sido bem-sucedidos.
 >
-> Tina O’Hailey, 2010
+> Tina O’Hailey, 2010[^2]
 
 [^1]: FARIA, Francisca Lowndes de Abreu Teixeira de. O impacto da animação híbrida no futuro da animação. 2022. – IADE-U: [s.n.].
 

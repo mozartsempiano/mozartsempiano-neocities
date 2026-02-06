@@ -67,6 +67,7 @@ title: Cinema
 |     | 2011      | Capitão América: O Primeiro Vingador      | Joe Johnston                                |
 |     | 2003      | Carandiru                                 | Hector Babenco                              |
 |     | 2008      | Cavaleiro das Trevas                      | Christopher Nolan                           |
+|     | 2001      | Cidade dos Sonhos                         | David Lynch                                 |
 |     | 2010      | Cisne Negro                               | Darren Aronofsky                            |
 |     | 2004      | Closer                                    | Mike Nichols                                |
 |     | 2008      | Cloverfield                               | Matt Reeves                                 |
@@ -124,6 +125,7 @@ title: Cinema
 |     | 2010      | Origem                                    | Christopher Nolan                           |
 |     | 2007      | Pixar Short Films: Volume 1               | Vários                                      |
 |     | 2011      | Planeta dos Macacos: A Origem             | Rupert Wyatt                                |
+|     | 2003      | Premonição 2                              | David R. Ellis                              |
 |     | 2002      | Prenda-me Se For Capaz                    | Steven Spielberg                            |
 |     | 2011      | Princesa e o Piloto                       | Jun Shishido                                |
 |     | 2003      | Procurando Nemo                           | Andrew Stanton, Lee Unkrich                 |
@@ -144,11 +146,13 @@ title: Cinema
 |     | 1972      | Snoopy: O Cachorro é Seu, Charlie Brown   | Bill Melendez                               |
 |     | 1999      | South Park: Maior, Melhor e Sem Cortes    | Trey Parker                                 |
 |     | 2006      | Superman: O Retorno                       | Bryan Singer                                |
+|     | 1976      | Taxi Driver                               | Martin Scorsese                             |
 |     | 2012      | Ted                                       | Seth MacFarlane                             |
 |     | 2007      | Turma da Mônica: Uma Aventura no Tempo    | José Márcio Nicolosi                        |
 |     | 2014      | Uma Aventura Lego                         | Phil Lord, Christopher Miller               |
 |     | 1987      | Uma Noite Alucinante 2                    | Sam Raimi                                   |
 |     | 2009      | Up                                        | Pete Docter, Bob Peterson                   |
+|     | 2005      | V de Vingança                             | James McTeigue                              |
 |     | 2013      | Wolverine Imortal                         | James Mangold                               |
 
 ## Links úteis
