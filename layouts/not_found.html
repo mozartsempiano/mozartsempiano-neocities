@@ -2,13 +2,18 @@
 <html lang="en">
 	<head>
 		{% include 'head.html' %}
+
+		<style>
+			main {
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
 	</head>
 	<body>
-		{% include 'header.html' %}
+		<!-- {% include 'header.html' %} -->
 		<main>
-			<div class="memory-fragment">
-				<h1 class="glitch">Página não encontrada</h1>
-				<pre>
+			<pre>
         a8      ,a888a,            a8   
       ,d88    ,8P"' `"Y8,        ,d88   
      a8P88   ,8P       Y8,      a8P88   
@@ -20,11 +25,12 @@
         88    `8ba, ,ad8'          88   
         88      "Y888P"            88   
             </pre
-				>
-				<a href="/">vamos para casa</a>
-			</div>
+			>
+			<h1 class="glitch">Página não encontrada</h1>
+			<a href="/">vamos para casa</a>
 		</main>
 
-		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}
+		<!-- {% include 'footer.html' %} -->
+		{% include 'scripts_bottom.html' %}
 	</body>
 </html>

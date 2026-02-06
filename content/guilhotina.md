@@ -7,7 +7,7 @@ created: 2026-02-04T16:33
 
 > Instrumento que, por meio de uma lâmina afiada, era usado para decapitar os condenados à morte. Condenação à morte por decapitação.
 
-Ela recebeu esse nome em homenagem ao médico francês Joseph-Ignace Guillotin, que, ironicamente, era contra a pena de morte. Ao perceber que ele não podia fazer as [pessoas](/misantropia/) largarem a ideia da pena de morte, Guillotin tentou criar um mecanismo que permitisse uma morte rápida e, consequentemente, não tão dolorosa.
+Ela recebeu esse nome em homenagem ao médico francês Joseph-Ignace Guillotin, que, ironicamente, era contra a pena de morte. Ao perceber que ele não podia fazer as [pessoas](/humanidade/) largarem a ideia da pena de morte, Guillotin tentou criar um mecanismo que permitisse uma morte rápida e, consequentemente, não tão dolorosa.
 
 Não sei por quê, mas já tem um tempo que eu ando pensando bastante nessa palavra. Talvez seja a sonoridade, o significado que ela carrega ou até a história por trás dela?
 
