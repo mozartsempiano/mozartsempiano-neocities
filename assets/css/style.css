@@ -135,6 +135,7 @@ main {
 
 footer.page-footer {
   text-align: left;
+  margin-top: 4rem;
   padding: 2.5rem 1rem;
   font-size: 0.84rem;
   display: flex;
@@ -152,7 +153,6 @@ footer.page-footer svg.lucide-copyright {
 }
 
 footer.page-footer a#scroll-top {
-  margin-left: auto;
   height: 4vh;
   width: 4vh;
   min-height: 24px;
