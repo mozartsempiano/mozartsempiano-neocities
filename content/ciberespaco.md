@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Neocities
+title: Ciberespaço
 ---
 
 ## Links úteis
+
+### Neocities
 
 - [Meu Neocities](https://neocities.org/site/mozartsempiano)
 - [Daliwali](https://daliwali.neocities.org/)
