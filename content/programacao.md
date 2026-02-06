@@ -2,14 +2,18 @@
 layout: default
 title: Programação
 created: 2026-02-04T16:33
+imgPrincipal: /assets/img/ed_cowboy_bebop_floor.jpg
+imgPrincipalCaption: Cowboy Bebop (1998)
 ---
 
 ## Visual Studio Code
 
-- **Ctrl + K, Ctrl + F** - Corrigir indentação
-- **Ctrl + K, Ctrl + C** - Comentar linha
-- **Ctrl + K, Ctrl + 0** - Fechar todas as seções
-- **Ctrl + ,** - Abrir configurações
+### Padrão
+
+- **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>F</kbd>** - Corrigir indentação
+- **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>C</kbd>** - Comentar linha
+- **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>0</kbd>** - Fechar todas as seções
+- **<kbd>Ctrl</kbd> + <kbd>,</kbd>** - Abrir configurações
 
 ## Terminal
 
@@ -24,7 +28,8 @@ Agora, programando em [Node.js](https://nodejs.org/):
 
 `npx install`
 `npx eleventy --serve`
-Pra abrir localhost:8080.
+
+Para abrir localhost:8080.
 
 Caso não tenha Node no computador e não tenha permissão de administrador pra baixar, baixar o .zip dele pelo site oficial, extrair em alguma pasta, como C:\Users\User, e usar:
 
@@ -34,11 +39,21 @@ Caso não tenha Node no computador e não tenha permissão de administrador pra 
 
 ## Links úteis
 
-### Geral
+### Software
+
+- [VS Code](https://code.visualstudio.com/download)
+  - Extensão [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - Extensão [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+- [Zed](https://zed.dev/download)
+- [Notepad++](https://notepad-plus-plus.org/downloads/)
+
+### Materiais
+
+#### Geral
 
 - [QuickRef](https://quickref.me/) - Dicas e referências rápidas pra vários serviços
 
-### Desenvolvimento web
+#### Desenvolvimento web
 
 - [W3Schools](https://www.w3schools.com/)
 - [DIY Web for Beginners](https://hnr.fyi/diy_websites/workshop/)

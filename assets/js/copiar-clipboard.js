@@ -1,75 +1,70 @@
-// copiar-clipboard.js
-const textoTitle = "Clique para copiar";
-const timeout = 6000;
+(() => {
+  const HIDE_DELAY = 2000;
+  let notif, hideTimer;
 
-// Função para inicializar o <pre>
-function setupPre(el) {
-	el.style.cursor = "pointer";
-	/* el.setAttribute("title", textoTitle);
-	el.setAttribute("data-smt-title", textoTitle); */
-}
+  // injeta CSS uma única vez
+  const style = document.createElement("style");
+  style.textContent = `
+    code { cursor: pointer; }
 
-// Notificação visual no canto inferior direito
-function showCopyNotification(msg, isError = false) {
-	let notif = document.getElementById("copy-notification");
-	if (!notif) {
-		notif = document.createElement("div");
-		notif.id = "copy-notification";
-		notif.style.position = "fixed";
-		notif.style.bottom = "20px";
-		notif.style.right = "20px";
-		notif.style.background = isError ? "#c0392b" : "#2ecc40";
-		notif.style.color = isError ? "#fff" : "#111";
-		notif.style.padding = "10px 16px";
-		notif.style.borderRadius = "6px";
-		notif.style.fontFamily = "inherit";
-		notif.style.fontSize = "1em";
-		notif.style.opacity = "0";
-		notif.style.pointerEvents = "none";
-		notif.style.transition = "opacity 0.3s, transform 0.3s";
-		notif.style.transform = "translateY(20px)";
-		notif.style.zIndex = "1000";
-		document.body.appendChild(notif);
-		// Força reflow para garantir animação na primeira vez
-		void notif.offsetWidth;
-	} else {
-		// Remove classes e força reflow para reiniciar animação
-		notif.classList.remove("notifError", "notifSuccess");
-		void notif.offsetWidth;
-	}
-	notif.textContent = msg;
-	notif.style.background = isError ? "#c0392b" : "#2ecc40";
-	notif.style.color = isError ? "#fff" : "#111";
-	notif.className = isError ? "notifError" : "notifSuccess";
-	notif.style.opacity = "1";
-	notif.style.transform = "translateY(0)";
-	clearTimeout(notif._timeout);
-	notif._timeout = setTimeout(() => {
-		notif.style.opacity = "0";
-		notif.style.transform = "translateY(20px)";
-	}, 2000);
-}
+    #copy-notification {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--b-radius);
+      font-family: inherit;
+      font-size: 1em;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .3s, transform .3s;
+      z-index: 1000;
+      background-color: var(--clr-black-a10);
+      color: var(--clr-white);
+      border-width: 0 0 0 4px;
+      border-style: solid;
+    }
 
-// Aplica aos <pre> já existentes
-document.querySelectorAll("pre.copiavel").forEach(setupPre);
+    #copy-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+  document.head.appendChild(style);
 
-// Delegação de clique para <pre> dinâmicos ou existentes
-document.body.addEventListener("click", (e) => {
-	const el = e.target;
-	if (el.tagName === "PRE" && el.closest(".copiavel")) {
-		// if (!el.hasAttribute("data-smt-title"))
-		setupPre(el);
+  function ensureNotification() {
+    if (notif) return notif;
 
-		navigator.clipboard
-			.writeText(el.innerText)
-			.then(() => {
-				showCopyNotification("Copiado!", false);
-				setTimeout(() => setupPre(el), timeout);
-			})
-			.catch(() => {
-				showCopyNotification("Erro ao copiar!", true);
-				console.error("Erro ao copiar!");
-				setTimeout(() => setupPre(el), timeout);
-			});
-	}
-});
+    notif = document.createElement("div");
+    notif.id = "copy-notification";
+    document.body.appendChild(notif);
+    return notif;
+  }
+
+  function notify(text, isError = false) {
+    const el = ensureNotification();
+
+    el.textContent = text;
+    el.style.borderColor = isError ? "var(--clr-red-a30)" : "var(--clr-green-a30)";
+
+    el.classList.remove("show");
+    void el.offsetWidth; // garante animação sempre
+    el.classList.add("show");
+
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      el.classList.remove("show");
+    }, HIDE_DELAY);
+  }
+
+  document.body.addEventListener("click", (e) => {
+    const code = e.target.closest("code");
+    if (!code) return;
+
+    navigator.clipboard
+      .writeText(code.textContent)
+      .then(() => notify("Copiado! ദ്ദി(˶>⩊<˵)"))
+      .catch(() => notify("Erro ao copiar. (ᗒᗣᗕ)՞", true));
+  });
+})();

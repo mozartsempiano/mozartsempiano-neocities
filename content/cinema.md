@@ -3,6 +3,8 @@ layout: default
 title: Cinema
 ---
 
+- [Diário midiático](/cinema-log/)
+
 ## Filmes e séries favoritos
 
 - Alien (1979)

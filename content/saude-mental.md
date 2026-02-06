@@ -39,7 +39,7 @@ created: 2026-02-04T16:33
 - Compartilhar suas imperfeições e constrangimentos como se não fossem nada demais, pra ajudar a crescer a sua confiança; não tratar como se fosse vergonhoso, mas natural. Honestidade é a chave.
 - Assuma o que você fizer ou não faça.
 - Elogiar as pessoas por coisas nas quais elas estão trabalhando e buscando melhorar.
-- Guiar a conversa pra um tópico que a pessoa goste; perguntar o que ela acha de algo ou o que em específico faz ela gostar desse algo. Fazer associações com temas semelhantes. Ex: Kanye West perguntando o que acha da capa do álbum dele pra que ele possa, eventualmente, falar sobre saúde mental.
+- Guiar a conversa pra um tópico que a pessoa goste; perguntar o que ela acha de algo ou o que em específico faz ela gostar desse algo. Fazer associações com temas semelhantes.
 - Ser honesto com as pessoas sobre o que eu acho que é melhor pra elas mesmas, mesmo que não seja melhor para mim.
 - Se importar com os outros mesmo que não seja conveniente.
 - Demonstrar linguagem corporal; não deixar a timidez e o nervosismo tomar conta (colocar mãos nos bolsos ou cruzar os braços).
@@ -65,65 +65,67 @@ created: 2026-02-04T16:33
 - Sorria.
 - Aceitar a minha própria idiotice. Todos nós somos idiotas. É normal fracassar, aceite isso.
 
-## Quem eu quero ser:
+## Autoconhecimento
+
+### Quem eu quero ser:
 
 ![>](/assets/img/perceived.jpg)
 
 - Uma pessoa que seja calma, reservada e reflexiva, mesmo em momentos difíceis, que expressa seus sentimentos de maneira saudável.
 
-## Coisas que me fazem bem:
+### Coisas que me fazem bem:
 
 - Silêncio e paz
 - Escrever
 - Ouvir música
 
-## Coisas que me fazem mal:
+### Coisas que me fazem mal:
 
 - Muito barulho
 - Muitas luzes
 - Multidões
 - Passar o dia com o cabelo sujo
 
-## Valores que quero cultivar:
+### Valores que quero cultivar:
 
 - Empatia, honestidade, gratidão, equilíbrio, disciplina, independência, respeito mútuo com quem amo.
 
-## Comportamentos que quero erradicar:
+### Comportamentos que quero erradicar:
 
 - Autoexposição em excesso em redes sociais ou para aqueles que não confio tanto assim;
 - Continuar oferecendo mais do que recebo em relacionamentos;
-- Constantemente ignorar red flags nas pessoas.
+- Constantemente ignorar [red flags](/romance/#red-flags) nas pessoas.
 
-## Coisas que me fazem sentir bem e que quero cultivar mais:
+### Coisas que me fazem sentir bem e que quero cultivar mais:
 
 - Andar de [bicicleta](/ciclismo/) ou caminhar;
 - Tomar sol;
 - Escrever pra mim mesmo ao invés de compartilhar com os outros;
 - Escrever mais, no geral, especialmente em um diário físico. Talvez começar um novo sketchbook.
 
-## Limites que quero estabelecer:
+### Limites que quero estabelecer:
 
-- Não aceitar manipulação, abuso, ou piadas desrespeitosas sobre mim, ou minha vida;
+- Não aceitar manipulação, abuso, ou piadas desrespeitosas sobre mim e minha vida;
 - Reservar meu tempo e energia para pessoas que também me valorizam;
 - Me afastar de ambientes ou pessoas tóxicas que afetam meu equilíbrio emocional;
 - Não fingir ser algo que não sou para agradar os outros, mantendo minha individualidade sem medo de julgamento.
 
-## Comportamentos que não aceitarei em outras pessoas:
+### Comportamentos que não aceitarei em outras pessoas:
 
-- Desrespeito contínuo – Não permitirei grosserias, piadas ofensivas que ultrapassem meus limites ou qualquer tipo de menosprezo, seja em piadas ou atitudes;
+- Desrespeito contínuo – Não permitirei grosserias, menosprezo ou piadas estúpidas que ultrapassem meus limites;
 - Faltas de consideração em momentos em que preciso de apoio;
 - Manipulação emocional – Não deixarei que tentem me fazer sentir culpa por algo que não fiz ou que já reconheci que fiz e me desculpei;
 - Desvalorização – Não permitirei que diminuam minhas conquistas, opiniões ou sentimentos;
-- Falta de reciprocidade – Só investirei meu tempo e energia naqueles que investem em mim na mesma medida;
+- Falta de reciprocidade – Só investirei meu tempo e energia naqueles que investem em mim no mesmo nível;
 - Vitimismo constante – Não quero conviver com pessoas que nunca assumem responsabilidade pelos próprios erros, e que são orgulhosas demais para se desculparem;
 - Fofocas e falsidade – Não quero conviver com quem espalha boatos ou com quem é dissimulado e fala mal dos outros pelas costas;
 - Falta de comprometimento – Não quero conviver com quem não cumpre promessas ou constantemente desmarca compromissos sem consideração por mim;
 - Negatividade e amargura – Não quero estar perto de pessoas que se alimentam de negatividade e parecem reclamar de tudo a todo momento.
 
-## Qualidade de amizades que busco:
+### Qualidade de amizades que busco:
 
-- Reciprocidade – Quero amizades que sejam recíprocas, onde ambos os lados investem no relacionamento;
+- Reciprocidade – Quero amizades que sejam recíprocas, onde ambos investem no relacionamento;
 - Respeito – Quero estar perto de pessoas que respeitam meus limites, opiniões e sentimentos;
 - Empatia – Quero amizades com pessoas que se importam com o que sinto e demonstrem consideração pelas minhas emoções, pessoas que saibam me ouvir e me respeitar quando eu preciso de apoio;
-- Confiança e lealdade – Quero amigos que possam guardar segredos e com quem eu sinto que posso compartilhar o que penso sem medo de como vão reagir;
+- Confiança e lealdade – Quero amigos que possam guardar segredos e com quem sinto que posso compartilhar o que penso sem medo de como vão reagir;
 - Sinceridade – Quero amigos que sejam honestos comigo, mesmo quando a verdade não for o que quero ouvir.

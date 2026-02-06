@@ -1,0 +1,19 @@
+.lastModif {
+  font-size: 0.75rem;
+}
+
+ol {
+  column-count: 3;
+}
+
+@media (max-width: 1024px) {
+  ol {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 770px) {
+  ol {
+    column-count: 1;
+  }
+}

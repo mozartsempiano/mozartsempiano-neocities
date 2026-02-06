@@ -1,5 +1,5 @@
 ---
 layout: curriculo
-title: Currículo de {% site.author %}
+title: Currículo de Mozart
 css: curriculo.css
 ---

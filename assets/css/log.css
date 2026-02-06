@@ -57,19 +57,20 @@ table tbody tr td:nth-child(3)::after {
 /* Nota */
 table tbody tr td:nth-child(4):not(:empty) {
   margin-left: 1rem;
-  color: var(--clr-green-a50);
+  /* color: var(--clr-green-a50); */
   outline: 1px solid;
   padding: 0.1rem 1rem;
   border-radius: 50px;
+  font-size: 1rem;
 }
 table tbody tr td:nth-child(4):not(:empty)::after {
   content: "";
   mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22m234.54-132.5%2065.85-275.63L82.63-593.46%20368-617.91l112-259.92%20112%20260.92%20285.37%2023.45-217.76%20185.33%2065.85%20275.63L480-278.91%20234.54-132.5Z%22%2F%3E%3C%2Fsvg%3E");
   -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20viewBox%3D%220%20-960%20960%20960%22%3E%3Cpath%20d%3D%22m234.54-132.5%2065.85-275.63L82.63-593.46%20368-617.91l112-259.92%20112%20260.92%20285.37%2023.45-217.76%20185.33%2065.85%20275.63L480-278.91%20234.54-132.5Z%22%2F%3E%3C%2Fsvg%3E");
-  height: 16px;
+  height: 1em;
   aspect-ratio: 1/1;
   margin-left: 0.5rem;
-  background-color: var(--clr-green-a50);
+  background-color: currentColor;
 }
 
 /* Rewatch */
@@ -132,7 +133,7 @@ table tbody tr:has(td:nth-child(6):empty) {
     font-size: 0.9rem;
   }
   td:nth-child(4):not(:empty)::after {
-    height: 14px;
+    height: 1em;
   }
 
   td:nth-child(7) {
