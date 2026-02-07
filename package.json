@@ -8,13 +8,20 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.0",
+    "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "cheerio": "^1.2.0",
+    "jimp": "^1.6.0",
     "markdown-it": "^13.0.2",
     "markdown-it-attrs": "^4.3.1",
-    "markdown-it-footnote": "^3.0.3"
+    "markdown-it-footnote": "^3.0.3",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.8.1"
   },
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "markdown-it-anchor": "^9.2.0"
+    "dotenv": "^17.2.4",
+    "markdown-it-anchor": "^9.2.0",
+    "node-fetch": "^3.3.2"
   },
   "description": "",
   "main": ".eleventy.js",
