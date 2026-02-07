@@ -98,6 +98,53 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("assets");
 
+  // Tabe of contents
+  eleventyConfig.addFilter("toc", (html) => {
+    if (!html) return "";
+    const re = /<h([2-4])[^>]*id="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
+    const items = [];
+    let m;
+    while ((m = re.exec(html))) {
+      items.push({
+        level: Number(m[1]),
+        id: m[2],
+        content: m[3],
+      });
+    }
+    if (!items.length) return "";
+
+    let htmlOut = "<nav class='toc'><ol>";
+    let prevLevel = 2;
+
+    for (const item of items) {
+      while (item.level > prevLevel) {
+        htmlOut += "<ol>";
+        prevLevel++;
+      }
+      while (item.level < prevLevel) {
+        htmlOut += "</ol>";
+        prevLevel--;
+      }
+      htmlOut += `<li><a href="#${item.id}">${item.content}</a></li>`;
+    }
+
+    while (prevLevel > 2) {
+      htmlOut += "</ol>";
+      prevLevel--;
+    }
+
+    htmlOut += "</ol></nav>";
+    return htmlOut;
+  });
+
+  eleventyConfig.addFilter("tocCount", (html) => {
+    if (!html) return 0;
+    const re = /<h([2-4])[^>]*id="([^"]+)"[^>]*>.*?<\/h\1>/gi;
+    let count = 0;
+    while (re.exec(html)) count++;
+    return count;
+  });
+
   // Coleções
   eleventyConfig.addCollection("content", (collection) =>
     collection.getFilteredByGlob(["content/**/*.md", "index.md"]),

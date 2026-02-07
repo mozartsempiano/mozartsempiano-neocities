@@ -91,7 +91,7 @@ header.page-header a.page-header__logo svg {
   }
 }
 
-nav {
+header.page-header nav {
   display: flex;
   gap: var(--padding-body);
 }
@@ -178,7 +178,7 @@ footer.page-footer a#scroll-top svg {
   width: 1rem;
   min-height: 20px;
   min-width: 20px;
-  transition: 0.3s;
+  transition: var(--transition-time);
 }
 
 footer.page-footer a#scroll-top:hover svg {
@@ -389,7 +389,7 @@ code {
   overflow: auto;
   font-size: 0.84rem;
   outline: 0;
-  transition: box-shadow 0.2s;
+  transition: box-shadow var(--transition-time);
 }
 
 code:hover {
@@ -740,10 +740,90 @@ a:active img {
 }
 
 /* ========================================= */
+/* Details */
+/* ========================================= */
+details {
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: var(--b-radius);
+  transition: 0.15s background linear;
+  &:hover {
+    background: var(--clr-black-a10);
+  }
+}
+
+summary::before {
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-info-icon lucide-info' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4m0-4h.01'/%3E%3C/svg%3E");
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 0.3ch;
+  vertical-align: baseline;
+  pointer-events: none;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 16px;
+  min-height: 16px;
+  width: 1em;
+  height: 1em;
+  background: var(--svg) no-repeat center center / contain;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+  background-blend-mode: color-dodge;
+  transition: var(--transition-time);
+}
+
+summary {
+  list-style: none;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  user-select: none;
+}
+
+details > *:not(summary) {
+  cursor: auto;
+  background: var(--clr-black-a10);
+  padding: 15px;
+  width: 250px;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  border-radius: var(--b-radius);
+}
+
+details[open] > *:not(summary) {
+  animation: animateDown var(--transition-time) linear forwards;
+  z-index: 100;
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+/* ========================================= */
 /* Listas */
 /* ========================================= */
 
 ol {
+  list-style-type: upper-roman;
   margin: 0.5em 0 1em 0;
 }
 
@@ -785,6 +865,50 @@ ul > li::before {
   position: absolute;
   left: 0;
   top: 0.2em;
+}
+
+/* ========================================= */
+/* Table of contents */
+/* ========================================= */
+
+main details.toc-wrapper {
+  display: block;
+  width: fit-content;
+  max-width: 300px;
+  border: 1px solid var(--clr-gray-a40);
+  padding: 0;
+  font-size: 0.9rem;
+  margin: 0 1rem 1rem 0;
+}
+
+main details.toc-wrapper summary:first-of-type {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+main details.toc-wrapper summary:first-of-type::before {
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-table-of-contents-icon lucide-table-of-contents'%3E%3Cpath d='M16 5H3'/%3E%3Cpath d='M16 12H3'/%3E%3Cpath d='M16 19H3'/%3E%3Cpath d='M21 5h.01'/%3E%3Cpath d='M21 12h.01'/%3E%3Cpath d='M21 19h.01'/%3E%3C/svg%3E");
+}
+
+main details.toc-wrapper > *:not(summary) {
+}
+
+main nav.toc ol {
+  margin: 0 auto;
+  column-count: 1 !important;
+}
+
+main nav.toc ol li {
+  margin-bottom: 0.1em;
+}
+
+main nav.toc ol li::marker {
+  color: var(--clr-gray-a50);
+}
+
+main nav.toc ol li a {
+  word-wrap: break-word;
 }
 
 /* ========================================= */

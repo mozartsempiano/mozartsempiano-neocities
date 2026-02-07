@@ -37,7 +37,7 @@
 
   window.addEventListener("load", function () {
     preloader.style.opacity = "0";
-    preloader.style.transition = "opacity 0.3s ease";
+    preloader.style.transition = "opacity var(--transition-time) ease";
     preloader.style.transitionDelay = "0.4s";
     setTimeout(() => {
       if (preloader.parentNode) preloader.parentNode.removeChild(preloader);

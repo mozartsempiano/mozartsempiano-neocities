@@ -81,50 +81,50 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 
 ## Autoconhecimento
 
-### Quem eu quero ser:
+### Quem eu quero ser
 
 ![>](/assets/img/perceived.jpg)
 
 - Uma pessoa que seja calma, reservada e reflexiva, mesmo em momentos difíceis, que expressa seus sentimentos de maneira saudável.
 
-### Coisas que me fazem bem:
+### Coisas que me fazem bem
 
 - Silêncio e paz
 - Escrever
 - Ouvir música
 
-### Coisas que me fazem mal:
+### Coisas que me fazem mal
 
 - Muito barulho
 - Muitas luzes
 - Multidões
 - Passar o dia com o cabelo sujo
 
-### Valores que quero cultivar:
+### Valores que quero cultivar
 
 - Empatia, honestidade, gratidão, equilíbrio, disciplina, independência, respeito mútuo com quem amo.
 
-### Comportamentos que quero erradicar:
+### Comportamentos que quero erradicar
 
 - Autoexposição em excesso em redes sociais ou para aqueles que não confio tanto assim;
 - Continuar oferecendo mais do que recebo em relacionamentos;
 - Constantemente ignorar [red flags](/romance/#red-flags) nas pessoas.
 
-### Coisas que me fazem sentir bem e que quero cultivar mais:
+### Coisas que me fazem sentir bem e que quero cultivar mais
 
 - Andar de [bicicleta](/ciclismo/) ou caminhar;
 - Tomar sol;
 - Escrever pra mim mesmo ao invés de compartilhar com os outros;
 - Escrever mais, no geral, especialmente em um diário físico. Talvez começar um novo sketchbook.
 
-### Limites que quero estabelecer:
+### Limites que quero estabelecer
 
 - Não aceitar manipulação, abuso, ou piadas desrespeitosas sobre mim e minha vida;
 - Reservar meu tempo e energia para pessoas que também me valorizam;
 - Me afastar de ambientes ou pessoas tóxicas que afetam meu equilíbrio emocional;
 - Não fingir ser algo que não sou para agradar os outros, mantendo minha individualidade sem medo de julgamento.
 
-### Comportamentos que não aceitarei em outras pessoas:
+### Comportamentos que não aceitarei em outras pessoas
 
 - Desrespeito contínuo – Não permitirei grosserias, menosprezo ou piadas estúpidas que ultrapassem meus limites;
 - Faltas de consideração em momentos em que preciso de apoio;
@@ -136,7 +136,7 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 - Falta de comprometimento – Não quero conviver com quem não cumpre promessas ou constantemente desmarca compromissos sem consideração por mim;
 - Negatividade e amargura – Não quero estar perto de pessoas que se alimentam de negatividade e parecem reclamar de tudo a todo momento.
 
-### Qualidade de amizades que busco:
+### Qualidade de amizades que busco
 
 - Reciprocidade – Quero amizades que sejam recíprocas, onde ambos investem no relacionamento;
 - Respeito – Quero estar perto de pessoas que respeitam meus limites, opiniões e sentimentos;
