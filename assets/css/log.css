@@ -70,6 +70,7 @@ div.movie-log.with-review > div {
   padding: 0.3rem 1rem;
   border-radius: 50px;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .movie-log .tags {
