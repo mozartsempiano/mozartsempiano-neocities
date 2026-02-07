@@ -486,11 +486,11 @@ main figure {
   padding: 0;
   display: flex;
   flex-direction: column;
-  /* gap: calc(var(--padding-body) / 2); */
   margin-left: auto;
   margin-right: auto;
   max-width: 50%;
   width: fit-content;
+  gap: 0.3rem;
 }
 
 main figure:has(img[alt$=">"]) {
