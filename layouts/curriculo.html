@@ -1,89 +1,75 @@
 <!doctype html>
-<html lang="pt-BR">
-	<head>
-		{% include 'head.html' %}
-	</head>
-	<body>
-		<header id="site-header">
-			<span>Currículo</span>
-			<button id="gerar-pdf" onclick="gerarPDF()">Gerar PDF</button>
-			<span id="hora-atual"></span>
-		</header>
-		<main>
-			<header>
-				<div id="header-content">
-					<div id="header-title">
-						<h1>{{site.author}}</h1>
-						<h2>Designer</h2>
-					</div>
-					<section>
-						<span>Bauru, SP - Brasil</span>
-						<span
-							><a href="https://mozartsempiano.com" target="_blank"
-								>mozartsempiano.com</a
-							></span
-						>
-						<span
-							><a href="mailto:mozartmt@protonmail.com"
-								>mozartmt@protonmail.com</a
-							></span
-						>
-					</section>
-					<nav class="table-of-contents">
-						<a href="#experiencia">Experiência</a>
-						<a href="#educacao">Educação</a>
-						<a href="#cursos">Cursos Extracurriculares</a>
-						<a href="#conhecimentos">Conhecimentos</a>
-						<a href="#projetos">Projetos</a>
-					</nav>
-				</div>
-			</header>
-			<section id="experiencia" class="page-section">
-				<h2>Experiência</h2>
-				<ul>
-					<li>
-						<h3>Designer Freelancer</h3>
-						<time>2018 - Presente</time>
-						<p>
-							Criação de logotipos e identidades visuais, edição de vídeo e
-							imagem, e desenvolvimento de materiais gráficos como pôsteres,
-							flyers, cartões de visita, convites, panfletos, revistas e livros.
-							Atuação em branding, diagramação e direção de arte para clientes
-							diversos. Web design.
-						</p>
-					</li>
-					<li>
-						<h3>Auxiliar de Designer Gráfico | Rotu Label</h3>
-						<time>2025 Set - Presente</time>
-						<p>
-							Gestão de documentos e materiais impressos. Vetorização e
-							padronização de logotipos. Criação de artes para rótulos, estampas
-							e materiais gráficos, com atenção à consistência visual,
-							tipografia e detalhamento técnico. Participação ativa em processos
-							de produção e impressão.
-						</p>
-					</li>
-					<li>
-						<h3>Estagiário de Design de Moda | GS Wear</h3>
-						<time>2024 Abr - Dez</time>
-						<p>
-							Desenvolvimento de estampas para vestuário esportivo. Operação de
-							impressoras sublimáticas e DTF (Direct to Film). Atendimento ao
-							cliente, com foco em organização, gestão de tempo, proatividade,
-							adaptabilidade e trabalho em equipe.
-						</p>
-					</li>
-					<li>
-						<h3>Designer | Pinus Brasil Móveis Planejados</h3>
-						<time>2022 Jan - Ago</time>
-						<p>
-							Criação de conteúdo para mídias sociais, design digital, produção
-							audiovisual e ilustração. Desenvolvimento de identidades visuais e
-							branding. Criação de site e realização de cálculos de orçamentos.
-							Atuação direta com atendimento ao cliente e comunicação visual.
-						</p>
-					</li>
-					<!-- <li>
+<html lang="pt-br">
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body>
+    <header id="site-header">
+      <span>Currículo</span>
+      <button id="gerar-pdf" onclick="gerarPDF()">Gerar PDF</button>
+      <span id="hora-atual"></span>
+    </header>
+    <main>
+      <header>
+        <div id="header-content">
+          <div id="header-title">
+            <h1>{{site.author}}</h1>
+            <h2>Designer</h2>
+          </div>
+          <section>
+            <span>Bauru, SP - Brasil</span>
+            <span><a href="https://mozartsempiano.com" target="_blank">mozartsempiano.com</a></span>
+            <span><a href="mailto:mozartmt@protonmail.com">mozartmt@protonmail.com</a></span>
+          </section>
+          <nav class="table-of-contents">
+            <a href="#experiencia">Experiência</a>
+            <a href="#educacao">Educação</a>
+            <a href="#cursos">Cursos Extracurriculares</a>
+            <a href="#conhecimentos">Conhecimentos</a>
+            <a href="#projetos">Projetos</a>
+          </nav>
+        </div>
+      </header>
+      <section id="experiencia" class="page-section">
+        <h2>Experiência</h2>
+        <ul>
+          <li>
+            <h3>Designer Freelancer</h3>
+            <time>2018 - Presente</time>
+            <p>
+              Criação de logotipos e identidades visuais, edição de vídeo e imagem, e desenvolvimento de materiais
+              gráficos como pôsteres, flyers, cartões de visita, convites, panfletos, revistas e livros. Atuação em
+              branding, diagramação e direção de arte para clientes diversos. Web design.
+            </p>
+          </li>
+          <li>
+            <h3>Auxiliar de Designer Gráfico | Rotu Label</h3>
+            <time>2025 Set - Presente</time>
+            <p>
+              Gestão de documentos e materiais impressos. Vetorização e padronização de logotipos. Criação de artes para
+              rótulos, estampas e materiais gráficos, com atenção à consistência visual, tipografia e detalhamento
+              técnico. Participação ativa em processos de produção e impressão.
+            </p>
+          </li>
+          <li>
+            <h3>Estagiário de Design de Moda | GS Wear</h3>
+            <time>2024 Abr - Dez</time>
+            <p>
+              Desenvolvimento de estampas para vestuário esportivo. Operação de impressoras sublimáticas e DTF (Direct
+              to Film). Atendimento ao cliente, com foco em organização, gestão de tempo, proatividade, adaptabilidade e
+              trabalho em equipe.
+            </p>
+          </li>
+          <li>
+            <h3>Designer | Pinus Brasil Móveis Planejados</h3>
+            <time>2022 Jan - Ago</time>
+            <p>
+              Criação de conteúdo para mídias sociais, design digital, produção audiovisual e ilustração.
+              Desenvolvimento de identidades visuais e branding. Criação de site e realização de cálculos de orçamentos.
+              Atuação direta com atendimento ao cliente e comunicação visual.
+            </p>
+          </li>
+          <!-- <li>
 						<h3>Designer Gráfico Freelancer | Underground Underdogs</h3>
 						<time>2018 Mai - 2019 Jul</time>
 						<p>
@@ -93,146 +79,136 @@
 							consistência visual em todas as entregas.
 						</p>
 					</li> -->
-					<li>
-						<h3>Estagiário de Técnico em Informática | IPMet Unesp</h3>
-						<time>2017 Mai - 2018 Fev</time>
-						<p>
-							Web design e design de interfaces, com foco em usabilidade e
-							soluções visuais para web. Auxílio no desenvolvimento com HTML,
-							CSS, PHP, JavaScript, Python e SQL.
-						</p>
-					</li>
-				</ul>
-			</section>
+          <li>
+            <h3>Estagiário de Técnico em Informática | IPMet Unesp</h3>
+            <time>2017 Mai - 2018 Fev</time>
+            <p>
+              Web design e design de interfaces, com foco em usabilidade e soluções visuais para web. Auxílio no
+              desenvolvimento com HTML, CSS, PHP, JavaScript, Python e SQL.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-			<section id="educacao" class="page-section">
-				<h2>Educação</h2>
-				<ul>
-					<li>
-						<div class="mesma-linha">
-							<h3>Graduação em Design Gráfico</h3>
-							<time>2019 - 2024</time>
-						</div>
-						<address>
-							Universidade Estadual Paulista "Júlio de Mesquita Filho" - Bauru,
-							SP
-						</address>
-					</li>
-					<li>
-						<div class="mesma-linha">
-							<h3>Técnico em Informática</h3>
-							<time>2015 - 2017</time>
-						</div>
-						<address>
-							Colégio Técnico Industrial "Prof. Isaac Portal Roldán" - Bauru, SP
-						</address>
-					</li>
-				</ul>
-			</section>
+      <section id="educacao" class="page-section">
+        <h2>Educação</h2>
+        <ul>
+          <li>
+            <div class="mesma-linha">
+              <h3>Graduação em Design Gráfico</h3>
+              <time>2019 - 2024</time>
+            </div>
+            <address>Universidade Estadual Paulista "Júlio de Mesquita Filho" - Bauru, SP</address>
+          </li>
+          <li>
+            <div class="mesma-linha">
+              <h3>Técnico em Informática</h3>
+              <time>2015 - 2017</time>
+            </div>
+            <address>Colégio Técnico Industrial "Prof. Isaac Portal Roldán" - Bauru, SP</address>
+          </li>
+        </ul>
+      </section>
 
-			<section id="cursos" class="page-section">
-				<h2>Cursos Extracurriculares</h2>
-				<ul>
-					<li>
-						<div class="mesma-linha">
-							<h3>Curso “Desenvolvedor Web”</h3>
-							<time>2025</time>
-						</div>
-						<address>IFRS</address>
-					</li>
-					<li>
-						<div class="mesma-linha">
-							<h3>
-								Curso “Jornada Design Gráfico: A primeira semana como designer
-								do resto da sua vida”
-							</h3>
-							<time>2025</time>
-						</div>
-						<address>EBAC</address>
-					</li>
-					<li>
-						<div class="mesma-linha">
-							<h3>Curso “Tecnologia da Informação e Comunicação”</h3>
-							<time>2024</time>
-						</div>
-						<address>SENAI</address>
-					</li>
-					<li>
-						<div class="mesma-linha">
-							<h3>Curso “Preparação para o mundo do trabalho”</h3>
-							<time>2021</time>
-						</div>
-						<address>SENAI</address>
-					</li>
-				</ul>
-			</section>
+      <section id="cursos" class="page-section">
+        <h2>Cursos Extracurriculares</h2>
+        <ul>
+          <li>
+            <div class="mesma-linha">
+              <h3>Curso “Desenvolvedor Web”</h3>
+              <time>2025</time>
+            </div>
+            <address>IFRS</address>
+          </li>
+          <li>
+            <div class="mesma-linha">
+              <h3>Curso “Jornada Design Gráfico: A primeira semana como designer do resto da sua vida”</h3>
+              <time>2025</time>
+            </div>
+            <address>EBAC</address>
+          </li>
+          <li>
+            <div class="mesma-linha">
+              <h3>Curso “Tecnologia da Informação e Comunicação”</h3>
+              <time>2024</time>
+            </div>
+            <address>SENAI</address>
+          </li>
+          <li>
+            <div class="mesma-linha">
+              <h3>Curso “Preparação para o mundo do trabalho”</h3>
+              <time>2021</time>
+            </div>
+            <address>SENAI</address>
+          </li>
+        </ul>
+      </section>
 
-			<section id="conhecimentos" class="page-section">
-				<h2>Conhecimentos</h2>
-				<section id="conhecimentos-conteudo">
-					<section>
-						<h3>Design</h3>
-						<ul>
-							<li>Edição de imagens (Photoshop, Illustrator, Canva)</li>
-							<li>Edição de vídeo (Premiere Pro, After Effects, CapCut)</li>
-							<li>Diagramação (InDesign)</li>
-							<li>Design de interfaces (Figma)</li>
-							<li>Boas práticas, acessibilidade e sensibilidade em UX</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Desenvolvimento</h3>
-						<ul>
-							<li>Desenvolvimento Web (HTML, CSS, JavaScript, PHP)</li>
-							<li>Python</li>
-							<li>SQL</li>
-							<li>C++</li>
-							<li>C#</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Idiomas</h3>
-						<ul>
-							<li>Português (Nativo)</li>
-							<li>Inglês (Fluente)</li>
-							<li>Espanhol (Básico)</li>
-						</ul>
-					</section>
-				</section>
-			</section>
+      <section id="conhecimentos" class="page-section">
+        <h2>Conhecimentos</h2>
+        <section id="conhecimentos-conteudo">
+          <section>
+            <h3>Design</h3>
+            <ul>
+              <li>Edição de imagens (Photoshop, Illustrator, Canva)</li>
+              <li>Edição de vídeo (Premiere Pro, After Effects, CapCut)</li>
+              <li>Diagramação (InDesign)</li>
+              <li>Design de interfaces (Figma)</li>
+              <li>Boas práticas, acessibilidade e sensibilidade em UX</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Desenvolvimento</h3>
+            <ul>
+              <li>Desenvolvimento Web (HTML, CSS, JavaScript, PHP)</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>C++</li>
+              <li>C#</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Idiomas</h3>
+            <ul>
+              <li>Português (Nativo)</li>
+              <li>Inglês (Fluente)</li>
+              <li>Espanhol (Básico)</li>
+            </ul>
+          </section>
+        </section>
+      </section>
 
-			<section id="projetos" class="page-section">
-				<h2>Projetos</h2>
-				<ul>
-					<li>
-						<h3>Projeto Kepler | IPMet Unesp</h3>
-						<p>
-							Desenvolvimento de um site para agendamento remoto de um
-							telescópio do instituto, com transmissão ao vivo. Atuação em web
-							design e suporte ao desenvolvimento front-end e back-end.
-						</p>
-					</li>
-				</ul>
-			</section>
-		</main>
+      <section id="projetos" class="page-section">
+        <h2>Projetos</h2>
+        <ul>
+          <li>
+            <h3>Projeto Kepler | IPMet Unesp</h3>
+            <p>
+              Desenvolvimento de um site para agendamento remoto de um telescópio do instituto, com transmissão ao vivo.
+              Atuação em web design e suporte ao desenvolvimento front-end e back-end.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-		{% include 'scripts_bottom.html' %}
-		<script>
-			function atualizarHora() {
-				const agora = new Date();
-				const horas = String(agora.getHours()).padStart(2, "0");
-				const minutos = String(agora.getMinutes()).padStart(2, "0");
-				const segundos = String(agora.getSeconds()).padStart(2, "0");
-				const horaFormatada = `${horas}:${minutos}:${segundos}`;
-				document.getElementById("hora-atual").textContent = horaFormatada;
-			}
-			setInterval(atualizarHora, 1000);
-			atualizarHora();
+    {% include 'scripts_bottom.html' %}
+    <script>
+      function atualizarHora() {
+        const agora = new Date();
+        const horas = String(agora.getHours()).padStart(2, "0");
+        const minutos = String(agora.getMinutes()).padStart(2, "0");
+        const segundos = String(agora.getSeconds()).padStart(2, "0");
+        const horaFormatada = `${horas}:${minutos}:${segundos}`;
+        document.getElementById("hora-atual").textContent = horaFormatada;
+      }
+      setInterval(atualizarHora, 1000);
+      atualizarHora();
 
-			function gerarPDF() {
-				window.focus();
-				window.print();
-			}
-		</script>
-	</body>
+      function gerarPDF() {
+        window.focus();
+        window.print();
+      }
+    </script>
+  </body>
 </html>

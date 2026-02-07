@@ -1,4 +1,4 @@
 ---
-layout: sonhos
+layout: sonhos-log
 title: Diário de Sonhos
 ---
