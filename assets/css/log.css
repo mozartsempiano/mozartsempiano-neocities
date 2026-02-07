@@ -14,7 +14,7 @@ table tbody tr {
   flex-direction: row;
   gap: 0.3rem;
   flex-wrap: wrap;
-  padding: 3vh;
+  padding: 1.75rem;
   width: 100%;
 }
 
@@ -120,6 +120,7 @@ table tbody tr:has(td:nth-child(6):empty) {
   white-space: nowrap;
   text-overflow: ellipsis;
   color: var(--clr-gray-a50) !important;
+  padding: 0.75rem;
 
   td:nth-child(1) {
     width: fit-content;
