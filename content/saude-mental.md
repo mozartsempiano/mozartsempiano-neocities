@@ -5,6 +5,14 @@ imgPrincipal: /assets/img/refined_mental_healh.jpg
 created: 2026-02-04T16:33
 ---
 
+> Agora, sou o homem mais infeliz que vive. Se o que sinto fosse distribuído igualmente para toda a população humana, não haveria um único rosto alegre na Terra. Se algum dia ficarei melhor, não sei dizer; tenho um terrível pressentimento de que não. Permanecer como estou é impossível; devo morrer ou melhorar, ao que me parece.
+>
+> Abraham Lincoln
+
+As pessoas vão tolerar até um certo ponto a autocrítica, porque mostra que você tem consciência de si, mas o ódio a si mesmo é só sabotagem contínua.
+
+Você tem que fazer o possível pra se manter otimista, esperançoso e forte com relação a essas emoções na sua vida.
+
 ## Para ler todos os dias
 
 - Não use o Twitter como um diário.
@@ -31,6 +39,12 @@ created: 2026-02-04T16:33
 - Não desabafar. Lide sozinho.
 
 ![](/assets/img/time_will_pass.jpg)
+
+# No fim de todo dia pensar em...
+
+- Algo que me fez sorrir;
+- Algo pelo qual eu agradeço;
+- Algo que eu fiz bem.
 
 ## Como eu quero ser percebido e o que eu devo fazer pra alcançar isso?
 
@@ -60,7 +74,7 @@ created: 2026-02-04T16:33
 - Não perder a linha em situações nas quais a maioria perderia. Manter contato visual mesmo em conflito pra demonstrar confiança, mas olhar para os lados às vezes se quiser desescalar a situação.
 - Não fazer afirmações em tom de pergunta, porque mostra falta de confiança em si mesmo.
 - Falar devagar e usar pausas entre palavras.
-- Se não correr bem, eu sigo com a minha vida.
+- Se não correr bem, eu sigo com a minha vida. O que se foi, se foi; o que restou, eu valorizo e preservo.
 - Buscar algo pra ser grato todos os dias, independente do momento no qual eu estiver na vida, por menor que seja.
 - Sorria.
 - Aceitar a minha própria idiotice. Todos nós somos idiotas. É normal fracassar, aceite isso.
@@ -129,3 +143,25 @@ created: 2026-02-04T16:33
 - Empatia – Quero amizades com pessoas que se importam com o que sinto e demonstrem consideração pelas minhas emoções, pessoas que saibam me ouvir e me respeitar quando eu preciso de apoio;
 - Confiança e lealdade – Quero amigos que possam guardar segredos e com quem sinto que posso compartilhar o que penso sem medo de como vão reagir;
 - Sinceridade – Quero amigos que sejam honestos comigo, mesmo quando a verdade não for o que quero ouvir.
+
+## Cansaço
+
+O cansaço é o resultado do seu cérebro calculando o tanto de trabalho que realizar uma atividade vai dar. É uma estratégia do cérebro pra conservar energia.
+
+Refletir sobre o que nessa atividade faz eu me sentir cansado. Parar pra pensar em como eu vou me sentir depois de concluir a atividade e concluir que vou me sentir aliviado, realizado.
+
+Dividir uma atividade em partes e concluir uma parte por vez. Se meu objetivo diário for concluir uma única parte, vai ser mais fácil de fazer tudo.
+
+> Once done, half done.
+
+## Conceitos
+
+- [desamparo aprendido (learned helplessness)](https://en.wikipedia.org/wiki/Learned_helplessness): estado psicológico em que a pessoa, após repetidas experiências de impotência, deixa de tentar reagir, acreditando que nenhuma ação pode mudar a situação, mesmo quando poderia. é o comportamento exibido por um sujeito após suportar estímulos aversivos repetidos além de seu controle.
+- [ligação traumática (trauma bonding)](https://pt.wikipedia.org/wiki/Liga%C3%A7%C3%A3o_traum%C3%A1tica): vínculo emocional intenso e persistente formado entre agressor e vítima em contextos de abuso cíclico, sustentado pela alternância entre violência e momentos de afeto, que gera confusão, dependência e lealdade à fonte do trauma.
+
+![>](/assets/img/dunbar.jpg)
+
+- [paradoxo do enforcamento inesperado](https://en.wikipedia.org/wiki/Unexpected_hanging_paradox): paradoxo que envolve as expectativas de uma pessoa sobre o momento de um evento futuro anunciado como inesperado; ao tentar prever logicamente quando ocorrerá, conclui-se que não poderia ser surpreendido, mas o evento ocorre de forma inesperada.
+- [número de dunbar](https://pt.wikipedia.org/wiki/N%C3%BAmero_de_Dunbar): teoria que sugere que o número máximo de relacionamentos sociais que um ser humano pode manter é entre 100 e 300 pessoas.
+- [neuroplasticidade](https://pt.wikipedia.org/wiki/Neuroplasticidade): capacidade do cérebro de se reorganizar e formar novas conexões neurais ao longo da vida.
+- [bon-vivant](https://www.dicio.com.br/bon-vivant/): pessoa que entende que a vida é feita de momentos efêmeros e que cada um deles deve ser aproveitado ao máximo, desfrutando dos prazeres dela.

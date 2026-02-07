@@ -18,8 +18,9 @@
         <h1 id="tituloPagina">{{ title }}</h1>
         {% if subtitulo %}
         <h2 id="subtitulo">{{ subtitulo }}</h2>
-        {%endif%} {{ content | markdownify }} {% include 'backlinks.html' %} {% if created %} {% assign created_ms =
-        created | date: "%s" | times: 1000 %} {% assign updated = page | lastModified %}
+        {%endif%} {{ content | markdownify }} {% if not noBacklinks %} {% include 'backlinks.html' %} {% endif %} {% if
+        created %} {% assign created_ms = created | date: "%s" | times: 1000 %} {% assign updated = page | lastModified
+        %}
 
         <div id="postDates">
           <span>

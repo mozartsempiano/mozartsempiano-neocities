@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Budismo
+created: 2026-02-06T21:02
+imgPrincipal: /assets/img/buda_gato.jpg
 ---
 
 ## Dokkōdō
@@ -68,3 +70,7 @@ title: Budismo
 21. Nunca se afaste do Caminho.
 
 ![](/assets/img/vagabond_kind.jpg "Vagabond (1998-)")
+
+## Conceitos
+
+- [Bodisatva](https://pt.wikipedia.org/wiki/Bodisatva)

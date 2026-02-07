@@ -6,6 +6,14 @@ imgPrincipalCaption: Pierrot le Fou (1965)
 created: 2026-02-04T16:33
 ---
 
+Pra mim, uma das coisas mais difíceis da vida adulta tem sido aceitar que eu não posso sustentar relações sozinho, e que o outro tem que estar na mesma sintonia que eu, o que muitas vezes não acontece. às vezes, só resta aceitar que acabou. Não permita que o tédio ou a solidão te mandem de volta pra aquele lugar.
+
+Ainda assim, tem algo muito lindo no fato de que todos nós um dia passamos pela experiência de perder alguém que a gente já amou, e por mais distintos que os contextos sejam, o sentimento ainda é sempre o mesmo.
+
+A única maneira de realmente me redimir é me tornando a pessoa que você sempre me disse que eu poderia ser.
+
+Quanto mais o tempo passa, mais eu me convenço de que ninguem nunca vai ser digno do meu amor.
+
 ## Limerência
 
 > The desire to be loved is the last illusion. Give it up and you will be free.
@@ -63,13 +71,17 @@ created: 2026-02-04T16:33
 - Compaixão;
 - Crescimento – Quero uma parceira que me apoie a crescer e evoluir na vida, assim como sempre apoiarei ela.
 
+Ser muito determinista em relação a sentimentos e aos outros só vai te levar a ter relacionamentos fracassados e a ser inevitavelmente infeliz.
+
 ## Red Flags
 
-![](/assets/img/peanuts_love.jpg)
+![>](/assets/img/peanuts_love.jpg)
 
 Talvez a pessoa tenha sido tão machucada no passado que, inconscientemente, ela acaba tendo muito medo de se conectar verdadeiramente com alguém. Eu posso ter empatia e compaixão com ela, mas ainda devo impor limites e decidir o que é melhor pra mim, a fim de evitar um relacionamento tóxico no futuro. Honestidade, vulnerabilidade e consideração são fundamentais pra mim, e eu não devo aceitar entrar em um relacionamento que me ofereça menos que isso.
 
-kindness, compassion, growth
+> kindness, compassion, growth
+
+Se gostarem de você, você vai saber. Se não gostarem, você vai se sentir confuso. Empatia irrestrita é autodestruição.
 
 ### Nível baixo
 
@@ -150,3 +162,7 @@ Red Flags que não são negociáveis e, no primeiro sinal delas, dar no pé. Fic
 ### Posteriores
 
 - [Cinema](/cinema/) (NUNCA levar no 1º e 2º date porque é péssimo pra conhecer a pessoa e construir conexão)
+
+> Eu durmo bem sabendo que, à noite, a gente olha pra mesma lua.
+
+Você vai se lembrar do que fez comigo pelo resto da sua vida. Eu te perdoaria se você me desse a oportunidade.

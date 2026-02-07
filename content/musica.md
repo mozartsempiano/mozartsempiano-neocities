@@ -73,6 +73,16 @@ created: 2026-02-04T16:33
 |     | 1992 | Star Inc.                  | <br> The Most Spectacular Synthesizer Hits Of Vangelis,<br> Jean Michel Jarre &amp; Jan Hammer<br> |
 |     | 2016 | The Weeknd                 | Starboy                                                                                            |
 
+## Shows em que fui
+
+- **15 & 16.01.2020 - Alex G - Sesc Pompéia**
+  - Acredito de verdade que esses foram os melhores dias da minha vida até hoje. Foi no Sesc Pompéia, e o espaço não era muito grande (acho ótimo) e, na época, o Alex G não era tão popular, então não tinha tanta gente. Também consegui ficar bem na frente, as pessoas estavam sendo respeitosas e o Alex G em si performou excelentemente. É um cara super simpático! Ele chegou até a dar a sua paleta à minha amiga, que me acompanhou. Na verdade, a gente era a fim um do outro e, depois do show do segundo dia, acabamos nos beijando. Foi a última vez que a vi.
+- **26.04.2025 - Machine Girl - Hangar 110**
+- **17.09.2025 - Boogarins - Sesc Bauru**
+- **08.11.2025 - Cap'n Jazz - Cine Joia**
+- **30.11.2025 - Boris - Fabrique Club**
+  - O show atrasou mais de três horas e tive que ir embora antes do Boris tocar. É um dia que me dói até hoje só de pensar, e tenho a camiseta da tour, que comprei no dia, pra me torturar lembrando dele eternamente. Consegui ver o [Siena Root](https://en.wikipedia.org/wiki/Siena_Root), uma banda que nunca havia ouvido falar, abrir o show, e eles são surpreendentemente bons, apesar dos inúmeros problemas técnicos causados pela péssima equipe de mixagem do clube.
+
 ## Links úteis
 
 - [Last.fm Picture To Album Collage Generator](https://www.chartmymusic.com/lastfm/picturecollage/)

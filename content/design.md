@@ -4,12 +4,24 @@ title: Design
 created: 2026-02-04T16:33
 ---
 
-## Atalhos Illustrator
+## Atalhos
 
-- Shape Builder - <kbd>Shift</kbd> + <kbd>M</kbd>
-- Width Tool - <kbd>Shift</kbd> + <kbd>W</kbd>
-- Eyedropper - <kbd>I</kbd>
-- Live Paint Bucket - <kbd>K</kbd>
+### Illustrator
+
+- <kbd>Shift</kbd> + <kbd>M</kbd> - Shape Builder
+- <kbd>Shift</kbd> + <kbd>W</kbd> - Width Tool
+- <kbd>I</kbd> - Eyedropper
+- <kbd>K</kbd> - Live Paint Bucket
+
+### Premiere Pro
+
+- Audio → Preferences → Timeline → Audio transition default duration = 6 frames
+- Sequence → Selection follows playhead
+- <kbd>Shift</kbd> + <kbd>Del</kbd> = Deleta e puxa
+- <kbd>L</kbd> = Acelera o preview
+- <kbd>Q</kbd> & <kbd>W</kbd> = Deleta atrás ou à frente da agulha de reprodução
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + D no corte = transição de áudio/cross fade
+- <kbd>Alt</kbd> + Arrastar Clipe = duplica clipe
 
 ## Links úteis
 

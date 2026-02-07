@@ -34,10 +34,6 @@ subtitulo: Coleção de citações
 >
 > Leo Tolstoy
 
-> Agora, sou o homem mais infeliz que vive. Se o que sinto fosse distribuído igualmente para toda a população humana, não haveria um único rosto alegre na Terra. Se algum dia ficarei melhor, não sei dizer; tenho um terrível pressentimento de que não. Permanecer como estou é impossível; devo morrer ou melhorar, ao que me parece.
->
-> Abraham Lincoln
-
 > I may think of you softly from time to time. But I’ll cut off my hand before I ever reach for you again.
 >
 > Arthur Miller
@@ -54,10 +50,6 @@ subtitulo: Coleção de citações
 >
 > Mark Kingwell
 
-> But the person who mocks others mocks himself, and it is not meaningless but is rather a profound mockery of yourself, a tragic proof of how flabby your soul is.
->
-> Søren Kierkegaard
-
 > You sensed that you should be following a different path, a more ambitious one, you felt that you were destined for other things but you had no idea how to achieve them and in your misery you began to hate everything around you.
 >
 > Fyodor Dostoyevsky
@@ -71,10 +63,6 @@ subtitulo: Coleção de citações
 > I have spent all my life resisting the desire to end it.
 >
 > Franz Kafka, [Letters to Milena](https://en.wikipedia.org/wiki/Notebooks_1951%E2%80%931959)
-
-> Men are the devils of the earth, and the animals are the tormented souls.
->
-> Arthur Schopenhauer
 
 > Find meaning. Distinguish melancholy from sadness. Go out for a walk. It doesn’t have to be a romantic walk in the park, spring at its most spectacular moment, flowers and smells and outstanding poetical imagery smoothly transferring you into another world. It doesn’t have to be a walk during which you’ll have multiple life epiphanies and discover meanings no other brain ever managed to encounter. Do not be afraid of spending quality time by yourself. Find meaning or don’t find meaning but 'steal' some time and give it freely and exclusively to your own self. Opt for privacy and solitude. That doesn’t make you antisocial or cause you to reject the rest of the world. But you need to breathe. And you need to be.
 >
@@ -91,3 +79,7 @@ subtitulo: Coleção de citações
 > The Byronic hero, incapable of love, or capable only of an impossible love, suffers endlessly. He is solitary, languid, his condition exhausts him. If he wants to feel alive, it must be in the terrible exaltation of a brief and destructive action.
 >
 > Albert Camus, The Rebel
+
+> I am the shipwreck with its scattered and soaked wood littering the ocean like a nest of roaches. The water smothers me patiently, and it waits to feel my body on the ocean floor. I am the captain. I stand on my ship, never leaving its side, for tonight I sleep in a shark's stomach. The tears and rain both hit my face, as I lay on the deck and wait to drown. I am the thunder, I am the storm. Hear me roar as I deafen all. I conduct my orchestra as loud as possible and conclude with a violent smash. I am washing the splinters from within my heart and I scream as it pumps. I let my lungs fill with water as the broken bath tub leaks.
+>
+> Ruby da Cherry, [Gray/Grey Poem](https://www.youtube.com/watch?v=F5WkkSkEkqs&t=360s)

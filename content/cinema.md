@@ -3,6 +3,12 @@ layout: default
 title: Cinema
 ---
 
+> One of the worst thematic trends of the past fifteen years has been an obsession with naturalistic lighting. Every light needs a precise source with the idea that the audience needs to understand every beam’s origin. We don’t. One time during a screening for 'Lord of the Rings 2', star Sean Astin asked the late lighting director Andrew Lesnie 'Where is the light coming from?' Lesnie replied 'The same place as the music.'
+>
+> Jack Simon, [Mucking with Movies: ‘Poor Things’](https://www.aspentimes.com/news/mucking-with-movies-poor-things/)
+
+## Ver também
+
 - [Diário midiático](/cinema-log/)
 
 ## Filmes e séries favoritos
