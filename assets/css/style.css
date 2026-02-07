@@ -516,6 +516,10 @@ main img {
   height: auto;
 }
 
+main img[src*="dither"] {
+  image-rendering: pixelated;
+}
+
 /* main img[src*="svg"],
 main img[src*="png"] {
   filter: invert(1) hue-rotate(180deg);
