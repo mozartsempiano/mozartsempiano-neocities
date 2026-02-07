@@ -44,7 +44,7 @@
   --fonte-neo-grotesque: "Inter", "Roboto", "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 
   /* --clr-black-a0: #090909; */
-  --clr-black-a0: #000;
+  --clr-black-a0: #0c0c0c;
   --clr-black-a10: lch(from var(--clr-black-a0) calc(l + 5) c h);
 
   --clr-gray-a0: lch(from var(--clr-black-a0) calc(l + 10) c calc(h + 10));

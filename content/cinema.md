@@ -9,7 +9,7 @@ title: Cinema
 
 ## Ver também
 
-- [Diário midiático](/cinema-log/)
+- [Diário de filmes](/cinema-log/)
 
 ## Filmes e séries favoritos
 

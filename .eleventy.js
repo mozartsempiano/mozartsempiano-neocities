@@ -99,6 +99,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   // Tabe of contents
+  const stripLinks = (str) => str.replace(/<a[^>]*>(.*?)<\/a>/gi, "$1");
+
   eleventyConfig.addFilter("toc", (html) => {
     if (!html) return "";
     const re = /<h([2-4])[^>]*id="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
@@ -108,7 +110,7 @@ module.exports = function (eleventyConfig) {
       items.push({
         level: Number(m[1]),
         id: m[2],
-        content: m[3],
+        content: stripLinks(m[3]),
       });
     }
     if (!items.length) return "";
@@ -174,6 +176,7 @@ module.exports = function (eleventyConfig) {
 
     const norm = (u) => {
       if (!u.startsWith("/")) u = "/" + u;
+      u = u.split("#")[0];
       if (!u.endsWith("/")) u += "/";
       return u;
     };

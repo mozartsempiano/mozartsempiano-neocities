@@ -5,6 +5,10 @@ title: Leitura
 
 Nunca tive muito costume de ler livros. Sempre li [mangás](/manga/), especialmente quando era adolescente, mas nunca livros de verdade. Em [2025](/2025/), resolvi mudar isso e comprei um livro que queria ler há anos, "O Apanhador no Campo de Centeio", na tentativa de adquirir o hábito da leitura. Levei um tempo pra terminá-lo, no início lendo só 1 capítulo por dia, no horário de almoço do [trabalho](/curriculo/) (isso quando conseguia ter ânimo pra ler), mas, conforme me acostumava, fui acelerando o ritmo e consegui terminar até dezembro, antes que o ano acabasse. Eu lia no trabalho, lia no transporte público e lia até em casa. Fiquei muito feliz, porque já faziam cerca de dez anos que eu não lia um livro de verdade, e, mesmo na época, só havia o feito pra disciplina de português da escola.
 
+## Ver também
+
+- [Diário de livros](/leitura-log/)
+
 ## Coleção de livros
 
 | Nº  | Título                                        | Autor                                      | Editora                            |

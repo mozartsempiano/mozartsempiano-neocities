@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diário Midiático
+title: Diário de Filmes
 css: log.css
 created: 2026-02-03T17:03
 ---
