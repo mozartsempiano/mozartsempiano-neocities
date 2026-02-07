@@ -242,12 +242,12 @@ main > h1#tituloPagina {
   --cor-titulo: var(--clr-white);
   --cor-underline: var(--clr-gray-a40);
 
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--cor-titulo);
   margin: 0;
   margin-bottom: 2rem !important;
   padding: 0;
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-weight: bold;
   text-wrap: wrap;
   border-bottom: 1px solid var(--cor-underline);
@@ -277,7 +277,13 @@ main > h1#tituloPagina {
     );
   } */
 
-  &:after {
+  &::before {
+    content: "//";
+    color: var(--cor-underline);
+    margin-right: 1rem;
+  }
+
+  &::after {
     content: "_";
     animation-name: blinkUnderline;
     animation-duration: 0.9s;

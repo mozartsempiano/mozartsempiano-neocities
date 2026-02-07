@@ -43,7 +43,7 @@ table tbody tr td:nth-child(1) {
 table tbody tr td:nth-child(2),
 table tbody tr td:nth-child(3) {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 /* Ano */
@@ -58,10 +58,10 @@ table tbody tr td:nth-child(3)::after {
 table tbody tr td:nth-child(4):not(:empty) {
   margin-left: 1rem;
   /* color: var(--clr-green-a50); */
-  outline: 1px solid;
+  box-shadow: inset 0px 0 0 1px;
   padding: 0.1rem 1rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 table tbody tr td:nth-child(4):not(:empty)::after {
   content: "";
@@ -94,7 +94,7 @@ table tbody tr td:nth-child(6):not(:empty) {
   width: 100%;
   display: block;
   background-color: var(--clr-gray-a10);
-  padding: 1rem 1.2rem;
+  padding: 0.5rem 0.9rem;
   margin-top: 0.5rem;
   line-height: 160%;
 }
@@ -106,7 +106,7 @@ table tbody tr td:nth-child(7) {
   color: var(--clr-gray-a50);
   width: 100%;
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
 }
 
 main table blockquote {
