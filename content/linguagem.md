@@ -26,3 +26,7 @@ você deve eliminar a palavra cringe do seu vocabulário
 - impressora
 - encefalógrafo
 - pedestal
+
+## Links úteis
+
+- [Shapecatcher](https://shapecatcher.com/) - Identificar caracter unicode através de um desenho

@@ -2,6 +2,7 @@
 layout: default
 title: Saúde Mental
 imgPrincipal: /assets/img/refined_mental_healh.jpg
+imgPrincipalCaption: Dark Cloud
 created: 2026-02-04T16:33
 ---
 
