@@ -31,7 +31,7 @@ created: 2026-02-04T16:33
 
 [Mais no Backloggd](https://backloggd.com/u/mozartsempiano/list/favoritos/)
 
-## Coleção de CDs de jogos
+## [Coleção](/colecionar/) de CDs de jogos
 
 | Nº  | Ano  | Título                                      | Plataforma    |
 | --- | ---- | ------------------------------------------- | ------------- |

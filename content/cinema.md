@@ -53,7 +53,7 @@ title: Cinema
 
 [Mais no Letterboxd](https://letterboxd.com/mozartsempiano/list/mozartsempiano/)
 
-## Coleção de DVDs de filmes e séries
+## [Coleção](/colecionar/) de DVDs de filmes e séries
 
 | Nº  | Ano       | Título                                    | Diretor                                     |
 | --- | --------- | ----------------------------------------- | ------------------------------------------- |

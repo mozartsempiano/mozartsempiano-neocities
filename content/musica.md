@@ -48,7 +48,7 @@ created: 2026-02-04T16:33
 
 [Mais no Last.fm](https://www.last.fm/user/wrired/library/albums?date_preset=LAST_365_DAYS)
 
-## Coleção de CDs
+## [Coleção](/colecionar/) de CDs
 
 | Nº  | Ano  | Artista                    | Título                                                                                             |
 | --- | ---- | -------------------------- | -------------------------------------------------------------------------------------------------- |

@@ -9,7 +9,7 @@ Nunca tive muito costume de ler livros. Sempre li [mangás](/manga/), especialme
 
 - [Diário de livros](/leitura-log/)
 
-## Coleção de livros
+## [Coleção](/colecionar/) de livros
 
 | Nº  | Título                                        | Autor                                      | Editora                            |
 | --- | --------------------------------------------- | ------------------------------------------ | ---------------------------------- |
