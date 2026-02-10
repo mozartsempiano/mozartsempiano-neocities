@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
 			const url = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&language=${lang}&query=${query}&year=${year}`;
 
 			try {
-				const res = await fetch(url);
+				const res = await fetch(url, { duration: "1d", type: "json" });
 				const data = await res.json();
 				const movie = data.results?.[0];
 
