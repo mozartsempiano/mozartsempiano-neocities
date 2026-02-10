@@ -2,8 +2,8 @@
 layout: default
 title: Home
 subtitulo: Meu nome é Mozart.
-imgPrincipal: /assets/img/fotografia/DSC_0009-small.jpg
-imgPrincipalCaption: Mel, 2023
+imgPrincipal: /assets/img/fotografia/DSC06193.jpg
+imgPrincipalCaption: Sem título, 2025
 css: sobre.css
 created: 2026-02-04T16:33
 ---

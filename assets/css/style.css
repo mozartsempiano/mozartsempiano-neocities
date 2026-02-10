@@ -477,6 +477,11 @@ main > figure:has(img#imgPrincipal) {
 	/* outline: 1px solid var(--clr-white); */
 }
 
+main > figure:has(img#imgPrincipal) img {
+	object-fit: cover;
+	aspect-ratio: 16/9;
+}
+
 main > figure:has(img#imgPrincipal) figcaption {
 	/* padding-left: var(--padding-body); */
 }

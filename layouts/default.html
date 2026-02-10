@@ -1,44 +1,45 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    {% include 'head.html' %}
-  </head>
-  <body>
-    <div>
-      {% include 'header.html' %}
-      <main>
-        {% if imgPrincipal %}
-        <figure>
-          <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
-          {% if imgPrincipalCaption %}
-          <figcaption>{{ imgPrincipalCaption }}</figcaption>
-          {%endif%}
-        </figure>
-        {% endif %}
-        <h1 id="tituloPagina">{{ title }}</h1>
-        {% if subtitulo %}
-        <h2 id="subtitulo">{{ subtitulo }}</h2>
-        {%endif%} {% include 'toc.html' %} {{ content | markdownify }} {% if not noBacklinks %} {% include
-        'backlinks.html' %} {% endif %} {% if created %} {% assign created_ms = created | date: "%s" | times: 1000 %} {%
-        assign updated = page | lastModified %}
+	<head>
+		{% include 'head.html' %}
+	</head>
+	<body class="crt">
+		<div>
+			{% include 'header.html' %}
+			<main>
+				{% if imgPrincipal %}
+				<figure>
+					<img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+					{% if imgPrincipalCaption %}
+					<figcaption>{{ imgPrincipalCaption }}</figcaption>
+					{%endif%}
+				</figure>
+				{% endif %}
+				<h1 id="tituloPagina">{{ title }}</h1>
+				{% if subtitulo %}
+				<h2 id="subtitulo">{{ subtitulo }}</h2>
+				{%endif%} {% include 'toc.html' %} {{ content | markdownify }} {% if not
+				noBacklinks %} {% include 'backlinks.html' %} {% endif %} {% if created
+				%} {% assign created_ms = created | date: "%s" | times: 1000 %} {%
+				assign updated = page | lastModified %}
 
-        <div id="postDates">
-          <span>
-            <label>Publicado:</label>
-            <span>{{ created | formatDateTime }}</span>
-          </span>
+				<div id="postDates">
+					<span>
+						<label>Publicado:</label>
+						<span>{{ created | formatDateTime }}</span>
+					</span>
 
-          {% if updated > created_ms %}
-          <span>
-            <label>Modificado:</label>
-            <span>{{ updated | formatDateTime }}</span>
-          </span>
-          {% endif %}
-        </div>
-        {% endif %}
-      </main>
-    </div>
+					{% if updated > created_ms %}
+					<span>
+						<label>Modificado:</label>
+						<span>{{ updated | formatDateTime }}</span>
+					</span>
+					{% endif %}
+				</div>
+				{% endif %}
+			</main>
+		</div>
 
-    {% include 'footer.html' %} {% include 'scripts_bottom.html' %}
-  </body>
+		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}
+	</body>
 </html>
