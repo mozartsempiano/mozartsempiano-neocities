@@ -1,0 +1,30 @@
+:root {
+	--gal-column-count: 3;
+	--gal-img-size: calc(var(--main-width) / 2);
+}
+
+body main:has(.gallery) {
+	max-width: 100%;
+	width: calc(
+		(var(--gal-img-size) * var(--gal-column-count)) +
+			calc(var(--gap-padrao) * var(--gal-column-count))
+	);
+}
+
+div.gallery {
+	gap: var(--gap-padrao);
+	column-width: var(--gal-img-size);
+	width: 100%;
+}
+
+div.gallery
+	div.filter-gallery-item
+	div.filter-gallery-content
+	div.filter-gallery-thumb
+	img {
+	width: fit-content;
+}
+
+div.gallery div.filter-gallery-item {
+	display: inline-block;
+}

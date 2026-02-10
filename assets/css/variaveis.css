@@ -27,6 +27,7 @@
 	--borda-padrao: 1px solid var(--clr-borda);
 	--padding-btn: 0.8em 1.2em;
 	--padding-btn-small: 0.4em 1em;
+	--gap-padrao: 1rem;
 	--b-radius: 0;
 	--transition-time-short: 0.1s;
 	--transition-time: 0.2s;

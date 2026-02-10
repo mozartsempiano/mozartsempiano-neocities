@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		{% include 'head.html' %}
+		<link rel="stylesheet" href="/assets/css/galeria.css" />
+	</head>
+	<body>
+		<div>
+			{% include 'header.html' %}
+			<main>
+				{% if imgPrincipal %}
+				<figure>
+					<img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+					{% if imgPrincipalCaption %}
+					<figcaption>{{ imgPrincipalCaption }}</figcaption>
+					{% endif %}
+				</figure>
+				{% endif %}
+				<h1 id="tituloPagina">{{ title }}</h1>
+				{% if subtitulo %}
+				<h2 id="subtitulo">{{ subtitulo }}</h2>
+				{% endif %} {% include 'toc.html' %}
+				<div class="gallery">
+					{% for item in title | slugify %}
+					<div class="filter-gallery-item">
+						<div class="filter-gallery-content">
+							<div class="filter-gallery-thumb">
+								<img
+									src="{{ item.medias[0].src }}"
+									alt="{{ item.titulo | escape }}"
+								/>
+							</div>
+							<div class="filter-gallery-tags">
+								{% for tag in item.tags %}
+								<span class="filter-gallery-tag" data-tag="{{ tag }}"
+									>#{{ tag }}</span
+								>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				{{ content | markdownify }} {% if not noBacklinks %} {% include
+				'backlinks.html' %} {% endif %} {% if created %} {% assign created_ms =
+				created | date: "%s" | times: 1000 %} {% assign updated = page |
+				lastModified %}
+
+				<div id="postDates">
+					<span>
+						<label>Publicado:</label>
+						<span>{{ created | formatDateTime }}</span>
+					</span>
+
+					{% if updated > created_ms %}
+					<span>
+						<label>Modificado:</label>
+						<span>{{ updated | formatDateTime }}</span>
+					</span>
+					{% endif %}
+				</div>
+				{% endif %}
+			</main>
+		</div>
+
+		{% include 'footer.html' %} {% include 'scripts_bottom.html' %}
+	</body>
+</html>

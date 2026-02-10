@@ -609,6 +609,36 @@ div#backlinks_section
 }
 
 /* ----------------------------------------------
+ * Footer de publicação
+ * ---------------------------------------------- */
+
+div#postFooter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* ----------------------------------------------
+ * Datas de publicação e modificação
+ * ---------------------------------------------- */
+
+a#editPage svg {
+	min-width: 16px;
+	min-height: 16px;
+	width: 1.5rem;
+	height: auto;
+	transition: var(--transition-time);
+}
+
+a#editPage:hover svg {
+	transform: translateY(-2px);
+}
+
+a#editPage:has(svg) {
+	color: currentColor;
+}
+
+/* ----------------------------------------------
  * Datas de publicação e modificação
  * ---------------------------------------------- */
 
@@ -982,9 +1012,6 @@ table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
 /* ========================================= */
 
 @media (max-width: 1240px) {
-	main {
-		max-width: 90%;
-	}
 }
 
 @media (max-width: 1024px) {
@@ -996,7 +1023,7 @@ table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
 
 @media (max-width: 770px) {
 	body {
-		padding: 3rem 1rem;
+		padding: 3rem 2rem;
 	}
 
 	main {

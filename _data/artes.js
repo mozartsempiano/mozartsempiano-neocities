@@ -1,0 +1,126 @@
+artes = [
+	{
+		titulo: "Abril 2K e vinte e cinco",
+		data: 2025,
+		tipo: "",
+		cliente: "",
+		desc: "Feito inteiramente em <a href='https://github.com/mozartsempiano/ascii-text-generator' target='_blank'>JavaScript</a>, após um episódio depressivo.",
+		software: ["javascript"],
+		tags: ["digital"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/abril_2025.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Nostalgia, e amadurecer com a dor",
+		data: 2025,
+		tipo: "",
+		cliente: "",
+		desc: "Conjunto de cartas e objetos que guardei no meu passado, associados a momentos que, embora difíceis, pavimentaram o caminho que me trouxe até aqui.",
+		software: ["photoshop"],
+		tags: ["tradicional", "colagem"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/Nostalgia e amadurecer com a dor.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Fim do arco-íris",
+		data: 2023,
+		tipo: "",
+		cliente: "",
+		desc: "Desenho tradicional que sobrepus com uma fotografia que tirei.",
+		software: ["photoshop"],
+		tags: ["tradicional"],
+		medias: [{ tipo: "image", src: "/assets/img/arte/fim_do_arco_iris.jpg" }],
+	},
+	{
+		titulo: "Mascote Comissão III",
+		data: 2025,
+		tipo: "Mascote em vetor",
+		cliente: "Comissão de formatura XVII Direito USP Ribeirão",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["digital", "mascote", "comissão direito usp ribeirão"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/digital/Comissao_Bufalo_2025.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Mascote Comissão II",
+		data: 2024,
+		tipo: "Mascote em vetor",
+		cliente: "Comissão de formatura XVI Direito USP Ribeirão",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["digital", "mascote", "comissão direito usp ribeirão"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/digital/Comissao_Boi_2024.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Mascote Comissão I",
+		data: 2023,
+		tipo: "Mascote em vetor e logo",
+		cliente: "Comissão de formatura XV Direito USP Ribeirão",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["digital", "mascote", "comissão direito usp ribeirão"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/digital/Comissao_Boi_2023.jpg",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Logo_Comissao.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Morte",
+		data: 2022,
+		tipo: "",
+		cliente: "",
+		desc: "Redesign de uma personagem minha de infância, a Morte.",
+		software: "",
+		tags: ["tradicional"],
+		medias: [{ tipo: "image", src: "/assets/img/arte/morte.jpg" }],
+	},
+	/* {
+					titulo: "Sem título",
+					data: 2022,
+					tipo: "",
+					cliente: "",
+					desc: "",
+					software: "",
+					tags: ["tradicional"],
+					medias: [{ tipo: "image", src: "/assets/img/arte/Image_20250421_0005.jpg" }],
+				}, */
+	{
+		titulo: "Mestre Ensinador",
+		data: 2022,
+		tipo: "Pixel art",
+		cliente: "",
+		desc: "",
+		software: ["aseprite"],
+		tags: ["digital", "pixel"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/arte/digital/mestre_ensinador_2022.jpg",
+			},
+		],
+	},
+];

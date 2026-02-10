@@ -1,0 +1,366 @@
+designs = [
+	{
+		titulo: "Fucking Life",
+		data: 2025,
+		tipo: "Audiovisual",
+		cliente: "",
+		desc: "Montagem para o lançamento da música 'Fucking Life' da banda Império Contra-Ataca!, com visuais do anime FLCL.",
+		software: ["premiere"],
+		tags: ["audiovisual"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/thumbnails/Fucking Life (2025) Thumbnail.jpg",
+				thumbOnly: true,
+			},
+			{
+				tipo: "video",
+				src: "https://www.youtube.com/watch?v=rlGgEj5xSwI",
+			},
+		],
+	},
+	{
+		titulo: "Bate-Papo Canino",
+		data: 2024,
+		tipo: "Animação",
+		cliente: "",
+		desc: "Animação híbrida realizada como Trabalho de Conclusão de Curso para a graduação em Design Gráfico na Universidade Estadual Paulista.",
+		software: ["after effects", "premiere", "photoshop"],
+		tags: ["audiovisual"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/thumbnails/Bate-Papo Canino (2024) Thumbnail.jpg",
+				thumbOnly: true,
+			},
+			{
+				tipo: "video",
+				src: "https://www.youtube.com/watch?v=9th8NyV1w-g",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Bate-Papo Canino Concepts.jpg",
+				caption: "Concept arts dos personagens",
+			},
+		],
+	},
+	{
+		titulo: "Camisetas esportivas",
+		data: 2024,
+		tipo: "Moda",
+		cliente: "",
+		desc: "Trabalhos selecionados",
+		software: ["illustrator", "photoshop"],
+		tags: ["moda"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/moda/Selected-Works-Moda-2.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Phonesex & Booty Call",
+		data: 2024,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Em 2020, criei uma capa alternativa para a música 'Phonesex', do rapper brasileiro Yung Lixo, com participação de Yumaru. Em 2024, também criei uma capa para 'Booty Call', a sequência da música anterior, lançada dois anos depois. As duas músicas se complementam musicalmente, então meu objetivo foi criar um complemento visual também.",
+		software: ["illustrator", "photoshop"],
+		tags: ["música", "capa", "logo", "yung lixo"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Phonesex/Yung Lixo - Phonesex (2020).jpg",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Phonesex/Yung Lixo - Booty Call (2024).jpg",
+			},
+			{ tipo: "image", src: "/assets/img/designs/Phonesex/3.jpg" },
+			{ tipo: "image", src: "/assets/img/designs/Phonesex/4.jpg" },
+			{ tipo: "image", src: "/assets/img/designs/Phonesex/5.jpg" },
+		],
+	},
+	{
+		titulo: "Faded",
+		data: 2023,
+		tipo: "Pôster",
+		cliente: "",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["cartaz/pôster"],
+		medias: [{ tipo: "image", src: "/assets/img/designs/Faded (2023).jpg" }],
+	},
+	{
+		titulo: "Reviver",
+		data: 2023,
+		tipo: "",
+		cliente: "",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["logo"],
+		medias: [{ tipo: "image", src: "/assets/img/designs/Reviver (2023).jpg" }],
+	},
+	{
+		titulo: "Doce Sussi",
+		data: 2023,
+		tipo: "Logo e embalagem",
+		cliente: "Doce Sussi",
+		desc: "",
+		software: ["illustrator", "photoshop"],
+		tags: ["marca", "logo", "embalagem", "doce sussi"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Doce Sussi Caixa.jpg",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Doce Sussi Logo Fundo.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Bombodoom",
+		data: 2022,
+		tipo: "Concept de Logo",
+		cliente: "",
+		desc: "Para uma empresa fictícia de bombons.",
+		software: ["illustrator"],
+		tags: ["marca", "logo"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Bombodoom Logo Fundo.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Blissom",
+		data: 2022,
+		tipo: "Concept de Logo",
+		cliente: "",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["marca", "logo"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Blissom Logo Fundo.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Reviver",
+		data: 2022,
+		tipo: "Concept de Logo",
+		cliente: "",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["marca", "logo"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Reviver Logo Fundo.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Zelar Decor",
+		data: 2021,
+		tipo: "Logo",
+		cliente: "Zelar Decor",
+		desc: "",
+		software: ["illustrator"],
+		tags: ["marca", "logo", "zelar decor"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/marcas/Zelar Decor Logo Fundo.jpg",
+			},
+		],
+	},
+	{
+		titulo: "Block By Block West",
+		data: 2020,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Capa alternativa para o EP 'Block By Block West', do rapper Oliver Francis. As músicas estreiaram em um festival virtual dentro do Minecraft, então busquei criar uma versão que lembrasse videogames (mas bem mais antigos).",
+		software: ["photoshop"],
+		tags: ["música", "capa", "oliver francis"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Oliver - Block By Block West (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Art Angels",
+		data: 2020,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Releitura da capa do álbum 'Art Angels', da artista canadense Grimes. A ideia era criar uma versão alternativa da capa, no estilo dos meus designs, buscando manter a essência da original.",
+		software: ["photoshop"],
+		tags: ["música", "capa", "logo", "grimes"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Grimes - Art Angels (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Hi, How Are You",
+		data: 2020,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Uma releitura da capa do álbum 'Hi, How Are You', de Daniel Johnston, imaginando como seria se fosse lançada hoje, com uma abordagem mais moderna. Apesar de transmitir uma sensação completamente distinta da original, achei um experimento interessante.",
+		software: ["photoshop"],
+		tags: ["música", "capa", "daniel johnston"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Daniel Johnston - Hi How Are You (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Fake",
+		data: 2020,
+		tipo: "Capa de single",
+		cliente: "H3lthy",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["música", "capa", "h3lthy"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/h3lthy - fake (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "In My Head",
+		data: 2020,
+		tipo: "Capa de single",
+		cliente: "H3lthy",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["música", "capa", "h3lthy"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/h3lthy & naive - In My Head (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Makes Sense You Hung Up",
+		data: 2020,
+		tipo: "Capa de single",
+		cliente: "Naïve",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["música", "capa", "naïve"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Naïve - Makes Sense You Hung Up (2020).jpg",
+			},
+		],
+	},
+	{
+		titulo: "24hrs Sem Dormir",
+		data: 2019,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Concept de capa alternativa para o álbum '24hrs Sem Dormir', do MC Igu.",
+		software: ["photoshop"],
+		tags: ["música", "capa", "mc igu"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/Mc Igu - 24hrs Sem Dormir (2019).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Underground Underdogs",
+		data: 2018,
+		tipo: "Concepts de camisetas",
+		cliente: "Underground Underdogs",
+		desc: "",
+		software: ["illustrator", "photoshop"],
+		tags: ["moda", "underground underdogs"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/moda/UU Merch (2018).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Boston Shows",
+		data: 2018,
+		tipo: "Cartazes",
+		cliente: "Underground Underdogs",
+		desc: "Em 2018, a Underground Underdogs organizou dois shows distintos para a cena underground de rap e hip-hop, ambos realizados em Boston, Massachusetts. Um aconteceu em 29 de agosto e o outro em 19 de dezembro de 2018. Tive a honra de criar os cartazes para esses eventos. <br><br>Os concertos contaram com uma programação de vários artistas underground conhecidos na cena do rap e hip-hop, incluindo Cold Hart, Horse Head, Lil Lotus, Guccihighwaters e muitos outros.",
+		software: ["illustrator", "photoshop"],
+		tags: ["música", "cartaz/pôster", "underground underdogs"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/UU Poster Shows (2018).jpg",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/UU - August 29, 2018 Boston Show (2018).jpg",
+			},
+			{
+				tipo: "image",
+				src: "/assets/img/designs/UU - December 19, 2018 Boston Show (2018).jpg",
+			},
+		],
+	},
+	{
+		titulo: "SUICIDESESH",
+		data: 2018,
+		tipo: "Concept de capa",
+		cliente: "",
+		desc: "Concept de capa para um álbum colaborativo entre os artistas $UICIDEBOY$ e Bones.",
+		software: ["photoshop"],
+		tags: ["música", "capa", "logo", "suicideboys", "bones"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/SUICIDESESH (2018).jpg",
+			},
+		],
+	},
+	{
+		titulo: "Scrape",
+		data: 2018,
+		tipo: "Concept de capa alternativa",
+		cliente: "",
+		desc: "Concept de capa alternativa para o single 'Scrape', do duo $UICIDEBOY$",
+		software: ["photoshop"],
+		tags: ["música", "capa", "suicideboys"],
+		medias: [
+			{
+				tipo: "image",
+				src: "/assets/img/designs/$UICIDEBOY$ - Scrape (2018).jpg",
+			},
+		],
+	},
+	{
+		titulo: "1208",
+		data: 2018,
+		tipo: "Concept de capa",
+		cliente: "",
+		desc: "",
+		software: ["photoshop"],
+		tags: ["capa"],
+		medias: [{ tipo: "image", src: "/assets/img/designs/1208 (2018).jpg" }],
+	},
+];
