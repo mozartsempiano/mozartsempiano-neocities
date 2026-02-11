@@ -81,12 +81,23 @@ module.exports = function (eleventyConfig) {
 		});
 	});
 
+	// eleventyConfig.addGlobalData("eleventyComputed", {
+	// 	permalink: (data) => {
+	// 		const stem = data.page?.filePathStem;
+	// 		if (!stem) return;
+	// 		if (stem.startsWith("/content/")) {
+	// 			return `/${data.page.fileSlug}/`;
+	// 		}
+	// 	},
+	// });
+
 	eleventyConfig.addGlobalData("eleventyComputed", {
 		permalink: (data) => {
 			const stem = data.page?.filePathStem;
 			if (!stem) return;
+
 			if (stem.startsWith("/content/")) {
-				return `/${data.page.fileSlug}/`;
+				return stem.slice("/content".length) + "/";
 			}
 		},
 	});
