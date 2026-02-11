@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.0",
+    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
     "@shopify/prettier-plugin-liquid": "^1.10.0",
     "cheerio": "^1.2.0",
     "jimp": "^1.6.0",
@@ -20,6 +21,7 @@
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "dotenv": "^17.2.4",
+    "eleventy-plugin-purgecss": "^0.6.0",
     "markdown-it-anchor": "^9.2.0",
     "node-fetch": "^3.3.2"
   },

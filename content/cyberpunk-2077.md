@@ -2,6 +2,8 @@
 layout: default
 title: Cyberpunk 2077
 created: 2026-02-03T09:53
+imgPrincipal: /assets/img/cyberpunk-2077/hanako.jpg
+imgPrincipalCaption: Cyberpunk 2077
 ---
 
 ![>](/assets/img/cyberpunk-2077/char_corpo.jpg "Minha personagem na minha primeira run, uma corpo com mantis blades")

@@ -623,9 +623,9 @@ div#postFooter {
  * ---------------------------------------------- */
 
 a#editPage svg {
-	min-width: 16px;
-	min-height: 16px;
-	width: 1.5rem;
+	min-width: 14px;
+	min-height: 14px;
+	width: 1rem;
 	height: auto;
 	transition: var(--transition-time);
 }
