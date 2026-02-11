@@ -24,4 +24,4 @@ O último verso, “I’m happy just because I found out I am really no one”, 
 
 Não devemos lamentar pela viagem ter um fim, mas nos alegrarmos por termos tido a oportunidade de fazer parte dela. Sem a morte, a vida não teria sentido, e, sem a vida, a morte também não. São faces opostas da mesma moeda, que se completam e dão sentido pro universo, inerentemente movido por essas duas leis. E isso não precisa ser deprimente, mas pode ser libertador.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2GHyLhbdzN0?si=pZ4c9ocktMmVwmKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=2GHyLhbdzN0

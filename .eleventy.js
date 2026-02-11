@@ -8,6 +8,8 @@ module.exports = function (eleventyConfig) {
 	const cheerio = require("cheerio");
 	const tinyCSS = require("@sardine/eleventy-plugin-tinycss");
 	const tinyHTML = require("@sardine/eleventy-plugin-tinyhtml");
+	const embedEverything = require("eleventy-plugin-embed-everything");
+	const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
 	require("dotenv").config();
 	const fetch = (...args) =>
 		import("node-fetch").then(({ default: fetch }) => fetch(...args));
@@ -64,6 +66,8 @@ module.exports = function (eleventyConfig) {
 		sortClassName: true,
 	};
 	eleventyConfig.addPlugin(tinyHTML, tinyHTMLOptions);
+
+	eleventyConfig.addPlugin(embedEverything);
 
 	const tmdbKey = process.env.TMDB_API_KEY;
 	const lang = "en";
