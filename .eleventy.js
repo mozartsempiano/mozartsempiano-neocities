@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
 	const path = require("path");
 	const { Jimp } = require("jimp");
 	const cheerio = require("cheerio");
+	const tinyCSS = require("@sardine/eleventy-plugin-tinycss");
 	const tinyHTML = require("@sardine/eleventy-plugin-tinyhtml");
 	require("dotenv").config();
 	const fetch = (...args) =>
@@ -40,6 +41,15 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+	const tinyOptions = {
+		purgeCSS: {
+			fontFace: true,
+			keyframes: true,
+			variables: true,
+		},
+	};
+	eleventyConfig.addPlugin(tinyCSS, tinyOptions);
+
 	const tinyHTMLOptions = {
 		html5: true,
 		removeRedundantAttributes: true,
@@ -53,7 +63,7 @@ module.exports = function (eleventyConfig) {
 		sortAttributes: true,
 		sortClassName: true,
 	};
-	eleventyConfig.addPlugin(tinyHTML);
+	eleventyConfig.addPlugin(tinyHTML, tinyHTMLOptions);
 
 	const tmdbKey = process.env.TMDB_API_KEY;
 	const lang = "en";
