@@ -69,6 +69,17 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(embedEverything);
 
+	/** @type {import("eleventy-plugin-robotstxt/typedefs.js").EleventyPluginRobotsTxtOptions} */
+	const eleventyPluginRobotsTxtOptions = {
+		// sitemapURL: "https://mozartsempiano.com/sitemap.xml",
+		shouldBlockAIRobots: true,
+		rules: new Map([["*", [{ disallow: "/sonhos/" }, { disallow: "/junk/" }]]]),
+	};
+	eleventyConfig.addPlugin(
+		EleventyPluginRobotsTxt,
+		eleventyPluginRobotsTxtOptions,
+	);
+
 	const tmdbKey = process.env.TMDB_API_KEY;
 	const lang = "en";
 
