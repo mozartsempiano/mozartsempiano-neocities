@@ -21,7 +21,7 @@
 				<h2 id="subtitulo">{{ subtitulo }}</h2>
 				{% endif %} {% include 'toc.html' %}
 				<div class="gallery">
-					{% for item in title | slugify %}
+					{% assign items = dataset %} {% for item in items %}
 					<div class="filter-gallery-item">
 						<div class="filter-gallery-content">
 							<div class="filter-gallery-thumb">
