@@ -15,7 +15,9 @@ imgPrincipalCaption: Cowboy Bebop (1998)
 - **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>0</kbd>** - Fechar todas as seções
 - **<kbd>Ctrl</kbd> + <kbd>,</kbd>** - Abrir configurações
 
-## Terminal
+## Desenvolvimento Web
+
+### Terminal
 
 `python -m http.server 8000`
 Na pasta do site, abre servidor localhost:8000.

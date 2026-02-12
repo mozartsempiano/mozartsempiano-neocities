@@ -7,7 +7,7 @@ created: 2026-02-06T10:41
 
 ## Música
 
-<div style="display: flex; flex-direction: row; gap: 1rem">
+<div style="display: flex; flex-direction: row; gap: var(--gap-padrao); justify-content: flex-start;">
 
 ![](https://tapmusic.net/collage.php?user=wrired&type=7day&size=3x3 "O que ouvi na última semana")
 

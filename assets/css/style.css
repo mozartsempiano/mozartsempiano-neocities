@@ -177,6 +177,7 @@ footer.page-footer a#scroll-top {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: var(--b-radius);
 }
 
 footer.page-footer a#scroll-top svg {
@@ -402,6 +403,7 @@ code {
 	font-size: 0.84rem;
 	outline: 0;
 	transition: box-shadow var(--transition-time-short);
+	border-radius: var(--b-radius);
 }
 
 code:hover {
@@ -511,9 +513,11 @@ main figure:has(img[alt$="><"]) {
 	float: none !important;
 }
 
-main img {
+main figure img {
 	width: 100%;
 	height: auto;
+	border-radius: var(--b-radius);
+	border: var(--borda-padrao);
 }
 
 main img[src*="dither"] {
@@ -543,6 +547,7 @@ div#backlinks_section {
 	margin-top: 2rem;
 	display: inline-block;
 	width: 100%;
+	border-radius: var(--b-radius);
 }
 
 div#backlinks_section h1.backlinks-title {

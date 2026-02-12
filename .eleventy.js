@@ -216,14 +216,14 @@ module.exports = function (eleventyConfig) {
 		return originalParagraphClose(tokens, idx, options, env, self);
 	};
 
-	eleventyConfig.addTransform("lazyImages", function (content, outputPath) {
-		if (outputPath && outputPath.endsWith(".html"))
-			return content.replace(
-				/<img(?!.*loading=)(.*?)>/g,
-				'<img$1 loading="lazy">',
-			);
-		return content;
-	});
+	// eleventyConfig.addTransform("lazyImages", function (content, outputPath) {
+	// 	if (outputPath && outputPath.endsWith(".html"))
+	// 		return content.replace(
+	// 			/<img(?!.*loading=)(.*?)>/g,
+	// 			'<img$1 loading="lazy">',
+	// 		);
+	// 	return content;
+	// });
 
 	eleventyConfig.addFilter("markdownify", (string) => md.render(string));
 	eleventyConfig.setLibrary("md", md);
