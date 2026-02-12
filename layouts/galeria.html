@@ -40,23 +40,7 @@
 					{% endfor %}
 				</div>
 				{% if not noBacklinks %} {% include 'backlinks.html' %} {% endif %} {%
-				if created %} {% assign created_ms = created | date: "%s" | times: 1000
-				%} {% assign updated = page | lastModified %}
-
-				<div id="postDates">
-					<span>
-						<label>Publicado:</label>
-						<span>{{ created | formatDateTime }}</span>
-					</span>
-
-					{% if updated > created_ms %}
-					<span>
-						<label>Modificado:</label>
-						<span>{{ updated | formatDateTime }}</span>
-					</span>
-					{% endif %}
-				</div>
-				{% endif %}
+				include 'postFooter.html' %}
 			</main>
 		</div>
 

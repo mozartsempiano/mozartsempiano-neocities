@@ -43,31 +43,31 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-	const tinyOptions = {
-		purgeCSS: {
-			fontFace: true,
-			keyframes: true,
-			variables: true,
-		},
-	};
-	eleventyConfig.addPlugin(tinyCSS, tinyOptions);
+	// const tinyOptions = {
+	// 	purgeCSS: {
+	// 		fontFace: true,
+	// 		keyframes: true,
+	// 		variables: true,
+	// 	},
+	// };
+	// eleventyConfig.addPlugin(tinyCSS, tinyOptions);
 
-	const tinyHTMLOptions = {
-		html5: true,
-		removeRedundantAttributes: true,
-		collapseBooleanAttributes: true,
-		collapseWhitespace: true,
-		decodeEntities: true,
-		html5: true,
-		removeAttributeQuotes: true,
-		removeComments: true,
-		removeOptionalTags: true,
-		sortAttributes: true,
-		sortClassName: true,
-	};
-	eleventyConfig.addPlugin(tinyHTML, tinyHTMLOptions);
+	// const tinyHTMLOptions = {
+	// 	html5: true,
+	// 	removeRedundantAttributes: true,
+	// 	collapseBooleanAttributes: true,
+	// 	collapseWhitespace: true,
+	// 	decodeEntities: true,
+	// 	html5: true,
+	// 	removeAttributeQuotes: true,
+	// 	removeComments: true,
+	// 	removeOptionalTags: true,
+	// 	sortAttributes: true,
+	// 	sortClassName: true,
+	// };
+	// eleventyConfig.addPlugin(tinyHTML, tinyHTMLOptions);
 
-	eleventyConfig.addPlugin(embedEverything);
+	// eleventyConfig.addPlugin(embedEverything);
 
 	/** @type {import("eleventy-plugin-robotstxt/typedefs.js").EleventyPluginRobotsTxtOptions} */
 	const eleventyPluginRobotsTxtOptions = {
