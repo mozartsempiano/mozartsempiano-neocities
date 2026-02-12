@@ -89,3 +89,4 @@ created: 2026-02-04T16:33
 - [Topsters](https://topsters.org/) - Criar charts de músicas
 - [Spicetify](https://github.com/spicetify) - Cliente alternativo para Spotify
 - [Strudel](https://strudel.cc/) - Fazer músicas através de programação
+- [Soulseek](https://www.slsknet.org/)

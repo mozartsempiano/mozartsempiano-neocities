@@ -622,6 +622,14 @@ div#postFooter {
  * Datas de publicação e modificação
  * ---------------------------------------------- */
 
+a#editPage {
+	text-wrap: nowrap;
+	display: inline-flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-items: center;
+}
+
 a#editPage svg {
 	min-width: 14px;
 	min-height: 14px;
