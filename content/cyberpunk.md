@@ -8,7 +8,7 @@ imgPrincipalCaption: Blade Runner (1982)
 
 Cyberpunk é um subgênero da ficção científica que retrata futuros distópicos, dominados por megacorporações, onde tecnologia avançada coexiste com uma sociedade decadente, marginalização e opressão sistêmica.
 
-É uma estética que sempre me fascinou muito, desde pequeno. Sinto que, de certa forma, a gente já vive em um mundo muito parecido com os de histórias cyberpunk, nessa fase de capitalismo tardio, só que sem toda a tecnologia legal — os hologramas, a moda futurista, a integração de tecnologia avançada e corpo humano ou os carros voadores (que, na verdade, nem acho legais, mas, sim, fundamentalmente estúpidos).
+É uma estética que sempre me fascinou muito, desde pequeno. Sinto que, de certa forma, a gente já vive em um mundo muito parecido com os de histórias cyberpunk, nessa fase de capitalismo tardio, só que sem toda a tecnologia legal — os hologramas, a moda futurista, a integração de tecnologia avançada e corpo humano ou os carros voadores (que, na verdade, nem acho legais, mas fundamentalmente estúpidos).
 
 ## Obras
 
