@@ -149,6 +149,7 @@ footer.page-footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 0.5rem;
+	border-top: 1px solid var(--clr-gray-a30);
 }
 
 footer.page-footer svg.lucide-copyright {
@@ -616,6 +617,8 @@ div#postFooter {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 1rem;
 }
 
 /* ----------------------------------------------
@@ -628,6 +631,8 @@ a#editPage {
 	flex-direction: row;
 	gap: 0.5rem;
 	align-items: center;
+	line-height: 100%;
+	color: var(--clr-gray-a50);
 }
 
 a#editPage svg {
@@ -636,14 +641,15 @@ a#editPage svg {
 	width: 1rem;
 	height: auto;
 	transition: var(--transition-time);
+	color: var(--clr-white);
 }
 
 a#editPage:hover svg {
 	transform: translateY(-2px);
 }
 
-a#editPage:has(svg) {
-	color: currentColor;
+a#editPage:hover {
+	color: var(--clr-white);
 }
 
 /* ----------------------------------------------
