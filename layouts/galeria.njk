@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% include "head.njk" ignore missing %}
+        <link rel="stylesheet" href="/assets/css/galeria.css" />
+    </head>
+    <body>
+        <div>
+            {% include "header.njk" ignore missing %}
+            <main>
+                {% if imgPrincipal %}
+                    <figure>
+                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                    </figure>
+                {% endif %}
+                <h1 id="tituloPagina">{{ title }}</h1>
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                {% include "toc.njk" ignore missing %}
+                {{ content | safe }}
+                <div class="gallery">
+                    {% for item in dataset %}
+                        <div class="gallery-item">
+                            <div class="gallery-content">
+                                <div class="gallery-thumb">
+                                    <img src="{{ item.medias[0].src }}" alt="{{ item.titulo | escape }}" />
+                                </div>
+                                <div class="gallery-tags">
+                                    {% for tag in item.tags %}<span class="gallery-tag" data-tag="{{ tag }}">#{{ tag }}</span>{% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if not noBacklinks %}
+                    {% include "backlinks.njk" ignore missing %}
+                {% endif %}
+                {% include "postFooter.njk" %}
+            </main>
+        </div>
+        {% include "footer.njk" ignore missing %}
+        {% include "scripts_bottom.njk" ignore missing %}
+    </body>
+</html>

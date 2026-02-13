@@ -83,7 +83,7 @@ module.exports = function (eleventyConfig) {
 	const tmdbKey = process.env.TMDB_API_KEY;
 	const lang = "en";
 
-	eleventyConfig.addLiquidShortcode(
+	eleventyConfig.addNunjucksAsyncShortcode(
 		"tmdbPoster",
 		async (title, year, size = "w154") => {
 			if (!tmdbKey) return "";
@@ -225,7 +225,6 @@ module.exports = function (eleventyConfig) {
 	// 	return content;
 	// });
 
-	eleventyConfig.addFilter("markdownify", (string) => md.render(string));
 	eleventyConfig.setLibrary("md", md);
 	eleventyConfig.addPlugin(sitemap, {
 		sitemap: { hostname: "https://mozartsempiano.com" },

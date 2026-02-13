@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>{% include "head.njk" ignore missing %}</head>
+    <body class="crt">
+        <div>
+            {% include "header.njk" ignore missing %}
+            <main>
+                {% if imgPrincipal %}
+                    <figure>
+                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                    </figure>
+                {% endif %}
+                <h1 id="tituloPagina">{{ title }}</h1>
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                {% include "toc.njk" ignore missing %}
+                {{ content | safe }}
+                {% if not noBacklinks %}
+                    {% include "backlinks.njk" ignore missing %}
+                {% endif %}
+                {% include "postFooter.njk" ignore missing %}
+            </main>
+        </div>
+        {% include "footer.njk" ignore missing %}
+        {% include "scripts_bottom.njk" ignore missing %}
+    </body>
+</html>
