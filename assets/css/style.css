@@ -411,13 +411,13 @@ code:hover {
 	box-shadow: inset 0 0 0 1px var(--clr-white);
 	/* animation: bounce 0.5s ease; */
 
-	&:after {
+	/* &:after {
 		content: "|";
 		animation-name: blinkUnderline;
 		animation-duration: 0.9s;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
-	}
+	} */
 }
 
 @keyframes bounce {

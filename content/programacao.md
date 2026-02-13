@@ -19,7 +19,10 @@ imgPrincipalCaption: Cowboy Bebop (1998)
 
 ### Terminal
 
-`python -m http.server 8000`
+```
+python -m http.server 8000
+```
+
 Na pasta do site, abre servidor localhost:8000.
 
 ### Node.js
@@ -28,17 +31,21 @@ Na pasta do site, abre servidor localhost:8000.
 
 Agora, programando em [Node.js](https://nodejs.org/):
 
-`npx install`
-`npx eleventy --serve`
+```
+npx install
+npx eleventy --serve
+```
 
 Para abrir localhost:8080.
 
 Caso não tenha Node no computador e não tenha permissão de administrador pra baixar, baixar o .zip dele pelo site oficial, extrair em alguma pasta, como C:\Users\User, e usar:
 
-`$env:PATH = "C:\Users\[User]\node;" + $env:PATH`
-`npm.cmd -v`
-`npm.cmd install`
-`npx.cmd eleventy --serve`
+```
+$env:PATH = "C:\Users[User]\node;" + $env:PATH
+npm.cmd -v
+npm.cmd install
+npx.cmd eleventy --serve
+```
 
 ## Links úteis
 
