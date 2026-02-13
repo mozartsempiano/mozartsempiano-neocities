@@ -2,6 +2,6 @@
 {% if headingsCount > 3 %}
   <details class="toc-wrapper">
     <summary>Conteúdo</summary>
-    {{ content | toc }}
+    {{ content | toc | safe }}
   </details>
 {% endif %}
