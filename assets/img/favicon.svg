@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="2.4" r="2.4"/><circle cx="20.4" cy="7.2" r="2.4"/><circle cx="20.4" cy="16.8" r="2.4"/><circle cx="12" cy="21.6" r="2.4"/><circle cx="3.6" cy="16.8" r="2.4"/><circle cx="3.6" cy="7.2" r="2.4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <style>
+		circle {
+			fill: #f8edff;
+		}
+		
+        @media (prefers-color-scheme: dark) {
+            circle {
+                fill: #f8edff;
+            }
+        }
+        
+        @media (prefers-color-scheme: light) {
+            circle {
+                fill: #0c0c0c;
+            }
+        }
+    </style>
+    <circle cx="12" cy="2.4" r="2.4"></circle>
+    <circle cx="20.4" cy="7.2" r="2.4"></circle>
+    <circle cx="20.4" cy="16.8" r="2.4"></circle>
+    <circle cx="12" cy="21.6" r="2.4"></circle>
+    <circle cx="3.6" cy="16.8" r="2.4"></circle>
+    <circle cx="3.6" cy="7.2" r="2.4"></circle>
+</svg>

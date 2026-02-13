@@ -8,7 +8,7 @@
             | striptags
             | trim
             | replace("\n", " ")
-            | truncate(100, true, "…") %}
+        | truncate(100, true, "…") %}
 {% elif desc %}
     {% set metadesc = desc %}
 {% else %}
@@ -21,6 +21,10 @@
 <meta property="og:url" content="{{ site.baseurl ~ page.url }}" />
 <meta property="og:image" content="/assets/img/avatar.png" />
 <meta property="og:description" content="{{ metadesc }}" />
+<link rel="icon"
+      type="image/x-icon"
+      href="/assets/img/favicon.svg"
+      type="image/svg+xml">
 <link rel="canonical" href="{{ site.baseurl ~ page.url }}" />
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 <link rel="stylesheet" href="/assets/css/style.css" />
