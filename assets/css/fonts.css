@@ -1,44 +1,43 @@
 /* ----------------------------------------------
- * Fontes externas
+ * Fontes
  * ---------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 @font-face {
-	font-family: "Redaction20";
-	src: url("/assets/fontes/Redaction20.otf") format("opentype");
+  font-family: "Redaction20";
+  src: url("/assets/fontes/Redaction20.otf") format("opentype");
 }
 
 @font-face {
-	font-family: "Redaction35";
-	src: url("/assets/fontes/Redaction35.otf") format("opentype");
+  font-family: "Redaction35";
+  src: url("/assets/fontes/Redaction35.otf") format("opentype");
 }
 
 @font-face {
-	font-family: "Redaction50";
-	src: url("/assets/fontes/Redaction50.otf") format("opentype");
+  font-family: "Redaction50";
+  src: url("/assets/fontes/Redaction50.otf") format("opentype");
 }
 
 @font-face {
-	font-family: "DotGothic";
-	src: url("/assets/fontes/DotGothic16-Regular.ttf") format("truetype");
+  font-family: "DotGothic";
+  src: url("/assets/fontes/DotGothic16-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Voxel";
-	src: url("/assets/fontes/Voxel.otf") format("opentype");
+  font-family: "gabriele-d";
+  src: url("/assets/fontes/gabriele-d.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "gabriele-d";
-	src: url("/assets/fontes/gabriele-d.ttf") format("truetype");
+  font-family: "Kraut";
+  src: url("/assets/fontes/kraut____typefuck11.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Kraut";
-	src: url("/assets/fontes/kraut____typefuck11.ttf") format("truetype");
+  font-family: "ANK";
+  src: url("/assets/fontes/Web437_DOS-V_re_ANK24.woff") format("woff");
 }
 
 @font-face {
-	font-family: "ANK";
-	src: url("/assets/fontes/Web437_DOS-V_re_ANK24.woff") format("woff");
+  font-family: "XGA";
+  src: url("/assets/fontes/Web437_IBM_XGA-AI_12x20.woff") format("woff");
 }

@@ -36,11 +36,11 @@
   --width-img-main: var(--main-width);
   --padding-body: 2.2rem;
 
-  --fonte-titulo: var(--fonte-monospace);
+  --fonte-titulo: "XGA", var(--fonte-monospace);
   --fonte-corpo: var(--fonte-sans-serif);
 
   --fonte-serif: serif;
-  --fonte-sans-serif: sans-serif;
+  --fonte-sans-serif: "ANK", sans-serif;
   /* --fonte-monospace: "ANK", "MS UI Gothic", monospace; */
   --fonte-monospace: monospace;
   --fonte-neo-grotesque: "Inter", "Roboto", "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
