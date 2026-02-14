@@ -4,7 +4,6 @@ title: Home
 subtitulo: Meu nome é Mozart.
 imgPrincipal: /assets/img/fotografia/DSC06193.jpg
 imgPrincipalCaption: Sem título, 2025
-css: sobre.css
 created: 2026-02-04T16:33
 ---
 
