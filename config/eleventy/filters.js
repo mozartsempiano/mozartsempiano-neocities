@@ -1,0 +1,81 @@
+﻿const fs = require("fs");
+const path = require("path");
+
+const stripLinks = (str) => str.replace(/<a[^>]*>(.*?)<\/a>/gi, "$1");
+
+module.exports = function configureFilters(eleventyConfig) {
+	const toMillis = (value) => {
+		if (!value) return NaN;
+		if (value instanceof Date) return value.getTime();
+		if (typeof value === "number") return Number.isFinite(value) ? value : NaN;
+		if (typeof value === "string") {
+			const parsed = Date.parse(value);
+			return Number.isFinite(parsed) ? parsed : NaN;
+		}
+		return NaN;
+	};
+
+	eleventyConfig.addFilter("lastModified", (page) => {
+		const inputPath =
+			typeof page === "string"
+				? page
+				: page?.inputPath || page?.page?.inputPath;
+		if (!inputPath) return NaN;
+		const fullPath = path.isAbsolute(inputPath)
+			? inputPath
+			: path.resolve(process.cwd(), inputPath);
+		try {
+			return fs.statSync(fullPath).mtime.getTime();
+		} catch (e) {
+			return NaN;
+		}
+	});
+
+	eleventyConfig.addFilter("toMillis", toMillis);
+	eleventyConfig.addNunjucksFilter("toMillis", toMillis);
+
+	eleventyConfig.addFilter("formatDateTime", (date) => {
+		const d = new Date(date);
+		if (isNaN(d)) return "data invalida";
+		const w = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
+		return `${w[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}.${d.getFullYear()} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")} BRT`;
+	});
+
+	eleventyConfig.addFilter("toc", (html) => {
+		if (!html) return "";
+		const re = /<h([2-4])[^>]*id="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
+		const items = [];
+		let m;
+		while ((m = re.exec(html)))
+			items.push({ level: Number(m[1]), id: m[2], content: stripLinks(m[3]) });
+		if (!items.length) return "";
+		let htmlOut = "<nav class='toc'><ol>";
+		let prevLevel = 2;
+		for (const item of items) {
+			while (item.level > prevLevel) {
+				htmlOut += "<ol>";
+				prevLevel++;
+			}
+			while (item.level < prevLevel) {
+				htmlOut += "</ol>";
+				prevLevel--;
+			}
+			htmlOut += `<li><a href="#${item.id}">${item.content}</a></li>`;
+		}
+		while (prevLevel > 2) {
+			htmlOut += "</ol>";
+			prevLevel--;
+		}
+		htmlOut += "</ol></nav>";
+		return htmlOut;
+	});
+
+	eleventyConfig.addFilter("tocCount", (html) => {
+		if (!html) return 0;
+		const re = /<h([2-4])[^>]*id="([^"]+)"[^>]*>.*?<\/h\1>/gi;
+		let count = 0;
+		while (re.exec(html)) count++;
+		return count;
+	});
+};
+
