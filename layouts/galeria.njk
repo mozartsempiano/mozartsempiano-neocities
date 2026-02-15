@@ -17,7 +17,6 @@
                 <h1 id="tituloPagina">{{ title }}</h1>
                 {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
                 {% include "toc.njk" ignore missing %}
-                {{ content | safe }}
                 <div class="gallery">
                     {% for item in dataset %}
                         <div class="gallery-item">
@@ -32,6 +31,7 @@
                         </div>
                     {% endfor %}
                 </div>
+                {{ content | safe }}
                 {% if not noBacklinks %}
                     {% include "backlinks.njk" ignore missing %}
                 {% endif %}

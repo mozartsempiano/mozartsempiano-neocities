@@ -45,13 +45,24 @@ module.exports = function configureDitherTransform(eleventyConfig) {
   }
 
   function getDuotonePalette() {
+    if (!fs.existsSync(VARS_CSS_PATH)) {
+      return [
+        { r: 255, g: 255, b: 255 },
+        { r: 0, g: 0, b: 0 },
+      ];
+    }
     const css = fs.readFileSync(VARS_CSS_PATH, "utf8");
     const rootCss = getRootBlock(css);
-    const whiteHex = getCssVarHex(rootCss, "clr-white");
-    const blackHex =
-      getCssVarHex(rootCss, "clr-black-a10") ||
-      getCssVarHex(rootCss, "clr-black-a0");
-    return [hexToRgb(whiteHex), hexToRgb(blackHex)];
+    const whiteRgb = getCssVarRgb(rootCss, "clr-white");
+    const blackRgb = getCssVarRgb(rootCss, "clr-black-a10") || getCssVarRgb(rootCss, "clr-black-a0");
+    return [whiteRgb, blackRgb].filter(Boolean);
+  }
+
+  function getCssVarRgb(css, name) {
+    const re = new RegExp(`--${name}\\s*:\\s*rgb\\((\\d+),\\s*(\\d+),\\s*(\\d+)\\)`, "i");
+    const match = css.match(re);
+    if (match) return { r: parseInt(match[1]), g: parseInt(match[2]), b: parseInt(match[3]) };
+    return null;
   }
 
   function getMainWidthPx() {
