@@ -704,7 +704,9 @@ main div#postDates label {
 
 .button-site code#copy-input {
   width: 120px;
+  height: 31px;
   display: inherit;
+  align-items: center;
   white-space: nowrap;
   scrollbar-width: none;
   padding: 5px;
