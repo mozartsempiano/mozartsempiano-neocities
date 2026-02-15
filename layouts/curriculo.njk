@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>{% include "head.njk" ignore missing %}</head>
+    <head>
+        {% set metatitle = site.title %}
+        {% if title %}
+            {% set metatitle = title ~ " — " ~ metatitle %}
+        {% endif %}
+        <title>{{ metatitle }}</title>
+        {% if content %}
+            {% set metadesc = content | striptags | trim | replace("\n", " ") | truncate(100, true, "…") %}
+        {% elif desc %}
+            {% set metadesc = desc %}
+        {% else %}
+            {% set metadesc = site.desc %}
+        {% endif %}
+        <meta name="description" content="{{ metadesc }}"/>
+        <meta property="og:title" content="{{ metatitle }}"/>
+        {% set metatype = "website" %}
+        <meta property="og:type" content="{{ metatype }}"/>
+        <meta property="og:url" content="{{ site.baseurl ~ page.url }}"/>
+        <meta property="og:image" content="/assets/img/avatar.png"/>
+        <meta property="og:description" content="{{ metadesc }}"/>
+        <link rel="icon"
+      type="image/x-icon"
+      href="/assets/img/favicon.svg"
+      type="image/svg+xml">
+        <link rel="canonical" href="{{ site.baseurl ~ page.url }}"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin/>
+        <link rel="stylesheet" href="/assets/css/curriculo.css"/>
+        <link rel="stylesheet" href="/assets/css/animations.css"/>
+        <link rel="stylesheet" href="/assets/css/variaveis.css"/>
+        <link rel="stylesheet" href="/assets/css/fonts.css"/>
+    </head>
     <body>
         <header id="site-header">
             <span>Currículo</span>
@@ -16,8 +46,12 @@
                     </div>
                     <section>
                         <span>Bauru, SP - Brasil</span>
-                        <span><a href="https://mozartsempiano.com" target="_blank">mozartsempiano.com</a></span>
-                        <span><a href="mailto:mozartmt@protonmail.com">mozartmt@protonmail.com</a></span>
+                        <span>
+                            <a href="https://mozartsempiano.com" target="_blank">mozartsempiano.com</a>
+                        </span>
+                        <span>
+                            <a href="mailto:mozartmt@protonmail.com">mozartmt@protonmail.com</a>
+                        </span>
                     </section>
                     <nav class="table-of-contents">
                         <a href="#experiencia">Experiência</a>
@@ -203,21 +237,23 @@
         </main>
         {% include "scripts_bottom.njk" ignore missing %}
         <script>
-			function atualizarHora() {
-				const agora = new Date();
-				const horas = String(agora.getHours()).padStart(2, "0");
-				const minutos = String(agora.getMinutes()).padStart(2, "0");
-				const segundos = String(agora.getSeconds()).padStart(2, "0");
-				const horaFormatada = `${horas}:${minutos}:${segundos}`;
-				document.getElementById("hora-atual").textContent = horaFormatada;
-			}
-			setInterval(atualizarHora, 1000);
-			atualizarHora();
+            function atualizarHora() {
+                const agora = new Date();
+                const horas = String(agora.getHours()).padStart(2, "0");
+                const minutos = String(agora.getMinutes()).padStart(2, "0");
+                const segundos = String(agora.getSeconds()).padStart(2, "0");
+                const horaFormatada = `${horas}:${minutos}:${segundos}`;
+                document
+                    .getElementById("hora-atual")
+                    .textContent = horaFormatada;
+            }
+            setInterval(atualizarHora, 1000);
+            atualizarHora();
 
-			function gerarPDF() {
-				window.focus();
-				window.print();
-			}
+            function gerarPDF() {
+                window.focus();
+                window.print();
+            }
         </script>
     </body>
 </html>

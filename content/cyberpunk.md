@@ -22,7 +22,6 @@ Cyberpunk é um subgênero da ficção científica que retrata futuros distópic
 
 - Ghost in the Shell (1995), dir. Mamoru Oshii
 - Cyberpunk: Edgerunners (2022)
-- Cowboy Bebop (1998)
 
 ### [Mangá](/manga/)
 
@@ -34,3 +33,7 @@ Cyberpunk é um subgênero da ficção científica que retrata futuros distópic
 - RUINER
 - Metal Gear Rising: Revengeance
 - Cloudpunk
+
+## Ver também
+
+- [Cassette Futurism](/cassette-futurism/)
