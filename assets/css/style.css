@@ -193,6 +193,13 @@ footer.page-footer a#scroll-top:hover svg {
 	transform: translateY(-2px);
 }
 
+footer.page-footer a:link,
+footer.page-footer a:visited,
+footer.page-footer a:active {
+	color: var(--clr-gray-a50);
+	font-weight: bold;
+}
+
 .footnotes {
 	font-size: 0.8em;
 }

@@ -10,9 +10,11 @@ imgPrincipal: /assets/img/lain_sketch_01.png
 
 Entre pixels, linhas de código e madrugadas acordado, encontrei no [design](/meus-designs/), na arte e na tecnologia uma forma de transformar ideias em experiências. Gosto de misturar referências, experimentar linguagens e criar conexões, seja numa [arte](/minhas-artes/), num vídeo, numa [fotografia](/minhas-fotografias/) ou num [código](/programacao/).
 
-Cresci nos anos 2000 e sempre tive um apego especial à tecnologia daquela década—e também da anterior. Tem algo de muito mais interessante, quase mágico, em TVs de tubo, DVDs e CDs do que em uma tela plana ou um serviço de [streaming](/streaming/). Com certeza tem uma nostalgia envolvida, mas acredito que seja mais do que isso. São experiências mais táteis, imperfeitas e autênticas.
+Cresci nos anos 2000 e sempre tive um apego especial à tecnologia daquela década e também da anterior. Sinto que tem algo de muito mais interessante, quase mágico, em TVs de tubo, DVDs e CDs do que em uma tela plana ou um serviço de [streaming](/streaming/). Com certeza tem uma nostalgia envolvida, mas acredito que seja mais do que isso. É tudo muito mais tátil, imperfeito e autêntico.
 
-Sempre me fascinei por estéticas como [cassette futurism](/cassette-futurism/) e [cyberpunk](/cyberpunk/), que imaginam futuros onde a tecnologia tomou outros caminhos. Sempre que possível, tento trazer um pouco disso pros meus projetos autorais. Além do design, também sou apaixonado por [filmes](/cinema/), [música](/musica/), fotografia e tudo que envolve arte.
+Sempre me fascinei por estéticas como [cassette futurism](/cassette-futurism/) e [cyberpunk](/cyberpunk/), que imaginam futuros onde a tecnologia tomou outros caminhos. Sempre que possível, tento trazer um pouco disso pros meus projetos autorais. Além do design, também sou apaixonado por [filmes](/cinema/), [música](/musica/) e filosofia, eternamente movido por uma sede de conhecimento.
+
+Você pode ver meu currículo [aqui](/curriculo/).
 
 ## Portfólio
 
