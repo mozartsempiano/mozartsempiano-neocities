@@ -4,7 +4,7 @@
         {% include "head.njk" ignore missing %}
         <link rel="stylesheet" href="/assets/css/log.css" />
     </head>
-    <body>
+    <body {% if site.crt %}class="crt"{% endif %}>
         <div>
             {% include "header.njk" ignore missing %}
             <main>
