@@ -10,6 +10,7 @@ title: Cinema
 ## Ver também
 
 - [Diário de filmes](/cinema-log/)
+- [Anime](/anime/)
 
 ## Filmes e séries favoritos
 
@@ -22,28 +23,21 @@ title: Cinema
 - Challengers (2024)
 - Crash (1996)
 - Duel (1971)
-- The End of Evangelion (1997)
 - Exotica (1994)
 - Fargo (2014–2024)
-- FLCL (1ª temporada) (2000)
 - Good Time (2017)
 - Irezumi (1966)
 - Misery (1990)
 - Lady Snowblood (1973)
-- Look Back (2021)
 - mid90s (2018)
 - Mr. Robot (2015-2019)
 - [Mulholland Drive (2001)](/mulholland-drive/)
-- Nausicaä do Vale do Vento (1984)
 - The Northman (2022)
 - Occult (2009)
 - Paris, Texas (1984)
-- Perfect Blue (1997)
-- Princesa Mononoke (1997)
 - Rosemary's Baby (1968)
 - Secretary (2002)
 - Seinfeld (1989-1998)
-- Serial Experiments Lain (1998)
 - The Thing (1982)
 - Twin Peaks (1990-1991; 2017)
 - Twin Peaks: Fire Walk with Me (1992)

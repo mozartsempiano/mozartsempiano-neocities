@@ -3,7 +3,7 @@ layout: home
 title: Home
 subtitulo: Meu nome é Mozart.
 created: 2026-02-04T16:33
-imgPrincipal: /assets/img/lain_sketch_01.png
+imgPrincipal: /assets/img/lain_sketch_02.png
 ---
 
 <marquee>artista multimídia ▪ designer gráfico ▪ web designer ▪ editor de vídeo ▪ fotógrafo ▪ programador ▪ entusiasta de tecnologia ▪ amante de filmes ▪ sonhador ▪ viajante ▪ criatura noturna ▪ colecionador de memórias ▪ explorador de mundos ▪ curador de silêncios ▪ guardião de segredos invisíveis</marquee>

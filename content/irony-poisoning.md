@@ -14,4 +14,4 @@ Acho que as pessoas que acham tudo "cringe", "brega" ou "performático" tão só
 
 > God will bless you if you stop hating.
 
-[^1] https://en.wikipedia.org/wiki/Irony_poisoning
+[^1]: https://en.wikipedia.org/wiki/Irony_poisoning

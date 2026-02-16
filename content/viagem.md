@@ -16,12 +16,11 @@ created: 2026-02-04T16:33
 - Condicionador
 - Sabonete líquido
 - Pente
-- Lâmina e espuma de barbear
-- Pós-barba
+- Lâmina, espuma de barbear e pós-barba
 - Escova de dente
 - Pasta de dente
 - Hidratante
-- Cuecas
+- Roupas íntimas
 - Roupa de Banho
 - Meias
 - Guarda-chuva

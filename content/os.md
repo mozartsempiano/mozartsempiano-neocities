@@ -6,7 +6,7 @@ created: 2026-02-06T10:46
 
 ## Windows
 
-# Reparar arquivos de sistema corrompidos no Windows
+### Reparar arquivos de sistema corrompidos no Windows
 
 Abrir Powershell como Admin e digitar:
 
