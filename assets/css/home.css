@@ -1,0 +1,30 @@
+body > div#container {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	width: 100%;
+}
+
+pre#tituloPagina {
+	width: fit-content;
+	max-width: 100%;
+	margin-bottom: 12px;
+	overflow: hidden;
+	font-size: clamp(0.7em, 3vw, 1em);
+	line-height: normal;
+	white-space: pre;
+}
+
+main:has(pre#tituloPagina) #subtitulo {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	body > div#container {
+		flex-direction: column;
+	}
+	aside {
+		display: flex;
+		justify-content: center;
+	}
+}

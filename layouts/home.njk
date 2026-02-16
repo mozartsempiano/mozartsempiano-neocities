@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>{% include "head.njk" ignore missing %}</head>
-    <body {% if site.crt %}class="crt"{% endif %}>
-        <div>
-            {% include "header.njk" ignore missing %}
+    <head>
+        {% include "head.njk" ignore missing %}
+        <link rel="stylesheet" href="/assets/css/home.css" />
+    </head>
+    <body {% if site.crt %}class="{% if site.crt %}crt{% endif %}"{% endif %}>
+        {% include "header.njk" ignore missing %}
+        <div id="container">
             <main>
+                <pre id="tituloPagina" title="{{ site.title }}">
+                                                                  mm                  
+                                                                  MM                  
+            `7MMpMMMb.pMMMb.  ,pW"Wq.  M"""MMV  ,6"Yb.  `7Mb,od8 mmMMmm                
+              MM    MM    MM 6W'   `Wb '  AMV  8)   MM    MM' "'   MM                  
+              MM    MM    MM 8M     M8   AMV    ,pm9MM    MM       MM                  
+              MM    MM    MM YA.   ,A9  AMV  , 8M   MM    MM       MM                  
+            .JMML  JMML  JMML.`Ybmd9'  AMMmmmM `Moo9^Yo..JMML.     `Mbmo               
+                                                                                      
+                                             ,,                                
+                                             db                                
+                                                                               
+,pP"Ybd  .gP"Ya `7MMpMMMb.pMMMb. `7MMpdMAo.`7MM   ,6"Yb.  `7MMpMMMb.  ,pW"Wq.  
+8I   `" ,M'   Yb  MM    MM    MM   MM   `Wb  MM  8)   MM    MM    MM 6W'   `Wb 
+`YMMMa. 8M""""""  MM    MM    MM   MM    M8  MM   ,pm9MM    MM    MM 8M     M8 
+L.   I8 YM.    ,  MM    MM    MM   MM   ,AP  MM  8M   MM    MM    MM YA.   ,A9 
+M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'  
+                                   MM                                          
+                                 .JMML.                                        
+                </pre>
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                {{ content | safe }}
+            </main>
+            <aside>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="invert" />
                         {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
                     </figure>
                 {% endif %}
-                <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
-                {% include "toc.njk" ignore missing %}
-                {{ content | safe }}
-                {% if not noBacklinks %}
-                    {% include "backlinks.njk" ignore missing %}
-                {% endif %}
-                {% include "postFooter.njk" ignore missing %}
-            </main>
+            </aside>
         </div>
         {% include "footer.njk" ignore missing %}
         {% include "scripts_bottom.njk" ignore missing %}
