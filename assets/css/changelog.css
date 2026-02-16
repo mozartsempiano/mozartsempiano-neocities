@@ -29,6 +29,7 @@ fieldset.changelog > h2 {
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	align-items: center;
+	width: 100%;
 
 	&::after {
 		margin-top: 0;

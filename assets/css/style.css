@@ -197,7 +197,7 @@ footer.page-footer a:link,
 footer.page-footer a:visited,
 footer.page-footer a:active {
 	color: var(--clr-gray-a50);
-	font-weight: bold;
+	font-style: italic;
 }
 
 .footnotes {

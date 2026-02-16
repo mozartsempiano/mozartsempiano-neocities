@@ -11,7 +11,7 @@ pre#tituloPagina {
 	margin-bottom: 12px;
 	overflow: hidden;
 	font-size: clamp(0.7em, 1vw, 1em);
-	line-height: normal;
+	line-height: 1em;
 	white-space: pre;
 }
 
