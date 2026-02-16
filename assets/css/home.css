@@ -10,13 +10,18 @@ pre#tituloPagina {
 	max-width: 100%;
 	margin-bottom: 12px;
 	overflow: hidden;
-	font-size: clamp(0.7em, 3vw, 1em);
+	font-size: clamp(0.7em, 1vw, 1em);
 	line-height: normal;
 	white-space: pre;
 }
 
 main:has(pre#tituloPagina) #subtitulo {
 	display: none;
+}
+
+aside img {
+	width: inherit;
+	height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -26,5 +31,9 @@ main:has(pre#tituloPagina) #subtitulo {
 	aside {
 		display: flex;
 		justify-content: center;
+	}
+	pre#tituloPagina {
+		width: 100vw;
+		text-align: center;
 	}
 }

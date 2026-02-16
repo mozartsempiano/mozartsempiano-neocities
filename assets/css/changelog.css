@@ -1,0 +1,44 @@
+.changelog > h2:first-of-type {
+	margin-top: 0;
+}
+
+.changelog > h2 > small {
+	color: var(--clr-gray-a50);
+	font-family: var(--fonte-corpo);
+	font-size: 0.9rem;
+	font-weight: normal;
+}
+
+fieldset.changelog legend {
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: var(--clr-gray-a50);
+}
+
+fieldset.changelog {
+	padding: 0.8rem 1rem 0.5rem 1rem;
+	border-color: var(--clr-gray-a30);
+	border-width: 1px;
+	border-radius: var(--b-radius);
+	height: fit-content;
+}
+
+fieldset.changelog > h2 {
+	font-size: 1.7rem;
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+
+	&::after {
+		margin-top: 0;
+	}
+}
+
+fieldset.changelog ul li {
+	font-size: 0.9rem;
+}
+
+fieldset.changelog ul li::before {
+	top: 0.4em;
+}
