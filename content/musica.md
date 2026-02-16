@@ -90,3 +90,4 @@ created: 2026-02-04T16:33
 - [Spicetify](https://github.com/spicetify) - Cliente alternativo para Spotify
 - [Strudel](https://strudel.cc/) - Fazer músicas através de programação
 - [Soulseek](https://www.slsknet.org/)
+- [MP3Tag](https://www.mp3tag.de/en/)

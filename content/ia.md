@@ -6,7 +6,7 @@ created: 2026-02-04T16:33
 
 Não acho que toda inteligência artificial é inerentemente ruim, mas que o [ser humano](/humanidade/) faz um uso terrível e maligno dela, usando-a em inúmeros contextos cuja implementação dela nunca sequer deveria ter sido considerada, como a [arte](/arte/), entretenimento ou ainda o crime.
 
-Algo que me convence de que eu realmente vivo em [um mundo diferente](/neurodiversidade/) das outras pessoas é o fato de que existem pessoas que genuinamente se entretém assistindo vídeos gerados por inteligência artificial e não veem problema algum em passar o dia no celular vendo isso.
+Inclusive, algo que me convence de que eu realmente vivo em [um mundo diferente](/neurodiversidade/) das outras pessoas é o fato de que existem pessoas que genuinamente se entretém assistindo vídeos gerados por inteligência artificial e não veem problema algum em passar o dia no celular vendo isso.
 
 ## Prompt Modo Absoluto
 

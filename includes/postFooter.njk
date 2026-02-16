@@ -16,7 +16,7 @@
         Editar página
     </a>
     {% if created %}
-        {% set created_ms = (created / 1000) | int * 1000 %}
+        {% set created_ms = created | toMillis %}
         {% set updated = page | lastModified %}
         <div id="postDates">
             <span>

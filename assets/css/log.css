@@ -24,6 +24,7 @@
   background-color: var(--clr-gray-a10);
   padding: 0.5rem 0.9rem;
   line-height: 160%;
+  border-radius: var(--b-radius);
 }
 
 div.movie-log.with-review > div {
@@ -35,6 +36,7 @@ div.movie-log.with-review > div {
 .movie-log img:first-of-type {
   height: 110px;
   width: auto;
+  border-radius: var(--b-radius);
 }
 
 .movie-log .movie-header {
