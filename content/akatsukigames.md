@@ -1,3 +1,5 @@
 ---
 layout: akatsukigames
 ---
+
+Placeholder
