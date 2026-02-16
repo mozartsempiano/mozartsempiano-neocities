@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Now
-subtitulo: Isso é uma página <a href="https://nownownow.com/about">now</a>
 created: 2026-02-06T10:41
 ---
+
+Isso é uma página [now](https://nownownow.com/about), que diz o que estou fazendo agora.
 
 ## Música
 
