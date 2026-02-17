@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
 	configureDitherTransform(eleventyConfig);
 
 	const md = configureMarkdown();
+	const renderMarkdown = (value) => md.render(String(value ?? ""));
+	eleventyConfig.addFilter("renderMarkdown", renderMarkdown);
+	eleventyConfig.addNunjucksFilter("renderMarkdown", renderMarkdown);
 	eleventyConfig.setLibrary("md", md);
 
 	return {
