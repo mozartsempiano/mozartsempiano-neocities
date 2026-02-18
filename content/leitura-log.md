@@ -12,3 +12,6 @@ created: 2026-02-03T17:03
 - Casa de Folhas, por Mark Z. Danielewski
 - Coração Satânico, por William Hjortsberg
 - Além do Bem e do Mal, por Friedrich Nietzsche
+- Dhammapada
+- Temor e Tremor, por Kiekegaard
+- Crime e Castigo, por Dostoiévski

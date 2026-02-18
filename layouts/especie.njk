@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% include "head.njk" ignore missing %}
+        <link rel="stylesheet" href="/assets/css/especie.css" />
+    </head>
+    <body {% if site.crt %}class="crt"{% endif %}>
+        <div>
+            {% include "header.njk" ignore missing %}
+            <main>
+                <h1 id="tituloPagina">{{ title }}</h1>
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                <div>
+                    {% if imgPrincipal %}
+                        <figure>
+                            <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                            {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                        </figure>
+                    {% endif %}
+                    <div>
+                        <h2>Data</h2>
+                        <table>
+                            <tr>
+                                <th>Classificação biológica</th>
+                            </tr>
+                            <tr>
+                                <th>Designação</th>
+                                <td>Não-senciente</td>
+                            </tr>
+                            <tr>
+                                <th>Classe</th>
+                                <td>Mamífero</td>
+                            </tr>
+                            <tr>
+                                <th>Subespécies</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Raças</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Características físicas</th>
+                            </tr>
+                            <tr>
+                                <th>Altura</th>
+                                <td>7.1 m</td>
+                            </tr>
+                            <tr>
+                                <th>Comprimento</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Envergadura</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Peso</th>
+                                <td>345.0 kg</td>
+                            </tr>
+                            <tr>
+                                <th>Esqueleto</th>
+                                <td>Vertebrado</td>
+                            </tr>
+                            <tr>
+                                <th>Cor da Pele</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Cor dos Pelos</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Cor das Penas</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Cor dos Olhos</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Tempo de vida</th>
+                                <td>80 anos</td>
+                            </tr>
+                            <tr>
+                                <th>Características socioculturais</th>
+                            </tr>
+                            <tr>
+                                <th>Planeta Natal</th>
+                                <td>Terra</td>
+                            </tr>
+                            <tr>
+                                <th>Habitat</th>
+                                <td>Lorem ipsum</td>
+                            </tr>
+                            <tr>
+                                <th>Meio</th>
+                                <td>Terrestre</td>
+                            </tr>
+                            <tr>
+                                <th>Alimentação</th>
+                                <td>Carnívoro</td>
+                            </tr>
+                            <tr>
+                                <th>Gestação</th>
+                                <td>Vivíparo</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                {% include "toc.njk" ignore missing %}
+                {{ content | safe }}
+                {% if not noBacklinks %}
+                    {% include "backlinks.njk" ignore missing %}
+                {% endif %}
+                {% include "postFooter.njk" ignore missing %}
+            </main>
+        </div>
+        {% include "footer.njk" ignore missing %}
+        {% include "scripts_bottom.njk" ignore missing %}
+    </body>
+</html>
