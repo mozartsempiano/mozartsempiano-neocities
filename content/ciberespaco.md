@@ -3,6 +3,10 @@ layout: default
 title: Ciberespaço
 ---
 
+O **ciberespaço** é um espaço virtual formado por redes digitais interconectadas pelo mundo inteiro, onde ocorrem comunicação, troca de dados e interações sociais e técnicas.
+
+O termo surgiu no [conto](/leitura/) [cyberpunk](/cyberpunk/) "Burning Chrome" (1982), por William Gibson, onde dois hackers freelancers navegam pelo ciberespaço, descrito como uma "alucinação consensual em massa na rede de [computadores](/computador/)", em busca de fortuna. Ele foi expandido mais tarde em "Neuromancer" (1984).
+
 ## Links úteis
 
 ### Neocities

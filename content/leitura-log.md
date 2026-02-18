@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: log
 title: Diário de Leituras
 css: log.css
 created: 2026-02-03T17:03
@@ -7,6 +7,8 @@ created: 2026-02-03T17:03
 
 ## Para ler
 
--
-
-## Resenhas
+- Neuromancer, por William Gibson
+- O Rei de Amarelo, por Robert W. Chambers
+- Casa de Folhas, por Mark Z. Danielewski
+- Coração Satânico, por William Hjortsberg
+- Além do Bem e do Mal, por Friedrich Nietzsche
