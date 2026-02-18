@@ -9,6 +9,8 @@ module.exports = function configureDitherTransform(eleventyConfig) {
   const INPUT_IMG_DIR = path.join(process.cwd(), "assets/img");
   const VARS_CSS_PATH = path.join(process.cwd(), "assets/css/variaveis.css");
   const generatedDither = new Set();
+  const copiedOriginal = new Set();
+  const frontMatterCache = new Map();
   const BAYER_8X8 = [
     [0, 32, 8, 40, 2, 34, 10, 42],
     [48, 16, 56, 24, 50, 18, 58, 26],
@@ -72,6 +74,90 @@ module.exports = function configureDitherTransform(eleventyConfig) {
     if (!match) return 840;
     const value = Math.round(Number(match[1]));
     return Number.isFinite(value) && value > 0 ? value : 840;
+  }
+
+  function parseBooleanLike(value) {
+    if (typeof value === "boolean") return value;
+    if (typeof value === "number") {
+      if (value === 1) return true;
+      if (value === 0) return false;
+      return null;
+    }
+    if (typeof value !== "string") return null;
+    const normalized = value.trim().toLowerCase();
+    if (!normalized) return null;
+    if (["true", "1", "yes", "y", "on", "enabled"].includes(normalized)) return true;
+    if (["false", "0", "no", "n", "off", "disabled"].includes(normalized)) return false;
+    return null;
+  }
+
+  function getDitherDisableValue(data) {
+    if (!data || typeof data !== "object") return null;
+    for (const key of ["noDither", "disableDither", "ditherDisabled"]) {
+      if (!(key in data)) continue;
+      const parsed = parseBooleanLike(data[key]);
+      if (parsed !== null) return parsed;
+    }
+    if (!("dither" in data)) return null;
+    const parsedDither = parseBooleanLike(data.dither);
+    if (parsedDither !== null) return !parsedDither;
+    if (typeof data.dither === "string") {
+      const normalized = data.dither.trim().toLowerCase();
+      if (["none", "original"].includes(normalized)) return true;
+      if (normalized === "dither") return false;
+    }
+    return null;
+  }
+
+  function getInputPathFromContext(context) {
+    return context?.page?.inputPath || context?.inputPath || null;
+  }
+
+  function parseSimpleFrontMatter(inputPath) {
+    if (!inputPath) return null;
+    const absolutePath = path.isAbsolute(inputPath) ? inputPath : path.join(process.cwd(), inputPath);
+    if (!fs.existsSync(absolutePath)) return null;
+
+    const stat = fs.statSync(absolutePath);
+    const cacheKey = `${absolutePath}|${stat.size}|${Math.floor(stat.mtimeMs)}`;
+    if (frontMatterCache.has(cacheKey)) return frontMatterCache.get(cacheKey);
+
+    const fileContent = fs.readFileSync(absolutePath, "utf8");
+    const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+    if (!match) {
+      frontMatterCache.set(cacheKey, null);
+      return null;
+    }
+
+    const data = {};
+    for (const line of match[1].split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const kv = trimmed.match(/^([A-Za-z0-9_-]+)\s*:\s*(.+)\s*$/);
+      if (!kv) continue;
+      const key = kv[1];
+      let value = kv[2].trim();
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      data[key] = value;
+    }
+
+    frontMatterCache.set(cacheKey, data);
+    return data;
+  }
+
+  function shouldDisableDither(context) {
+    for (const candidate of [context?.ctx, context?.data, context]) {
+      const disableValue = getDitherDisableValue(candidate);
+      if (disableValue !== null) return disableValue;
+    }
+    const frontMatterData = parseSimpleFrontMatter(getInputPathFromContext(context));
+    const disableFromFrontMatter = getDitherDisableValue(frontMatterData);
+    return disableFromFrontMatter === true;
   }
 
   async function generateDitheredImage(inputPath, outPath, maxWidth = null) {
@@ -144,6 +230,18 @@ module.exports = function configureDitherTransform(eleventyConfig) {
     return { inputFsPath, outFsPath, ditherUrl, suffix };
   }
 
+  function getOriginalInfo(src) {
+    const normalized = normalizeSrc(src);
+    if (!normalized) return null;
+    const { assetRel } = normalized;
+    if (!/\.(png|jpe?g)$/i.test(assetRel)) return null;
+    const assetRelFs = assetRel.split("/").join(path.sep);
+    const inputFsPath = path.join(INPUT_IMG_DIR, assetRelFs);
+    if (!fs.existsSync(inputFsPath)) return null;
+    const outFsPath = path.join(OUTPUT_DIR, "assets/img", assetRelFs);
+    return { inputFsPath, outFsPath };
+  }
+
   async function ensureDithered(info, maxWidth) {
     if (!info) return;
     if (generatedDither.has(info.outFsPath) || fs.existsSync(info.outFsPath)) {
@@ -156,6 +254,22 @@ module.exports = function configureDitherTransform(eleventyConfig) {
       console.log("[dither] gerado", info.outFsPath);
     } catch (e) {
       console.error("[dither] falha ao gerar", info.inputFsPath, e);
+    }
+  }
+
+  async function ensureOriginalCopied(info) {
+    if (!info) return;
+    if (copiedOriginal.has(info.outFsPath) || fs.existsSync(info.outFsPath)) {
+      copiedOriginal.add(info.outFsPath);
+      return;
+    }
+    try {
+      await fs.promises.mkdir(path.dirname(info.outFsPath), { recursive: true });
+      await fs.promises.copyFile(info.inputFsPath, info.outFsPath);
+      copiedOriginal.add(info.outFsPath);
+      console.log("[dither] original copiado", info.outFsPath);
+    } catch (e) {
+      console.error("[dither] falha ao copiar original", info.inputFsPath, e);
     }
   }
 
@@ -188,8 +302,29 @@ module.exports = function configureDitherTransform(eleventyConfig) {
     return updated;
   }
 
+  async function ensureOriginalAssets(html) {
+    if (!html) return;
+    const tasks = [];
+    html.replace(/<img\b[^>]*>/gi, (tag) => {
+      if (!/\ssrc\s*=/.test(tag)) return tag;
+      const src = getAttr(tag, "src");
+      if (!src) return tag;
+      const info = getOriginalInfo(src);
+      if (!info) return tag;
+      tasks.push(ensureOriginalCopied(info));
+      return tag;
+    });
+    if (tasks.length) await Promise.all(tasks);
+  }
+
   eleventyConfig.addTransform("ditherImages", async function (content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) return await replaceDitherSrc(content);
+    if (outputPath && outputPath.endsWith(".html")) {
+      if (shouldDisableDither(this)) {
+        await ensureOriginalAssets(content);
+        return content;
+      }
+      return await replaceDitherSrc(content);
+    }
     return content;
   });
 };

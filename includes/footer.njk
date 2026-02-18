@@ -1,15 +1,17 @@
 <footer class="page-footer">
-    <span>
-        <a href="https://webring.xxiivv.com/#xxiivv"
+
+    <div>
+        <span>
+            <a href="https://webring.xxiivv.com/#xxiivv"
            target="_blank"
            rel="noopener noreferrer">
-            <img src="https://webring.xxiivv.com/icon.white.svg"
+                <img src="https://webring.xxiivv.com/icon.white.svg"
                  alt="XXIIVV webring"
                  title="XXIIVV webring"
                  width="24"
-                 height="24" />
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg"
+                 height="24"/>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 24 24"
              fill="none"
              stroke="currentColor"
@@ -17,13 +19,22 @@
              stroke-linecap="round"
              stroke-linejoin="round"
              class="lucide lucide-copyright-icon lucide-copyright">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M14.83 14.83a4 4 0 1 1 0-5.66" />
-        </svg>
-        <span>2018—{% year %} {{ site.author }}</span> / <span>Hospedado em <a href="https://neocities.org/site/mozartsempiano"
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M14.83 14.83a4 4 0 1 1 0-5.66"/>
+            </svg>
+            <span>2018—{% year %}
+                {{ site.author }}</span>
+        </span>
+        <span class="separator">/</span>
+        <span>Hospedado em <a href="https://neocities.org/site/mozartsempiano"
     target="_blank"
-    rel="noreferrer">Neocities</a></span> / <a href="/sitemap/">Sitemap</a>
-    </span>
+    rel="noreferrer">Neocities</a>
+        </span>
+        <span class="separator">/</span>
+        <span>
+            <a href="/sitemap/">Sitemap</a>
+        </span>
+    </div>
     <a id="scroll-top" href="#top">
         <svg xmlns="http://www.w3.org/2000/svg"
              fill="none"
@@ -33,7 +44,7 @@
              stroke-width="2"
              class="lucide lucide-arrow-up-icon lucide-arrow-up"
              viewBox="0 0 24 24">
-            <path d="m5 12 7-7 7 7m-7 7V5" />
+            <path d="m5 12 7-7 7 7m-7 7V5"/>
         </svg>
     </a>
 </footer>
