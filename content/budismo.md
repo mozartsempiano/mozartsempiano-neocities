@@ -74,3 +74,7 @@ imgPrincipal: /assets/img/buda_gato.jpg
 ## Conceitos
 
 - [Bodisatva](https://pt.wikipedia.org/wiki/Bodisatva)
+
+## Ver também
+
+- [Religião](/religiao/)

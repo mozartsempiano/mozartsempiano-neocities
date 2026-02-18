@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Romance
+subtitulo: A única maneira de realmente me redimir é me tornando a pessoa que você sempre me disse que eu poderia ser.
 imgPrincipal: /assets/img/pierrot_le_fou.jpg
 imgPrincipalCaption: Pierrot le Fou (1965)
 created: 2026-02-04T16:33
@@ -9,8 +10,6 @@ created: 2026-02-04T16:33
 Pra mim, uma das coisas mais difíceis da vida adulta tem sido aceitar que eu não posso sustentar relações sozinho, e que o outro tem que estar na mesma sintonia que eu, o que muitas vezes não acontece. às vezes, só resta aceitar que acabou. Não permita que o tédio ou a solidão te mandem de volta pra aquele lugar.
 
 Ainda assim, tem algo muito lindo no fato de que todos nós um dia passamos pela experiência de perder alguém que a gente já amou, e por mais distintos que os contextos sejam, o sentimento ainda é sempre o mesmo.
-
-A única maneira de realmente me redimir é me tornando a pessoa que você sempre me disse que eu poderia ser.
 
 Quanto mais o tempo passa, mais eu me convenço de que ninguem nunca vai ser digno do meu amor.
 

@@ -6,12 +6,6 @@ imgPrincipal: /assets/img/nausicaa_03.jpg
 imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 ---
 
-## Ver também
-
-- [Coleção de DVDs de filmes e séries](/cinema#colecao-de-dvds-de-filmes-e-series)
-- [Diário de animes](/anime-log/)
-- [Mangá](/manga/)
-
 ## Favoritos
 
 - The End of Evangelion (1997)
@@ -24,3 +18,9 @@ imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 - Zankyou no Terror (2014)
 - Cowboy Bebop (1998)
 - Devilman Crybaby (2018)
+
+## Ver também
+
+- [Coleção de DVDs de filmes e séries](/cinema#colecao-de-dvds-de-filmes-e-series)
+- [Diário de animes](/anime-log/)
+- [Mangá](/manga/)

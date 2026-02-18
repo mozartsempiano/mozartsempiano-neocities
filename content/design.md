@@ -4,10 +4,6 @@ title: Design
 created: 2026-02-04T16:33
 ---
 
-## Ver também
-
-- [Meus designs](/meus-designs/)
-
 ## Atalhos
 
 ### Illustrator
@@ -50,3 +46,7 @@ created: 2026-02-04T16:33
 - [Chia Amisola](https://chia.design/)
 - [ARK Studio](https://www.ark.studio/)
 - [R▲](https://opacity.ru/)
+
+## Ver também
+
+- [Meus designs](/meus-designs/)

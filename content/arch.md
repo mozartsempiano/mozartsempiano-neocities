@@ -5,8 +5,6 @@ title: Arch Linux
 
 ## Guia rápido de instalação do Arch Linux
 
-### Links úteis
-
 - [Arch Wiki - Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
 - [Reddit - Recomendações de apps](https://www.reddit.com/r/archlinux/comments/14dmm24/what_basic_applications_do_you_recommend_for_a/)
 

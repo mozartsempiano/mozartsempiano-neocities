@@ -8,5 +8,3 @@ created: 2026-02-03T17:03
 ## Para ler
 
 -
-
-## Resenhas

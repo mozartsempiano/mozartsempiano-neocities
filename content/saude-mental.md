@@ -19,6 +19,7 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 - Não use o Twitter como um diário.
 - Não tuite nada que pareça uma indireta.
 - Não importa o quão sedento você esteja, você nunca deve beber de um poço envenenado.
+- Empatia irrestrita é autodestruição.
 - Foque onde há solo fértil. Não insista onde só tem pedra.
 - Aprenda a ouvir.
 - Não compartilhe demais e tão facilmente.

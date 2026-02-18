@@ -7,11 +7,6 @@ title: Cinema
 >
 > Jack Simon, [Mucking with Movies: ‘Poor Things’](https://www.aspentimes.com/news/mucking-with-movies-poor-things/)
 
-## Ver também
-
-- [Diário de filmes](/cinema-log/)
-- [Anime](/anime/)
-
 ## Filmes e séries favoritos
 
 - Alien (1979)
@@ -161,3 +156,8 @@ title: Cinema
 - [Letterboxd Watchlist Picker](https://watchlistpicker.com/)
 - [MyRetroTVs](https://www.myretrotvs.com/) - Ver canais de TV antigos e retrô
 - [FreeTube](https://github.com/FreeTubeApp/FreeTube) - Cliente alternativo para YouTube
+
+## Ver também
+
+- [Diário de filmes](/cinema-log/)
+- [Anime](/anime/)
