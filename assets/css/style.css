@@ -412,7 +412,6 @@ s {
 code {
 	background-color: var(--clr-gray-a0);
 	padding: 0.4rem 0.8rem;
-	display: block;
 	overflow: auto;
 	font-size: 0.84rem;
 	outline: 0;
@@ -432,6 +431,10 @@ code:hover {
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 	} */
+}
+
+pre code {
+	display: block;
 }
 
 @keyframes bounce {

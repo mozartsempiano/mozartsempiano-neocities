@@ -6,9 +6,13 @@ imgPrincipal: /assets/img/ed_cowboy_bebop_floor.jpg
 imgPrincipalCaption: Cowboy Bebop (1998)
 ---
 
-## Visual Studio Code
+> O que eu não posso criar, eu não entendo.
+>
+> Richard Feynman
 
-### Padrão
+## Atalhos
+
+### Visual Studio Code
 
 - **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>F</kbd>** - Corrigir indentação
 - **<kbd>Ctrl</kbd> + <kbd>K</kbd>, <kbd>Ctrl</kbd> + <kbd>C</kbd>** - Comentar linha
