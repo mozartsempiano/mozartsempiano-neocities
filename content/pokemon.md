@@ -30,6 +30,8 @@ created: 2026-02-04T16:33
 spindaspots,13,3,16,6,6,6,6,8,
 ```
 
+![>](/assets/img/pokemon_rain.gif "Pokémon")
+
 ## Links úteis
 
 - [Pokémon MMO](https://pokemmo.com/)
