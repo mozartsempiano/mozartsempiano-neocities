@@ -1,0 +1,60 @@
+---
+pagination:
+  data: galeriaCatalog.items
+  size: 1
+  alias: galeriaEntry
+permalink: "{{ galeriaEntry.url }}"
+layout: default
+eleventyComputed:
+  title: "{{ galeriaEntry.title }}"
+  subtitulo: "{{ galeriaEntry.galleryTitle }}"
+---
+
+{% set currentItem = galeriaEntry.item %}
+{% set mainMedia = currentItem.medias[0] if currentItem.medias and currentItem.medias.length else null %}
+{% if mainMedia and mainMedia.src %}
+  <figure>
+    <img src="{{ mainMedia.src }}"
+         id="imgPrincipal"
+         alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
+  </figure>
+{% endif %}
+<p>
+  <a href="{{ galeriaEntry.galleryUrl }}">Voltar para {{ galeriaEntry.galleryTitle }}</a>
+</p>
+{% if currentItem.desc %}<div>{{ currentItem.desc | safe }}</div>{% endif %}
+{% if currentItem.tags and currentItem.tags.length %}
+  <p>
+    {% for tag in currentItem.tags %}
+      <span>#{{ tag }}</span>
+      {% if not loop.last %}{% endif %}
+    {% endfor %}
+  </p>
+{% endif %}
+{% if currentItem.camera %}
+  <p>
+    <strong>Câmera:</strong> {{ currentItem.camera }}
+  </p>
+{% endif %}
+{% if currentItem.software and currentItem.software.length %}
+  <p>
+    <strong>Software:</strong>
+    {% for sw in currentItem.software %}
+      <span>{{ sw }}</span>
+      {% if not loop.last %},{% endif %}
+    {% endfor %}
+  </p>
+{% endif %}
+{% if currentItem.medias and currentItem.medias.length > 1 %}
+  <h3>Mídias</h3>
+  <div class="gallery-item-medias">
+    {% for media in currentItem.medias %}
+      {% if media.src %}
+        <figure>
+          <img src="{{ media.src }}"
+               alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
+        </figure>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

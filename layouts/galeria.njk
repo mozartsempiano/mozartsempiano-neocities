@@ -22,9 +22,13 @@
                         <div class="gallery-item">
                             <div class="gallery-content">
                                 <div class="gallery-thumb">
-                                    <img src="{{ item.medias[0].src }}"
-                                         alt="{{ item.titulo | escape }}"
-                                         data-hover-original="true" />
+                                    {% set datasetKey = page.fileSlug %}
+                                    {% set itemUrl = galeriaCatalog.urlsByDataset[datasetKey][loop.index0] if galeriaCatalog and galeriaCatalog.urlsByDataset and galeriaCatalog.urlsByDataset[datasetKey] else null %}
+                                    {% if itemUrl %}<a href="{{ itemUrl }}" class="gallery-item-link">{% endif %}
+                                        <img src="{{ item.medias[0].src }}"
+                                             alt="{{ item.titulo | escape }}"
+                                             data-hover-original="true" />
+                                    {% if itemUrl %}</a>{% endif %}
                                 </div>
                                 <div class="gallery-tags">
                                     {% for tag in item.tags %}<span class="gallery-tag" data-tag="{{ tag }}">#{{ tag }}</span>{% endfor %}

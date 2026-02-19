@@ -25,14 +25,19 @@ div.gallery {
 }
 
 .gallery-thumb {
-	position: relative;
-	border-radius: inherit;
+  position: relative;
+  border-radius: inherit;
+}
+
+.gallery-thumb .gallery-item-link {
+  display: block;
+  border-radius: inherit;
 }
 
 .gallery-thumb img {
-	display: block;
-	width: 100%;
-	border-radius: inherit;
+  display: block;
+  width: 100%;
+  border-radius: inherit;
 }
 
 .media-count {

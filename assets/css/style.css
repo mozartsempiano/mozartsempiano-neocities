@@ -588,6 +588,16 @@ figure img {
 	opacity: 1;
 }
 
+div.gallery-item-medias {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-padrao);
+
+	& figure {
+		margin: 0;
+	}
+}
+
 img[src*="dither"] {
 	image-rendering: pixelated;
 }

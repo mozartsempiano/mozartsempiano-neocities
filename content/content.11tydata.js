@@ -1,6 +1,11 @@
 module.exports = {
 	eleventyComputed: {
-		permalink: (data) => `/${data.page.fileSlug}/`,
+		permalink: (data) => {
+			if (data.page?.fileSlug === "galeria-item" && data.galeriaEntry?.url) {
+				return data.galeriaEntry.url;
+			}
+			return `/${data.page.fileSlug}/`;
+		},
 
 		dataset: (data) => {
 			return data[data.page.fileSlug] || null;
