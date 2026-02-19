@@ -313,6 +313,12 @@ module.exports = function configureDitherTransform(eleventyConfig) {
     return setAttr(tag, "class", classes.join(" "));
   }
 
+  function hasClass(tag, className) {
+    const currentClass = getAttr(tag, "class");
+    if (!currentClass) return false;
+    return currentClass.split(/\s+/).filter(Boolean).includes(className);
+  }
+
   function getAltKeywordInfo(tag) {
     const alt = getAttr(tag, "alt");
     if (!alt) return { hasKeyword: false, cleanedAlt: null };
@@ -335,8 +341,7 @@ module.exports = function configureDitherTransform(eleventyConfig) {
       const { hasKeyword, cleanedAlt } = getAltKeywordInfo(tag);
       const hasHoverAttr = hasAttr(tag, "data-hover-original");
       const shouldEnableHover = hasHoverAttr || hasKeyword;
-      const id = getAttr(tag, "id");
-      const variant = id === "imgPrincipal" ? "large" : "small";
+      const variant = hasClass(tag, "imgPrincipal") ? "large" : "small";
       const width = variant === "large" ? largeWidth : smallWidth;
       const info = getDitherInfo(src, variant);
       if (!info) return tag;

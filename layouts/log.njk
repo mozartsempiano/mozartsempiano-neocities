@@ -10,12 +10,12 @@
             <main>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="" />
                         {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
                     </figure>
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
                 {% include "toc.njk" ignore missing %}
                 {% for movie in movies %}
                     <div class="movie-log {% if movie.review != '' %}with-review{% else %}compact{% endif %}">
@@ -27,8 +27,8 @@
                                     <span class="date">{{ movie.watched }}</span>
                                     <div class="entry-info">
                                         <span class="entry-title">{{ movie.name }} ({{ movie.year }})</span>
-                                        {% if movie.rating != '' %}<span class="rating">{{ movie.rating }} ★</span>{% endif %}
-                                        {% if movie.rewatch != '' %}<span class="rewatch">⟳</span>{% endif %}
+                                        {% if movie.rating != '' %}<span class="rating">{{ movie.rating }} â˜…</span>{% endif %}
+                                        {% if movie.rewatch != '' %}<span class="rewatch">âŸ³</span>{% endif %}
                                     </div>
                                 </div>
                                 {% if movie.review != '' %}<div class="movie-review">{{ movie.review }}</div>{% endif %}

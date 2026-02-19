@@ -474,16 +474,16 @@ main blockquote:not(:has(p:nth-child(3))) {
 		max-width: 70%;
 	}
 	p:first-child::before {
-		content: "“";
+		content: "â€œ";
 	}
 	p:first-child::after {
-		content: "”";
+		content: "â€";
 	}
 	p:nth-child(2) {
 		font-size: 1rem;
 	}
 	p:nth-child(2)::before {
-		content: "— ";
+		content: "â€” ";
 	}
 }
 main blockquote:not(:has(p:nth-child(2))) {
@@ -500,21 +500,25 @@ main blockquote:not(:has(p:nth-child(2))) {
 	}
 }
 
-figure:has(img#imgPrincipal) {
+figure:has(img.imgPrincipal) {
 	width: fit-content;
 	height: auto;
 	max-width: var(--width-img-main);
-	max-height: var(--width-img-main);
 	height: auto;
-	margin: 0;
-	margin-bottom: 3rem !important;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
 	outline: 0;
 	text-align: center;
 	/* margin-left: calc(var(--padding-body) * -1); */
 	/* outline: 1px solid var(--clr-white); */
 }
 
-/* figure:has(img#imgPrincipal) figcaption {
+figure:only-of-type:has(img.imgPrincipal) {
+	margin-bottom: 3rem !important;
+}
+
+/* figure:has(img.imgPrincipal) figcaption {
 	padding-left: var(--padding-body);
 } */
 
@@ -562,7 +566,7 @@ figure img {
 	overflow: hidden;
 }
 
-/* Mostrar imagem original não-ditherizada no hover */
+/* Mostrar imagem original nÃ£o-ditherizada no hover */
 /* figure .dither-hover-wrap:has(img.dither-hover-base):hover {
 	cursor: help;
 } */
@@ -591,7 +595,8 @@ figure img {
 div.gallery-item-medias {
 	display: flex;
 	flex-direction: column;
-	gap: var(--gap-padrao);
+	gap: 30px;
+	width: 100%;
 
 	& figure {
 		margin: 0;
@@ -691,7 +696,7 @@ div#backlinks_section
 }
 
 /* ----------------------------------------------
- * Footer de publicação
+ * Footer de publicaÃ§Ã£o
  * ---------------------------------------------- */
 
 div#postFooter {
@@ -704,7 +709,7 @@ div#postFooter {
 }
 
 /* ----------------------------------------------
- * Datas de publicação e modificação
+ * Datas de publicaÃ§Ã£o e modificaÃ§Ã£o
  * ---------------------------------------------- */
 
 a#editPage {
@@ -735,7 +740,7 @@ a#editPage:hover {
 }
 
 /* ----------------------------------------------
- * Datas de publicação e modificação
+ * Datas de publicaÃ§Ã£o e modificaÃ§Ã£o
  * ---------------------------------------------- */
 
 main div#postDates {
@@ -758,7 +763,7 @@ main div#postDates label {
  * 
  * ---------------------------------------------- */
 
-/* Seleção de texto */
+/* SeleÃ§Ã£o de texto */
 ::selection {
 	background: var(--clr-white);
 	color: var(--clr-black-a0);
@@ -883,7 +888,7 @@ a:active img {
 }
 
 /* ========================================= */
-/* Construção */
+/* ConstruÃ§Ã£o */
 /* ========================================= */
 
 .construction-separator {
@@ -1105,6 +1110,13 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
 
 table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
 	content: counter(rowNumber, decimal-leading-zero);
+}
+
+table.galeria-item-infobox {
+	min-height: unset !important;
+	max-height: unset !important;
+	float: right;
+	max-width: 300px;
 }
 
 /* ========================================= */

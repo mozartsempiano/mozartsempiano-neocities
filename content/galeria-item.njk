@@ -6,8 +6,8 @@ pagination:
 permalink: "{{ galeriaEntry.url }}"
 layout: default
 eleventyComputed:
-  title: "{{ galeriaEntry.title }}"
-  subtitulo: "{{ galeriaEntry.galleryTitle }}"
+  title: "{{ galeriaEntry.item.titulo | default('Sem título', true) }}{% if galeriaEntry.item.data %} ({{ galeriaEntry.item.data }}){% endif %}"
+  subtitulo: "<a href='{{ galeriaEntry.galleryUrl }}'>≪ {{ galeriaEntry.galleryTitle }}</a>"
 ---
 
 {% set currentItem = galeriaEntry.item %}
@@ -15,41 +15,57 @@ eleventyComputed:
 {% if mainMedia and mainMedia.src %}
   <figure>
     <img src="{{ mainMedia.src }}"
-         id="imgPrincipal"
+         class="imgPrincipal galeria-item-imgPrincipal"
          alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
   </figure>
 {% endif %}
-<p>
-  <a href="{{ galeriaEntry.galleryUrl }}">Voltar para {{ galeriaEntry.galleryTitle }}</a>
-</p>
-{% if currentItem.desc %}<div>{{ currentItem.desc | safe }}</div>{% endif %}
-{% if currentItem.tags and currentItem.tags.length %}
-  <p>
-    {% for tag in currentItem.tags %}
-      <span>#{{ tag }}</span>
-      {% if not loop.last %}{% endif %}
-    {% endfor %}
-  </p>
+<h2>Dados</h2>
+<table class="galeria-item-infobox">
+  <tbody>
+    {% if currentItem.camera | length > 0 %}
+      <tr class="galeria-item-camera">
+        <th>Câmera</th>
+        <td>{{ currentItem.camera }}</td>
+      </tr>
+    {% endif %}
+    {% if currentItem.software | length > 0 %}
+      <tr class="galeria-item-software">
+        <th>Software</th>
+        <td>
+          {% for sw in currentItem.software %}
+            {{ sw }}
+            {% if not loop.last %},{% endif %}
+          {% endfor %}
+        </td>
+      </tr>
+    {% endif %}
+    {% if currentItem.data %}
+      <tr class="galeria-item-data">
+        <th>Data</th>
+        <td>{{ currentItem.data }}</td>
+      </tr>
+    {% endif %}
+    {# {% if currentItem.tags | length > 0 %}
+      <tr class="galeria-item-tags">
+        <th>Tags</th>
+        <td>
+          {% for tag in currentItem.tags %}
+            #{{ tag }}
+            {% if not loop.last %}{% endif %}
+          {% endfor %}
+        </td>
+      </tr>
+    {% endif %} #}
+  </tbody>
+</table>
+{% if currentItem.desc | length > 0 %}
+  <div class="galeria-item-desc">{{ currentItem.desc | renderMarkdown | safe }}</div>
 {% endif %}
-{% if currentItem.camera %}
-  <p>
-    <strong>Câmera:</strong> {{ currentItem.camera }}
-  </p>
-{% endif %}
-{% if currentItem.software and currentItem.software.length %}
-  <p>
-    <strong>Software:</strong>
-    {% for sw in currentItem.software %}
-      <span>{{ sw }}</span>
-      {% if not loop.last %},{% endif %}
-    {% endfor %}
-  </p>
-{% endif %}
-{% if currentItem.medias and currentItem.medias.length > 1 %}
-  <h3>Mídias</h3>
+{% if currentItem.medias | length > 1 %}
+  {# <h3>Mídias</h3> #}
   <div class="gallery-item-medias">
     {% for media in currentItem.medias %}
-      {% if media.src %}
+      {% if media.src | length > 0 %}
         <figure>
           <img src="{{ media.src }}"
                alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />

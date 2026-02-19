@@ -9,11 +9,11 @@
             {% include "header.njk" ignore missing %}
             <main>
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo }}</h2>{% endif %}
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
                 <div>
                     {% if imgPrincipal %}
                         <figure>
-                            <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="" />
+                            <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="" />
                             {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
                         </figure>
                     {% endif %}
@@ -21,26 +21,26 @@
                         <h2>Data</h2>
                         <table>
                             <tr>
-                                <th>Classificação biológica</th>
+                                <th>ClassificaÃ§Ã£o biolÃ³gica</th>
                             </tr>
                             <tr>
-                                <th>Designação</th>
-                                <td>Não-senciente</td>
+                                <th>DesignaÃ§Ã£o</th>
+                                <td>NÃ£o-senciente</td>
                             </tr>
                             <tr>
                                 <th>Classe</th>
-                                <td>Mamífero</td>
+                                <td>MamÃ­fero</td>
                             </tr>
                             <tr>
-                                <th>Subespécies</th>
+                                <th>SubespÃ©cies</th>
                                 <td>Lorem ipsum</td>
                             </tr>
                             <tr>
-                                <th>Raças</th>
+                                <th>RaÃ§as</th>
                                 <td>Lorem ipsum</td>
                             </tr>
                             <tr>
-                                <th>Características físicas</th>
+                                <th>CaracterÃ­sticas fÃ­sicas</th>
                             </tr>
                             <tr>
                                 <th>Altura</th>
@@ -83,7 +83,7 @@
                                 <td>80 anos</td>
                             </tr>
                             <tr>
-                                <th>Características socioculturais</th>
+                                <th>CaracterÃ­sticas socioculturais</th>
                             </tr>
                             <tr>
                                 <th>Planeta Natal</th>
@@ -98,12 +98,12 @@
                                 <td>Terrestre</td>
                             </tr>
                             <tr>
-                                <th>Alimentação</th>
-                                <td>Carnívoro</td>
+                                <th>AlimentaÃ§Ã£o</th>
+                                <td>CarnÃ­voro</td>
                             </tr>
                             <tr>
-                                <th>Gestação</th>
-                                <td>Vivíparo</td>
+                                <th>GestaÃ§Ã£o</th>
+                                <td>VivÃ­paro</td>
                             </tr>
                         </table>
                     </div>

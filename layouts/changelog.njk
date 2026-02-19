@@ -10,7 +10,7 @@
             <main>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt=""/>
+                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
                         {% if imgPrincipalCaption %}
                             <figcaption>{{ imgPrincipalCaption }}</figcaption>
                         {% endif %}
@@ -18,7 +18,7 @@
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
                 {% if subtitulo %}
-                    <h2 id="subtitulo">{{ subtitulo }}</h2>
+                    <h2 id="subtitulo">{{ subtitulo | safe }}</h2>
                 {% endif %}
                 <div class="changelog">
                     {% for log in changelog -%}
