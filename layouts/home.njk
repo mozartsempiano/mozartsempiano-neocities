@@ -2,8 +2,8 @@
 <html lang="pt-br">
     <head>
         {% include "head.njk" ignore missing %}
-        <link rel="stylesheet" href="/assets/css/home.css" />
-        <link rel="stylesheet" href="/assets/css/changelog.css" />
+        <link rel="stylesheet" href="/assets/css/home.css"/>
+        <link rel="stylesheet" href="/assets/css/changelog.css"/>
     </head>
     <body {% if site.crt %}class="{% if site.crt %}crt{% endif %}"{% endif %}>
         {% include "header.njk" ignore missing %}
@@ -35,7 +35,7 @@ M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
             <aside>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="invert" />
+                        <img src="{{ imgPrincipal }}" id="imgPrincipal" alt="invert"/>
                         {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
                     </figure>
                 {% endif %}
