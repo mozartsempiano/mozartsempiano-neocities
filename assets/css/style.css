@@ -217,7 +217,7 @@ main q,
 main cite,
 main pre,
 main code {
-	margin-bottom: 1.2rem;
+	margin-bottom: 1.5rem;
 	line-height: 160%;
 	text-wrap: wrap;
 }
@@ -459,27 +459,42 @@ main blockquote {
 	gap: 0;
 	margin: 0;
 }
-main blockquote p:first-child,
-main blockquote p:nth-child(2) {
-	display: block;
-	font-style: italic;
-	font-family: var(--fonte-serif);
+main blockquote:not(:has(p:nth-child(3))) {
+	p:first-child,
+	main blockquote p:nth-child(2) {
+		display: block;
+		font-style: italic;
+		font-family: var(--fonte-serif);
+	}
+	p:first-child {
+		font-size: 1.3rem;
+		max-width: 70%;
+	}
+	p:first-child::before {
+		content: "“";
+	}
+	p:first-child::after {
+		content: "”";
+	}
+	p:nth-child(2) {
+		font-size: 1rem;
+	}
+	p:nth-child(2)::before {
+		content: "— ";
+	}
 }
-main blockquote p:first-child {
-	font-size: 1.3rem;
-	max-width: 70%;
-}
-main blockquote p:first-child::before {
-	content: "“";
-}
-main blockquote p:first-child::after {
-	content: "”";
-}
-main blockquote p:nth-child(2) {
-	font-size: 1rem;
-}
-main blockquote p:nth-child(2)::before {
-	content: "— ";
+main blockquote:not(:has(p:nth-child(2))) {
+	align-items: flex-start;
+	padding-left: 25px;
+	margin: 1.5rem;
+	margin-left: 0;
+	border-left: 1px dotted currentColor;
+
+	p:only-child {
+		max-width: unset;
+		margin: 0;
+		font-size: initial;
+	}
 }
 
 figure:has(img#imgPrincipal) {
@@ -975,7 +990,6 @@ main details.toc-wrapper {
 	border: 1px solid var(--clr-gray-a40);
 	padding: 0;
 	font-size: 0.9rem;
-	margin: 0 1rem 1rem 0;
 }
 
 main details.toc-wrapper summary:first-of-type {
