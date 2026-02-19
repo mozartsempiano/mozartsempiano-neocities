@@ -562,7 +562,8 @@ figure img {
 	overflow: hidden;
 }
 
-figure .dither-hover-wrap:has(img.dither-hover-base):hover img {
+/* Mostrar imagem original não-ditherizada no hover */
+figure .dither-hover-wrap:has(img.dither-hover-base):hover {
 	cursor: help;
 }
 

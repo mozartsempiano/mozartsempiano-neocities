@@ -10,7 +10,7 @@ created: 2026-02-03T10:40
 
 O curta apresenta um bate-papo cotidiano entre dois personagens idosos, Augusto e Bernardo, ambos gatos antropomórficos, em uma praça em um fim de tarde, ao caminharem com seus cães de estimação.
 
-![](/assets/img/bate_papo_canino/bate_papo_canino_concepts.jpg "Concept arts dos personagens")
+![hover-original](/assets/img/bate_papo_canino/bate_papo_canino_concepts.jpg "Concept arts dos personagens")
 
 ## Links úteis
 

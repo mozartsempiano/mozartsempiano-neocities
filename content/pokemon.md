@@ -5,7 +5,9 @@ imgPrincipal: /assets/img/pokemon_header.jpg
 created: 2026-02-04T16:33
 ---
 
-## Jogos favoritos
+## Favoritos
+
+## [Jogos](/videogames/)
 
 - Pokémon Black 2
 - Pokémon Black
@@ -13,7 +15,11 @@ created: 2026-02-04T16:33
 - Pokémon Crystal
 - Pokémon Conquest
 
-## [Ultimate Favorite Pokémon Picker](https://cajunavenger.github.io/)
+## Pokémon
+
+![hover-original](/assets/img/pokemon_favs.png)
+
+Feito em [Ultimate Favorite Pokémon Picker](https://cajunavenger.github.io/):
 
 ```
 ,FROSLASS,GLISCOR,MAWILE,&GIGALITH,&LUCARIO,CORVIKNIGHT,PIDOVE,PATRAT,&CATERPIE,DRAGONITE,MIMIKYU,UMBREON,TYRANTRUM,ZAPDOS_1,BLASTOISE_2,RESHIRAM,&MEW,XURKITREE,WALKINGWAKE,Dark,TimerBall,SPINDA,,,,,,,,,,,,RIOLU,FROSLASS,

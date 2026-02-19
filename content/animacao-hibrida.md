@@ -22,7 +22,7 @@ Historicamente, o uso da hibridização entre live-action e animação pode ser 
 
 Nos anos 1980, a introdução de CGI (Computer Generated Imagery) abriu novas possibilidades para a hibridização e possibilitou a integração mais fluida entre animação 2D e 2D, com experimentos como o teste de John Lasseter para ‘Where the Wild Things Are’ (1983), baseado no livro infantil ‘Onde Vivem os Monstros’ (que, posteriormente, recebeu [uma adaptação live action](/onde-vivem-os-monstros/)), sendo um bom exemplo de uma dessas tentativas.
 
-![](/assets/img/animacao_hibrida/where_the_wild_things_are_hybrid.jpg "Tteste de ‘Where the Wild Things Are’ (1983)")
+![](/assets/img/animacao_hibrida/where_the_wild_things_are_hybrid.jpg "Teste de ‘Where the Wild Things Are’ (1983)")
 
 ## Animação híbrida na contemporaneidade
 
