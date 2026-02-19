@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { Jimp } = require("jimp");
+const cheerio = require("cheerio");
 
 module.exports = function configureDitherTransform(eleventyConfig) {
   // Dither transform corrigido
@@ -355,7 +356,27 @@ module.exports = function configureDitherTransform(eleventyConfig) {
       return outTag;
     });
     if (tasks.length) await Promise.all(tasks);
-    return updated;
+    return wrapNonGalleryHoverImages(updated);
+  }
+
+  function wrapNonGalleryHoverImages(html) {
+    if (!html) return html;
+    const $ = cheerio.load(html, { decodeEntities: false });
+
+    $("img[data-hover-original='true'][data-original-src]").each((_, img) => {
+      const $img = $(img);
+      if ($img.closest(".gallery").length) return;
+      if ($img.closest("a").length) return;
+
+      const originalSrc = $img.attr("data-original-src");
+      if (!originalSrc) return;
+
+      $img.wrap(
+        `<a href="${originalSrc}" target="_blank" rel="noopener noreferrer" class="hover-original-link"></a>`
+      );
+    });
+
+    return $.html();
   }
 
   async function ensureOriginalAssets(html) {

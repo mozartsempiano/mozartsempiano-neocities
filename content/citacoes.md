@@ -20,7 +20,7 @@ subtitulo: Coleção de citações
 >
 > Karl Marx, [Manuscritos Econômico-Filosóficos de 1844](https://web.archive.org/web/20140427164146/https://www.marxists.org/portugues/marx/1844/manuscritos/cap05.htm)
 
-![](/assets/img/lain_gods_quote.jpg "Serial Experiments Lain")
+![hover-original](/assets/img/lain_gods_quote.jpg "Serial Experiments Lain")
 
 > Pergunte-se a cada momento: 'Isso é necessário?'. A maior parte das coisas que dizemos e fazemos não é necessária; quem as eliminar da própria vida será mais tranquilo e sereno.
 >
@@ -58,7 +58,7 @@ subtitulo: Coleção de citações
 >
 > Franz Kafka, [Letter to His Father](https://en.wikipedia.org/wiki/Letter_to_His_Father)
 
-![](/assets/img/shooting_stars.jpg "Oyasumi Punpun (おやすみプンプン)")
+![hover-original](/assets/img/shooting_stars.jpg "Oyasumi Punpun (おやすみプンプン)")
 
 > I have spent all my life resisting the desire to end it.
 >
