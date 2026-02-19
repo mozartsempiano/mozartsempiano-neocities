@@ -11,6 +11,7 @@ module.exports = function configureDitherTransform(eleventyConfig) {
   const generatedDither = new Set();
   const copiedOriginal = new Set();
   const frontMatterCache = new Map();
+  const HOVER_ALT_KEYWORD = "hover-original";
   const BAYER_8X8 = [
     [0, 32, 8, 40, 2, 34, 10, 42],
     [48, 16, 56, 24, 50, 18, 58, 26],
@@ -279,6 +280,47 @@ module.exports = function configureDitherTransform(eleventyConfig) {
     return match ? match[2] : null;
   }
 
+  function escapeAttr(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function setAttr(tag, name, value) {
+    const escaped = escapeAttr(value);
+    const re = new RegExp(`\\b${name}\\s*=\\s*(['"])([^'"]*)\\1`, "i");
+    if (re.test(tag)) return tag.replace(re, `${name}="${escaped}"`);
+    return tag.replace(/\/?>$/, (end) => ` ${name}="${escaped}"${end}`);
+  }
+
+  function removeAttr(tag, name) {
+    const re = new RegExp(`\\s*\\b${name}\\s*=\\s*(['"])([^'"]*)\\1`, "i");
+    return tag.replace(re, "");
+  }
+
+  function hasAttr(tag, name) {
+    const re = new RegExp(`\\b${name}\\s*=`, "i");
+    return re.test(tag);
+  }
+
+  function addClass(tag, className) {
+    const currentClass = getAttr(tag, "class");
+    if (!currentClass) return setAttr(tag, "class", className);
+    const classes = currentClass.split(/\s+/).filter(Boolean);
+    if (classes.includes(className)) return tag;
+    classes.push(className);
+    return setAttr(tag, "class", classes.join(" "));
+  }
+
+  function getAltKeywordInfo(tag) {
+    const alt = getAttr(tag, "alt");
+    if (!alt) return { hasKeyword: false, cleanedAlt: null };
+    const keywordRe = new RegExp(`\\b${HOVER_ALT_KEYWORD}\\b`, "i");
+    if (!keywordRe.test(alt)) return { hasKeyword: false, cleanedAlt: alt };
+    const cleanedAlt = alt.replace(keywordRe, "").replace(/\s{2,}/g, " ").trim();
+    return { hasKeyword: true, cleanedAlt };
+  }
+
   async function replaceDitherSrc(html) {
     if (!html) return html;
     const mainWidth = getMainWidthPx();
@@ -289,6 +331,9 @@ module.exports = function configureDitherTransform(eleventyConfig) {
       if (!/\ssrc\s*=/.test(tag)) return tag;
       const src = getAttr(tag, "src");
       if (!src) return tag;
+      const { hasKeyword, cleanedAlt } = getAltKeywordInfo(tag);
+      const hasHoverAttr = hasAttr(tag, "data-hover-original");
+      const shouldEnableHover = hasHoverAttr || hasKeyword;
       const id = getAttr(tag, "id");
       const variant = id === "imgPrincipal" ? "large" : "small";
       const width = variant === "large" ? largeWidth : smallWidth;
@@ -296,7 +341,18 @@ module.exports = function configureDitherTransform(eleventyConfig) {
       if (!info) return tag;
       tasks.push(ensureDithered(info, width));
       const mapped = `${info.ditherUrl}${info.suffix}`;
-      return tag.replace(/\bsrc\s*=\s*(['"])([^'"]+)\1/i, `src=$1${mapped}$1`);
+      let outTag = tag.replace(/\bsrc\s*=\s*(['"])([^'"]+)\1/i, `src=$1${mapped}$1`);
+      if (shouldEnableHover) {
+        outTag = setAttr(outTag, "data-hover-original", "true");
+        outTag = setAttr(outTag, "data-dither-src", mapped);
+        outTag = setAttr(outTag, "data-original-src", src);
+        outTag = addClass(outTag, "dither-hover-swap");
+      }
+      if (hasKeyword) {
+        if (cleanedAlt) outTag = setAttr(outTag, "alt", cleanedAlt);
+        else outTag = removeAttr(outTag, "alt");
+      }
+      return outTag;
     });
     if (tasks.length) await Promise.all(tasks);
     return updated;

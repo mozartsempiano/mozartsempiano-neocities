@@ -40,7 +40,7 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 - Não entrar em um modo de pensar escasso → "dentre 8 bilhões de pessoas eu só quero você" → eu acabo limitando minhas opções a fim de confortar o meu ego → eu devo saber o meu valor.
 - Não desabafar. Lide sozinho.
 
-![](/assets/img/time_will_pass.jpg)
+![hover-original](/assets/img/time_will_pass.jpg)
 
 ## No fim de todo dia pensar em...
 

@@ -22,7 +22,9 @@
                         <div class="gallery-item">
                             <div class="gallery-content">
                                 <div class="gallery-thumb">
-                                    <img src="{{ item.medias[0].src }}" alt="{{ item.titulo | escape }}" />
+                                    <img src="{{ item.medias[0].src }}"
+                                         alt="{{ item.titulo | escape }}"
+                                         data-hover-original="true" />
                                 </div>
                                 <div class="gallery-tags">
                                     {% for tag in item.tags %}<span class="gallery-tag" data-tag="{{ tag }}">#{{ tag }}</span>{% endfor %}
