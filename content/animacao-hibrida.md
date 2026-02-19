@@ -8,7 +8,7 @@ imgPrincipalCaption: Uma Cilada para Roger Rabbit (1988)
 
 A **animação híbria** é um formato de [animação](/animacao/) que mistura duas ou mais técnicas distintas, como live action e desenho animado ou 2D e 3D.
 
-A seguinte dissertação foi retirada do [meu Trabalho de Conclusão de Curso](/bate-papo-canino/). Você pode ler ele por completo [aqui](/assets/pdf/TCC%20-%20Mozart%20Raul%20Mattar%20-%20Bate-Papo%20Canino.pdf).
+A seguinte dissertação foi retirada do [meu Trabalho de Conclusão de Curso](/meus-designs/bate-papo-canino/). Você pode ler ele por completo [aqui](/assets/pdf/TCC%20-%20Mozart%20Raul%20Mattar%20-%20Bate-Papo%20Canino.pdf).
 
 ## Origem
 

@@ -17,9 +17,13 @@ eleventyComputed:
     <img src="{{ mainMedia.src }}"
          class="imgPrincipal galeria-item-imgPrincipal"
          alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
+    <figcaption>
+      {{ galeriaEntry.item.titulo | default('Sem título', true) }}
+      {% if galeriaEntry.item.data %}, {{ galeriaEntry.item.data }}{% endif %}
+    </figcaption>
   </figure>
 {% endif %}
-<h2>Dados</h2>
+{# <h2>Dados</h2> #}
 <table class="galeria-item-infobox">
   <tbody>
     {% if currentItem.camera | length > 0 %}
@@ -67,8 +71,7 @@ eleventyComputed:
     {% for media in currentItem.medias %}
       {% if media.src | length > 0 %}
         <figure>
-          <img src="{{ media.src }}"
-               alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
+          <img src="{{ media.src }}" alt="hover-original" />
         </figure>
       {% endif %}
     {% endfor %}

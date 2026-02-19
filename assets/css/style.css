@@ -216,7 +216,8 @@ main p,
 main q,
 main cite,
 main pre,
-main code {
+main code,
+main .galeria-item-desc > * {
 	margin-bottom: 1.5rem;
 	line-height: 160%;
 	text-wrap: wrap;
@@ -1115,8 +1116,13 @@ table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
 table.galeria-item-infobox {
 	min-height: unset !important;
 	max-height: unset !important;
-	float: right;
-	max-width: 300px;
+}
+
+main:has(.galeria-item-desc) {
+	& table.galeria-item-infobox {
+		float: right;
+		max-width: 300px;
+	}
 }
 
 /* ========================================= */
