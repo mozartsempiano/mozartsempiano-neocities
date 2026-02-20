@@ -8,16 +8,17 @@ imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 
 ## Favoritos
 
-- The End of Evangelion (1997)
-- Serial Experiments Lain (1998)
-- Princesa Mononoke (1997)
-- FLCL (1ª temporada) (2000)
-- Perfect Blue (1997)
-- Look Back (2021)
-- Nausicaä do Vale do Vento (1984)
-- Zankyou no Terror (2014)
-- Cowboy Bebop (1998)
-- Devilman Crybaby (2018)
+- The End of Evangelion (1997), dir. Hideaki Anno
+- Serial Experiments Lain (1998), criado por Yasuyuki Ueda
+- Princesa Mononoke (1997), dir. Hayao Miyazaki
+- Nausicaä do Vale do Vento (1984), dir. Hayao Miyazaki
+- FLCL (1ª temporada) (2000), criado por Kazuya Tsurumaki
+- Perfect Blue (1997), dir. Satoshi Kon
+- Look Back (2021), dir. Kiyotaka Oshiyama
+- Terror em Ressonância (2014), criado por Shinichiro Watanabe
+- Cowboy Bebop (1998), criado por Shinichiro Watanabe
+- DEVILMAN Crybaby (2018), criado por Gô Nagai
+- Sonic the Hedgehog: The Movie (1996), dir. Kazunori Ikegami
 
 ## Ver também
 

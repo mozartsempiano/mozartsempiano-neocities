@@ -5,9 +5,7 @@ imgPrincipal: /assets/img/pokemon_header.jpg
 created: 2026-02-04T16:33
 ---
 
-## Favoritos
-
-## [Jogos](/videogames/)
+## [Jogos](/videogames/) Favoritos
 
 - Pokémon Black 2
 - Pokémon Black
@@ -40,5 +38,12 @@ spindaspots,13,3,16,6,6,6,6,8,
 
 ## Links úteis
 
+### Jogos
+
 - [Pokémon MMO](https://pokemmo.com/)
 - [Pokémon Showdown!](https://pokemonshowdown.com/)
+
+### Wikis
+
+- [Pokémon Database](https://pokemondb.net/)
+- [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)

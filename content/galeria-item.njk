@@ -3,7 +3,6 @@ pagination:
   data: galeriaCatalog.items
   size: 1
   alias: galeriaEntry
-permalink: "{{ galeriaEntry.url }}"
 layout: default
 eleventyComputed:
   title: "{{ galeriaEntry.item.titulo | default('Sem título', true) }}{% if galeriaEntry.item.data %} ({{ galeriaEntry.item.data }}){% endif %}"
@@ -11,6 +10,7 @@ eleventyComputed:
   imgPrincipal: "{% if galeriaEntry.item.medias and galeriaEntry.item.medias.length %}{{ galeriaEntry.item.medias[0].src }}{% endif %}"
   imgPrincipalCaption: "{{ galeriaEntry.item.titulo | default('Sem título', true) }}{% if galeriaEntry.item.data %}, {{ galeriaEntry.item.data }}{% endif %}"
   imgPrincipalOriginal: true
+  permalink: "{{ galeriaEntry.url }}"
 ---
 
 {% set currentItem = galeriaEntry.item %}

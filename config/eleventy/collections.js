@@ -34,6 +34,7 @@ module.exports = function configureCollections(eleventyConfig) {
 		const map = {};
 		const wikiRe = /\[\[\s*([^\]\|\n]+)(?:\|[^\]\n]+)?\s*\]\]/g;
 		const mdRe = /\[[^\]]*]\((\/[^)]+)\)/g;
+
 		const norm = (u) => {
 			if (!u.startsWith("/")) u = "/" + u;
 			u = u.split("#")[0];
@@ -44,22 +45,26 @@ module.exports = function configureCollections(eleventyConfig) {
 		for (const page of pages) {
 			const content = page.rawInput || "";
 			let m;
+
 			wikiRe.lastIndex = 0;
 			while ((m = wikiRe.exec(content))) {
 				const target = norm(m[1].replace(/\.(md|markdown)$/i, ""));
-				map[target] ??= [];
-				map[target].push(page);
+				map[target] ??= new Map(); // <- Map por url
+				map[target].set(page.url, page); // <- dedupe por url
 			}
+
 			mdRe.lastIndex = 0;
 			while ((m = mdRe.exec(content))) {
 				const target = norm(m[1]);
-				map[target] ??= [];
-				map[target].push(page);
+				map[target] ??= new Map();
+				map[target].set(page.url, page);
 			}
 		}
 
 		for (const page of pages) {
-			const refs = map[page.url] || [];
+			const refsMap = map[page.url];
+			const refs = refsMap ? [...refsMap.values()] : [];
+
 			page.data.backlinks = refs.map((p) => ({
 				url: p.url,
 				title: p.data?.title || p.fileSlug,

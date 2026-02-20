@@ -2,7 +2,7 @@
 layout: default
 title: Videogames
 imgPrincipal: /assets/img/videogames_dream.jpg
-imgPrincipalCaption: Manic Game Girl
+imgPrincipalCaption: Manic Game Girl (2002)
 created: 2026-02-04T16:33
 ---
 

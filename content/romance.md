@@ -63,14 +63,14 @@ Quanto mais o tempo passa, mais eu me convenço de que ninguem nunca vai ser dig
 - Apontar uma situação em específico que não pode ser negada.
 - Explicar como isso fez eu me sentir.
 
-## Qualidades que quero em uma parceira
+## Qualidades que busco em uma parceira
 
-- Todas as qualidades que busco em amizades, descritas anteriormente;
+- Todas as qualidades que [busco em amizades](/saude-mental/#qualidade-de-amizades-que-busco);
 - Gentileza;
 - Compaixão;
 - Crescimento – Quero uma parceira que me apoie a crescer e evoluir na vida, assim como sempre apoiarei ela.
 
-Ser muito determinista em relação a sentimentos e aos outros só vai te levar a ter relacionamentos fracassados e a ser inevitavelmente infeliz.
+Lembre-se de que ser muito determinista em relação a sentimentos e aos outros só vai te levar a ter relacionamentos fracassados e a ser inevitavelmente infeliz.
 
 ## Red Flags
 
@@ -80,7 +80,7 @@ Talvez a pessoa tenha sido tão machucada no passado que, inconscientemente, ela
 
 > kindness, compassion, growth
 
-Se gostarem de você, você vai saber. Se não gostarem, você vai se sentir confuso. Empatia irrestrita é autodestruição.
+Se gostarem de você, você vai saber. Se não gostarem, você vai se sentir confuso. Sempre se lembre de que empatia irrestrita é autodestruição.
 
 ### Nível baixo
 

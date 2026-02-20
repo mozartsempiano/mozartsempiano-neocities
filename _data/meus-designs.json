@@ -245,21 +245,6 @@
 		]
 	},
 	{
-		"titulo": "Fake",
-		"data": 2020,
-		"tipo": "Capa de single",
-		"cliente": "H3lthy",
-		"desc": "",
-		"software": ["photoshop"],
-		"tags": ["musica", "capa", "h3lthy"],
-		"medias": [
-			{
-				"tipo": "image",
-				"src": "/assets/img/designs/h3lthy - fake (2020).jpg"
-			}
-		]
-	},
-	{
 		"titulo": "In My Head",
 		"data": 2020,
 		"tipo": "Capa de single",

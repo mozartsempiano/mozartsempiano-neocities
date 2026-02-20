@@ -1,46 +1,53 @@
 ---
 layout: default
 title: Cinema
+imgPrincipal: /assets/img/lady-snowblood-01.jpg
+imgPrincipalCaption: Lady Snowblood (1973)
 ---
 
 > One of the worst thematic trends of the past fifteen years has been an obsession with naturalistic lighting. Every light needs a precise source with the idea that the audience needs to understand every beam’s origin. We don’t. One time during a screening for 'Lord of the Rings 2', star Sean Astin asked the late lighting director Andrew Lesnie 'Where is the light coming from?' Lesnie replied 'The same place as the music.'
 >
 > Jack Simon, [Mucking with Movies: ‘Poor Things’](https://www.aspentimes.com/news/mucking-with-movies-poor-things/)
 
-## Filmes e séries favoritos
+## Favoritos
 
-- Alien (1979)
-- An American Werewolf in London (1981)
-- A Bigger Splash (2015)
-- Better Call Saul (2015-2022)
-- The Blair Witch Project (1999)
-- Burning (2018)
-- Challengers (2024)
-- Crash (1996)
-- Duel (1971)
-- Exotica (1994)
-- Fargo (2014–2024)
-- Good Time (2017)
-- Irezumi (1966)
-- Misery (1990)
-- Lady Snowblood (1973)
-- mid90s (2018)
-- Mr. Robot (2015-2019)
-- [Mulholland Drive (2001)](/mulholland-drive/)
-- The Northman (2022)
-- Occult (2009)
-- Paris, Texas (1984)
-- Rosemary's Baby (1968)
-- Secretary (2002)
-- Seinfeld (1989-1998)
-- The Thing (1982)
-- Twin Peaks (1990-1991; 2017)
-- Twin Peaks: Fire Walk with Me (1992)
-- We're All Going to the World's Fair (2021)
-- [Where the Wild Things Are (2009)](/onde-vivem-os-monstros/)
-- Youth (2015)
+### Filmes
+
+- Alien (1979), dir. Ridley Scott
+- Um Lobisomem Americano em Londres (1981), dir. John Landis
+- A Bigger Splash (2015), dir. Luca Guadagnino
+- A Bruxa de Blair (1999), dir. Daniel Myrick e Eduardo Sánchez
+- Burning (2018), dir. Lee Chang-dong
+- Challengers (2024), dir. Luca Guadagnino
+- Crash (1996), dir. David Cronenberg
+- Duel (1971), dir. Steven Spielberg
+- Exotica (1994), dir. Atom Egoyan
+- Good Time (2017), dir. Benny Safdie e Josh Safdie
+- Irezumi (1966), dir. Yasuzō Masumura
+- Misery (1990), dir. Rob Reiner
+- Lady Snowblood (1973), dir. Toshiya Fujita
+- mid90s (2018), dir. Jonah Hill
+- Mulholland Drive (2001), dir. David Lynch
+- The Northman (2022), dir. Robert Eggers
+- Occult (2009), dir. Kōji Shiraishi
+- Paris, Texas (1984), dir. Wim Wenders
+- O Bebê de Rosemary (1968), dir. Roman Polanski
+- Secretária (2002), dir. Steven Shainberg
+- The Thing (1982), dir. John Carpenter
+- Twin Peaks: Os Últimos Dias de Laura Palmer (1992), dir. David Lynch
+- We're All Going to the World's Fair (2021), dir. Jane Schoenbrun
+- Onde Vivem os Monstros (2009), dir. Spike Jonze
+- Youth (2015), dir. Paolo Sorrentino
 
 [Mais no Letterboxd](https://letterboxd.com/mozartsempiano/list/mozartsempiano/)
+
+### Séries
+
+- Mr. Robot (2015–2019), criado por Sam Esmail
+- Seinfeld (1989–1998), criado por Larry David e Jerry Seinfeld
+- Better Call Saul (2015–2022), criado por Vince Gilligan e Peter Gould
+- Twin Peaks (1990–1991; 2017), criado por David Lynch e Mark Frost
+- Fargo (2014–2024), criado por Noah Hawley
 
 ## [Coleção](/colecionar/) de DVDs de filmes e séries
 
