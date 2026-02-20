@@ -1112,6 +1112,7 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
 	& tr > * {
 		padding: 0.5em 0.75em;
 		text-align: left;
+		vertical-align: top;
 		border: 1px dotted currentColor;
 	}
 }
@@ -1125,6 +1126,15 @@ table.galeria-item-infobox td {
 	min-height: unset !important;
 	max-height: unset !important;
 	width: 100%;
+	outline: none !important;
+	outline-offset: 0 !important;
+
+	& tr > * {
+		padding: 0.5em 2em 0.5em 0 !important;
+		border-color: currentColor !important;
+		border-style: dotted !important;
+		border-width: 1px 0 !important;
+	}
 }
 
 main:has(.galeria-item-desc) {
