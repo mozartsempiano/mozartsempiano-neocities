@@ -541,22 +541,16 @@ figure {
 	gap: 0.3rem;
 }
 
-figure:has(img[alt*=">"]) {
+figure:has(img[alt*=">"]),
+figure:has(img[alt*="&gt;"]) {
 	float: right;
 	margin: 0rem 0 0rem 2rem;
 }
 
-figure:has(img[alt*="<"]) {
+figure:has(img[alt*="<"]),
+figure:has(img[alt*="&lt;"]) {
 	float: left;
 	margin: 2rem 2rem 2rem 0;
-}
-
-figure:has(img[alt*="><"]) {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: auto;
-	float: none !important;
 }
 
 figure img,
