@@ -481,16 +481,16 @@ main blockquote:not(:has(p:nth-child(3))) {
 		max-width: 70%;
 	}
 	p:first-child::before {
-		content: "â€œ";
+		content: "“";
 	}
 	p:first-child::after {
-		content: "â€";
+		content: "”";
 	}
 	p:nth-child(2) {
 		font-size: 1rem;
 	}
 	p:nth-child(2)::before {
-		content: "â€” ";
+		content: "— ";
 	}
 }
 main blockquote:not(:has(p:nth-child(2))) {
