@@ -7,16 +7,14 @@
             <main>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
-                        {% if imgPrincipalCaption %}
-                            <figcaption>{{ imgPrincipalCaption }}</figcaption>
-                        {% endif %}
+                        <img src="{{ imgPrincipal }}"
+                             class="imgPrincipal"
+                             alt="{% if imgPrincipalOriginal %}hover-original{% endif %}" />
+                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
                     </figure>
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}
-                    <h2 id="subtitulo">{{ subtitulo | safe }}</h2>
-                {% endif %}
+                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
                 {% include "toc.njk" ignore missing %}
                 {{ content | safe }}
                 {% if not noBacklinks %}

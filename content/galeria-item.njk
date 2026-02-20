@@ -8,24 +8,20 @@ layout: default
 eleventyComputed:
   title: "{{ galeriaEntry.item.titulo | default('Sem título', true) }}{% if galeriaEntry.item.data %} ({{ galeriaEntry.item.data }}){% endif %}"
   subtitulo: "<a href='{{ galeriaEntry.galleryUrl }}'>≪ {{ galeriaEntry.galleryTitle }}</a>"
+  imgPrincipal: "{% if galeriaEntry.item.medias and galeriaEntry.item.medias.length %}{{ galeriaEntry.item.medias[0].src }}{% endif %}"
+  imgPrincipalCaption: "{{ galeriaEntry.item.titulo | default('Sem título', true) }}{% if galeriaEntry.item.data %}, {{ galeriaEntry.item.data }}{% endif %}"
+  imgPrincipalOriginal: true
 ---
 
 {% set currentItem = galeriaEntry.item %}
-{% set mainMedia = currentItem.medias[0] if currentItem.medias and currentItem.medias.length else null %}
-{% if mainMedia and mainMedia.src %}
-  <figure>
-    <img src="{{ mainMedia.src }}"
-         class="imgPrincipal galeria-item-imgPrincipal"
-         alt="{{ currentItem.titulo | default("Imagem da galeria") | escape }} hover-original" />
-    <figcaption>
-      {{ galeriaEntry.item.titulo | default('Sem título', true) }}
-      {% if galeriaEntry.item.data %}, {{ galeriaEntry.item.data }}{% endif %}
-    </figcaption>
-  </figure>
-{% endif %}
-{# <h2>Dados</h2> #}
 <table class="galeria-item-infobox">
   <tbody>
+    {% if currentItem.tipo %}
+      <tr class="galeria-item-tipo">
+        <th>Tipo</th>
+        <td>{{ currentItem.tipo }}</td>
+      </tr>
+    {% endif %}
     {% if currentItem.camera | length > 0 %}
       <tr class="galeria-item-camera">
         <th>Câmera</th>
@@ -49,6 +45,12 @@ eleventyComputed:
         <td>{{ currentItem.data }}</td>
       </tr>
     {% endif %}
+    {% if currentItem.cliente %}
+      <tr class="galeria-item-cliente">
+        <th>Cliente</th>
+        <td>{{ currentItem.cliente }}</td>
+      </tr>
+    {% endif %}
     {# {% if currentItem.tags | length > 0 %}
       <tr class="galeria-item-tags">
         <th>Tags</th>
@@ -70,9 +72,14 @@ eleventyComputed:
   <div class="gallery-item-medias">
     {% for media in currentItem.medias %}
       {% if media.src | length > 0 %}
-        <figure>
-          <img src="{{ media.src }}" alt="hover-original" />
-        </figure>
+        {% if media.tipo == "video" %}
+          {{ media.src | renderMarkdown | safe }}
+        {% elseif not media.thumbOnly %}
+          <figure>
+            <img src="{{ media.src }}" alt="hover-original" class="imgPrincipal" />
+            {% if media.caption | length > 0 %}<figcaption>{{ media.caption }}</figcaption>{% endif %}
+          </figure>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </div>

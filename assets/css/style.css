@@ -340,6 +340,12 @@ main > h2#subtitulo {
 	margin-top: 0;
 	margin-bottom: 2rem !important;
 	color: var(--clr-gray-a50);
+
+	a:link,
+	a:visited,
+	a:focus {
+		color: var(--clr-white);
+	}
 }
 main > h2#subtitulo::after {
 	display: none;
@@ -553,7 +559,8 @@ figure:has(img[alt*="><"]) {
 	float: none !important;
 }
 
-figure img {
+figure img,
+iframe {
 	width: 100%;
 	height: auto;
 	border-radius: var(--b-radius);
@@ -1113,15 +1120,20 @@ table:has(tbody td:first-child:empty) tbody tr td:first-child::before {
 	content: counter(rowNumber, decimal-leading-zero);
 }
 
-table.galeria-item-infobox {
+table.galeria-item-infobox,
+table.galeria-item-infobox td {
 	min-height: unset !important;
 	max-height: unset !important;
+	width: 100%;
 }
 
 main:has(.galeria-item-desc) {
 	& table.galeria-item-infobox {
 		float: right;
+		min-width: 265px;
 		max-width: 300px;
+		width: fit-content;
+		margin: 0rem 0 1rem 2rem !important;
 	}
 }
 
