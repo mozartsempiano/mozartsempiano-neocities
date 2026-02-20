@@ -29,7 +29,7 @@ imgPrincipal: /assets/img/buda_gato.jpg
    - O ciúme é uma forma poderosa de ódio, e Miyamoto Musashi ensinava que, se ficarmos presos a um mundo de ciúme, podemos facilmente nos destruir. Em vez disso, seja grato pelo que você já tem, e será abençoado com verdadeira abundância.
 
 8. Nunca se deixe entristecer por uma separação.
-   - - Escolher pensar constantemente ou se deter na partida triste de amigos e entes queridos nos impede de seguir em frente com nossas vidas. Musashi acreditava que, como não havia maneira de trazer os mortos de volta, deveríamos permanecer no momento presente e escolher seguir adiante.
+   - Escolher pensar constantemente ou se deter na partida triste de amigos e entes queridos nos impede de seguir em frente com nossas vidas. Musashi acreditava que, como não havia maneira de trazer os mortos de volta, deveríamos permanecer no momento presente e escolher seguir adiante.
 
 ![>](/assets/img/bitter.jpg)
 
