@@ -7,5 +7,5 @@ created: 2026-02-10T11:46
 
 ## Ver também
 
-- [Meus designs](/meus-designs/)
+- [Meus designs](/design/)
 - [Minhas artes](/arte/)
