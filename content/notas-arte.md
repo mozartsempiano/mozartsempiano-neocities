@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Arte
+title: Notas de Arte
 ---
 
 ## Ver também
