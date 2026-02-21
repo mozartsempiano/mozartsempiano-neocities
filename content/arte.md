@@ -1,8 +1,11 @@
 ---
-layout: default
-title: Arte
+layout: galeria
+title: Minhas Artes
+dataset: arte
+created: 2026-02-12T09:46
 ---
 
 ## Ver também
 
-- [Minhas artes](/minhas-artes/)
+- [Meus designs](/meus-designs/)
+- [Minhas fotografias](/fotografia/)

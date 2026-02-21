@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         {% include "head.njk" ignore missing %}
-        <link rel="stylesheet" href="/assets/css/galeria.css" />
+        <link rel="stylesheet" href="/assets/css/galeria.css"/>
     </head>
     <body {% if site.crt %}class="crt"{% endif %}>
         <div>
@@ -10,12 +10,16 @@
             <main>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="" />
-                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
+                        {% if imgPrincipalCaption %}
+                            <figcaption>{{ imgPrincipalCaption }}</figcaption>
+                        {% endif %}
                     </figure>
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
+                {% if subtitulo %}
+                    <h2 id="subtitulo">{{ subtitulo | safe }}</h2>
+                {% endif %}
                 {% include "toc.njk" ignore missing %}
                 <div class="gallery">
                     {% for item in dataset %}
@@ -23,15 +27,23 @@
                             <div class="gallery-content">
                                 <div class="gallery-thumb">
                                     {% set datasetKey = page.fileSlug %}
-                                    {% set itemUrl = galeriaCatalog.urlsByDataset[datasetKey][loop.index0] if galeriaCatalog and galeriaCatalog.urlsByDataset and galeriaCatalog.urlsByDataset[datasetKey] else null %}
-                                    {% if itemUrl %}<a href="{{ itemUrl }}" class="gallery-item-link">{% endif %}
+                                    {% set itemUrl = galeriaCatalog.urlsByDataset[datasetKey][loop.index0] if galeriaCatalog and galeriaCatalog
+                                        .urlsByDataset and galeriaCatalog
+                                        .urlsByDataset[datasetKey] else 
+                                            null %}
+                                    {% if itemUrl %}
+                                        <a href="{{ itemUrl }}" class="gallery-item-link">
+                                        {% endif %}
                                         <img src="{{ item.medias[0].src }}"
                                              alt="{{ item.titulo | escape }}"
-                                             data-hover-original="true" />
-                                    {% if itemUrl %}</a>{% endif %}
+                                             data-hover-original="true" class="imgPrincipal"/>
+                                        {% if itemUrl %}
+                                        </a>
+                                    {% endif %}
                                 </div>
                                 <div class="gallery-tags">
-                                    {% for tag in item.tags %}<span class="gallery-tag" data-tag="{{ tag }}">#{{ tag }}</span>{% endfor %}
+                                    {% for tag in item.tags %}
+                                        <span class="gallery-tag" data-tag="{{ tag }}">#{{ tag }}</span>{% endfor %}
                                 </div>
                             </div>
                         </div>

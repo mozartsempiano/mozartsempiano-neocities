@@ -8,7 +8,7 @@ imgPrincipal: /assets/img/lain_sketch_02.png
 
 <marquee>artista multimídia ▪ designer gráfico ▪ web designer ▪ editor de vídeo ▪ fotógrafo ▪ programador ▪ entusiasta de tecnologia ▪ amante de filmes ▪ sonhador ▪ viajante ▪ criatura noturna ▪ colecionador de memórias ▪ explorador de mundos ▪ curador de silêncios ▪ guardião de segredos invisíveis</marquee>
 
-Entre pixels, linhas de código e madrugadas acordado, encontrei no [design](/meus-designs/), na arte e na tecnologia uma forma de transformar ideias em experiências. Gosto de misturar referências, experimentar linguagens e criar conexões, seja numa [arte](/minhas-artes/), num vídeo, numa [fotografia](/minhas-fotografias/) ou num [código](/programacao/).
+Entre pixels, linhas de código e madrugadas acordado, encontrei no [design](/design/), na arte e na tecnologia uma forma de transformar ideias em experiências. Gosto de misturar referências, experimentar linguagens e criar conexões, seja numa [arte](/arte/), num vídeo, numa [fotografia](/fotografia/) ou num [código](/programacao/).
 
 Cresci nos anos 2000 e sempre tive um apego especial à tecnologia daquela década e também da anterior. Sinto que tem algo de muito mais interessante, quase mágico, em TVs de tubo, DVDs e CDs do que em uma tela plana ou um serviço de [streaming](/streaming/). Com certeza tem uma nostalgia envolvida, mas acredito que seja mais do que isso. É tudo muito mais tátil, imperfeito e autêntico.
 
@@ -18,11 +18,11 @@ Você pode ver meu currículo [aqui](/curriculo/).
 
 ## Portfólio
 
-- [Meus designs](/meus-designs/)
-- [Minhas artes](/minhas-artes/)
+- [Meus designs](/design/)
+- [Minhas artes](/arte/)
   - [Sketchbook 2019](/sketchbook-2019/)
   - [Sketchbook 2022](/sketchbook-2022/)
-- [Minhas fotografias](/minhas-fotografias/)
+- [Minhas fotografias](/fotografia/)
 
 ## Onde me encontrar
 
