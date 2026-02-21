@@ -1,19 +1,19 @@
 ---
 layout: default
 title: Mangá
-imgPrincipal: /assets/img/chainsaw_man_makima.jpg
-imgPrincipalCaption: Chainsaw Man
+imgPrincipal: /assets/img/oyasumi-punpun-01.jpg
+imgPrincipalCaption: Oyasumi Punpun (2007-2013)
 created: 2026-02-03T09:53
 ---
 
 ## Favoritos
 
-- [Oyasumi Punpun](/oyasumi-punpun/) (2008), Inio Asano
-- Ajin (2012), Gamon Sakurai
-- Uzumaki (1998), Junji Ito
-- Kiseijuu (1989), Hitoshi Iwaaki
-- Omoide Emanon (2006), Shinji Kajio
-- Umibe no Onnanoko (2009), Inio Asano
+- [Oyasumi Punpun](/oyasumi-punpun/) (2007-2013), por Inio Asano
+- Ajin (2012-2021), por Gamon Sakurai
+- Uzumaki (1998-1999), por Junji Ito
+- Kiseijuu (1989-1994), por Hitoshi Iwaaki
+- Omoide Emanon (2006-2008), por Shinji Kajio
+- Umibe no Onnanoko (2009-2013), por Inio Asano
 
 ## Links úteis
 

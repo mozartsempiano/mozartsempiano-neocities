@@ -4,6 +4,11 @@
 
 ol {
   column-count: 3;
+  padding-left: 0;
+
+  li {
+    margin-left: 4rem;
+  }
 }
 
 @media (max-width: 1024px) {

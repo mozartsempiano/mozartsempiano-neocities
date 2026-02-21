@@ -29,6 +29,7 @@ created: 2026-02-04T16:33
 
 - [Photopea](https://www.photopea.com/) - Editor de imagens online
 - [SVGOMG](https://svgomg.net/) - Simplificar e otimizar arquivos SVG
+- [Remove.bg](https://www.remove.bg/) - Remover fundo de imagens
 
 ### Dithering
 

@@ -92,3 +92,4 @@ created: 2026-02-04T16:33
 - [Soulseek](https://www.slsknet.org/)
 - [MP3Tag](https://www.mp3tag.de/en/)
 - [Tauon](https://github.com/Taiko2k/Tauon/)
+- [Bfxr](https://www.bfxr.net/) - Criação de efeitos sonoros

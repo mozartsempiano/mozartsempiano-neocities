@@ -8,6 +8,8 @@ created: 2026-02-06T19:34
 >
 > Arthur Schopenhauer
 
+![>](/assets/img/monke.jpg "Macaco-dourado")
+
 # Animais fodas
 
 - [tardígrado](https://pt.wikipedia.org/wiki/Tard%C3%ADgrado)

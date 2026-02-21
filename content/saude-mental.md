@@ -2,7 +2,7 @@
 layout: default
 title: Saúde Mental
 imgPrincipal: /assets/img/refined_mental_healh.jpg
-imgPrincipalCaption: Dark Cloud
+imgPrincipalCaption: Dark Cloud (2000)
 created: 2026-02-04T16:33
 ---
 
@@ -13,6 +13,8 @@ created: 2026-02-04T16:33
 As pessoas vão tolerar até um certo ponto a autocrítica, porque mostra que você tem consciência de si, mas o ódio a si mesmo é só sabotagem contínua.
 
 Você tem que fazer o possível pra se manter otimista, esperançoso e forte com relação a essas emoções na sua vida.
+
+![hover-original](/assets/img/guide_self_improvement.jpg)
 
 ## Para ler todos os dias
 
@@ -50,9 +52,11 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 
 ## Autoconhecimento
 
-### Quem eu quero ser
+> todas as vezes em que naufraguei, acabei em um lugar mais alto
 
 ![>](/assets/img/perceived.jpg)
+
+### Quem eu quero ser
 
 - Uma pessoa que seja calma, reservada e reflexiva, mesmo em momentos difíceis, que expressa seus sentimentos de maneira saudável.
 
@@ -128,7 +132,7 @@ Dividir uma atividade em partes e concluir uma parte por vez. Se meu objetivo di
 - [desamparo aprendido (learned helplessness)](https://en.wikipedia.org/wiki/Learned_helplessness): estado psicológico em que a pessoa, após repetidas experiências de impotência, deixa de tentar reagir, acreditando que nenhuma ação pode mudar a situação, mesmo quando poderia. é o comportamento exibido por um sujeito após suportar estímulos aversivos repetidos além de seu controle.
 - [ligação traumática (trauma bonding)](https://pt.wikipedia.org/wiki/Liga%C3%A7%C3%A3o_traum%C3%A1tica): vínculo emocional intenso e persistente formado entre agressor e vítima em contextos de abuso cíclico, sustentado pela alternância entre violência e momentos de afeto, que gera confusão, dependência e lealdade à fonte do trauma.
 
-![>](/assets/img/dunbar.jpg)
+![> hover-original](/assets/img/dunbar.jpg)
 
 - [paradoxo do enforcamento inesperado](https://en.wikipedia.org/wiki/Unexpected_hanging_paradox): paradoxo que envolve as expectativas de uma pessoa sobre o momento de um evento futuro anunciado como inesperado; ao tentar prever logicamente quando ocorrerá, conclui-se que não poderia ser surpreendido, mas o evento ocorre de forma inesperada.
 - [número de dunbar](https://pt.wikipedia.org/wiki/N%C3%BAmero_de_Dunbar): teoria que sugere que o número máximo de relacionamentos sociais que um ser humano pode manter é entre 100 e 300 pessoas.

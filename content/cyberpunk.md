@@ -21,18 +21,21 @@ imgPrincipalCaption: Blade Runner (1982)
 ### [Anime](/anime/)
 
 - Ghost in the Shell (1995), dir. Mamoru Oshii
-- Cyberpunk: Edgerunners (2022)
+- Cyberpunk: Edgerunners (2022), criado por Rafal Jaki
+- Blade Runner: Black Out 2022 (2017), dir. Shinichiro Watanabe
+
+https://www.youtube.com/watch?v=jtYyRBoXaPM
 
 ### [Mangá](/manga/)
 
-- Gunnm
+- Gunnm, por Yukito Kishiro
 
 ### [Videogames](/videogames/)
 
-- [Cyberpunk 2077](/cyberpunk-2077/)
-- RUINER
-- Metal Gear Rising: Revengeance
-- Cloudpunk
+- [Cyberpunk 2077 (2020)](/cyberpunk-2077/)
+- RUINER (2017)
+- Metal Gear Rising: Revengeance (2013)
+- Cloudpunk (2020)
 
 ### [Livros](/leitura/)
 

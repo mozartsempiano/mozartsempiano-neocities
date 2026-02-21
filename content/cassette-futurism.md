@@ -16,14 +16,13 @@ created: 2026-02-14T21:39
 
 ### [Anime](/anime/)
 
-- Cowboy Bebop (1998)
-- Akira (1988)
-- Dragon Ball (1986-1989)
+- Cowboy Bebop (1998), criado por Shinichiro Watanabe
+- Akira (1988), dir. Katsuhiro Otomo
 
 ### [Videogames](/videogames/)
 
-- Alien: Isolation
-- Bomb Rush Cyberfunk
+- Alien: Isolation (2014)
+- Bomb Rush Cyberfunk (2023)
 
 ## Ver também
 

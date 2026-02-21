@@ -9,6 +9,17 @@ O termo surgiu no [conto](/leitura/) [cyberpunk](/cyberpunk/) "Burning Chrome" (
 
 ## Links úteis
 
+### Geral
+
+- [A Website Is A Room](https://a-website-is-a-room.net/)
+- [Wiby](https://wiby.me/) - Ferramenta de busca por sites sem JavaScript
+- [Diretório de CD-ROMs Infantis](https://vinizinho.net/projects/cd-archive/)
+- [Random Imgur Image Generator](https://perchance.org/imgur-images) - Pega imagens aleatórias do Imgur
+- [The Iconolog](http://cs.gettysburg.edu/~duncjo01/archive/icons/iconolog/giffed/iconolog/index.html) - Acervo de ícones de sites antigos
+- [GifCities](https://gifcities.org/) - Acervo de GIFs de sites do Geocities
+- [88x31 Button Viewer](https://pilosophos.com/88x31-viewer) - Acervo de botões 88x31
+- [https://escargot.chat/](https://escargot.chat/) - MSN revivido
+
 ### Neocities
 
 - [Meu Neocities](https://neocities.org/site/mozartsempiano)
@@ -27,5 +38,6 @@ O termo surgiu no [conto](/leitura/) [cyberpunk](/cyberpunk/) "Burning Chrome" (
 - [psychicnewborn](https://psychicnewborn.neocities.org/)
 - [ribo.zone](https://ribo.zone/)
 - [SITCOM THEORY](https://sitcomtheory.org/)
+- [Surface Treasure](https://surfacetreasure.neocities.org/) - Coleção de imagens tiradas do Craigslist
 - [Twelve Men](https://twelvemen.neocities.org/)
 - [vinizinho](https://vinizinho.net/)

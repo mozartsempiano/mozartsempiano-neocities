@@ -1,7 +1,7 @@
 ---
 layout: default
 title: mozartsempiano
-subtitulo: A Persona
+subtitulo: A persona
 created: 2026-02-04T16:33
 ---
 

@@ -22,3 +22,8 @@ Mais alternativas:
 ## Conceitos
 
 - [Printer tracking dots](https://en.wikipedia.org/wiki/Printer_tracking_dots): padrão quase invisível de pontos amarelos que algumas impressoras a laser coloridas adicionam às páginas impressas, que codificam informações como o número de série da impressora e a data e hora da impressão.
+
+## Links úteis
+
+- [JustDeleteMe](https://justdeleteme.xyz/) - Diretório de links diretos para excluir sua conta de serviços da web
+- [FreeTube](https://github.com/FreeTubeApp/FreeTube) - Cliente alternativo para YouTube

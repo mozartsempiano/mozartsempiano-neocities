@@ -2,19 +2,23 @@
 <html lang="pt-br">
     <head>
         {% include "head.njk" ignore missing %}
-        <link rel="stylesheet" href="/assets/css/especie.css" />
+        <link rel="stylesheet" href="/assets/css/especie.css"/>
     </head>
     <body {% if site.crt %}class="crt"{% endif %}>
         <div>
             {% include "header.njk" ignore missing %}
             <main>
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
+                {% if subtitulo %}
+                    <h2 id="subtitulo">{{ subtitulo | safe }}</h2>
+                {% endif %}
                 <div>
                     {% if imgPrincipal %}
                         <figure>
-                            <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="" />
-                            {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                            <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
+                            {% if imgPrincipalCaption %}
+                                <figcaption>{{ imgPrincipalCaption | renderMarkdown | safe }}</figcaption>
+                            {% endif %}
                         </figure>
                     {% endif %}
                     <div>

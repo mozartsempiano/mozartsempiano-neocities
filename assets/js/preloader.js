@@ -19,8 +19,8 @@
       z-index: 9999;
     }
     #custom-preloader .spinner {
-        width: 2em;
-        height: 2em;
+        width: 28px;
+        height: 28px;
         background-color: var(--clr-white);
         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='20' r='20'/%3E%3Ccircle cx='170' cy='60' r='20'/%3E%3Ccircle cx='170' cy='140' r='20'/%3E%3Ccircle cx='100' cy='180' r='20'/%3E%3Ccircle cx='30' cy='140' r='20'/%3E%3Ccircle cx='30' cy='60' r='20'/%3E%3C/svg%3E") no-repeat center / contain;
         mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='20' r='20'/%3E%3Ccircle cx='170' cy='60' r='20'/%3E%3Ccircle cx='170' cy='140' r='20'/%3E%3Ccircle cx='100' cy='180' r='20'/%3E%3Ccircle cx='30' cy='140' r='20'/%3E%3Ccircle cx='30' cy='60' r='20'/%3E%3C/svg%3E") no-repeat center / contain;

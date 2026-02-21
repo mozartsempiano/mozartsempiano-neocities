@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Pokémon
-imgPrincipal: /assets/img/pokemon_header.jpg
+imgPrincipal: /assets/img/pokemon_thumb.jpg
 created: 2026-02-04T16:33
 ---
 
-## [Jogos](/videogames/) Favoritos
+## Favoritos
+
+### [Jogos](/videogames/)
 
 - Pokémon Black 2
 - Pokémon Black
@@ -13,7 +15,7 @@ created: 2026-02-04T16:33
 - Pokémon Crystal
 - Pokémon Conquest
 
-## Pokémon
+### Pokémon
 
 ![hover-original](/assets/img/pokemon_favs.png)
 

@@ -4,7 +4,7 @@ title: Linguagem
 created: 2026-02-06T19:32
 ---
 
-você deve eliminar a palavra cringe do seu vocabulário
+> você deve eliminar a palavra cringe do seu vocabulário
 
 ## Termos que quero lembrar
 
@@ -29,4 +29,6 @@ você deve eliminar a palavra cringe do seu vocabulário
 
 ## Links úteis
 
-- [Shapecatcher](https://shapecatcher.com/) - Identificar caracter unicode através de um desenho
+- [Gerador de palavras aleatórias em português](https://www.palavrasaleatorias.com/)
+- [Cryptii Caesar Cipher](https://cryptii.com/pipes/caesar-cipher) - Cifrar e decifrar mensagens usando a cifra de César
+- [Spammimic](https://www.spammimic.com/) - Codificar mensagens curtas em textos de spam

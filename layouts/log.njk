@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         {% include "head.njk" ignore missing %}
-        <link rel="stylesheet" href="/assets/css/log.css" />
+        <link rel="stylesheet" href="/assets/css/log.css"/>
     </head>
     <body {% if site.crt %}class="crt"{% endif %}>
         <div>
@@ -10,41 +10,50 @@
             <main>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="" />
-                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption }}</figcaption>{% endif %}
+                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
+                        {% if imgPrincipalCaption %}
+                            <figcaption>{{ imgPrincipalCaption | renderMarkdown | safe }}</figcaption>
+                        {% endif %}
                     </figure>
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
-                {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
+                {% if subtitulo %}
+                    <h2 id="subtitulo">{{ subtitulo | safe }}</h2>
+                {% endif %}
                 {% include "toc.njk" ignore missing %}
                 {% for movie in movies %}
                     <div class="movie-log {% if movie.review != '' %}with-review{% else %}compact{% endif %}">
                         {% if movie.review != '' %}
-                            {% tmdbPoster movie.name, movie.year %}{%
-                            endif %}
-                            <div>
-                                <div class="movie-header">
-                                    <span class="date">{{ movie.watched }}</span>
-                                    <div class="entry-info">
-                                        <span class="entry-title">{{ movie.name }} ({{ movie.year }})</span>
-                                        {% if movie.rating != '' %}<span class="rating">{{ movie.rating }} â˜…</span>{% endif %}
-                                        {% if movie.rewatch != '' %}<span class="rewatch">âŸ³</span>{% endif %}
-                                    </div>
+                            {% tmdbPoster movie.name,
+                            movie.year %}
+                        {% endif %}
+                        <div>
+                            <div class="movie-header">
+                                <span class="date">{{ movie.watched }}</span>
+                                <div class="entry-info">
+                                    <span class="entry-title">{{ movie.name }} ({{ movie.year }})</span>
+                                    {% if movie.rating != '' %}
+                                        <span class="rating">{{ movie.rating }} â˜…</span>{% endif %}
+                                    {% if movie.rewatch != '' %}
+                                        <span class="rewatch">âŸ³</span>{% endif %}
                                 </div>
-                                {% if movie.review != '' %}<div class="movie-review">{{ movie.review }}</div>{% endif %}
-                                {% if movie.tags != '' %}<span class="tags">{{ movie.tags }}</span>{% endif %}
                             </div>
+                            {% if movie.review != '' %}
+                                <div class="movie-review">{{ movie.review }}</div>
+                            {% endif %}
+                            {% if movie.tags != '' %}
+                                <span class="tags">{{ movie.tags }}</span>{% endif %}
                         </div>
-                    {% endfor %}
-                    {{ content | safe }}
-                    {% if not noBacklinks %}
-                        {%
-                        include "backlinks.njk" ignore missing %}
-                    {% endif %}
-                    {% include "postFooter.njk" ignore missing %}
-                </main>
-            </div>
-            {% include "footer.njk" ignore missing %}
-            {% include "scripts_bottom.njk" ignore missing %}
-        </body>
-    </html>
+                    </div>
+                {% endfor %}
+                {{ content | safe }}
+                {% if not noBacklinks %}
+                    {% include "backlinks.njk" ignore missing %}
+                {% endif %}
+                {% include "postFooter.njk" ignore missing %}
+            </main>
+        </div>
+        {% include "footer.njk" ignore missing %}
+        {% include "scripts_bottom.njk" ignore missing %}
+    </body>
+</html>

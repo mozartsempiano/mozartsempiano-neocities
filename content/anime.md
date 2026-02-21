@@ -10,12 +10,12 @@ imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 
 - The End of Evangelion (1997), dir. Hideaki Anno
 - Serial Experiments Lain (1998), criado por Yasuyuki Ueda
-- Princesa Mononoke (1997), dir. Hayao Miyazaki
+- Mononoke Hime (1997), dir. Hayao Miyazaki
 - Nausicaä do Vale do Vento (1984), dir. Hayao Miyazaki
 - FLCL (1ª temporada) (2000), criado por Kazuya Tsurumaki
 - Perfect Blue (1997), dir. Satoshi Kon
 - Look Back (2021), dir. Kiyotaka Oshiyama
-- Terror em Ressonância (2014), criado por Shinichiro Watanabe
+- Zankyō no Terror (2014), criado por Shinichiro Watanabe
 - Cowboy Bebop (1998), criado por Shinichiro Watanabe
 - DEVILMAN Crybaby (2018), criado por Gô Nagai
 - Sonic the Hedgehog: The Movie (1996), dir. Kazunori Ikegami

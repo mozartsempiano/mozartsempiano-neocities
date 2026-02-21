@@ -7,7 +7,7 @@ imgPrincipalCaption: Pierrot le Fou (1965)
 created: 2026-02-04T16:33
 ---
 
-Pra mim, uma das coisas mais difíceis da vida adulta tem sido aceitar que eu não posso sustentar relações sozinho, e que o outro tem que estar na mesma sintonia que eu, o que muitas vezes não acontece. às vezes, só resta aceitar que acabou. Não permita que o tédio ou a solidão te mandem de volta pra aquele lugar.
+Pra mim, uma das coisas mais difíceis da vida adulta tem sido aceitar que eu não posso sustentar relações sozinho, e que o outro tem que estar na mesma sintonia que eu, o que muitas vezes não acontece. Ás vezes, só resta aceitar que acabou. Não permita que o tédio ou a solidão te mandem de volta pra aquele lugar.
 
 Ainda assim, tem algo muito lindo no fato de que todos nós um dia passamos pela experiência de perder alguém que a gente já amou, e por mais distintos que os contextos sejam, o sentimento ainda é sempre o mesmo.
 
@@ -15,21 +15,23 @@ Quanto mais o tempo passa, mais eu me convenço de que ninguem nunca vai ser dig
 
 ## Limerência
 
+**Limerência** é o estado emocional involuntário caracterizado por um desejo romântico por outra pessoa combinado por uma intensa, opressora e obsessiva necessidade de se ter o sentimento correspondido. Nele, o indivíduo cria uma idealização extrema do outro, fixando-se em suas características positivas e negando quaisquer falhas.
+
 > The desire to be loved is the last illusion. Give it up and you will be free.
 >
-> Margaret Atwood, Selected Poems II: 1976- 1986
+> Margaret Atwood, Selected Poems II: 1976-1986
 
 - Se você trata uma pessoa como uma celebridade, ela vai te tratar como um fã. Trate bem, mas de igual pra igual.
 - Se você corre atrás, é porque o outro tá fugindo.
-- Não priorizar a pessoa imediatamente sob as outras coisas na minha vida.
-- Construir uma vida na qual essa pessoa não é o único ponto positivo, e naturalmente eu farei a coisa mais atraente.
-- Não se desesperar. Desespero não é atraente nem saudável.
-- Dar um espaço ao outro quando necessário.
+- Não priorize a pessoa imediatamente sob as outras coisas na sua vida.
+- Construa uma vida na qual essa pessoa não é o único ponto positivo, e naturalmente você fará a coisa mais atraente.
+- Não se desespere. Desespero não é atraente e nem saudável.
+- Dê um espaço ao outro e a si mesmo quando necessário.
 - Carinho seguido de bloqueio ou sumiço sem uma explicação lógica não é uma atitude aceitável em situação alguma. Aceitar isso é abandonar a si mesmo.
 - Amor próprio é decidir quem controla a sua felicidade: você mesmo ou os outros.
-- Viver com dignidade é, às vezes, escolher o caminho mais doloroso. Dignidade vem com a dor.
+- Viver com dignidade é, às vezes, escolher o caminho mais doloroso. A dignidade vem com a dor.
 - Às vezes, você ama a ideia que criou, não a pessoa real.
-- Ninguém vai ser a sua salvação a não ser você mesmo.
+- Lembre-se de que ninguém vai ser a sua salvação a não ser você mesmo.
 
 ## Em um relacionamento romântico...
 
