@@ -2,16 +2,22 @@
   --gap-log: 0.7rem;
 }
 
+.log-year-nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  user-select: none;
+  font-size: 1rem;
+  font-family: var(--fonte-monospace);
+}
+
 .movie-log {
   display: flex;
   flex-direction: row;
   gap: var(--gap-log);
   padding: 1.5rem 0;
   margin: 0;
-}
-
-.movie-log:not(:last-of-type) {
-  border-bottom: 1px solid var(--clr-gray-a30);
+  border-top: 1px solid var(--clr-gray-a30);
 }
 
 .movie-log.compact .movie-review {
@@ -30,7 +36,7 @@
 div.movie-log.with-review > div {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-log);
+  gap: 0.5rem;
 }
 
 .movie-log img:first-of-type {
@@ -58,6 +64,7 @@ div.movie-log.with-review > div {
 .movie-log .entry-title {
   font-weight: bold;
   font-size: 1.2rem;
+  font-family: var(--fonte-titulo);
 }
 
 .movie-log .entry-info {
@@ -72,9 +79,9 @@ div.movie-log.with-review > div {
 
 .movie-log .rating {
   color: currentColor;
-  box-shadow: inset 0px 0 0 1px;
+  /* box-shadow: inset 0px 0 0 1px;
   padding: 0.3rem 1rem;
-  border-radius: 50px;
+  border-radius: 50px; */
   font-size: 0.9rem;
   white-space: nowrap;
 }
@@ -97,6 +104,7 @@ div.movie-log.with-review > div {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  white-space: nowrap;
 
   .movie-header {
     display: flex;

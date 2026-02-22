@@ -1,0 +1,61 @@
+---
+pagination:
+  data: logPages
+  size: 1
+  alias: logPage
+layout: default
+eleventyComputed:
+  title: "{{ logPage.title }}"
+  permalink: "{{ logPage.permalink }}"
+---
+
+<nav class="log-year-nav" aria-label="Navegacao por ano">
+    {% if logPage.olderUrl %}
+        <a href="{{ logPage.olderUrl }}" class="log-year-nav-prev" aria-label="Ir para o ano anterior">&larr; {{ logPage.olderYear }}</a>
+    {% else %}
+        <span class="log-year-nav-prev is-disabled" aria-hidden="true">&larr;</span>
+    {% endif %}
+
+    <span class="log-year-nav-current">{{ logPage.year }}</span>
+
+    {% if logPage.newerUrl %}
+        <a href="{{ logPage.newerUrl }}" class="log-year-nav-next" aria-label="Ir para o ano mais recente">{{ logPage.newerYear }} &rarr;</a>
+    {% else %}
+        <span class="log-year-nav-next is-disabled" aria-hidden="true">&rarr;</span>
+    {% endif %}
+</nav>
+
+{% for item in logPage.items %}
+    <div class="movie-log {% if item.review != '' %}with-review{% else %}compact{% endif %}">
+        {% if item.review != '' %}
+            {% tmdbPoster item.name,
+            item.year %}
+        {% endif %}
+        <div>
+            <div class="movie-header">
+                <span class="date">{{ item.when | formatDateTime }}</span>
+                <div class="entry-info">
+                    <span class="entry-title">{{ item.name }}
+                        {% if item.year %} ({{ item.year }}){% endif %}
+                    </span>
+                    {% if item.rating != '' %}
+                        <span class="rating">{{ item.rating }} ★</span>
+                    {% endif %}
+                    {% if item.rewatch != '' %}
+                        <span class="rewatch">↺</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% if item.review != '' %}
+                <div class="movie-review">{{ item.review | safe }}</div>
+            {% endif %}
+            {% if item.tags != '' %}
+                <span class="tags">{{ item.tags }}</span>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+{% if logPage.introMarkdown and logPage.isNewestYear %}
+    {{ logPage.introMarkdown | renderMarkdown | safe }}
+{% endif %}

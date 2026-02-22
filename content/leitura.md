@@ -70,6 +70,17 @@ Nunca tive muito costume de ler livros. Sempre li [mangás](/manga/), especialme
 |     | Zona de Crise                                 | Simon Hanselmann                           | Veneta                             |
 |     | Zupi - Edição 53                              | –                                          | –                                  |
 
+## Para ler
+
+- Neuromancer, por William Gibson
+- O Rei de Amarelo, por Robert W. Chambers
+- Casa de Folhas, por Mark Z. Danielewski
+- Coração Satânico, por William Hjortsberg
+- Além do Bem e do Mal, por Friedrich Nietzsche
+- Dhammapada
+- Temor e Tremor, por Kiekegaard
+- Crime e Castigo, por Dostoiévski
+
 ## Links úteis
 
 - [fadedpage](https://www.fadedpage.com/)

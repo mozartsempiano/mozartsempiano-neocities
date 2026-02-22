@@ -1,6 +1,12 @@
 module.exports = {
 	eleventyComputed: {
 		permalink: (data) => {
+			if (data.permalink === false) {
+				return false;
+			}
+			if (typeof data.permalink === "string" && data.permalink.trim().length > 0) {
+				return data.permalink;
+			}
 			if (data.page?.fileSlug === "galeria-item" && data.galeriaEntry?.url) {
 				return data.galeriaEntry.url;
 			}

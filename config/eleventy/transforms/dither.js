@@ -5,6 +5,8 @@ const cheerio = require("cheerio");
 
 module.exports = function configureDitherTransform(eleventyConfig) {
   // Dither transform corrigido
+  const isServeMode = process.env.ELEVENTY_RUN_MODE === "serve";
+  const ditherDisabledInServe = process.env.ELEVENTY_DISABLE_DITHER_IN_SERVE === "1";
   const OUTPUT_DIR = path.join(process.cwd(), "_site");
   const DITHER_OUT_DIR = path.join(OUTPUT_DIR, "assets/img/dither");
   const INPUT_IMG_DIR = path.join(process.cwd(), "assets/img");
@@ -401,6 +403,9 @@ module.exports = function configureDitherTransform(eleventyConfig) {
 
   eleventyConfig.addTransform("ditherImages", async function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
+      if (isServeMode && ditherDisabledInServe) {
+        return content;
+      }
       if (shouldDisableDither(this)) {
         await ensureOriginalAssets(content);
         return content;

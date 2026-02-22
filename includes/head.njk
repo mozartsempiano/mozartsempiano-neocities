@@ -1,40 +1,36 @@
 {% set metatitle = site.title %}
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 {% if title %}
     {% set metatitle = title ~ " — " ~ metatitle %}
 {% endif %}
 <title>{{ metatitle }}</title>
 {% if content %}
-    {% set metadesc = content
-            | striptags
-            | trim
-            | replace("\n", " ")
-        | truncate(100, true, "…") %}
+    {% set metadesc = content | striptags | trim | replace("\n", " ") | truncate(100, true, "…") %}
 {% elif desc %}
     {% set metadesc = desc %}
 {% else %}
     {% set metadesc = site.desc %}
 {% endif %}
-<meta name="description" content="{{ metadesc }}" />
-<meta property="og:title" content="{{ metatitle }}" />
+<meta name="description" content="{{ metadesc }}"/>
+<meta property="og:title" content="{{ metatitle }}"/>
 {% set metatype = "website" %}
-<meta property="og:type" content="{{ metatype }}" />
-<meta property="og:url" content="{{ site.baseurl ~ page.url }}" />
-<meta property="og:image" content="/assets/img/avatar.png" />
-<meta property="og:description" content="{{ metadesc }}" />
+<meta property="og:type" content="{{ metatype }}"/>
+<meta property="og:url" content="{{ site.baseurl ~ page.url }}"/>
+<meta property="og:image" content="/assets/img/avatar.png"/>
+<meta property="og:description" content="{{ metadesc }}"/>
 <link rel="icon"
       type="image/x-icon"
       href="/assets/img/favicon.svg"
       type="image/svg+xml">
-<link rel="canonical" href="{{ site.baseurl ~ page.url }}" />
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-<link rel="stylesheet" href="/assets/css/style.css" />
-<link rel="stylesheet" href="/assets/css/animations.css" />
-<link rel="stylesheet" href="/assets/css/variaveis.css" />
-<link rel="stylesheet" href="/assets/css/fonts.css" />
+<link rel="canonical" href="{{ site.baseurl ~ page.url }}"/>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/animations.css"/>
+<link rel="stylesheet" href="/assets/css/variaveis.css"/>
+<link rel="stylesheet" href="/assets/css/fonts.css"/>
 {% if page.fileSlug == "sitemap" %}
-    <link rel="stylesheet" href="/assets/css/sitemap.css" />
-{% elif "-log" in page.fileSlug %}
-    <link rel="stylesheet" href="/assets/css/log.css" />
+    <link rel="stylesheet" href="/assets/css/sitemap.css"/>
+{% elif logPage and "-log" in logPage.slug %}
+    <link rel="stylesheet" href="/assets/css/log.css"/>
 {% endif %}

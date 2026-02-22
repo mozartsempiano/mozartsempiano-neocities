@@ -21,7 +21,7 @@
 
   --clr-texto: var(--clr-white);
   --clr-link: var(--clr-main-a30);
-  --clr-borda: var(--clr-gray-a20);
+  --clr-borda: var(--clr-gray-a30);
   --clr-fundo: var(--clr-black-a0);
 
   --borda-padrao: 0 solid var(--clr-borda);

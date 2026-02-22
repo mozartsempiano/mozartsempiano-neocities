@@ -157,6 +157,15 @@ imgPrincipalCaption: Lady Snowblood (1973)
 |     | 2005      | V de Vingança                             | James McTeigue                              |
 |     | 2013      | Wolverine Imortal                         | James Mangold                               |
 
+## Para assistir
+
+- Amadeus (1984)
+- Lua de Fel (1992)
+- Buffalo '66 (1998)
+- Je T’Aime, Je T’Aime (1968), dir. Alain Resnais
+- Pierrot le Fou (1965)
+- Demonlover (2002), dir. Olivier Assayas
+
 ## Links úteis
 
 - [FILM GRAB](https://film-grab.com/) - Acervo de stills de filmes
