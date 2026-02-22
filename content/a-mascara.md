@@ -1,6 +1,9 @@
 ---
 layout: default
 title: A Máscara
+created: 2026-02-22T17:24
+imgPrincipal: /assets/img/a-mascara-01.jpg
+imgPrincipalCaption: Coragem, o Cão Covarde - A Máscara (2002)
 ---
 
 Desde criança, minha mãe sempre foi muito protetora e me impedia de consumir conteúdos que, segundo ela, não me trariam nada positivo. Isso incluia alguns desenhos animados, como Dragon Ball, onde o público de um torneio grita constantemente pelo nome “Satã”, um personagem aclamado no universo da série; As Terríveis Aventuras de Billy & Mandy, que exibe violência explícita apesar de ser voltado para crianças; ou também Coragem, o Cão Covarde, que, assim como os outros dois, nunca teve receio de ser muito real nas mensagens trazidas. O episódio “A Máscara”, lançado em 2002, é um ótimo exemplo disso, fugindo do tom cômico habitual do seriado e trazendo à tona temas como trauma, violência doméstica e relacionamentos abusivos.
@@ -12,6 +15,8 @@ O que torna a dinâmica entre os personagens ainda mais interessante é como, em
 Enquanto Muriel arruma um quarto para a hóspede, Coragem, cansado dos maus-tratos pela visitante, decide agir. Ele rouba o objeto mais precioso de Kitty, um ratinho de pelúcia dado por Bunny, e sai em busca de ajuda. Ele tranca todos em seus quartos, pega o ratinho e entra na caminhonete do Eustácio. Durante sua jornada, ele encontra Charlie, um bartender que reconhece a pelúcia e revela a história de Kitty e Bunny. Agora com o ponto de vista de Charlie, Coragem percebe que Kitty não é a vilã que ele acreditava que fosse. Ela é uma amiga desesperada que perdeu a esperança de resgatar Bunny. Com isso em mente, Coragem decide intervir e salvar a coelha.
 
 Ao encontrar Mad Dog, Coragem também vê Bunny ao seu lado, visivelmente deprimida e miserável, entrando em seu apartamento. O gangster pergunta a Bunny se ele a faz feliz, enquanto a manipula, distorcendo os fatos, ameaçando-a de morte, assim como fez com Kitty, e, claro, a fazendo chorar. A coelha decide tomar uma atitude, prendendo Mad Dog e correndo, com uma mala que já havia preparado, mas, infelizmente, os comparsas do cão estão guardando a porta e não a deixam fugir. Mais tarde, com a ajuda de Coragem, que quebra a janela, ela consegue escapar. Mad Dog ouve os barulhos e os persegue de carro.
+
+![>](/assets/img/bunny-e-kitty.jpg "Bunny e Kitty")
 
 Depois de uns minutos na perseguição, ele acaba sendo atropelado por um trem e some de vista. Bunny se aproxima de Coragem, que a salvou, diz que ele é um cão muito corajoso e agradece. No final do episódio, Bunny se reencontra com Kitty, que percebe que estava errada ao generalizar seu ódio contra os cães. Ambas partem juntas, livres para reconstruir suas vidas. É interessante notar um simbolismo ao longo do episódio, em que as personagens vão perdendo suas roupas, como se estivessem se livrando de suas máscaras metafóricas. No final, estão abraçadas, podendo finalmente ser elas mesmas.
 

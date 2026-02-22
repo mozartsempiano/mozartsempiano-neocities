@@ -8,7 +8,7 @@ created: 2026-02-03T09:53
 
 ## Favoritos
 
-- [Oyasumi Punpun](/oyasumi-punpun/) (2007-2013), por Inio Asano
+- Oyasumi Punpun (2007-2013), por Inio Asano
 - Ajin (2012-2021), por Gamon Sakurai
 - Uzumaki (1998-1999), por Junji Ito
 - Kiseijuu (1989-1994), por Hitoshi Iwaaki

@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: var(--font-size);
   scroll-behavior: smooth;
 }
 
@@ -137,6 +137,10 @@ main {
   direction: ltr;
   /* margin-left: auto;
 	margin-right: auto; */
+}
+
+main * {
+  scrollbar-width: thin;
 }
 
 footer.page-footer {
@@ -410,21 +414,28 @@ s {
     position: absolute;
     inset: 2px 0 0;
     z-index: 2;
-    background-color: var(--clr-texto);
+    background-color: currentColor;
     transform: skewX(10deg) skewY(-2deg);
     border-radius: 12px;
+    transition: var(--transition-time-short) var(--cubic-bezier);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    background-color: transparent;
   }
 }
 
 code {
+  font-family: var(--fonte-monospace);
+  font-size: 0.84rem;
+  line-height: normal !important;
   background-color: var(--clr-gray-a0);
+  border-radius: var(--b-radius);
+  outline: 0;
   padding: 0.4rem 0.8rem;
   overflow: auto;
-  font-size: 0.84rem;
-  outline: 0;
   transition: box-shadow var(--transition-time-short);
-  border-radius: var(--b-radius);
-  font-family: var(--fonte-monospace);
 }
 
 code:hover {
@@ -611,6 +622,11 @@ img[src*="dither"] {
 
 img[alt*="invert"] {
   filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+img[alt*="pixel"] {
+  image-rendering: pixelated;
 }
 
 /* img[src*="svg"],
@@ -811,7 +827,7 @@ a:active:not(.button) {
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 1px;
-  transition: var(--transition-time) cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: var(--transition-time) var(--cubic-bezier);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1089,9 +1105,12 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
   margin-left: var(--offset);
 
   max-height: 64vh;
-  min-height: 364px;
   overflow-y: scroll;
   display: inline-block;
+
+  & > * {
+    width: 100%;
+  }
 
   & thead tr th {
     color: var(--clr-white);
@@ -1109,6 +1128,7 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
     text-align: left;
     vertical-align: top;
     border: 1px dotted currentColor;
+    width: fit-content;
   }
 }
 

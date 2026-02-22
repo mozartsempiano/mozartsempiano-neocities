@@ -2,9 +2,13 @@
 layout: default
 title: ASCII
 created: 2026-02-21T15:54
+imgPrincipal: /assets/img/ascii-header.jpg
+imgPrincipalCaption: Hatsune Miku feita em ASCII Art
 ---
 
-## Caracteres
+**ASCII** (American Standard Code for Information Interchange) é um conjunto básico de 128 caracteres de 7 bits, em que cada bit individual representa um caractere único.
+
+## Caracteres para clipboard
 
 ```
 ً
@@ -18,7 +22,30 @@ created: 2026-02-21T15:54
 〠ൠᴥ௵ஔ∰ጃ෴𒐫ᅘ༽໒✺𓍊𓋼𓍊𓋼𓍊☾༘⋆𔓘☾𓁹‿𓁹☾☼⭒✮🀣🀦🀧₊˚⊹♡☾
 ```
 
-## Artes
+## ASCII Art
+
+ASCII Art é qualquer tipo de imagem ou diagrama desenhado com os caracteres imprimíveis do conjunto de caracteres ASCII.
+
+```
+                                                                  mm
+                                                                  MM
+            `7MMpMMMb.pMMMb.  ,pW"Wq.  M"""MMV  ,6"Yb.  `7Mb,od8 mmMMmm
+              MM    MM    MM 6W'   `Wb '  AMV  8)   MM    MM' "'   MM
+              MM    MM    MM 8M     M8   AMV    ,pm9MM    MM       MM
+              MM    MM    MM YA.   ,A9  AMV  , 8M   MM    MM       MM
+            .JMML  JMML  JMML.`Ybmd9'  AMMmmmM `Moo9^Yo..JMML.     `Mbmo
+
+                                             ,,
+                                             db
+
+,pP"Ybd  .gP"Ya `7MMpMMMb.pMMMb. `7MMpdMAo.`7MM   ,6"Yb.  `7MMpMMMb.  ,pW"Wq.
+8I   `" ,M'   Yb  MM    MM    MM   MM   `Wb  MM  8)   MM    MM    MM 6W'   `Wb
+`YMMMa. 8M""""""  MM    MM    MM   MM    M8  MM   ,pm9MM    MM    MM 8M     M8
+L.   I8 YM.    ,  MM    MM    MM   MM   ,AP  MM  8M   MM    MM    MM YA.   ,A9
+M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
+                                   MM
+                                 .JMML.
+```
 
 ```
                   ⢀⣀⣤⡤⠤⠤⠤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -122,7 +149,19 @@ created: 2026-02-21T15:54
 
 ## Links úteis
 
-- ASCII Art Archive
-- Text to ASCII Art Generator
+![> invert pixel](/assets/img/ascii-animated-girl.gif)
+
+### Utilidade
+
+- [ASCII Art Archive](https://www.asciiart.eu/)
 - [SYMBL](https://symbl.cc/) - Símbolos Unicode
 - [Shapecatcher](https://shapecatcher.com/) - Identificar caracter unicode através de um desenho
+
+### Geradores
+
+- [Text to ASCII Art Generator](https://patorjk.com/software/taag/)
+- [ASCII Art Generator with Text](https://github.com/mozartsempiano/ascii-text-generator) - Um gerador que fiz em JavaScript
+
+### [Jogos](/videogames/)
+
+- [Candy Box!](https://candybox2.github.io/candybox/)
