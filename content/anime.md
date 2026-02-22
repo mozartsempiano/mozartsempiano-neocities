@@ -23,5 +23,5 @@ imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 ## Ver também
 
 - [Coleção de DVDs de filmes e séries](/cinema#colecao-de-dvds-de-filmes-e-series)
-- [Diário de animes](/anime-log/)
+- [Diário de séries](/series-log/)
 - [Mangá](/manga/)

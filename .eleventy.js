@@ -20,7 +20,11 @@ module.exports = function (eleventyConfig) {
 
 	const md = configureMarkdown();
 	const renderMarkdown = (value) => md.render(String(value ?? ""));
+	const renderMarkdownInline = (value) => md.renderInline(String(value ?? ""));
+	eleventyConfig.addFilter("renderMarkdown", renderMarkdown);
+	eleventyConfig.addFilter("renderMarkdownInline", renderMarkdownInline);
 	eleventyConfig.addNunjucksFilter("renderMarkdown", renderMarkdown);
+	eleventyConfig.addNunjucksFilter("renderMarkdownInline", renderMarkdownInline);
 	eleventyConfig.setLibrary("md", md);
 
 	return {

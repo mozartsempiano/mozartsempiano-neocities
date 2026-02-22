@@ -12,7 +12,7 @@
                     <figure>
                         <img src="{{ imgPrincipal }}" class="imgPrincipal" alt=""/>
                         {% if imgPrincipalCaption %}
-                            <figcaption>{{ imgPrincipalCaption | renderMarkdown | safe }}</figcaption>
+                            <figcaption>{{ imgPrincipalCaption | renderMarkdownInline | safe }}</figcaption>
                         {% endif %}
                     </figure>
                 {% endif %}

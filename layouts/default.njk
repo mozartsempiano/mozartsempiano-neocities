@@ -11,7 +11,7 @@
                              class="imgPrincipal"
                              alt="{% if imgPrincipalOriginal %}hover-original{% endif %}"/>
                         {% if imgPrincipalCaption %}
-                            <figcaption>{{ imgPrincipalCaption | renderMarkdown | safe }}</figcaption>
+                            <figcaption>{{ imgPrincipalCaption | renderMarkdownInline | safe }}</figcaption>
                         {% endif %}
                     </figure>
                 {% endif %}

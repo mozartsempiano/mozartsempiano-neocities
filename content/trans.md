@@ -4,6 +4,7 @@ title: Trans
 imgPrincipal: /assets/img/hermafrodito_dormindo.jpg
 imgPrincipalCaption: Hermafrodito Dormindo
 created: 2026-02-04T16:33
+draft: true
 ---
 
 ## Links úteis

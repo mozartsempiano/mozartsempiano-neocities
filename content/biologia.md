@@ -2,6 +2,8 @@
 layout: default
 title: Biologia
 created: 2026-02-06T19:34
+imgPrincipal: /assets/img/nausicaa_01.jpg
+imgPrincipalCaption: Nausicaä do Vale do Vento (1984)
 ---
 
 > Men are the devils of the earth, and the animals are the tormented souls.

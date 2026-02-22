@@ -36,7 +36,7 @@ M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
                 {% if imgPrincipal %}
                     <figure>
                         <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="invert"/>
-                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption | renderMarkdown | safe }}</figcaption>{% endif %}
+                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption | renderMarkdownInline | safe }}</figcaption>{% endif %}
                     </figure>
                 {% endif %}
                 <fieldset class="changelog">

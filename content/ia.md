@@ -2,9 +2,11 @@
 layout: default
 title: IA
 created: 2026-02-04T16:33
+imgPrincipal: /assets/img/blade-runner-2049-01.jpg
+imgPrincipalCaption: Blade Runner 2049 (2017)
 ---
 
-Não acho que toda inteligência artificial é inerentemente ruim, mas que o [ser humano](/humanidade/) faz um uso terrível e maligno dela, usando-a em inúmeros contextos cuja implementação dela nunca sequer deveria ter sido considerada, como a [arte](/arte/), entretenimento ou ainda o crime.
+Não acho que toda inteligência artificial seja inerentemente ruim, mas que o [ser humano](/humanidade/) certamente faz um uso terrível e maligno dela, usando-a em inúmeros contextos cuja implementação dela nunca sequer deveria ter sido considerada, como a [arte](/arte/), o entretenimento ou ainda o crime.
 
 Inclusive, algo que me convence de que eu realmente vivo em [um mundo diferente](/neurodiversidade/) das outras pessoas é o fato de que existem pessoas que genuinamente se entretém assistindo vídeos gerados por inteligência artificial e não veem problema algum em passar o dia no celular vendo isso.
 

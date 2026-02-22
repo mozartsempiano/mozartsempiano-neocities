@@ -51,7 +51,7 @@ function addImageFigure(md) {
 		const title = token.attrGet && token.attrGet("title");
 		const imgHtml = defaultImage(tokens, idx, options, env, self);
 		return title
-			? `<figure>${imgHtml}<figcaption>${md.utils.escapeHtml(title)}</figcaption></figure>`
+			? `<figure>${imgHtml}<figcaption>${md.renderInline(title)}</figcaption></figure>`
 			: `<figure>${imgHtml}</figure>`;
 	};
 }
