@@ -4,6 +4,11 @@ const path = require("path");
 const DATA_DIR = __dirname;
 const CONTENT_DIR = path.join(__dirname, "..", "content");
 const LOG_DATA_RE = /-log\.(js|json)$/i;
+const LOGS_WITH_TMDB_POSTERS = new Set(["cinema-log", "series-log", "anime-log"]);
+const LOG_TITLES = {
+  "cinema-log": "Diário de Filmes",
+  "series-log": "Diário de Séries",
+};
 
 function parseFrontMatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -47,10 +52,11 @@ function loadSourceMeta(slug) {
   const sourcePath = path.join(CONTENT_DIR, `${slug}.md`);
   if (!fs.existsSync(sourcePath)) {
     return {
-      title: titleFromSlug(slug),
+      title: LOG_TITLES[slug] || titleFromSlug(slug),
       subtitulo: "",
       imgPrincipal: "",
       imgPrincipalCaption: "",
+      enableTmdbPosters: LOGS_WITH_TMDB_POSTERS.has(slug),
       noBacklinks: false,
       draft: false,
       introMarkdown: "",
@@ -61,12 +67,21 @@ function loadSourceMeta(slug) {
   const parsed = parseFrontMatter(raw);
   const draft = parseBooleanLike(parsed.data.draft) === true;
   const noBacklinks = parseBooleanLike(parsed.data.noBacklinks) === true;
+  const enableTmdbPostersOverride = parseBooleanLike(parsed.data.enableTmdbPosters);
+  const legacyEnablePostersOverride = parseBooleanLike(parsed.data.enablePosters);
+  const resolvedEnableTmdbPosters =
+    enableTmdbPostersOverride !== null
+      ? enableTmdbPostersOverride
+      : legacyEnablePostersOverride !== null
+        ? legacyEnablePostersOverride
+        : LOGS_WITH_TMDB_POSTERS.has(slug);
 
   return {
-    title: parsed.data.title || titleFromSlug(slug),
+    title: parsed.data.title || LOG_TITLES[slug] || titleFromSlug(slug),
     subtitulo: parsed.data.subtitulo || "",
     imgPrincipal: parsed.data.imgPrincipal || "",
     imgPrincipalCaption: parsed.data.imgPrincipalCaption || "",
+    enableTmdbPosters: resolvedEnableTmdbPosters,
     noBacklinks,
     draft,
     introMarkdown: (parsed.body || "").trim(),
@@ -164,6 +179,7 @@ module.exports = (() => {
         subtitulo: meta.subtitulo,
         imgPrincipal: meta.imgPrincipal,
         imgPrincipalCaption: meta.imgPrincipalCaption,
+        enableTmdbPosters: meta.enableTmdbPosters,
         noBacklinks: meta.noBacklinks,
         introMarkdown: meta.introMarkdown,
         year,

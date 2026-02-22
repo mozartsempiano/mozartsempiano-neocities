@@ -27,7 +27,7 @@ eleventyComputed:
 
 {% for item in logPage.items %}
     <div class="movie-log {% if item.review != '' %}with-review{% else %}compact{% endif %}">
-        {% if item.review != '' %}
+        {% if logPage.enableTmdbPosters and item.review != '' %}
             {% tmdbPoster item.name,
             item.year %}
         {% endif %}
