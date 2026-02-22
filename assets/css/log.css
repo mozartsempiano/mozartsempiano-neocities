@@ -43,10 +43,14 @@ div.movie-log.with-review > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 0.4em;
 }
 
 .movie-log .date {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
+  color: var(--clr-gray-a50);
+  font-family: var(--fonte-monospace);
+  line-height: normal;
   width: 100%;
   display: block;
 }
