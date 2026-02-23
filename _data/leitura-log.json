@@ -2,11 +2,56 @@
   {
     "name": "O Apanhador no Campo de Centeio",
     "ogName": "The Catcher in the Rye",
+    "author": "J. D. Salinger",
     "year": "1951",
     "rating": "",
     "rewatch": "",
-    "review": "teste",
+    "review": "",
     "tags": "",
     "when": "2025-12-29"
+  },
+  {
+    "name": "the nightmare of fabrication",
+    "ogName": "",
+    "author": "Yoshitoshi Abe",
+    "year": "1998",
+    "rating": "",
+    "rewatch": "",
+    "review": "",
+    "tags": "",
+    "when": "2022-06-07"
+  },
+  {
+    "name": "Tokyo Ghoul",
+    "ogName": "Tokyo Ghoul, Vol. 14",
+    "author": "Sui Ishida",
+    "year": "2014",
+    "rating": "",
+    "rewatch": "",
+    "review": "",
+    "tags": "",
+    "when": "2017-08-14"
+  },
+  {
+    "name": "The Garden of Words",
+    "ogName": "Garden of Words",
+    "author": "Makoto Shinkai",
+    "year": "2013",
+    "rating": "",
+    "rewatch": "",
+    "review": "",
+    "tags": "",
+    "when": "2017-03-10"
+  },
+  {
+    "name": "Parasyte",
+    "ogName": "Parasyte, Vol. 10",
+    "author": "Hitoshi Iwaaki",
+    "year": "1995",
+    "rating": "",
+    "rewatch": "",
+    "review": "",
+    "tags": "",
+    "when": "2017-01-23"
   }
 ]

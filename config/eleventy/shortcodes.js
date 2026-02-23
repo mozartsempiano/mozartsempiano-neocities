@@ -30,10 +30,11 @@ function normalizeKey(title, year) {
   return `${safeTitle}|${safeYear}`;
 }
 
-function normalizeOpenLibraryKey(title, year, fallbackTitle) {
+function normalizeOpenLibraryKey(title, year, fallbackTitle, author) {
   const base = normalizeKey(title, year);
   const fallback = String(fallbackTitle || "").trim().toLowerCase();
-  return `${base}|${fallback}`;
+  const safeAuthor = String(author || "").trim().toLowerCase();
+  return `${base}|${fallback}|${safeAuthor}`;
 }
 
 function normalizeProvider(provider) {
@@ -107,8 +108,9 @@ function normalizeText(str) {
     .trim();
 }
 
-function pickOpenLibraryDoc(docs, title, year) {
+function pickOpenLibraryDoc(docs, title, year, author) {
   const normalizedTitle = normalizeText(title);
+  const normalizedAuthor = normalizeText(author);
   const yearNum = Number.parseInt(String(year || ""), 10);
 
   let best = null;
@@ -121,6 +123,12 @@ function pickOpenLibraryDoc(docs, title, year) {
     const docTitle = normalizeText(doc.title || "");
     if (docTitle === normalizedTitle) score += 30;
     else if (docTitle.startsWith(normalizedTitle) || normalizedTitle.startsWith(docTitle)) score += 15;
+
+    if (normalizedAuthor) {
+      const authorNames = Array.isArray(doc.author_name) ? doc.author_name : [];
+      const hasAuthorMatch = authorNames.some((name) => normalizeText(name) === normalizedAuthor);
+      if (hasAuthorMatch) score += 20;
+    }
 
     if (Number.isFinite(yearNum) && Number.isFinite(doc.first_publish_year)) {
       const diff = Math.abs(doc.first_publish_year - yearNum);
@@ -210,14 +218,19 @@ module.exports = function configureShortcodes(eleventyConfig) {
     return job;
   }
 
-  async function fetchOpenLibraryPosterEntry(title, year) {
+  async function fetchOpenLibraryPosterEntry(title, year, useYear = true, author = "") {
     const params = new URLSearchParams({
       title: String(title || "").trim(),
       limit: "20",
     });
 
+    const safeAuthor = String(author || "").trim();
+    if (safeAuthor) {
+      params.set("author", safeAuthor);
+    }
+
     const yearNum = Number.parseInt(String(year || ""), 10);
-    if (Number.isFinite(yearNum)) {
+    if (useYear && Number.isFinite(yearNum)) {
       params.set("first_publish_year", String(yearNum));
     }
 
@@ -228,7 +241,7 @@ module.exports = function configureShortcodes(eleventyConfig) {
     }
 
     const data = await res.json();
-    const doc = pickOpenLibraryDoc(data.docs || [], title, year);
+    const doc = pickOpenLibraryDoc(data.docs || [], title, year, author);
 
     if (!doc || !doc.cover_i) {
       return {
@@ -245,8 +258,8 @@ module.exports = function configureShortcodes(eleventyConfig) {
     };
   }
 
-  async function resolveOpenLibraryPosterEntry(title, year, fallbackTitle) {
-    const key = normalizeOpenLibraryKey(title, year, fallbackTitle);
+  async function resolveOpenLibraryPosterEntry(title, year, fallbackTitle, author) {
+    const key = normalizeOpenLibraryKey(title, year, fallbackTitle, author);
     const cached = openLibraryCache.items[key];
 
     if (
@@ -264,7 +277,13 @@ module.exports = function configureShortcodes(eleventyConfig) {
 
     const job = (async () => {
       try {
-        let next = await fetchOpenLibraryPosterEntry(title, year);
+        let next = await fetchOpenLibraryPosterEntry(title, year, true, author);
+
+        // Fallback 1: same title, but without year filter.
+        if (next?.status === "not_found") {
+          next = await fetchOpenLibraryPosterEntry(title, year, false, author);
+        }
+
         const safeFallbackTitle = String(fallbackTitle || "").trim();
         const safePrimaryTitle = String(title || "").trim();
         const shouldTryFallback =
@@ -273,7 +292,13 @@ module.exports = function configureShortcodes(eleventyConfig) {
           safeFallbackTitle.toLowerCase() !== safePrimaryTitle.toLowerCase();
 
         if (shouldTryFallback) {
-          next = await fetchOpenLibraryPosterEntry(safeFallbackTitle, year);
+          // Fallback 2: ogName with year.
+          next = await fetchOpenLibraryPosterEntry(safeFallbackTitle, year, true, author);
+
+          // Fallback 3: ogName without year filter.
+          if (next?.status === "not_found") {
+            next = await fetchOpenLibraryPosterEntry(safeFallbackTitle, year, false, author);
+          }
         }
 
         openLibraryCache.items[key] = next;
@@ -307,7 +332,7 @@ module.exports = function configureShortcodes(eleventyConfig) {
     return `<img src="${escapeAttr(posterUrl)}" alt="${escapeAttr(alt)}">`;
   }
 
-  async function renderOpenLibraryPosterHtml(title, year, fallbackTitle) {
+  async function renderOpenLibraryPosterHtml(title, year, fallbackTitle, author) {
     if (shouldSkipOpenLibraryLookup) return "";
 
     const safeTitle = String(title || "").trim();
@@ -315,7 +340,7 @@ module.exports = function configureShortcodes(eleventyConfig) {
     const safeFallbackTitle = String(fallbackTitle || "").trim();
     if (!safeTitle) return "";
 
-    const entry = await resolveOpenLibraryPosterEntry(safeTitle, safeYear, safeFallbackTitle);
+    const entry = await resolveOpenLibraryPosterEntry(safeTitle, safeYear, safeFallbackTitle, author);
     if (!entry || entry.status !== "ok" || !entry.coverId) return "";
 
     const posterUrl = `${OPENLIBRARY_COVERS_BASE}${entry.coverId}-M.jpg`;
@@ -327,19 +352,22 @@ module.exports = function configureShortcodes(eleventyConfig) {
     return await renderTmdbPosterHtml(title, year, size);
   });
 
-  eleventyConfig.addNunjucksAsyncShortcode("openLibraryPoster", async (title, year, ogName = "") => {
-    return await renderOpenLibraryPosterHtml(title, year, ogName);
-  });
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "openLibraryPoster",
+    async (title, year, ogName = "", author = "") => {
+      return await renderOpenLibraryPosterHtml(title, year, ogName, author);
+    },
+  );
 
   eleventyConfig.addNunjucksAsyncShortcode(
     "logPoster",
-    async (title, year, provider = "tmdb", ogName = "") => {
+    async (title, year, provider = "tmdb", ogName = "", author = "") => {
     const normalizedProvider = normalizeProvider(provider);
     if (normalizedProvider === "tmdb") {
       return await renderTmdbPosterHtml(title, year, "w154");
     }
     if (normalizedProvider === "openlibrary") {
-      return await renderOpenLibraryPosterHtml(title, year, ogName);
+      return await renderOpenLibraryPosterHtml(title, year, ogName, author);
     }
     return "";
     },
