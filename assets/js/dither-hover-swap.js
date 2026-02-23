@@ -19,7 +19,9 @@
     overlay.src = originalSrc;
     overlay.alt = "";
     overlay.setAttribute("aria-hidden", "true");
-    overlay.loading = "eager";
+    // overlay.loading = "eager";
+    overlay.loading = "lazy";
+    overlay.fetchPriority = "low";
     overlay.decoding = "async";
 
     wrapper.appendChild(overlay);
