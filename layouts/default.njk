@@ -21,12 +21,28 @@
                 {% endif %}
                 <h1 id="tituloPagina">{{ title }}</h1>
                 {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
-                {% include "toc.njk" ignore missing %}
-                {% if tipo == "galeria" %}
-                    {% include "gallery.njk" ignore missing %}
+                {% if tipo == "changelog" %}
+                    <div class="changelog">
+                        {% for log in changelog -%}
+                            <h2>
+                                v{{ log.v }}
+                                <small>{{ log.date }}</small>
+                            </h2>
+                            <ul>
+                                {% for changes in log.items -%}
+                                    <li>{{ changes }}</li>
+                                {% endfor -%}
+                            </ul>
+                        {% endfor -%}
+                    </div>
+                {% else %}
+                    {% include "toc.njk" ignore missing %}
+                    {% if tipo == "galeria" %}
+                        {% include "gallery.njk" ignore missing %}
+                    {% endif %}
+                    {{ content | safe }}
                 {% endif %}
-                {{ content | safe }}
-                {% if page.url != "/" %}
+                {% if page.url != "/" and tipo != "changelog" %}
                     {% if not noBacklinks %}
                         {% include "backlinks.njk" ignore missing %}
                     {% endif %}

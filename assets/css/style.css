@@ -207,7 +207,7 @@ main * {
 
 footer.page-footer {
 	text-align: left;
-	margin-top: 5rem;
+	margin-top: auto;
 	padding: 2.5rem 1rem;
 	font-size: 0.84rem;
 	display: flex;
