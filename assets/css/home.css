@@ -5,23 +5,34 @@ body > div#container {
 	width: 100%;
 }
 
-pre#tituloPagina {
+main > pre:first-of-type code {
 	width: fit-content;
 	max-width: 100%;
 	margin-bottom: 12px;
 	overflow: hidden;
 	font-size: clamp(0.4em, 1vw, 1em);
-	line-height: 1em;
+	line-height: 1em !important;
 	white-space: pre;
+	pointer-events: none;
+	background: transparent;
+	padding: 0;
+
+	&:hover {
+		box-shadow: none;
+		cursor: default;
+	}
 }
 
-main:has(pre#tituloPagina) #subtitulo {
-	display: none;
+main:has(> pre:first-of-type code) {
+	& #subtitulo,
+	#tituloPagina {
+		display: none;
+	}
 }
 
 aside {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 	gap: var(--gap-padrao);
@@ -48,7 +59,7 @@ aside img {
 		}
 	}
 
-	pre#tituloPagina {
+	main > pre:first-of-type code {
 		width: 100vw;
 		text-align: center;
 	}

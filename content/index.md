@@ -1,10 +1,32 @@
 ---
-layout: home
+layout: default
 title: Home
 subtitulo: Meu nome é Mozart.
 created: 2026-02-04T16:33
 imgPrincipal: /assets/img/lain_sketch_02.png
+imgPrincipalPos: side
 ---
+
+```
+                                                                  mm
+                                                                  MM
+            `7MMpMMMb.pMMMb.  ,pW"Wq.  M"""MMV  ,6"Yb.  `7Mb,od8 mmMMmm
+              MM    MM    MM 6W'   `Wb '  AMV  8)   MM    MM' "'   MM
+              MM    MM    MM 8M     M8   AMV    ,pm9MM    MM       MM
+              MM    MM    MM YA.   ,A9  AMV  , 8M   MM    MM       MM
+            .JMML  JMML  JMML.`Ybmd9'  AMMmmmM `Moo9^Yo..JMML.     `Mbmo
+
+                                             ,,
+                                             db
+
+,pP"Ybd  .gP"Ya `7MMpMMMb.pMMMb. `7MMpdMAo.`7MM   ,6"Yb.  `7MMpMMMb.  ,pW"Wq.
+8I   `" ,M'   Yb  MM    MM    MM   MM   `Wb  MM  8)   MM    MM    MM 6W'   `Wb
+`YMMMa. 8M""""""  MM    MM    MM   MM    M8  MM   ,pm9MM    MM    MM 8M     M8
+L.   I8 YM.    ,  MM    MM    MM   MM   ,AP  MM  8M   MM    MM    MM YA.   ,A9
+M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
+                                   MM
+                                 .JMML.
+```
 
 <marquee>artista multimídia ▪ designer gráfico ▪ web designer ▪ editor de vídeo ▪ fotógrafo ▪ programador ▪ entusiasta de tecnologia ▪ amante de filmes ▪ sonhador ▪ viajante ▪ criatura noturna ▪ colecionador de memórias ▪ explorador de mundos ▪ curador de silêncios ▪ guardião de segredos invisíveis</marquee>
 
