@@ -64,6 +64,41 @@ module.exports = function configureFilters(eleventyConfig) {
     return count;
   });
 
+  const pagesTree = (pages) => {
+    const root = { label: "/", children: new Map(), page: null };
+
+    for (const page of pages || []) {
+      const url = String(page?.url || "").trim();
+      if (!url || url === "/") continue;
+
+      const segments = url.replace(/^\/|\/$/g, "").split("/").filter(Boolean);
+      let node = root;
+
+      for (let i = 0; i < segments.length; i++) {
+        const segment = segments[i];
+        if (!node.children.has(segment)) {
+          node.children.set(segment, { label: segment, children: new Map(), page: null });
+        }
+        node = node.children.get(segment);
+        if (i === segments.length - 1) {
+          node.page = page;
+        }
+      }
+    }
+
+    const toArray = (node) =>
+      [...node.children.values()]
+        .sort((a, b) => a.label.localeCompare(b.label, "pt-BR"))
+        .map((child) => ({
+          ...child,
+          children: toArray(child),
+        }));
+
+    return toArray(root);
+  };
+  eleventyConfig.addFilter("pagesTree", pagesTree);
+  eleventyConfig.addNunjucksFilter("pagesTree", pagesTree);
+
   /* SAB 22.12.2012 17:45 BRT */
   eleventyConfig.addFilter("formatDateTime", (date) => {
     let d;

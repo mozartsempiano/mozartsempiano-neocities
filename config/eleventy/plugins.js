@@ -6,7 +6,7 @@ const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
 
 /** @type {import("eleventy-plugin-robotstxt/typedefs.js").EleventyPluginRobotsTxtOptions} */
 const eleventyPluginRobotsTxtOptions = {
-  // sitemapURL: "https://mozartsempiano.com/sitemap.xml",
+  sitemapURL: "https://mozartsempiano.com/sitemap.xml",
   shouldBlockAIRobots: true,
   rules: new Map([["*", [{ disallow: "/sonhos/" }, { disallow: "/junk/" }]]]),
 };

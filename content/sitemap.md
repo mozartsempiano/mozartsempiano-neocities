@@ -4,10 +4,22 @@ layout: default
 css: sitemap.css
 ---
 
-<ol>
-{% for page in collections.allPages | sort(attribute="url") %}
+{% macro renderTree(nodes) %}
+
+<ul>
+{% for node in nodes %}
   <li>
-    <a href="{{ page.url }}">{{ page.url }}</a>
+    {% if node.page %}
+      <a href="{{ node.page.url }}">{{ node.page.url }}</a>
+    {% else %}
+      {{ node.label }}
+    {% endif %}
+    {% if node.children | length %}
+      {{ renderTree(node.children) }}
+    {% endif %}
   </li>
 {% endfor %}
-</ol>
+</ul>
+{% endmacro %}
+
+{{ renderTree(collections.allPages | pagesTree) }}

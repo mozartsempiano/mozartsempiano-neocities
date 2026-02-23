@@ -1,24 +1,33 @@
-.lastModif {
-  font-size: 0.75rem;
-}
+﻿main > ul,
+main > ul ul {
+  column-count: 1 !important;
+  list-style: "\2514";
+  border-left: 1px dotted currentColor;
+  line-height: 135% !important;
+  margin: 0;
+  padding-left: revert;
 
-ol {
-  column-count: 3;
-  padding-left: 0;
-
-  li {
-    margin-left: 4rem;
+  & > li {
+    position: static;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin: 0 0 0 9px;
+    overflow: visible;
   }
 }
 
-@media (max-width: 1024px) {
-  ol {
-    column-count: 2;
-  }
+main ul > li::before {
+  content: none !important;
 }
 
-@media (max-width: 770px) {
-  ol {
-    column-count: 1;
+main > ul > li {
+  font-size: 1rem;
+
+  & ul:nth-child(2) {
+    font-size: 0.93em;
+  }
+
+  & ul:nth-child(3) {
+    font-size: 0.86em;
   }
 }
