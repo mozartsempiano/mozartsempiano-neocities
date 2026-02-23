@@ -19,7 +19,7 @@
       opacity: 0;
       transform: translateY(10px);
       transition: opacity .3s, transform .3s;
-      z-index: 1000;
+      z-index: 750;
       background-color: var(--clr-black-a10);
       color: var(--clr-white);
       border-width: 0 0 0 4px;

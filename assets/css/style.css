@@ -55,7 +55,7 @@ body.crt::before {
  * ---------------------------------------------- */
 
 .contrastadjust {
-	z-index: 20;
+	z-index: 800;
 	pointer-events: none;
 	backdrop-filter: contrast(200%);
 	position: fixed;
@@ -68,7 +68,7 @@ body.crt::before {
 }
 
 .matrix {
-	z-index: 2;
+	z-index: 799;
 	pointer-events: none;
 	position: fixed;
 	height: 1000%;
@@ -81,6 +81,21 @@ body.crt::before {
 	background-attachment: fixed;
 	text-align: center;
 	mix-blend-mode: soft-light;
+	image-rendering: pixelated;
+}
+
+:root:has(.contrastadjust) {
+	--clr-black-a10: lch(from var(--clr-black-a0) calc(l + 17) c h);
+	--clr-gray-a0: lch(from var(--clr-black-a0) calc(l + 24) c calc(h + 10));
+	--clr-gray-a10: lch(from var(--clr-black-a0) calc(l + 35) c calc(h + 10));
+	--clr-gray-a20: lch(from var(--clr-black-a0) calc(l + 40) c calc(h + 10));
+	--clr-gray-a30: lch(from var(--clr-black-a0) calc(l + 45) c calc(h + 10));
+	--clr-gray-a40: lch(from var(--clr-black-a0) calc(l + 60) c calc(h + 10));
+	--clr-gray-a50: lch(from var(--clr-black-a0) calc(l + 75) c calc(h + 10));
+
+	main img {
+		z-index: 900;
+	}
 }
 
 /* ----------------------------------------------
@@ -133,7 +148,7 @@ header.page-header a.page-header__logo svg {
 	animation: spin 12s linear infinite;
 	transform-origin: 50% 50%;
 	user-select: none;
-	fill: var(--clr-white);
+	fill: currentColor;
 	transition: 0.5s;
 }
 
@@ -177,7 +192,7 @@ header.page-header.header-voltar {
 
 hr {
 	border: none;
-	border-width: 1px;
+	border-width: var(--border-width);
 	border-style: dashed;
 	border-color: #444;
 	margin: 1rem 0;
@@ -215,7 +230,7 @@ footer.page-footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 0.5rem;
-	border-top: 1px solid var(--clr-gray-a30);
+	border-top: var(--border-width) var(--border-style) var(--clr-gray-a30);
 }
 
 footer.page-footer svg.lucide-copyright {
@@ -301,7 +316,7 @@ h4,
 h5 {
 	margin: 0;
 	line-height: 1.15;
-	color: var(--clr-white);
+	color: currentColor;
 	letter-spacing: 0.1em;
 	overflow: hidden;
 }
@@ -324,8 +339,8 @@ h1 {
 }
 
 main > h1#tituloPagina {
-	--cor-titulo: var(--clr-white);
-	--cor-underline: var(--clr-gray-a40);
+	--cor-titulo: currentColor;
+	--cor-underline: var(--clr-underline);
 
 	font-size: 2rem;
 	color: var(--cor-titulo);
@@ -335,7 +350,7 @@ main > h1#tituloPagina {
 	text-transform: uppercase;
 	font-weight: bold;
 	text-wrap: wrap;
-	border-bottom: 1px solid var(--cor-underline);
+	border-bottom: var(--border-width) var(--border-style) var(--cor-underline);
 	padding-bottom: 0.5rem;
 
 	/* &:before {
@@ -410,7 +425,7 @@ main > h2#subtitulo {
 	a:link,
 	a:visited,
 	a:focus {
-		color: var(--clr-white);
+		color: currentColor;
 	}
 }
 main > h2#subtitulo::after {
@@ -426,7 +441,7 @@ h2::after {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 1px;
+	height: var(--border-width);
 	background-color: var(--clr-borda);
 	margin: 0;
 	margin-top: 8px;
@@ -456,7 +471,7 @@ small {
 }
 
 kbd {
-	border: 1px solid;
+	border: var(--border-width) var(--border-style);
 	padding: 0 0.3rem;
 	border-radius: 0.25rem;
 	font-family: var(--fonte-monospace);
@@ -501,7 +516,7 @@ code {
 }
 
 code:hover {
-	box-shadow: inset 0 0 0 1px var(--clr-white);
+	box-shadow: inset 0 0 0 var(--border-width) var(--clr-white);
 	/* animation: bounce 0.5s ease; */
 
 	/* &:after {
@@ -571,7 +586,7 @@ main blockquote:not(:has(p:nth-child(2))) {
 	padding-left: 25px;
 	margin: 1.5rem;
 	margin-left: 0;
-	border-left: 1px dotted currentColor;
+	border-left: var(--border-width) dotted currentColor;
 
 	p:only-child {
 		max-width: unset;
@@ -591,7 +606,7 @@ figure:has(img.imgPrincipal) {
 	outline: 0;
 	text-align: center;
 	/* margin-left: calc(var(--padding-body) * -1); */
-	/* outline: 1px solid var(--clr-white); */
+	/* outline: var(--border-width) var(--border-style) var(--clr-white); */
 }
 
 figure:only-of-type:has(img.imgPrincipal) {
@@ -736,7 +751,7 @@ div.banners {
  * ---------------------------------------------- */
 
 div#backlinks_section {
-	border: 1px solid #333;
+	border: var(--border-width) var(--border-style) #333;
 	padding: 1rem 1.4rem;
 	margin-top: 2rem;
 	display: inline-block;
@@ -762,7 +777,7 @@ div#backlinks_section h1.backlinks-title {
 	bottom: 8px;
 	left: 100%;
 	background-color: #222;
-	border: 1px solid #333;
+	border: var(--border-width) var(--border-style) #333;
 	padding: 0.4rem 1rem;
 	width: 348px;
 	max-height: 148px;
@@ -835,7 +850,7 @@ a#editPage svg {
 	width: 1rem;
 	height: auto;
 	transition: var(--transition-time);
-	color: var(--clr-white);
+	color: currentColor;
 }
 
 a#editPage:hover svg {
@@ -843,7 +858,7 @@ a#editPage:hover svg {
 }
 
 a#editPage:hover {
-	color: var(--clr-white);
+	color: currentColor;
 }
 
 /* ----------------------------------------------
@@ -987,10 +1002,10 @@ a:active img {
 }
 
 .link-button {
-	border: 1px solid var(--clr-white);
+	border: var(--border-width) var(--border-style) var(--clr-white);
 	padding: 5px 10px;
 	background-color: var(--clr-black-a0);
-	color: var(--clr-white);
+	color: currentColor;
 	border-radius: var(--b-radius);
 }
 
@@ -1020,7 +1035,7 @@ details {
 	border-radius: var(--b-radius);
 	transition: 0.15s background linear;
 	&:hover {
-		background: var(--clr-black-a10);
+		background: var(--clr-fundo-lighter);
 	}
 }
 
@@ -1062,7 +1077,7 @@ summary {
 
 details > *:not(summary) {
 	cursor: auto;
-	background: var(--clr-black-a10);
+	background: var(--clr-fundo-lighter);
 	padding: 15px;
 	width: 250px;
 	position: absolute;
@@ -1151,7 +1166,7 @@ main details.toc-wrapper {
 	display: block;
 	width: fit-content;
 	max-width: 300px;
-	border: 1px solid var(--clr-gray-a40);
+	border: var(--border-width) var(--border-style) var(--clr-gray-a40);
 	padding: 0;
 	font-size: 0.9rem;
 }
@@ -1194,7 +1209,7 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
 	--offset: 3px;
 
 	border-collapse: collapse;
-	outline: 1px solid var(--clr-texto);
+	outline: var(--border-width) var(--border-style) var(--clr-texto);
 	outline-offset: var(--offset);
 	margin-left: var(--offset);
 
@@ -1207,7 +1222,7 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
 	}
 
 	& thead tr th {
-		color: var(--clr-white);
+		color: currentColor;
 		pointer-events: none;
 		user-select: none;
 		font-family: var(--fonte-monospace);
@@ -1221,7 +1236,7 @@ html:not(:has(head meta[property="og:url"][content$="-log/"])) table {
 		padding: 0.5em 0.75em;
 		text-align: left;
 		vertical-align: top;
-		border: 1px dotted currentColor;
+		border: var(--border-width) dotted currentColor;
 		width: fit-content;
 	}
 }
@@ -1243,7 +1258,7 @@ table.galeria-item-infobox td {
 		padding: 0.5em 2em 0.5em 0 !important;
 		border-color: currentColor !important;
 		border-style: dotted !important;
-		border-width: 1px 0 !important;
+		border-width: var(--border-width) 0 !important;
 	}
 }
 
@@ -1340,8 +1355,8 @@ main:has(.galeria-item-desc) {
 
 	font-family: var(--fonte-corpo);
 	font-size: 0.94rem;
-	color: var(--clr-white);
+	color: currentColor;
 	border-radius: var(--b-radius);
-	border: 1px solid var(--clr-gray-a30);
+	border: var(--border-width) var(--border-style) var(--clr-gray-a30);
 	text-align: left;
 }

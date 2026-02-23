@@ -29,15 +29,17 @@
 <link rel="stylesheet" href="/assets/css/animations.css" />
 <link rel="stylesheet" href="/assets/css/variaveis.css" />
 <link rel="stylesheet" href="/assets/css/fonts.css" />
-{% if page.fileSlug == "sitemap" %}
+{% if page.url == "/" %}
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <link rel="stylesheet" href="/assets/css/changelog.css" />
+{% elif page.fileSlug == "changelog" %}
+    <link rel="stylesheet" href="/assets/css/changelog.css" />
+{% elif page.fileSlug == "sitemap" %}
     <link rel="stylesheet" href="/assets/css/sitemap.css" />
 {% elif logPage and "-log" in logPage.slug %}
     <link rel="stylesheet" href="/assets/css/log.css" />
-{% elif tipo == "changelog" %}
-    <link rel="stylesheet" href="/assets/css/changelog.css" />
 {% elif tipo == "galeria" %}
     <link rel="stylesheet" href="/assets/css/galeria.css" />
-{% elif page.url == "/" %}
-    <link rel="stylesheet" href="/assets/css/home.css" />
-    <link rel="stylesheet" href="/assets/css/changelog.css" />
+{% elif page.fileSlug == "pokemon" %}
+    <link rel="stylesheet" href="/assets/css/pokemon.css" />
 {% endif %}

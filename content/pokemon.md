@@ -2,6 +2,7 @@
 layout: default
 title: Pokémon
 imgPrincipal: /assets/img/pokemon_thumb.jpg
+imgPrincipalCaption: Pokémon Adventures, Vol. 3
 created: 2026-02-04T16:33
 ---
 
