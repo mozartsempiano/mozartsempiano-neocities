@@ -1,13 +1,19 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const DATA_DIR = __dirname;
 const CONTENT_DIR = path.join(__dirname, "..", "content");
 const LOG_DATA_RE = /-log\.(js|json)$/i;
-const LOGS_WITH_TMDB_POSTERS = new Set(["cinema-log", "series-log", "anime-log"]);
+const LOG_POSTER_PROVIDERS = {
+  "cinema-log": "tmdb",
+  "series-log": "tmdb",
+  "anime-log": "tmdb",
+  "leitura-log": "openlibrary",
+};
 const LOG_TITLES = {
-  "cinema-log": "Diário de Filmes",
-  "series-log": "Diário de Séries",
+  "cinema-log": "Diario de Filmes",
+  "series-log": "Diario de Series",
+  "leitura-log": "Diario de Leitura",
 };
 
 function parseFrontMatter(raw) {
@@ -45,7 +51,20 @@ function parseBooleanLike(value) {
 function titleFromSlug(slug) {
   const label = slug.replace(/-log$/i, "").replace(/-/g, " ").trim();
   if (!label) return "Log";
-  return `Diário de ${label.charAt(0).toUpperCase()}${label.slice(1)}`;
+  return `Diario de ${label.charAt(0).toUpperCase()}${label.slice(1)}`;
+}
+
+function normalizePosterProvider(value) {
+  if (typeof value !== "string") return null;
+  const normalized = value.trim().toLowerCase();
+  if (!normalized) return null;
+  if (["tmdb", "openlibrary", "none"].includes(normalized)) return normalized;
+  if (["open-library", "open_library", "ol"].includes(normalized)) return "openlibrary";
+  return null;
+}
+
+function getDefaultPosterProvider(slug) {
+  return LOG_POSTER_PROVIDERS[slug] || "none";
 }
 
 function loadSourceMeta(slug) {
@@ -56,7 +75,7 @@ function loadSourceMeta(slug) {
       subtitulo: "",
       imgPrincipal: "",
       imgPrincipalCaption: "",
-      enableTmdbPosters: LOGS_WITH_TMDB_POSTERS.has(slug),
+      posterProvider: getDefaultPosterProvider(slug),
       noBacklinks: false,
       draft: false,
       introMarkdown: "",
@@ -67,21 +86,25 @@ function loadSourceMeta(slug) {
   const parsed = parseFrontMatter(raw);
   const draft = parseBooleanLike(parsed.data.draft) === true;
   const noBacklinks = parseBooleanLike(parsed.data.noBacklinks) === true;
+
+  const posterProviderOverride = normalizePosterProvider(parsed.data.posterProvider);
   const enableTmdbPostersOverride = parseBooleanLike(parsed.data.enableTmdbPosters);
   const legacyEnablePostersOverride = parseBooleanLike(parsed.data.enablePosters);
-  const resolvedEnableTmdbPosters =
-    enableTmdbPostersOverride !== null
-      ? enableTmdbPostersOverride
-      : legacyEnablePostersOverride !== null
-        ? legacyEnablePostersOverride
-        : LOGS_WITH_TMDB_POSTERS.has(slug);
+
+  let posterProvider = getDefaultPosterProvider(slug);
+  if (posterProviderOverride !== null) {
+    posterProvider = posterProviderOverride;
+  } else if (enableTmdbPostersOverride !== null || legacyEnablePostersOverride !== null) {
+    const enabled = enableTmdbPostersOverride !== null ? enableTmdbPostersOverride : legacyEnablePostersOverride;
+    posterProvider = enabled ? "tmdb" : "none";
+  }
 
   return {
     title: parsed.data.title || LOG_TITLES[slug] || titleFromSlug(slug),
     subtitulo: parsed.data.subtitulo || "",
     imgPrincipal: parsed.data.imgPrincipal || "",
     imgPrincipalCaption: parsed.data.imgPrincipalCaption || "",
-    enableTmdbPosters: resolvedEnableTmdbPosters,
+    posterProvider,
     noBacklinks,
     draft,
     introMarkdown: (parsed.body || "").trim(),
@@ -179,7 +202,7 @@ module.exports = (() => {
         subtitulo: meta.subtitulo,
         imgPrincipal: meta.imgPrincipal,
         imgPrincipalCaption: meta.imgPrincipalCaption,
-        enableTmdbPosters: meta.enableTmdbPosters,
+        posterProvider: meta.posterProvider,
         noBacklinks: meta.noBacklinks,
         introMarkdown: meta.introMarkdown,
         year,
