@@ -66,10 +66,17 @@ module.exports = function configureFilters(eleventyConfig) {
 
   /* SAB 22.12.2012 17:45 BRT */
   eleventyConfig.addFilter("formatDateTime", (date) => {
-    const d = new Date(date);
+    const input = String(date ?? "").trim();
+    const d = new Date(input);
     if (isNaN(d)) return "data invalida";
+
     const w = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
-    return `${w[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}.${d.getFullYear()} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")} BRT`;
+    const base = `${w[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}.${d.getFullYear()}`;
+
+    const hasTime = /T\d{2}:\d{2}(:\d{2})?/.test(input) || /\d{2}:\d{2}/.test(input);
+    if (!hasTime) return base;
+
+    return `${base} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")} BRT`;
   });
 
   /* sábado, 22 de dezembro de 2012 */

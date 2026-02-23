@@ -11,9 +11,9 @@ const LOG_POSTER_PROVIDERS = {
   "leitura-log": "openlibrary",
 };
 const LOG_TITLES = {
-  "cinema-log": "Diario de Filmes",
-  "series-log": "Diario de Series",
-  "leitura-log": "Diario de Leitura",
+  "cinema-log": "Diário de Filmes",
+  "series-log": "Diário de Séries",
+  "leitura-log": "Diário de Leitura",
 };
 
 function parseFrontMatter(raw) {
@@ -51,7 +51,7 @@ function parseBooleanLike(value) {
 function titleFromSlug(slug) {
   const label = slug.replace(/-log$/i, "").replace(/-/g, " ").trim();
   if (!label) return "Log";
-  return `Diario de ${label.charAt(0).toUpperCase()}${label.slice(1)}`;
+  return `Diário de ${label.charAt(0).toUpperCase()}${label.slice(1)}`;
 }
 
 function normalizePosterProvider(value) {
