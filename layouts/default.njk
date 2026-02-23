@@ -22,6 +22,9 @@
                 <h1 id="tituloPagina">{{ title }}</h1>
                 {% if subtitulo %}<h2 id="subtitulo">{{ subtitulo | safe }}</h2>{% endif %}
                 {% include "toc.njk" ignore missing %}
+                {% if tipo == "galeria" %}
+                    {% include "gallery.njk" ignore missing %}
+                {% endif %}
                 {{ content | safe }}
                 {% if page.url != "/" %}
                     {% if not noBacklinks %}

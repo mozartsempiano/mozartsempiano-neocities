@@ -1,7 +1,7 @@
 ---
-layout: galeria
+layout: default
+tipo: galeria
 title: Minhas Fotografias
-dataset: fotografia
 created: 2026-02-10T11:46
 ---
 
