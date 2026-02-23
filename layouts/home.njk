@@ -2,8 +2,8 @@
 <html lang="pt-br">
     <head>
         {% include "head.njk" ignore missing %}
-        <link rel="stylesheet" href="/assets/css/home.css"/>
-        <link rel="stylesheet" href="/assets/css/changelog.css"/>
+        <link rel="stylesheet" href="/assets/css/home.css" />
+        <link rel="stylesheet" href="/assets/css/changelog.css" />
     </head>
     <body {% if site.crt %}class="{% if site.crt %}crt{% endif %}"{% endif %}>
         {% include "header.njk" ignore missing %}
@@ -35,8 +35,10 @@ M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
             <aside>
                 {% if imgPrincipal %}
                     <figure>
-                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="invert"/>
-                        {% if imgPrincipalCaption %}<figcaption>{{ imgPrincipalCaption | renderMarkdownInline | safe }}</figcaption>{% endif %}
+                        <img src="{{ imgPrincipal }}" class="imgPrincipal" alt="invert" />
+                        {% if imgPrincipalCaption %}
+                            <figcaption>{{ imgPrincipalCaption | renderMarkdownInline | safe }}</figcaption>
+                        {% endif %}
                     </figure>
                 {% endif %}
                 <fieldset class="changelog">
@@ -52,6 +54,56 @@ M9mmmP'  `Mbmmd'.JMML  JMML  JMML. MMbmmd' .JMML.`Moo9^Yo..JMML  JMML.`Ybmd9'
                         </ul>
                     {% endfor -%}
                 </fieldset>
+                <div class="banners">
+                    <a href="https://daliwali.neocities.org"
+                       target="_blank"
+                       data-smt-title="daliwali">
+                        <img src="https://daliwali.neocities.org/assets/buttons/daliwali.gif"
+                             alt="daliwali">
+                    </a>
+                    <a href="https://dudalog.neocities.org"
+                       target="_blank"
+                       data-smt-title="dudalog">
+                        <img src="https://dudalog.neocities.org/_astro/dudalog-button-main.BGVXOPHJ.png"
+                             alt="dudalog">
+                    </a>
+                    <a href="https://fauux.neocities.org"
+                       target="_blank"
+                       data-smt-title="fauux">
+                        <img src="https://fauux.neocities.org/fauux-btn-01.gif" alt="fauux">
+                    </a>
+                    <a href="https://frajola.neocities.org"
+                       target="_blank"
+                       data-smt-title="frajola">
+                        <img src="/assets/img/88x31-banners/frajola.gif" alt="frajola">
+                    </a>
+                    <a href="https://omni.vi" target="_blank" data-smt-title="OMNI">
+                        <img src="https://omni.vi/assets/omnibutton.gif" alt="OMNI">
+                    </a>
+                    <a href="https://princss.online"
+                       target="_blank"
+                       data-smt-title="princss">
+                        <img src="https://princss.online/media/images/buttons/princss_button.png"
+                             alt="princss">
+                    </a>
+                    <a href="https://psychicnewborn.neocities.org"
+                       target="_blank"
+                       data-smt-title="psychicnewborn">
+                        <img src="https://psychicnewborn.neocities.org/media/button.gif"
+                             alt="psychicnewborn">
+                    </a>
+                    <a href="https://sitcomtheory.org"
+                       target="blank"
+                       data-smt-title="SITCOM THEORY">
+                        <img src="https://sitcomtheory.neocities.org/BUTTONS/sitcombutton.webp"
+                             alt="SITCOM THEORY">
+                    </a>
+                    <a href="https://vinizinho.net"
+                       target="_blank"
+                       data-smt-title="vinizinho">
+                        <img src="https://vinizinho.net/figures/button_1.png" alt="vinizinho">
+                    </a>
+                </div>
             </aside>
         </div>
         {% include "footer.njk" ignore missing %}
