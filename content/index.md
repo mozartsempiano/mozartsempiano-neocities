@@ -59,5 +59,5 @@ Você pode me contatar através do meu email **mozartmt <svg style="height: 1rem
 
 <div class="button-site">
 	<img src="/assets/img/mozartsempiano-btn-01.gif">
-	<code id="copy-input">&lt;a href="https://mozartsempiano.com/" target="_blank"&gt;&lt;img src="https://mozartsempiano.neocities.org/assets/img/mozartsempiano-btn-01.gif"&gt;&lt;/a&gt;</code>
+	<code id="copy-input">&lt;a href="https://mozartsempiano.com/" target="_blank"&gt;&lt;img src="https://mozartsempiano.com/assets/img/mozartsempiano-btn-01.gif"&gt;&lt;/a&gt;</code>
 </div>
