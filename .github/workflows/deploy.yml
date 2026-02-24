@@ -12,6 +12,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - name: Checkout
@@ -28,6 +29,8 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3

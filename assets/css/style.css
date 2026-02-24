@@ -1100,6 +1100,7 @@ details > *:not(summary) {
 	left: 0;
 	right: 0;
 	border-radius: var(--b-radius);
+	border: var(--borda-padrao);
 }
 
 details[open] > *:not(summary) {
