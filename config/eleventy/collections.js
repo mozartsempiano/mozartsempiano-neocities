@@ -87,6 +87,25 @@ module.exports = function configureCollections(eleventyConfig) {
       return u;
     };
 
+    // Ensure gallery item URLs are present in this collection even when
+    // Eleventy does not expose each paginated output as a collection item.
+    const existingUrls = new Set(pages.map((p) => norm(p.url)));
+    const galeriaCatalogForTargets = loadData("galeriaCatalog.js");
+    const galeriaItemsForTargets = galeriaCatalogForTargets?.items;
+    if (Array.isArray(galeriaItemsForTargets)) {
+      for (const item of galeriaItemsForTargets) {
+        const itemUrl = norm(item?.url || "");
+        if (!itemUrl || existingUrls.has(itemUrl)) continue;
+        pages.push({
+          url: itemUrl,
+          fileSlug: item?.slug || itemUrl.replace(/^\/|\/$/g, ""),
+          rawInput: "",
+          data: { title: item?.title || itemUrl },
+        });
+        existingUrls.add(itemUrl);
+      }
+    }
+
     for (const page of pages) {
       const content = page.rawInput || "";
       let m;
@@ -103,6 +122,25 @@ module.exports = function configureCollections(eleventyConfig) {
         const target = norm(m[1]);
         map[target] ??= new Map();
         map[target].set(page.url, page);
+      }
+    }
+
+    // Gallery item links are rendered dynamically in templates, so they are not
+    // present in rawInput. Rebuild those backlinks from galeriaCatalog.
+    const pagesByUrl = new Map();
+    for (const page of pages) pagesByUrl.set(norm(page.url), page);
+
+    const galeriaCatalog = loadData("galeriaCatalog.js");
+    const galeriaItems = galeriaCatalog?.items;
+    if (Array.isArray(galeriaItems)) {
+      for (const item of galeriaItems) {
+        const targetUrl = norm(item?.url || "");
+        const sourceUrl = norm(item?.galleryUrl || "");
+        if (!targetUrl || !sourceUrl || targetUrl === sourceUrl) continue;
+        const sourcePage = pagesByUrl.get(sourceUrl);
+        if (!sourcePage) continue;
+        map[targetUrl] ??= new Map();
+        map[targetUrl].set(sourcePage.url, sourcePage);
       }
     }
 

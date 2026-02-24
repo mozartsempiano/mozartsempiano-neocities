@@ -4,6 +4,16 @@ const path = require("path");
 const stripLinks = (str) => str.replace(/<a[^>]*>(.*?)<\/a>/gi, "$1");
 
 module.exports = function configureFilters(eleventyConfig) {
+  const normalizeTrailingSlashUrl = (url) => {
+    if (!url) return "/";
+    let value = String(url).trim();
+    if (!value) return "/";
+    if (!value.startsWith("/")) value = `/${value}`;
+    value = value.split("#")[0];
+    if (!value.endsWith("/")) value += "/";
+    return value;
+  };
+
   const toMillis = (value) => {
     if (!value) return NaN;
     if (value instanceof Date) return value.getTime();
@@ -155,5 +165,18 @@ module.exports = function configureFilters(eleventyConfig) {
   eleventyConfig.addFilter("formatHora", (value) => {
     const d = new Date(value);
     return d.toISOString().slice(11, 16);
+  });
+
+  eleventyConfig.addFilter("backlinksForUrl", (collectionItems, url) => {
+    if (!Array.isArray(collectionItems)) return [];
+    const target = normalizeTrailingSlashUrl(url);
+    const match = collectionItems.find((item) => normalizeTrailingSlashUrl(item?.url) === target);
+    return Array.isArray(match?.data?.backlinks) ? match.data.backlinks : [];
+  });
+  eleventyConfig.addNunjucksFilter("backlinksForUrl", (collectionItems, url) => {
+    if (!Array.isArray(collectionItems)) return [];
+    const target = normalizeTrailingSlashUrl(url);
+    const match = collectionItems.find((item) => normalizeTrailingSlashUrl(item?.url) === target);
+    return Array.isArray(match?.data?.backlinks) ? match.data.backlinks : [];
   });
 };

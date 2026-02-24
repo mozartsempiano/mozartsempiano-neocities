@@ -1,8 +1,12 @@
 <div id="backlinks_section">
   <h1 class="backlinks-title larger">Backlinks</h1>
-  {% if backlinks and backlinks | length > 0 %}
+  {% set backlinksList = backlinks %}
+  {% if (not backlinksList or backlinksList | length == 0) and collections and collections.backlinks %}
+    {% set backlinksList = collections.backlinks | backlinksForUrl(page.url) %}
+  {% endif %}
+  {% if backlinksList and backlinksList | length > 0 %}
     <ul class="backlinks-container">
-      {% for link in backlinks %}
+      {% for link in backlinksList %}
         <li class="backlink">
           <a href="{{ link.url }}" class="backlink__link">{{ link.title }}</a>
           <div class="backlink__preview" role="none">{{ link.preview | safe }}</div>
