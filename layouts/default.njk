@@ -62,16 +62,16 @@
                     {% if page.url == "/" %}
                         <fieldset class="changelog">
                             <legend>changelog</legend>
-                            {% for log in changelog -%}
+                            {% set log = changelog[0] %}
+                            {% if log %}
                                 <h2>
                                     v{{ log.v }}<small>{{ log.date }}</small>
                                 </h2>
                                 <ul>
-                                    {% for changes in log.items -%}
-                                        <li>{{ log.items }}</li>
-                                    {% endfor -%}
+                                    {% for change in log.items %}<li>{{ change }}</li>{% endfor %}
                                 </ul>
-                            {% endfor -%}
+                                <a href="/changelog/" class="btn">Veja o changelog completo</a>
+                            {% endif %}
                         </fieldset>
                         <div class="banners">
                             <a href="https://daliwali.neocities.org"

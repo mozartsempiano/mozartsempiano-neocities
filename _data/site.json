@@ -3,6 +3,6 @@
 	"desc": "Designer gráfico, web designer e programador.",
 	"author": "Mozart Mattar",
 	"baseurl": "https://mozartsempiano.com",
-	"crt": false,
+	"crt": true,
 	"bayerOverlay": false
 }

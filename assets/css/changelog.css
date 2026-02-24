@@ -24,6 +24,10 @@ fieldset.changelog {
 	width: 100%;
 }
 
+fieldset.changelog:has(a.btn) {
+	padding-bottom: 1rem;
+}
+
 fieldset.changelog > h2 {
 	font-size: 1.7rem;
 	display: inline-flex;

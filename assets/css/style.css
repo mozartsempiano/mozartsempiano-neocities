@@ -646,7 +646,7 @@ iframe {
 	width: 100%;
 	height: auto;
 	border-radius: var(--b-radius);
-	border: var(--borda-padrao);
+	/* outline: var(--borda-padrao); */
 }
 
 .dither-hover-wrap {
@@ -1009,8 +1009,23 @@ a:active img {
 	border-radius: var(--b-radius);
 }
 
+a.btn {
+	border: 1px var(--border-style) var(--clr-borda);
+	padding: var(--padding-btn-small);
+	display: inline-block;
+	border-radius: var(--b-radius);
+	color: var(--clr-texto) !important;
+	background: var(--clr-fundo);
+	background-image: unset !important;
+
+	&:hover {
+		background: var(--clr-fundo-lighter);
+		text-decoration: none !important;
+	}
+}
+
 /* ========================================= */
-/* ConstruÃ§Ã£o */
+/* Construção */
 /* ========================================= */
 
 .construction-separator {
