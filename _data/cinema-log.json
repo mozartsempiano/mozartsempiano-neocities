@@ -2391,36 +2391,12 @@
 		"when": "2018-03-14"
 	},
 	{
-		"name": "Mato Sem Cachorro",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "visto no cinema, c/ mãe",
-		"when": "2013-10-05"
-	},
-	{
-		"name": "Don't Hug Me I'm Scared",
-		"year": 2011,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2016-06-19"
-	},
-	{
 		"name": "Logan",
 		"year": 2017,
 		"rating": 5,
 		"rewatch": "",
 		"tags": "visto no cinema",
 		"when": "2017-10-06"
-	},
-	{
-		"name": "Black Mirror: White Christmas",
-		"year": 2014,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2017-10-15"
 	},
 	{
 		"name": "Fight Club",
@@ -2471,126 +2447,6 @@
 		"when": "2017-12-26"
 	},
 	{
-		"name": "Black Mirror: USS Callister",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Arkangel",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Hang the DJ",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Black Museum",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Metalhead",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Crocodile",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Fifteen Million Merits",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Nosedive",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: White Bear",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Be Right Back",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Shut Up and Dance",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The Entire History of You",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The National Anthem",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Playtest",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The Waldo Moment",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
 		"name": "Big Mommas: Like Father, Like Son",
 		"year": 2011,
 		"rating": "",
@@ -2629,22 +2485,6 @@
 		"rewatch": "",
 		"tags": "c/ marconato, c/ palpito, c/ vicenzo",
 		"when": "2018-01-22"
-	},
-	{
-		"name": "Black Mirror: Hated in the Nation",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-28"
-	},
-	{
-		"name": "Black Mirror: Men Against Fire",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-28"
 	},
 	{
 		"name": "Rocky",
@@ -2911,14 +2751,6 @@
 		"when": "2018-07-02"
 	},
 	{
-		"name": "DARLING in the FRANXX",
-		"year": 2018,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-07-07"
-	},
-	{
 		"name": "The Blair Witch Project",
 		"year": 1999,
 		"rating": 4,
@@ -2941,14 +2773,6 @@
 		"rewatch": "",
 		"tags": "c/ marconato, c/ palpito, c/ vicenzo",
 		"when": "2018-07-16"
-	},
-	{
-		"name": "Twin Peaks",
-		"year": 1989,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-07-18"
 	},
 	{
 		"name": "High School Musical 2",
@@ -3135,14 +2959,6 @@
 		"when": "2018-12-28"
 	},
 	{
-		"name": "Black Mirror: Bandersnatch",
-		"year": 2018,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-12-29"
-	},
-	{
 		"name": "Cam",
 		"year": 2018,
 		"rating": 2,
@@ -3277,14 +3093,6 @@
 		"rewatch": "",
 		"tags": "visto no cinema, c/ marconato, c/ palpito, multiplex bauru shopping",
 		"when": "2019-06-05"
-	},
-	{
-		"name": "Black Mirror: Striking Vipers",
-		"year": 2019,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2019-06-23"
 	},
 	{
 		"name": "Toy Story 4",
@@ -3519,14 +3327,6 @@
 		"when": "2020-02-08"
 	},
 	{
-		"name": "Alita: Battle Angel",
-		"year": 2019,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2020-02-10"
-	},
-	{
 		"name": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
 		"year": 2020,
 		"rating": 4,
@@ -3591,14 +3391,6 @@
 		"when": "2020-09-10"
 	},
 	{
-		"name": "Twin Peaks: The Return",
-		"year": 2017,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2020-09-16"
-	},
-	{
 		"name": "5 Minute Dating",
 		"year": 2010,
 		"rating": 2.5,
@@ -3645,14 +3437,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2020-10-03"
-	},
-	{
-		"name": "The Haunting of Bly Manor",
-		"year": 2020,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2020-10-20"
 	},
 	{
 		"name": "10 Hours for Christmas",
@@ -3823,54 +3607,6 @@
 		"when": "2021-09-15"
 	},
 	{
-		"name": "Star Wars: Visions – The Duel",
-		"year": 2021,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – Tatooine Rhapsody",
-		"year": 2021,
-		"rating": 1.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Twins",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Village Bride",
-		"year": 2021,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Ninth Jedi",
-		"year": 2021,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – T0-B1",
-		"year": 2021,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
 		"name": "We Need to Talk About Kevin",
 		"year": 2011,
 		"rating": 3,
@@ -3887,44 +3623,12 @@
 		"when": "2021-10-01"
 	},
 	{
-		"name": "Squid Game",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-04"
-	},
-	{
 		"name": "Venom: Let There Be Carnage",
 		"year": 2021,
 		"rating": 3,
 		"rewatch": "",
 		"tags": "visto no cinema, multiplex bauru shopping",
 		"when": "2021-10-11"
-	},
-	{
-		"name": "Paranoia Agent",
-		"year": 2004,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-14"
-	},
-	{
-		"name": "Loki",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-18"
-	},
-	{
-		"name": "WandaVision",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-19"
 	},
 	{
 		"name": "A Quiet Place Part II",
@@ -4029,14 +3733,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2021-12-15"
-	},
-	{
-		"name": "Hawkeye",
-		"year": 2021,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-12-23"
 	},
 	{
 		"name": "Men in Black: International",
@@ -4151,14 +3847,6 @@
 		"when": "2022-04-27"
 	},
 	{
-		"name": "Moon Knight",
-		"year": 2022,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-07"
-	},
-	{
 		"name": "Captain America: The First Avenger",
 		"year": 2011,
 		"rating": 3.5,
@@ -4173,22 +3861,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2022-05-12"
-	},
-	{
-		"name": "Love, Death & Robots: Bad Travelling",
-		"year": 2022,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-20"
-	},
-	{
-		"name": "Love, Death & Robots: Night of the Mini Dead",
-		"year": 2022,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-25"
 	},
 	{
 		"name": "Chip 'n Dale: Rescue Rangers",
@@ -4394,14 +4066,6 @@
 		"name": "Guillermo del Toro's Pinocchio",
 		"year": 2022,
 		"rating": 4,
-		"rewatch": "",
-		"tags": "c/ bone",
-		"when": "2022-12-23"
-	},
-	{
-		"name": "Gudetama: An Eggcellent Adventure",
-		"year": 2022,
-		"rating": 3.5,
 		"rewatch": "",
 		"tags": "c/ bone",
 		"when": "2022-12-23"
@@ -4767,14 +4431,6 @@
 		"when": "2023-05-23"
 	},
 	{
-		"name": "Love & Death",
-		"year": 2023,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-05-25"
-	},
-	{
 		"name": "Good Time",
 		"year": 2017,
 		"rating": 5,
@@ -4887,46 +4543,6 @@
 		"when": "2023-06-11"
 	},
 	{
-		"name": "Black Mirror: Joan Is Awful",
-		"year": 2023,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Loch Henry",
-		"year": 2023,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Beyond the Sea",
-		"year": 2023,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Mazey Day",
-		"year": 2023,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Demon 79",
-		"year": 2023,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
 		"name": "The Flash",
 		"year": 2023,
 		"rating": 2,
@@ -4981,14 +4597,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2023-07-05"
-	},
-	{
-		"name": "The Simpsons in Plusaversary",
-		"year": 2021,
-		"rating": 0.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-07-15"
 	},
 	{
 		"name": "Mad God",
@@ -5237,14 +4845,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2023-11-09"
-	},
-	{
-		"name": "Sonic Mania Adventures",
-		"year": 2018,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-11-13"
 	},
 	{
 		"name": "Danny Boy",
@@ -5695,22 +5295,6 @@
 		"when": "2024-10-26"
 	},
 	{
-		"name": "Devilman - Volume 1: The Birth",
-		"year": 1987,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-08"
-	},
-	{
-		"name": "Devilman - Volume 2: Demon Bird",
-		"year": 1990,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-10"
-	},
-	{
 		"name": "Wristcutters: A Love Story",
 		"year": 2006,
 		"rating": 3.5,
@@ -5733,14 +5317,6 @@
 		"rewatch": "Yes",
 		"tags": "",
 		"when": "2024-11-20"
-	},
-	{
-		"name": "Knuckles",
-		"year": 2024,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-25"
 	},
 	{
 		"name": "The Careful Massacre of the Bourgeoisie",
@@ -5807,116 +5383,12 @@
 		"when": "2025-01-25"
 	},
 	{
-		"name": "Alien: Containment",
-		"year": 2019,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-08"
-	},
-	{
-		"name": "Alien: Specimen",
-		"year": 2019,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-08"
-	},
-	{
-		"name": "Alien: Night Shift",
-		"year": 2019,
-		"rating": 1.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Ore",
-		"year": 2019,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Harvest",
-		"year": 2019,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Alone",
-		"year": 2019,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
 		"name": "Chao in Space",
 		"year": 2019,
 		"rating": 4,
 		"rewatch": "",
 		"tags": "",
 		"when": "2025-04-13"
-	},
-	{
-		"name": "Black Mirror: Common People",
-		"year": 2025,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Bête Noire",
-		"year": 2025,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Hotel Reverie",
-		"year": 2025,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Plaything",
-		"year": 2025,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: Eulogy",
-		"year": 2025,
-		"rating": 5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: USS Callister – Into Infinity",
-		"year": 2025,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: White Christmas",
-		"year": 2014,
-		"rating": 4,
-		"rewatch": "Yes",
-		"tags": "",
-		"when": "2025-04-18"
 	},
 	{
 		"name": "Last Days",
@@ -6013,14 +5485,6 @@
 		"rewatch": "",
 		"tags": "",
 		"when": "2025-08-11"
-	},
-	{
-		"name": "Quiet on Set: The Dark Side of Kids TV",
-		"year": 2024,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-09-05"
 	},
 	{
 		"name": "Senritsu Kaiki File Kowasugi! File 02: Shivering Ghost",
@@ -6132,14 +5596,6 @@
 		"rating": 5,
 		"rewatch": "",
 		"tags": "c/ costely, c/ fefi",
-		"when": "2026-01-02"
-	},
-	{
-		"name": "Serial Experiments Lain",
-		"year": 1998,
-		"rating": "",
-		"rewatch": "Yes",
-		"tags": "c/ ste",
 		"when": "2026-01-02"
 	},
 	{
