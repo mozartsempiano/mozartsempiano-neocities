@@ -11,54 +11,52 @@ eleventyComputed:
 
 <nav class="log-year-nav" aria-label="Navegacao por ano">
     {% if logPage.olderUrl %}
-        <a href="{{ logPage.olderUrl }}" class="log-year-nav-prev" aria-label="Ir para o ano anterior">&larr; {{ logPage.olderYear }}</a>
+        <a href="{{ logPage.olderUrl }}"
+           class="log-year-nav-prev"
+           aria-label="Ir para o ano anterior">&larr; {{ logPage.olderYear }}</a>
     {% else %}
         <span class="log-year-nav-prev is-disabled" aria-hidden="true">&larr;</span>
     {% endif %}
-
     <span class="log-year-nav-current">{{ logPage.year }}</span>
-
     {% if logPage.newerUrl %}
-        <a href="{{ logPage.newerUrl }}" class="log-year-nav-next" aria-label="Ir para o ano mais recente">{{ logPage.newerYear }} &rarr;</a>
+        <a href="{{ logPage.newerUrl }}"
+           class="log-year-nav-next"
+           aria-label="Ir para o ano mais recente">{{ logPage.newerYear }} &rarr;</a>
     {% else %}
         <span class="log-year-nav-next is-disabled" aria-hidden="true">&rarr;</span>
     {% endif %}
 </nav>
-
 {% for item in logPage.items %}
-    <div class="movie-log {% if item.review != '' %}with-review{% else %}compact{% endif %}">
-        {% if logPage.posterProvider != "none" and item.review != '' %}
-            {% logPoster item.name,
-            item.year,
-            logPage.posterProvider,
-            item.ogName,
-            item.author %}
+    <div class="movie-log {% if item.review and (item.review | trim) != '' %}with-review{% else %}compact{% endif %}">
+        {% if logPage.posterProvider != "none" and item.review and (item.review | trim) != '' %}
+            {% if item.posterUrl %}
+                <img src="{{ item.posterUrl | escape }}"
+                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %}" />
+            {% elseif item.tmdbPoster %}
+                <img src="https://image.tmdb.org/t/p/w154{{ item.tmdbPoster | escape }}"
+                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %}" />
+            {% else %}
+                {% logPoster item.name,
+                item.year,
+                logPage.posterProvider,
+                item.ogName,
+                item.author %}
+            {% endif %}
         {% endif %}
         <div>
             <div class="movie-header">
                 <span class="date">{{ item.when | formatDateTime }}</span>
                 <div class="entry-info">
                     <span class="entry-title">{{ item.name }}
-                        {% if item.year %} ({{ item.year }}){% endif %}
+                        {% if item.year %}({{ item.year }}){% endif %}
                     </span>
-                    {% if item.rating != '' %}
-                        <span class="rating">{{ item.rating }} ★</span>
-                    {% endif %}
-                    {% if item.rewatch != '' %}
-                        <span class="rewatch">↺</span>
-                    {% endif %}
+                    {% if item.rating or item.rating != '' %}<span class="rating">{{ item.rating }} ★</span>{% endif %}
+                    {% if item.rewatch or item.rewatch != '' %}<span class="rewatch">↺</span>{% endif %}
                 </div>
             </div>
-            {% if item.review != '' %}
-                <div class="movie-review">{{ item.review | safe }}</div>
-            {% endif %}
-            {% if item.tags != '' %}
-                <span class="tags">{{ item.tags }}</span>
-            {% endif %}
+            {% if item.review and (item.review | trim) != '' %}<div class="movie-review">{{ item.review | safe }}</div>{% endif %}
+            {% if item.tags or item.tags != '' %}<span class="tags">{{ item.tags }}</span>{% endif %}
         </div>
     </div>
 {% endfor %}
-
-{% if logPage.introMarkdown and logPage.isNewestYear %}
-    {{ logPage.introMarkdown | renderMarkdown | safe }}
-{% endif %}
+{% if logPage.introMarkdown and logPage.isNewestYear %}{{ logPage.introMarkdown | renderMarkdown | safe }}{% endif %}
