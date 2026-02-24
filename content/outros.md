@@ -2,6 +2,7 @@
 layout: default
 title: Outros
 created: 2026-02-21T16:32
+draft: true
 ---
 
 Quando algo for importante pra você, você vai atrás mesmo que todas as chances estejam contra ti.

@@ -2,6 +2,7 @@
 layout: default
 title: Ensino
 created: 2026-02-06T20:43
+draft: true
 ---
 
 Se faculdade não fosse tão cara, eu estudaria umas coisas só por diversão. Gosto muito de psicologia, filosofia e letras, e adoraria aprender mais sobre cada um.

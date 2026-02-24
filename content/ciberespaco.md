@@ -18,4 +18,4 @@ O termo surgiu no [conto](/leitura/) [cyberpunk](/cyberpunk/) "Burning Chrome" (
 - [The Iconolog](http://cs.gettysburg.edu/~duncjo01/archive/icons/iconolog/giffed/iconolog/index.html) - Acervo de ícones de sites antigos
 - [GifCities](https://gifcities.org/) - Acervo de GIFs de sites do Geocities
 - [88x31 Button Viewer](https://pilosophos.com/88x31-viewer) - Acervo de botões 88x31
-- [https://escargot.chat/](https://escargot.chat/) - MSN revivido
+- [Escargot](https://escargot.chat/) - MSN revivido

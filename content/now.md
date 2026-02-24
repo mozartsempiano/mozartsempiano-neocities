@@ -2,6 +2,7 @@
 layout: default
 title: Now
 created: 2026-02-06T10:41
+draft: true
 ---
 
 Isso é uma página [now](https://nownownow.com/about), que diz o que estou fazendo agora.

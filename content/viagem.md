@@ -2,6 +2,7 @@
 layout: default
 title: Viagem
 created: 2026-02-04T16:33
+draft: true
 ---
 
 ## O que levar em uma viagem:

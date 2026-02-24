@@ -6,8 +6,8 @@ created: 2026-02-03T10:48
 ---
 
 - [ ] Incluir [/sketchbook-2019](/sketchbook-2019/) e [/sketchbook-2022](/sketchbook-2022/)
-- [ ] Incluir paginação nas páginas de logs
-- [ ] Remover repetições dos backlinks
+- [x] Incluir paginação nas páginas de logs
+- [x] Remover repetições dos backlinks
 - [x] Corrigir [/akatsukigames](/akatsukigames/)
 - [x] Fazer com que as imagens originais (não-ditherizadas) possam ser acessadas
 - [x] Table of contents
