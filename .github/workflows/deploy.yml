@@ -29,9 +29,9 @@ jobs:
       - name: Build site
         run: npm run build
 
-      # - name: Deploy to Neocities
-      #   uses: bcomnes/deploy-to-neocities@v3
-      #   with:
-      #     api_key: ${{ secrets.NEOCITIES_API_KEY }}
-      #     dist_dir: _site
-      #     cleanup: true
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_KEY }}
+          dist_dir: _site
+          cleanup: true
