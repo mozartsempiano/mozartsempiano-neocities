@@ -1,20 +1,16 @@
-name: Deploy Eleventy to GitHub Pages
+name: Deploy Eleventy to Neocities
 
 on:
   push:
     branches: ["main"]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  workflow_dispatch:
 
 concurrency:
-  group: "pages"
+  group: "neocities"
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,20 +27,11 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npx eleventy
+        run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: Deploy to Neocities
+      #   uses: bcomnes/deploy-to-neocities@v3
+      #   with:
+      #     api_key: ${{ secrets.NEOCITIES_API_KEY }}
+      #     dist_dir: _site
+      #     cleanup: true
