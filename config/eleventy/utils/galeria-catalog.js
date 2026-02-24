@@ -84,7 +84,8 @@ function getGalleryDefinitions() {
   for (const fileName of files) {
     const fullPath = path.join(contentDir, fileName);
     const fm = parseSimpleFrontMatter(fullPath);
-    if (fm.layout !== "galeria" || !fm.dataset) continue;
+    const isGalleryPage = fm.tipo === "galeria" || fm.layout === "galeria";
+    if (!isGalleryPage) continue;
     const slug = fileName.replace(/\.(md|njk)$/i, "");
     defs.push({
       datasetKey: slug,
