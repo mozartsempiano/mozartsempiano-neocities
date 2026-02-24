@@ -503,6 +503,20 @@ s {
 	}
 }
 
+s.spoiler {
+	background-color: currentColor;
+	user-select: none;
+
+	&:hover {
+		background-color: transparent;
+		user-select: unset;
+	}
+
+	&::before {
+		all: unset;
+	}
+}
+
 code {
 	font-family: var(--fonte-monospace);
 	font-size: 0.84rem;

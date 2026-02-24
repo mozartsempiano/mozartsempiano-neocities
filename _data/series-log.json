@@ -1,11 +1,253 @@
 [
 	{
+		"name": "",
+		"year": "",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": ""
+	},
+	{
+		"name": "Smiling Friends S03",
+		"year": "2025",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-12-14"
+	},
+	{
+		"name": "Pluribus S01",
+		"year": "2025",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-12-12"
+	},
+	{
+		"name": "Gen V S02",
+		"year": "2025",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-10-24"
+	},
+	{
+		"name": "Peacemaker S02",
+		"year": "2025",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-10-09"
+	},
+	{
+		"name": "Peacemaker S01",
+		"year": "2022",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-10-05"
+	},
+	{
+		"name": "Alien: Earth S01",
+		"year": "2025",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-09-27"
+	},
+	{
+		"name": "Fargo S05",
+		"year": "2023",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-08-19"
+	},
+	{
+		"name": "Curb Your Enthusiasm S02",
+		"year": "2001",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-07-01"
+	},
+	{
+		"name": "Curb Your Enthusiasm S01",
+		"year": "2000",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-06-26"
+	},
+	{
+		"name": "Invincible S03",
+		"year": "2025",
+		"rating": "4.5",
+		"rewatch": "",
+		"tags": "",
+		"when": "2025-03-13"
+	},
+	{
+		"name": "South Park S08",
+		"year": "2004",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2026-01-16"
+	},
+	{
+		"name": "South Park S07",
+		"year": "2003",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2026-01-11"
+	},
+	{
+		"name": "South Park S06",
+		"year": "2002",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2026-01-08"
+	},
+	{
+		"name": "Mr. Robot S04",
+		"year": "2019",
+		"rating": "4.5",
+		"rewatch": "Yes",
+		"tags": "",
+		"when": "2024-12-20"
+	},
+	{
+		"name": "Mr. Robot S03",
+		"year": "2017",
+		"rating": "5",
+		"rewatch": "Yes",
+		"tags": "",
+		"when": "2024-12-13"
+	},
+	{
+		"name": "South Park S05",
+		"year": "2001",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-09-16"
+	},
+	{
+		"name": "South Park S04",
+		"year": "2000",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-09-11"
+	},
+	{
+		"name": "South Park S03",
+		"year": "1999",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-09-03"
+	},
+	{
+		"name": "South Park S02",
+		"year": "1998",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-08-31"
+	},
+	{
+		"name": "South Park S01",
+		"year": "1997",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-08-22"
+	},
+	{
+		"name": "The Boys S04",
+		"year": "2024",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-07-18"
+	},
+	{
+		"name": "Smiling Friends S02",
+		"year": "2024",
+		"rating": "",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-06-24"
+	},
+	{
+		"name": "The Simpsons S01",
+		"year": "1989",
+		"rating": "3.5",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-04-06"
+	},
+	{
+		"name": "Invincible S02",
+		"year": "2024",
+		"rating": "3.5",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-04-05",
+		"review": "Foi uma temporada boa, com a reintrodução de rostos familiares, a introdução de novos personangens e uma continuação da trama já conhecida pelo público. Entretanto, a qualidade da animação definitivamente caiu em comparação com a primeira temporada, o que é estranho, considerando o longo tempo de espera de mais de dois anos. Além disso, a descenecessária pausa de meses entre a primeira e a segunda parte, apesar dos episódios já estarem finalizados, contribuiu pra diminuir o hype pra mim.\n\nAdmito que a trama, apesar de interessante, não me entreteu tanto quanto a da primeira temporada. Sinto que vários personagens acabaram por escapar da morte com muita facilidade, contando até com plot twists, quando suas perdas poderiam ter tornado a história mais emocionante. Dá pra argumentar que os personagens agora são mais habilidosos e cautelosos depois de tantas perdas, mas essa decisão dos roteiristas acabou diminuindo o impacto de várias cenas, especialmente em uma série conhecida por sua violência e pela disposição de mostrar a fragilidade da vida, mesmo pra super-heróis."
+	},
+	{
 		"name": "Black Mirror: White Christmas",
 		"year": 2014,
 		"rating": "",
 		"rewatch": "",
 		"tags": "",
 		"when": "2017-10-15"
+	},
+	{
+		"name": "ted S01",
+		"year": "2024",
+		"rating": "4",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-03-28"
+	},
+	{
+		"name": "Seinfeld S09",
+		"year": "1997",
+		"rating": "4",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-03-17"
+	},
+	{
+		"name": "Mr. Robot S02",
+		"year": "2016",
+		"rating": "4",
+		"rewatch": "Yes",
+		"tags": "",
+		"when": "2024-02-03"
+	},
+	{
+		"name": "Echo",
+		"year": "2024",
+		"rating": "3",
+		"rewatch": "",
+		"tags": "",
+		"when": "2024-01-24"
+	},
+	{
+		"name": "Cyberpunk: Edgerunners S01",
+		"year": "2022",
+		"rating": "4",
+		"rewatch": "",
+		"tags": "",
+		"when": "2023-12-20",
+		"review": "<s class='spoiler'>Meu único problema com o anime é o ritmo. Tem um timeskip bem desnecessário no meio da temporada, e depois disso, tudo se desenrola muito rapidamente e o telespectador não tem muito tempo pra processar algumas cenas, especialmente mortes de personagens importantes, que acabam não recebendo muita atenção, como no último episódio. Uns dois episódios a mais o tornariam perfeito.</s>"
 	},
 	{
 		"name": "Black Mirror: USS Callister",
@@ -269,6 +511,7 @@
 		"rating": 2.5,
 		"rewatch": "",
 		"tags": "",
+		"review": "Posterguei assistir ao documentário quando viralizou no ano passado, mas só me interessei de verdade recentemente, depois de ver um vídeo sobre a história da Jennette McCurdy e todo o abuso que ela sofreu nas produções da Nickelodeon. Lamentavelmente, o documentário só a menciona brevemente em um trecho de, no máximo, cinco minutos em um dos episódios, e, na verdade, praticamente nem fala sobre iCarly, o que foi bem decepcionante, já que era justamente sobre isso que eu queria saber mais.\n\nPor outro lado, sim, fico feliz pelas vítimas terem tido um espaço pra se expressarem, mas não senti que tudo foi apresentado de forma satisfatória ou sequer tão respeitosa. E havia mesmo necessidade de isso durar três horas e meia? Ou ainda de introduzirem o Drake Bell no final de um dos episódios em um cliffhanger, como se fosse um personagem da Marvel? É uma produção bem exploratória, o que é irônico, já que é isso que o próprio documentário busca criticar.\n\nTambém não entendo por que dedicaram tanto tempo falando da Amanda Bynes se no fim ela nem quis dar depoimento, e, assim, o documentário se satisfaz com horas de suposições vindas de dezenas de pessoas.\n\nAcho que é o que mereço por ter escolhido assistir a um documentário da Netflix em vez de simplesmente ler o livro da Jennette McCurdy.",
 		"when": "2025-09-05"
 	},
 	{
@@ -373,7 +616,8 @@
 		"rating": 2,
 		"rewatch": "",
 		"tags": "",
-		"when": "2018-07-07"
+		"when": "2018-07-07",
+		"review": "Os designs dos personagem são excelentes e a primeira metade da trama é muito boa, mas fica extremamente ruim depois disso. É basicamente Evangelion, mas pra punheteiro."
 	},
 	{
 		"name": "Devilman - Volume 1: The Birth",
@@ -416,12 +660,13 @@
 		"when": "2026-01-02"
 	},
 	{
-		"name": "Alita: Battle Angel",
-		"year": 2019,
-		"rating": 4.5,
+		"name": "Battle Angel",
+		"year": "1993",
+		"rating": "3",
 		"rewatch": "",
+		"review": "Por ser uma OVA, Battle Angel tem um ritmo frenético e é bastante condensada em comparação com a riqueza do mangá original, deixando algumas partes subdesenvolvidas. Ainda assim, o anime é surpreendentemente emocionante pra uma obra que dura apenas 54 minutos, repleto de cenas de ação incríveis e sem decepcionar na exploração de questões filosóficas mais profundas, decorrentes do mundo distópico de Gunnm, na medida do possível.",
 		"tags": "",
-		"when": "2020-02-10"
+		"when": "2024-03-31"
 	},
 	{
 		"name": "Star Wars: Visions – The Duel",
