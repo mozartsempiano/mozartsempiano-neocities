@@ -1,4 +1,9 @@
 node_modules/
 _site/
 .cache/
+
+# Environment secrets
 .env
+
+# TMDB Backdrops
+assets/img/tmdb-backdrops

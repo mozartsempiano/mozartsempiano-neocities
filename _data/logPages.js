@@ -24,6 +24,7 @@ const LOG_TITLES = {
 };
 const LOG_DYNAMIC_HEADER_SLUGS = new Set(["cinema-log", "series-log", "anime-log"]);
 const LOG_BACKDROP_DIR = path.join(process.cwd(), "assets", "img", "tmdb-backdrops");
+const LOG_HEADER_IMAGE_MODE_DEFAULT = "chronological";
 
 function toPositiveNumber(value, fallback) {
   const n = Number(value);
@@ -33,6 +34,91 @@ function toPositiveNumber(value, fallback) {
 const TMDB_CACHE_DAYS = toPositiveNumber(process.env.TMDB_CACHE_DAYS, 30);
 const TMDB_NOT_FOUND_CACHE_DAYS = toPositiveNumber(process.env.TMDB_NOT_FOUND_CACHE_DAYS, 7);
 const TMDB_FORCE_REFRESH = process.env.TMDB_FORCE_REFRESH === "1";
+
+function normalizeLogHeaderImageMode(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  if (!normalized) return LOG_HEADER_IMAGE_MODE_DEFAULT;
+
+  if (["chronological", "chrono", "oldest-first", "oldest_first", "default"].includes(normalized)) {
+    return "chronological";
+  }
+
+  if (
+    [
+      "reverse-chronological",
+      "reverse_chronological",
+      "chronological-reverse",
+      "chronological_reverse",
+      "newest-first",
+      "newest_first",
+    ].includes(normalized)
+  ) {
+    return "reverse-chronological";
+  }
+
+  if (
+    ["highest-rated", "highest_rated", "top-rated", "top_rated", "best-rated", "best_rated", "maior-nota", "maior_nota"].includes(
+      normalized,
+    )
+  ) {
+    return "highest-rated";
+  }
+
+  return LOG_HEADER_IMAGE_MODE_DEFAULT;
+}
+
+function loadSiteData() {
+  const filePath = path.join(DATA_DIR, "site.json");
+  if (!fs.existsSync(filePath)) return {};
+
+  try {
+    const raw = fs.readFileSync(filePath, "utf8");
+    const normalized = raw.charCodeAt(0) === 0xfeff ? raw.slice(1) : raw;
+    const parsed = JSON.parse(normalized);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch (e) {
+    console.error("[logs] erro ao carregar site.json:", e.message);
+    return {};
+  }
+}
+
+function parseRatingNumber(value) {
+  const normalized = String(value ?? "")
+    .trim()
+    .replace(",", ".");
+  if (!normalized) return NaN;
+
+  const parsed = Number.parseFloat(normalized);
+  return Number.isFinite(parsed) ? parsed : NaN;
+}
+
+function getHeaderCandidates(items, mode) {
+  if (!Array.isArray(items) || items.length === 0) return [];
+
+  const normalizedMode = normalizeLogHeaderImageMode(mode);
+  if (normalizedMode === "reverse-chronological") {
+    return [...items];
+  }
+
+  if (normalizedMode === "highest-rated") {
+    return [...items]
+      .map((item) => ({ item, rating: parseRatingNumber(item?.rating) }))
+      .sort((a, b) => {
+        const aHasRating = Number.isFinite(a.rating);
+        const bHasRating = Number.isFinite(b.rating);
+
+        if (aHasRating && bHasRating) {
+          if (a.rating !== b.rating) return b.rating - a.rating;
+          return byWhenDesc(a.item, b.item);
+        }
+        if (aHasRating !== bHasRating) return aHasRating ? -1 : 1;
+        return byWhenDesc(a.item, b.item);
+      })
+      .map(({ item }) => item);
+  }
+
+  return [...items].reverse();
+}
 
 function resolveLogHeaderImage(slug) {
   const fileName = `${slug}-header.jpg`;
@@ -255,6 +341,7 @@ function formatHeaderCaption(item) {
 async function resolveDynamicHeaderForYear({
   slug,
   items,
+  headerImageMode,
   tmdbMediaType,
   fallbackHeader,
   tmdbKey,
@@ -268,8 +355,8 @@ async function resolveDynamicHeaderForYear({
 
   if (!tmdbKey || shouldSkipTmdbLookup) return fallbackHeader;
 
-  for (let i = items.length - 1; i >= 0; i -= 1) {
-    const candidate = items[i];
+  const candidates = getHeaderCandidates(items, headerImageMode);
+  for (const candidate of candidates) {
     const title = String(candidate?.name || "").trim();
     const year = String(candidate?.year || "").trim();
     if (!title) continue;
@@ -467,6 +554,8 @@ function byWhenDesc(a, b) {
 }
 
 module.exports = (async () => {
+  const siteData = loadSiteData();
+  const logHeaderImageMode = normalizeLogHeaderImageMode(siteData.logHeaderImageMode);
   const tmdbKey = process.env.TMDB_API_KEY;
   const isServeMode = process.env.ELEVENTY_RUN_MODE === "serve";
   const tmdbDisabledInServe = process.env.ELEVENTY_DISABLE_TMDB_IN_SERVE === "1";
@@ -529,6 +618,7 @@ module.exports = (async () => {
       const dynamicHeader = await resolveDynamicHeaderForYear({
         slug,
         items: yearItems,
+        headerImageMode: logHeaderImageMode,
         tmdbMediaType: meta.tmdbMediaType,
         fallbackHeader,
         tmdbKey,

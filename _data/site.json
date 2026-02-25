@@ -4,5 +4,6 @@
 	"author": "Mozart Mattar",
 	"baseurl": "https://mozartsempiano.com",
 	"crt": true,
-	"bayerOverlay": false
+	"bayerOverlay": false,
+	"logHeaderImageMode": "highest-rated"
 }
