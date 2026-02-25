@@ -732,7 +732,7 @@ div.banners {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 88px);
 	grid-gap: 6px;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	text-align: left;
 	width: 100%;
 

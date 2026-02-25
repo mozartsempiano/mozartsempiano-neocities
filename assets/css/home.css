@@ -36,6 +36,7 @@ aside {
 	flex-direction: column;
 	align-items: center;
 	gap: var(--gap-padrao);
+	max-width: calc(var(--main-width) * 0.67);
 }
 
 aside img {
@@ -52,6 +53,7 @@ aside img {
 	aside {
 		flex-direction: column-reverse;
 		gap: 3rem;
+		max-width: 100%;
 
 		& img {
 			width: auto;

@@ -1,5 +1,14 @@
 [
 	{
+		"v": "2.0.1",
+		"date": "2026-02-25",
+		"items": [
+			"alterado dither automático de 8x8 pra 16x16",
+			"adicionado fetch automático de backdrops do TMDB para serem usados como imagens principais nas páginas de logs, de acordo com os itens com notas mais altas em suas respectivas páginas",
+			"corrigido fetch automático de pôsteres do TMDB"
+		]
+	},
+	{
 		"v": "2.0",
 		"date": "2026-02-24",
 		"items": ["nova versão do site v2.0"]
