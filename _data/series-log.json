@@ -1,775 +1,806 @@
 [
-	{
-		"name": "",
-		"year": "",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": ""
-	},
-	{
-		"name": "Smiling Friends S03",
-		"year": "2025",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-12-14"
-	},
-	{
-		"name": "Pluribus S01",
-		"year": "2025",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-12-12"
-	},
-	{
-		"name": "Gen V S02",
-		"year": "2025",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-10-24"
-	},
-	{
-		"name": "Peacemaker S02",
-		"year": "2025",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-10-09"
-	},
-	{
-		"name": "Peacemaker S01",
-		"year": "2022",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-10-05"
-	},
-	{
-		"name": "Alien: Earth S01",
-		"year": "2025",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-09-27"
-	},
-	{
-		"name": "Fargo S05",
-		"year": "2023",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-08-19"
-	},
-	{
-		"name": "Curb Your Enthusiasm S02",
-		"year": "2001",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-07-01"
-	},
-	{
-		"name": "Curb Your Enthusiasm S01",
-		"year": "2000",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-06-26"
-	},
-	{
-		"name": "Invincible S03",
-		"year": "2025",
-		"rating": "4.5",
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-03-13"
-	},
-	{
-		"name": "South Park S08",
-		"year": "2004",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2026-01-16"
-	},
-	{
-		"name": "South Park S07",
-		"year": "2003",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2026-01-11"
-	},
-	{
-		"name": "South Park S06",
-		"year": "2002",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2026-01-08"
-	},
-	{
-		"name": "Mr. Robot S04",
-		"year": "2019",
-		"rating": "4.5",
-		"rewatch": "Yes",
-		"tags": "",
-		"when": "2024-12-20"
-	},
-	{
-		"name": "Mr. Robot S03",
-		"year": "2017",
-		"rating": "5",
-		"rewatch": "Yes",
-		"tags": "",
-		"when": "2024-12-13"
-	},
-	{
-		"name": "South Park S05",
-		"year": "2001",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-09-16"
-	},
-	{
-		"name": "South Park S04",
-		"year": "2000",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-09-11"
-	},
-	{
-		"name": "South Park S03",
-		"year": "1999",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-09-03"
-	},
-	{
-		"name": "South Park S02",
-		"year": "1998",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-08-31"
-	},
-	{
-		"name": "South Park S01",
-		"year": "1997",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-08-22"
-	},
-	{
-		"name": "The Boys S04",
-		"year": "2024",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-07-18"
-	},
-	{
-		"name": "Smiling Friends S02",
-		"year": "2024",
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-06-24"
-	},
-	{
-		"name": "The Simpsons S01",
-		"year": "1989",
-		"rating": "3.5",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-04-06"
-	},
-	{
-		"name": "Invincible S02",
-		"year": "2024",
-		"rating": "3.5",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-04-05",
-		"review": "Foi uma temporada boa, com a reintrodução de rostos familiares, a introdução de novos personangens e uma continuação da trama já conhecida pelo público. Entretanto, a qualidade da animação definitivamente caiu em comparação com a primeira temporada, o que é estranho, considerando o longo tempo de espera de mais de dois anos. Além disso, a descenecessária pausa de meses entre a primeira e a segunda parte, apesar dos episódios já estarem finalizados, contribuiu pra diminuir o hype pra mim.\n\nAdmito que a trama, apesar de interessante, não me entreteu tanto quanto a da primeira temporada. Sinto que vários personagens acabaram por escapar da morte com muita facilidade, contando até com plot twists, quando suas perdas poderiam ter tornado a história mais emocionante. Dá pra argumentar que os personagens agora são mais habilidosos e cautelosos depois de tantas perdas, mas essa decisão dos roteiristas acabou diminuindo o impacto de várias cenas, especialmente em uma série conhecida por sua violência e pela disposição de mostrar a fragilidade da vida, mesmo pra super-heróis."
-	},
-	{
-		"name": "Black Mirror: White Christmas",
-		"year": 2014,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2017-10-15"
-	},
-	{
-		"name": "ted S01",
-		"year": "2024",
-		"rating": "4",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-03-28"
-	},
-	{
-		"name": "Seinfeld S09",
-		"year": "1997",
-		"rating": "4",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-03-17"
-	},
-	{
-		"name": "Mr. Robot S02",
-		"year": "2016",
-		"rating": "4",
-		"rewatch": "Yes",
-		"tags": "",
-		"when": "2024-02-03"
-	},
-	{
-		"name": "Echo",
-		"year": "2024",
-		"rating": "3",
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-01-24"
-	},
-	{
-		"name": "Cyberpunk: Edgerunners S01",
-		"year": "2022",
-		"rating": "4",
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-12-20",
-		"review": "<s class='spoiler'>Meu único problema com o anime é o ritmo. Tem um timeskip bem desnecessário no meio da temporada, e depois disso, tudo se desenrola muito rapidamente e o telespectador não tem muito tempo pra processar algumas cenas, especialmente mortes de personagens importantes, que acabam não recebendo muita atenção, como no último episódio. Uns dois episódios a mais o tornariam perfeito.</s>"
-	},
-	{
-		"name": "Black Mirror: USS Callister",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Arkangel",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Hang the DJ",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Black Museum",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Metalhead",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Crocodile",
-		"year": 2017,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Fifteen Million Merits",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Nosedive",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: White Bear",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Be Right Back",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Shut Up and Dance",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The Entire History of You",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The National Anthem",
-		"year": 2011,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Playtest",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: The Waldo Moment",
-		"year": 2013,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-03"
-	},
-	{
-		"name": "Black Mirror: Hated in the Nation",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-28"
-	},
-	{
-		"name": "Black Mirror: Men Against Fire",
-		"year": 2016,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-01-28"
-	},
-	{
-		"name": "Black Mirror: Bandersnatch",
-		"year": 2018,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-12-29"
-	},
-	{
-		"name": "Black Mirror: Striking Vipers",
-		"year": 2019,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2019-06-23"
-	},
-	{
-		"name": "Black Mirror: Joan Is Awful",
-		"year": 2023,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Loch Henry",
-		"year": 2023,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Beyond the Sea",
-		"year": 2023,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Mazey Day",
-		"year": 2023,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Demon 79",
-		"year": 2023,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-06-15"
-	},
-	{
-		"name": "Black Mirror: Common People",
-		"year": 2025,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Bête Noire",
-		"year": 2025,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Hotel Reverie",
-		"year": 2025,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-17"
-	},
-	{
-		"name": "Black Mirror: Plaything",
-		"year": 2025,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: Eulogy",
-		"year": 2025,
-		"rating": 5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: USS Callister – Into Infinity",
-		"year": 2025,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Black Mirror: White Christmas",
-		"year": 2014,
-		"rating": 4,
-		"rewatch": "Yes",
-		"tags": "",
-		"when": "2025-04-18"
-	},
-	{
-		"name": "Knuckles",
-		"year": 2024,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-25"
-	},
-	{
-		"name": "Quiet on Set: The Dark Side of Kids TV",
-		"year": 2024,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"review": "Posterguei assistir ao documentário quando viralizou no ano passado, mas só me interessei de verdade recentemente, depois de ver um vídeo sobre a história da Jennette McCurdy e todo o abuso que ela sofreu nas produções da Nickelodeon. Lamentavelmente, o documentário só a menciona brevemente em um trecho de, no máximo, cinco minutos em um dos episódios, e, na verdade, praticamente nem fala sobre iCarly, o que foi bem decepcionante, já que era justamente sobre isso que eu queria saber mais.\n\nPor outro lado, sim, fico feliz pelas vítimas terem tido um espaço pra se expressarem, mas não senti que tudo foi apresentado de forma satisfatória ou sequer tão respeitosa. E havia mesmo necessidade de isso durar três horas e meia? Ou ainda de introduzirem o Drake Bell no final de um dos episódios em um cliffhanger, como se fosse um personagem da Marvel? É uma produção bem exploratória, o que é irônico, já que é isso que o próprio documentário busca criticar.\n\nTambém não entendo por que dedicaram tanto tempo falando da Amanda Bynes se no fim ela nem quis dar depoimento, e, assim, o documentário se satisfaz com horas de suposições vindas de dezenas de pessoas.\n\nAcho que é o que mereço por ter escolhido assistir a um documentário da Netflix em vez de simplesmente ler o livro da Jennette McCurdy.",
-		"when": "2025-09-05"
-	},
-	{
-		"name": "Love, Death & Robots: Bad Travelling",
-		"year": 2022,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-20"
-	},
-	{
-		"name": "Love, Death & Robots: Night of the Mini Dead",
-		"year": 2022,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-25"
-	},
-	{
-		"name": "Love & Death",
-		"year": 2023,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-05-25"
-	},
-	{
-		"name": "Gudetama: An Eggcellent Adventure",
-		"year": 2022,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "c/ bone",
-		"when": "2022-12-23"
-	},
-	{
-		"name": "Moon Knight",
-		"year": 2022,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2022-05-07"
-	},
-	{
-		"name": "Hawkeye",
-		"year": 2021,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-12-23"
-	},
-	{
-		"name": "Squid Game",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-04"
-	},
-	{
-		"name": "Loki",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-18"
-	},
-	{
-		"name": "Paranoia Agent",
-		"year": 2004,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-14"
-	},
-	{
-		"name": "WandaVision",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-10-19"
-	},
-	{
-		"name": "The Haunting of Bly Manor",
-		"year": 2020,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2020-10-20"
-	},
-	{
-		"name": "Sonic Mania Adventures",
-		"year": 2018,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2023-11-13"
-	},
-	{
-		"name": "DARLING in the FRANXX",
-		"year": 2018,
-		"rating": 2,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-07-07",
-		"review": "Os designs dos personagem são excelentes e a primeira metade da trama é muito boa, mas fica extremamente ruim depois disso. É basicamente Evangelion, mas pra punheteiro."
-	},
-	{
-		"name": "Devilman - Volume 1: The Birth",
-		"year": 1987,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-08"
-	},
-	{
-		"name": "Devilman - Volume 2: Demon Bird",
-		"year": 1990,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2024-11-10"
-	},
-	{
-		"name": "Twin Peaks",
-		"year": 1989,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2018-07-18"
-	},
-	{
-		"name": "Twin Peaks: The Return",
-		"year": 2017,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2020-09-16"
-	},
-	{
-		"name": "Serial Experiments Lain",
-		"year": 1998,
-		"rating": "",
-		"rewatch": "Yes",
-		"tags": "c/ ste",
-		"when": "2026-01-02"
-	},
-	{
-		"name": "Battle Angel",
-		"year": "1993",
-		"rating": "3",
-		"rewatch": "",
-		"review": "Por ser uma OVA, Battle Angel tem um ritmo frenético e é bastante condensada em comparação com a riqueza do mangá original, deixando algumas partes subdesenvolvidas. Ainda assim, o anime é surpreendentemente emocionante pra uma obra que dura apenas 54 minutos, repleto de cenas de ação incríveis e sem decepcionar na exploração de questões filosóficas mais profundas, decorrentes do mundo distópico de Gunnm, na medida do possível.",
-		"tags": "",
-		"when": "2024-03-31"
-	},
-	{
-		"name": "Star Wars: Visions – The Duel",
-		"year": 2021,
-		"rating": 4.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – Tatooine Rhapsody",
-		"year": 2021,
-		"rating": 1.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Twins",
-		"year": 2021,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Village Bride",
-		"year": 2021,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – The Ninth Jedi",
-		"year": 2021,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Star Wars: Visions – T0-B1",
-		"year": 2021,
-		"rating": "",
-		"rewatch": "",
-		"tags": "",
-		"when": "2021-09-24"
-	},
-	{
-		"name": "Alien: Containment",
-		"year": 2019,
-		"rating": 2.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-08"
-	},
-	{
-		"name": "Alien: Specimen",
-		"year": 2019,
-		"rating": 3.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-08"
-	},
-	{
-		"name": "Alien: Night Shift",
-		"year": 2019,
-		"rating": 1.5,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Ore",
-		"year": 2019,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Harvest",
-		"year": 2019,
-		"rating": 1,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Alien: Alone",
-		"year": 2019,
-		"rating": 3,
-		"rewatch": "",
-		"tags": "",
-		"when": "2025-04-09"
-	},
-	{
-		"name": "Don't Hug Me I'm Scared",
-		"year": 2011,
-		"rating": 4,
-		"rewatch": "",
-		"tags": "",
-		"when": "2016-06-19"
-	}
+  {
+    "name": "",
+    "year": "",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": ""
+  },
+  {
+    "name": "Smiling Friends",
+    "season": "3",
+    "year": "2025",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-12-14"
+  },
+  {
+    "name": "Pluribus",
+    "season": "1",
+    "year": "2025",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-12-12"
+  },
+  {
+    "name": "Gen V",
+    "season": "2",
+    "year": "2025",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-10-24"
+  },
+  {
+    "name": "Peacemaker",
+    "season": "2",
+    "year": "2025",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-10-09"
+  },
+  {
+    "name": "Peacemaker",
+    "season": "1",
+    "year": "2022",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-10-05"
+  },
+  {
+    "name": "Alien: Earth",
+    "season": "1",
+    "year": "2025",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-09-27"
+  },
+  {
+    "name": "Fargo",
+    "season": "5",
+    "year": "2023",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-08-19"
+  },
+  {
+    "name": "Curb Your Enthusiasm",
+    "season": "2",
+    "year": "2001",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-07-01"
+  },
+  {
+    "name": "Curb Your Enthusiasm",
+    "season": "1",
+    "year": "2000",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-06-26"
+  },
+  {
+    "name": "Invincible",
+    "season": "3",
+    "year": "2025",
+    "rating": "4.5",
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-03-13"
+  },
+  {
+    "name": "South Park",
+    "season": "8",
+    "year": "2004",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2026-01-16"
+  },
+  {
+    "name": "South Park",
+    "season": "7",
+    "year": "2003",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2026-01-11"
+  },
+  {
+    "name": "South Park",
+    "season": "6",
+    "year": "2002",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2026-01-08"
+  },
+  {
+    "name": "Mr. Robot",
+    "season": "4",
+    "year": "2019",
+    "rating": "4.5",
+    "rewatch": "Yes",
+    "tags": "",
+    "when": "2024-12-20"
+  },
+  {
+    "name": "Mr. Robot",
+    "season": "3",
+    "year": "2017",
+    "rating": "5",
+    "rewatch": "Yes",
+    "tags": "",
+    "when": "2024-12-13"
+  },
+  {
+    "name": "South Park",
+    "season": "5",
+    "year": "2001",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-09-16"
+  },
+  {
+    "name": "South Park",
+    "season": "4",
+    "year": "2000",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-09-11"
+  },
+  {
+    "name": "South Park",
+    "season": "3",
+    "year": "1999",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-09-03"
+  },
+  {
+    "name": "South Park",
+    "season": "2",
+    "year": "1998",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-08-31"
+  },
+  {
+    "name": "South Park",
+    "season": "1",
+    "year": "1997",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-08-22"
+  },
+  {
+    "name": "The Boys",
+    "season": "4",
+    "year": "2024",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-07-18"
+  },
+  {
+    "name": "Smiling Friends",
+    "season": "2",
+    "year": "2024",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-06-24"
+  },
+  {
+    "name": "The Simpsons",
+    "season": "1",
+    "year": "1989",
+    "rating": "3.5",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-04-06"
+  },
+  {
+    "name": "Invincible",
+    "season": "2",
+    "year": "2021",
+    "rating": "3.5",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-04-05",
+    "review": "Foi uma temporada boa, com a reintrodução de rostos familiares, a introdução de novos personangens e uma continuação da trama já conhecida pelo público. Entretanto, a qualidade da animação definitivamente caiu em comparação com a primeira temporada, o que é estranho, considerando o longo tempo de espera de mais de dois anos. Além disso, a descenecessária pausa de meses entre a primeira e a segunda parte, apesar dos episódios já estarem finalizados, contribuiu pra diminuir o hype pra mim.\n\nAdmito que a trama, apesar de interessante, não me entreteu tanto quanto a da primeira temporada. Sinto que vários personagens acabaram por escapar da morte com muita facilidade, contando até com plot twists, quando suas perdas poderiam ter tornado a história mais emocionante. Dá pra argumentar que os personagens agora são mais habilidosos e cautelosos depois de tantas perdas, mas essa decisão dos roteiristas acabou diminuindo o impacto de várias cenas, especialmente em uma série conhecida por sua violência e pela disposição de mostrar a fragilidade da vida, mesmo pra super-heróis."
+  },
+  {
+    "name": "Black Mirror: White Christmas",
+    "year": "2014",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2017-10-15"
+  },
+  {
+    "name": "ted",
+    "season": "1",
+    "year": "2024",
+    "rating": "4",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-03-28"
+  },
+  {
+    "name": "Seinfeld",
+    "season": "9",
+    "year": "1997",
+    "rating": "4",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-03-17"
+  },
+  {
+    "name": "Mr. Robot",
+    "season": "2",
+    "year": "2016",
+    "rating": "4",
+    "rewatch": "Yes",
+    "tags": "",
+    "when": "2024-02-03"
+  },
+  {
+    "name": "Echo",
+    "year": "2024",
+    "rating": "3",
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-01-24"
+  },
+  {
+    "name": "Cyberpunk: Edgerunners",
+    "season": "1",
+    "year": "2022",
+    "rating": "4",
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-12-20",
+    "review": "<s class='spoiler'>Meu único problema com o anime é o ritmo. Tem um timeskip bem desnecessário no meio da temporada, e depois disso, tudo se desenrola muito rapidamente e o telespectador não tem muito tempo pra processar algumas cenas, especialmente mortes de personagens importantes, que acabam não recebendo muita atenção, como no último episódio. Uns dois episódios a mais o tornariam perfeito.</s>"
+  },
+  {
+    "name": "Black Mirror: USS Callister",
+    "year": "2017",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Arkangel",
+    "year": "2017",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Hang the DJ",
+    "year": "2017",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Black Museum",
+    "year": "2017",
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Metalhead",
+    "year": 2017,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Crocodile",
+    "year": 2017,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Fifteen Million Merits",
+    "year": 2011,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Nosedive",
+    "year": 2016,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: White Bear",
+    "year": 2013,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Be Right Back",
+    "year": 2013,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Shut Up and Dance",
+    "year": 2016,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: The Entire History of You",
+    "year": 2011,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: The National Anthem",
+    "year": 2011,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Playtest",
+    "year": 2016,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: The Waldo Moment",
+    "year": 2013,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-03"
+  },
+  {
+    "name": "Black Mirror: Hated in the Nation",
+    "year": 2016,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-28"
+  },
+  {
+    "name": "Black Mirror: Men Against Fire",
+    "year": 2016,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-01-28"
+  },
+  {
+    "name": "Black Mirror: Bandersnatch",
+    "year": 2018,
+    "rating": 3,
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-12-29"
+  },
+  {
+    "name": "Black Mirror: Striking Vipers",
+    "year": 2019,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2019-06-23"
+  },
+  {
+    "name": "Black Mirror: Joan Is Awful",
+    "year": 2023,
+    "rating": 3,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-06-15"
+  },
+  {
+    "name": "Black Mirror: Loch Henry",
+    "year": 2023,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-06-15"
+  },
+  {
+    "name": "Black Mirror: Beyond the Sea",
+    "year": 2023,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-06-15"
+  },
+  {
+    "name": "Black Mirror: Mazey Day",
+    "year": 2023,
+    "rating": 1,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-06-15"
+  },
+  {
+    "name": "Black Mirror: Demon 79",
+    "year": 2023,
+    "rating": 2,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-06-15"
+  },
+  {
+    "name": "Black Mirror: Common People",
+    "year": 2025,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-17"
+  },
+  {
+    "name": "Black Mirror: Bête Noire",
+    "year": 2025,
+    "rating": 3,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-17"
+  },
+  {
+    "name": "Black Mirror: Hotel Reverie",
+    "year": 2025,
+    "rating": 1,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-17"
+  },
+  {
+    "name": "Black Mirror: Plaything",
+    "year": 2025,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-18"
+  },
+  {
+    "name": "Black Mirror: Eulogy",
+    "year": 2025,
+    "rating": 5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-18"
+  },
+  {
+    "name": "Black Mirror: USS Callister – Into Infinity",
+    "year": 2025,
+    "rating": 3,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-18"
+  },
+  {
+    "name": "Black Mirror: White Christmas",
+    "year": 2014,
+    "rating": 4,
+    "rewatch": "Yes",
+    "tags": "",
+    "when": "2025-04-18"
+  },
+  {
+    "name": "Knuckles",
+    "year": "2024",
+    "rating": 2.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-11-25"
+  },
+  {
+    "name": "Quiet on Set: The Dark Side of Kids TV",
+    "year": "2024",
+    "rating": 2.5,
+    "rewatch": "",
+    "tags": "",
+    "review": "Posterguei assistir ao documentário quando viralizou no ano passado, mas só me interessei de verdade recentemente, depois de ver um vídeo sobre a história da Jennette McCurdy e todo o abuso que ela sofreu nas produções da Nickelodeon. Lamentavelmente, o documentário só a menciona brevemente em um trecho de, no máximo, cinco minutos em um dos episódios, e, na verdade, praticamente nem fala sobre iCarly, o que foi bem decepcionante, já que era justamente sobre isso que eu queria saber mais.\n\nPor outro lado, sim, fico feliz pelas vítimas terem tido um espaço pra se expressarem, mas não senti que tudo foi apresentado de forma satisfatória ou sequer tão respeitosa. E havia mesmo necessidade de isso durar três horas e meia? Ou ainda de introduzirem o Drake Bell no final de um dos episódios em um cliffhanger, como se fosse um personagem da Marvel? É uma produção bem exploratória, o que é irônico, já que é isso que o próprio documentário busca criticar.\n\nTambém não entendo por que dedicaram tanto tempo falando da Amanda Bynes se no fim ela nem quis dar depoimento, e, assim, o documentário se satisfaz com horas de suposições vindas de dezenas de pessoas.\n\nAcho que é o que mereço por ter escolhido assistir a um documentário da Netflix em vez de simplesmente ler o livro da Jennette McCurdy.",
+    "when": "2025-09-05"
+  },
+  {
+    "name": "Love, Death & Robots: Bad Travelling",
+    "year": 2022,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2022-05-20"
+  },
+  {
+    "name": "Love, Death & Robots: Night of the Mini Dead",
+    "year": 2022,
+    "rating": 2,
+    "rewatch": "",
+    "tags": "",
+    "when": "2022-05-25"
+  },
+  {
+    "name": "Love & Death",
+    "year": 2023,
+    "rating": 4.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-05-25"
+  },
+  {
+    "name": "Gudetama: An Eggcellent Adventure",
+    "year": 2022,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "c/ bone",
+    "when": "2022-12-23"
+  },
+  {
+    "name": "Moon Knight",
+    "year": 2022,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2022-05-07"
+  },
+  {
+    "name": "Hawkeye",
+    "year": 2021,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-12-23"
+  },
+  {
+    "name": "Squid Game",
+    "season": "1",
+    "year": 2021,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-10-04"
+  },
+  {
+    "name": "Loki",
+    "season": "1",
+    "year": 2021,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-10-18"
+  },
+  {
+    "name": "Paranoia Agent",
+    "year": 2004,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-10-14"
+  },
+  {
+    "name": "WandaVision",
+    "year": 2021,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-10-19"
+  },
+  {
+    "name": "The Haunting of Bly Manor",
+    "year": 2020,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2020-10-20"
+  },
+  {
+    "name": "Sonic Mania Adventures",
+    "year": 2018,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2023-11-13"
+  },
+  {
+    "name": "DARLING in the FRANXX",
+    "year": 2018,
+    "rating": 2,
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-07-07",
+    "review": "Os designs dos personagem são excelentes e a primeira metade da trama é muito boa, mas fica extremamente ruim depois disso. É basicamente Evangelion, mas pra punheteiro."
+  },
+  {
+    "name": "Devilman - Volume 1: The Birth",
+    "year": 1987,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-11-08"
+  },
+  {
+    "name": "Devilman - Volume 2: Demon Bird",
+    "year": 1990,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2024-11-10"
+  },
+  {
+    "name": "Twin Peaks",
+    "season": "2",
+    "year": 1989,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2018-07-18"
+  },
+  {
+    "name": "Twin Peaks: The Return",
+    "year": 2017,
+    "rating": 4.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2020-09-16"
+  },
+  {
+    "name": "Serial Experiments Lain",
+    "year": 1998,
+    "rating": "",
+    "rewatch": "Yes",
+    "tags": "c/ ste",
+    "when": "2026-01-02"
+  },
+  {
+    "name": "Battle Angel",
+    "year": "1993",
+    "rating": "3",
+    "rewatch": "",
+    "review": "Por ser uma OVA, Battle Angel tem um ritmo frenético e é bastante condensada em comparação com a riqueza do mangá original, deixando algumas partes subdesenvolvidas. Ainda assim, o anime é surpreendentemente emocionante pra uma obra que dura apenas 54 minutos, repleto de cenas de ação incríveis e sem decepcionar na exploração de questões filosóficas mais profundas, decorrentes do mundo distópico de Gunnm, na medida do possível.",
+    "tags": "",
+    "when": "2024-03-31"
+  },
+  {
+    "name": "Star Wars: Visions – The Duel",
+    "year": 2021,
+    "rating": 4.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Star Wars: Visions – Tatooine Rhapsody",
+    "year": 2021,
+    "rating": 1.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Star Wars: Visions – The Twins",
+    "year": 2021,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Star Wars: Visions – The Village Bride",
+    "year": 2021,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Star Wars: Visions – The Ninth Jedi",
+    "year": 2021,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Star Wars: Visions – T0-B1",
+    "year": 2021,
+    "rating": "",
+    "rewatch": "",
+    "tags": "",
+    "when": "2021-09-24"
+  },
+  {
+    "name": "Alien: Containment",
+    "year": 2019,
+    "rating": 2.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-08"
+  },
+  {
+    "name": "Alien: Specimen",
+    "year": 2019,
+    "rating": 3.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-08"
+  },
+  {
+    "name": "Alien: Night Shift",
+    "year": 2019,
+    "rating": 1.5,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-09"
+  },
+  {
+    "name": "Alien: Ore",
+    "year": 2019,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-09"
+  },
+  {
+    "name": "Alien: Harvest",
+    "year": 2019,
+    "rating": 1,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-09"
+  },
+  {
+    "name": "Alien: Alone",
+    "year": 2019,
+    "rating": 3,
+    "rewatch": "",
+    "tags": "",
+    "when": "2025-04-09"
+  },
+  {
+    "name": "Don't Hug Me I'm Scared",
+    "year": 2011,
+    "rating": 4,
+    "rewatch": "",
+    "tags": "",
+    "when": "2016-06-19"
+  }
 ]

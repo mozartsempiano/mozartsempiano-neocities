@@ -10,6 +10,9 @@ const LOG_POSTER_PROVIDERS = {
   "anime-log": "tmdb",
   "leitura-log": "openlibrary",
 };
+const LOG_TMDB_MEDIA_TYPES = {
+  "series-log": "tv",
+};
 const LOG_TITLES = {
   "cinema-log": "Diário de Filmes",
   "series-log": "Diário de Séries",
@@ -63,8 +66,21 @@ function normalizePosterProvider(value) {
   return null;
 }
 
+function normalizeTmdbMediaType(value) {
+  if (typeof value !== "string") return null;
+  const normalized = value.trim().toLowerCase();
+  if (!normalized) return null;
+  if (["tv", "series", "show", "shows"].includes(normalized)) return "tv";
+  if (["movie", "movies", "film", "films"].includes(normalized)) return "movie";
+  return null;
+}
+
 function getDefaultPosterProvider(slug) {
   return LOG_POSTER_PROVIDERS[slug] || "none";
+}
+
+function getDefaultTmdbMediaType(slug) {
+  return LOG_TMDB_MEDIA_TYPES[slug] || "movie";
 }
 
 function loadSourceMeta(slug) {
@@ -76,6 +92,7 @@ function loadSourceMeta(slug) {
       imgPrincipal: "",
       imgPrincipalCaption: "",
       posterProvider: getDefaultPosterProvider(slug),
+      tmdbMediaType: getDefaultTmdbMediaType(slug),
       noBacklinks: false,
       draft: false,
       introMarkdown: "",
@@ -88,15 +105,20 @@ function loadSourceMeta(slug) {
   const noBacklinks = parseBooleanLike(parsed.data.noBacklinks) === true;
 
   const posterProviderOverride = normalizePosterProvider(parsed.data.posterProvider);
+  const tmdbMediaTypeOverride = normalizeTmdbMediaType(parsed.data.tmdbMediaType);
   const enableTmdbPostersOverride = parseBooleanLike(parsed.data.enableTmdbPosters);
   const legacyEnablePostersOverride = parseBooleanLike(parsed.data.enablePosters);
 
   let posterProvider = getDefaultPosterProvider(slug);
+  let tmdbMediaType = getDefaultTmdbMediaType(slug);
   if (posterProviderOverride !== null) {
     posterProvider = posterProviderOverride;
   } else if (enableTmdbPostersOverride !== null || legacyEnablePostersOverride !== null) {
     const enabled = enableTmdbPostersOverride !== null ? enableTmdbPostersOverride : legacyEnablePostersOverride;
     posterProvider = enabled ? "tmdb" : "none";
+  }
+  if (tmdbMediaTypeOverride !== null) {
+    tmdbMediaType = tmdbMediaTypeOverride;
   }
 
   return {
@@ -105,6 +127,7 @@ function loadSourceMeta(slug) {
     imgPrincipal: parsed.data.imgPrincipal || "",
     imgPrincipalCaption: parsed.data.imgPrincipalCaption || "",
     posterProvider,
+    tmdbMediaType,
     noBacklinks,
     draft,
     introMarkdown: (parsed.body || "").trim(),
@@ -203,6 +226,7 @@ module.exports = (() => {
         imgPrincipal: meta.imgPrincipal,
         imgPrincipalCaption: meta.imgPrincipalCaption,
         posterProvider: meta.posterProvider,
+        tmdbMediaType: meta.tmdbMediaType,
         noBacklinks: meta.noBacklinks,
         introMarkdown: meta.introMarkdown,
         year,

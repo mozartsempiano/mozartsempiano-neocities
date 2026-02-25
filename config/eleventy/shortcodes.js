@@ -24,7 +24,46 @@ const OPENLIBRARY_CACHE_DAYS = toPositiveNumber(process.env.OPENLIBRARY_CACHE_DA
 const OPENLIBRARY_NOT_FOUND_CACHE_DAYS = toPositiveNumber(process.env.OPENLIBRARY_NOT_FOUND_CACHE_DAYS, 7);
 const OPENLIBRARY_FORCE_REFRESH = process.env.OPENLIBRARY_FORCE_REFRESH === "1";
 
-function normalizeKey(title, year) {
+function normalizeTmdbMediaType(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  if (["tv", "series", "show", "shows"].includes(normalized)) return "tv";
+  return "movie";
+}
+
+function parseSeasonNumber(value) {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    const n = Math.trunc(value);
+    return n > 0 ? n : null;
+  }
+
+  const raw = String(value || "").trim();
+  if (!raw) return null;
+
+  const match = raw.match(/\d+/);
+  if (!match) return null;
+
+  const n = Number.parseInt(match[0], 10);
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+function normalizeKey(title, year, mediaType = "movie") {
+  const safeTitle = String(title || "").trim().toLowerCase();
+  const safeYear = String(year || "").trim();
+  const safeMediaType = normalizeTmdbMediaType(mediaType);
+  return `${safeTitle}|${safeYear}|${safeMediaType}`;
+}
+
+function normalizeTmdbKey(title, year, mediaType = "movie", season = "") {
+  const base = normalizeKey(title, year, mediaType);
+  const safeMediaType = normalizeTmdbMediaType(mediaType);
+  const seasonNumber = parseSeasonNumber(season);
+  if (safeMediaType === "tv" && seasonNumber !== null) {
+    return `${base}|season:${seasonNumber}`;
+  }
+  return base;
+}
+
+function normalizeLegacyTmdbKey(title, year) {
   const safeTitle = String(title || "").trim().toLowerCase();
   const safeYear = String(year || "").trim();
   return `${safeTitle}|${safeYear}`;
@@ -164,17 +203,59 @@ module.exports = function configureShortcodes(eleventyConfig) {
   const tmdbInFlight = new Map();
   const openLibraryInFlight = new Map();
 
-  async function fetchTmdbPosterEntry(title, year) {
-    const query = encodeURIComponent(title);
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&language=${lang}&query=${query}&year=${year}`;
+  async function fetchTmdbPosterEntry(title, year, mediaType = "movie", season = "", useYearFilter = true) {
+    const safeMediaType = normalizeTmdbMediaType(mediaType);
+    const seasonNumber = parseSeasonNumber(season);
+    const yearNum = Number.parseInt(String(year || ""), 10);
+    const params = new URLSearchParams({
+      api_key: tmdbKey,
+      language: lang,
+      query: String(title || "").trim(),
+    });
+
+    if (useYearFilter && Number.isFinite(yearNum)) {
+      if (safeMediaType === "tv") {
+        params.set("first_air_date_year", String(yearNum));
+      } else {
+        params.set("year", String(yearNum));
+      }
+    }
+
+    const url = `https://api.themoviedb.org/3/search/${safeMediaType}?${params.toString()}`;
     const res = await fetch(url);
     if (!res.ok) {
       throw new Error(`TMDB HTTP ${res.status}`);
     }
     const data = await res.json();
-    const movie = data.results?.[0];
+    const result = data.results?.[0];
 
-    if (!movie || !movie.poster_path) {
+    if (!result) {
+      return {
+        status: "not_found",
+        fetchedAt: new Date().toISOString(),
+      };
+    }
+
+    let posterPath = result.poster_path || "";
+    let resolvedSeasonNumber = null;
+
+    if (safeMediaType === "tv" && seasonNumber !== null && result.id) {
+      const seasonParams = new URLSearchParams({
+        api_key: tmdbKey,
+        language: lang,
+      });
+      const seasonUrl = `https://api.themoviedb.org/3/tv/${result.id}/season/${seasonNumber}?${seasonParams.toString()}`;
+      const seasonRes = await fetch(seasonUrl);
+      if (seasonRes.ok) {
+        const seasonData = await seasonRes.json();
+        if (seasonData?.poster_path) {
+          posterPath = seasonData.poster_path;
+          resolvedSeasonNumber = seasonNumber;
+        }
+      }
+    }
+
+    if (!posterPath) {
       return {
         status: "not_found",
         fetchedAt: new Date().toISOString(),
@@ -183,17 +264,42 @@ module.exports = function configureShortcodes(eleventyConfig) {
 
     return {
       status: "ok",
-      posterPath: movie.poster_path,
-      title: movie.title || String(title || "").trim(),
+      posterPath,
+      title: result.title || result.name || String(title || "").trim(),
+      mediaType: safeMediaType,
+      seasonNumber: resolvedSeasonNumber,
       fetchedAt: new Date().toISOString(),
     };
   }
 
-  async function resolveTmdbPosterEntry(title, year) {
-    const key = normalizeKey(title, year);
-    const cached = tmdbCache.items[key];
+  async function resolveTmdbPosterEntry(title, year, mediaType = "movie", season = "") {
+    const safeMediaType = normalizeTmdbMediaType(mediaType);
+    const yearNum = Number.parseInt(String(year || ""), 10);
+    const hasYear = Number.isFinite(yearNum);
+    const key = normalizeTmdbKey(title, year, safeMediaType, season);
+    let cached = tmdbCache.items[key];
 
-    if (isEntryFresh(cached, TMDB_FORCE_REFRESH, TMDB_CACHE_DAYS, TMDB_NOT_FOUND_CACHE_DAYS)) {
+    // Backward compatibility for cache entries created before mediaType support.
+    if (!cached && safeMediaType === "movie") {
+      const legacyKey = normalizeLegacyTmdbKey(title, year);
+      const legacyCached = tmdbCache.items[legacyKey];
+      if (legacyCached) {
+        cached = legacyCached;
+        tmdbCache.items[key] = legacyCached;
+        saveCache(TMDB_CACHE_PATH, tmdbCache);
+      }
+    }
+
+    // If we previously cached TV+year as not_found, still allow one retry path without year filter.
+    const shouldRetryTvWithoutYear =
+      safeMediaType === "tv" &&
+      hasYear &&
+      cached?.status === "not_found";
+
+    if (
+      isEntryFresh(cached, TMDB_FORCE_REFRESH, TMDB_CACHE_DAYS, TMDB_NOT_FOUND_CACHE_DAYS) &&
+      !shouldRetryTvWithoutYear
+    ) {
       return cached;
     }
 
@@ -201,7 +307,14 @@ module.exports = function configureShortcodes(eleventyConfig) {
 
     const job = (async () => {
       try {
-        const next = await fetchTmdbPosterEntry(title, year);
+        let next = await fetchTmdbPosterEntry(title, year, safeMediaType, season, true);
+
+        // "year" in series-log can be the season year. If search with first_air_date_year misses,
+        // retry TV lookup without year filter.
+        if (next?.status === "not_found" && safeMediaType === "tv" && hasYear) {
+          next = await fetchTmdbPosterEntry(title, year, safeMediaType, season, false);
+        }
+
         tmdbCache.items[key] = next;
         saveCache(TMDB_CACHE_PATH, tmdbCache);
         return next;
@@ -317,18 +430,28 @@ module.exports = function configureShortcodes(eleventyConfig) {
     return job;
   }
 
-  async function renderTmdbPosterHtml(title, year, size = "w154") {
+  async function renderTmdbPosterHtml(title, year, size = "w154", mediaType = "movie", season = "") {
     if (!tmdbKey || shouldSkipTmdbLookup) return "";
 
     const safeTitle = String(title || "").trim();
     const safeYear = String(year || "").trim();
+    const safeMediaType = normalizeTmdbMediaType(mediaType);
+    const safeSeasonNumber = parseSeasonNumber(season);
     if (!safeTitle) return "";
 
-    const entry = await resolveTmdbPosterEntry(safeTitle, safeYear);
+    const entry = await resolveTmdbPosterEntry(
+      safeTitle,
+      safeYear,
+      safeMediaType,
+      safeSeasonNumber === null ? "" : safeSeasonNumber,
+    );
     if (!entry || entry.status !== "ok" || !entry.posterPath) return "";
 
     const posterUrl = `${TMDB_IMAGE_BASE}${size}${entry.posterPath}`;
-    const alt = safeYear ? `${entry.title || safeTitle} (${safeYear})` : (entry.title || safeTitle);
+    const seasonSuffix = entry.seasonNumber ? ` - Season ${entry.seasonNumber}` : "";
+    const alt = safeYear
+      ? `${entry.title || safeTitle}${seasonSuffix} (${safeYear})`
+      : `${entry.title || safeTitle}${seasonSuffix}`;
     return `<img src="${escapeAttr(posterUrl)}" alt="${escapeAttr(alt)}">`;
   }
 
@@ -348,8 +471,8 @@ module.exports = function configureShortcodes(eleventyConfig) {
     return `<img src="${escapeAttr(posterUrl)}" alt="${escapeAttr(alt)}">`;
   }
 
-  eleventyConfig.addNunjucksAsyncShortcode("tmdbPoster", async (title, year, size = "w154") => {
-    return await renderTmdbPosterHtml(title, year, size);
+  eleventyConfig.addNunjucksAsyncShortcode("tmdbPoster", async (title, year, size = "w154", mediaType = "movie", season = "") => {
+    return await renderTmdbPosterHtml(title, year, size, mediaType, season);
   });
 
   eleventyConfig.addNunjucksAsyncShortcode(
@@ -361,10 +484,17 @@ module.exports = function configureShortcodes(eleventyConfig) {
 
   eleventyConfig.addNunjucksAsyncShortcode(
     "logPoster",
-    async (title, year, provider = "tmdb", ogName = "", author = "") => {
+    async (title, year, provider = "tmdb", ogName = "", author = "", tmdbMediaType = "movie", season = "") => {
     const normalizedProvider = normalizeProvider(provider);
     if (normalizedProvider === "tmdb") {
-      return await renderTmdbPosterHtml(title, year, "w154");
+      const primaryMediaType = normalizeTmdbMediaType(tmdbMediaType);
+      const primaryPoster = await renderTmdbPosterHtml(title, year, "w154", primaryMediaType, season);
+
+      // For series logs, try TV first and fallback to movie only when TV has no match.
+      if (!primaryPoster && primaryMediaType === "tv") {
+        return await renderTmdbPosterHtml(title, year, "w154", "movie");
+      }
+      return primaryPoster;
     }
     if (normalizedProvider === "openlibrary") {
       return await renderOpenLibraryPosterHtml(title, year, ogName, author);
