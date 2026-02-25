@@ -1,57 +1,57 @@
 [
-  {
-    "name": "O Apanhador no Campo de Centeio",
-    "ogName": "The Catcher in the Rye",
-    "author": "J. D. Salinger",
-    "year": "1951",
-    "rating": "",
-    "rewatch": "",
-    "review": "",
-    "tags": "",
-    "when": "2025-12-29"
-  },
-  {
-    "name": "the nightmare of fabrication",
-    "ogName": "",
-    "author": "Yoshitoshi Abe",
-    "year": "1998",
-    "rating": "",
-    "rewatch": "",
-    "review": "",
-    "tags": "",
-    "when": "2022-06-07"
-  },
-  {
-    "name": "Tokyo Ghoul",
-    "ogName": "Tokyo Ghoul, Vol. 14",
-    "author": "Sui Ishida",
-    "year": "2014",
-    "rating": "",
-    "rewatch": "",
-    "review": "",
-    "tags": "",
-    "when": "2017-08-14"
-  },
-  {
-    "name": "The Garden of Words",
-    "ogName": "Garden of Words",
-    "author": "Makoto Shinkai",
-    "year": "2013",
-    "rating": "",
-    "rewatch": "",
-    "review": "",
-    "tags": "",
-    "when": "2017-03-10"
-  },
-  {
-    "name": "Parasyte",
-    "ogName": "Parasyte, Vol. 10",
-    "author": "Hitoshi Iwaaki",
-    "year": "1995",
-    "rating": "",
-    "rewatch": "",
-    "review": "",
-    "tags": "",
-    "when": "2017-01-23"
-  }
+	{
+		"name": "O Apanhador no Campo de Centeio",
+		"ogName": "The Catcher in the Rye",
+		"author": "J. D. Salinger",
+		"year": "1951",
+		"rating": "",
+		"rewatch": "",
+		"review": "Sinto que muitos leitores mais novos odeiam o Holden porque ele é um espelho deles mesmos—e um espelho bem difamante—, e muitos leitores adultos o odeiam porque não têm autoconsciência pra reconhecerem que eram igualmente irritantes aos dezesseis anos. O personagem ser um adolescente já explica suficientemente a sua personalidade e olhar de mundo, mas, se isso não for motivo o suficiente, ainda é relevante refletir sobre quanta dor ele já experienciou tão cedo, <span class='spoiler'>tendo perdido o irmão mais novo por leucemia e um amigo por suicídio</span>. É um livro excelente, e fico feliz por ter sido aquele que marcou meu retorno (ou início?) à leitura, porém não consigo deixar de pensar que talvez teria gostado ainda mais dele se tivesse lido também aos dezesseis, quando compartilhava a idade e exata mentalidade do Holden.",
+		"tags": "",
+		"when": "2025-12-29"
+	},
+	{
+		"name": "the nightmare of fabrication",
+		"ogName": "",
+		"author": "Yoshitoshi Abe",
+		"year": "1998",
+		"rating": "",
+		"rewatch": "",
+		"review": "",
+		"tags": "",
+		"when": "2022-06-07"
+	},
+	{
+		"name": "Tokyo Ghoul",
+		"ogName": "Tokyo Ghoul, Vol. 14",
+		"author": "Sui Ishida",
+		"year": "2014",
+		"rating": "",
+		"rewatch": "",
+		"review": "",
+		"tags": "",
+		"when": "2017-08-14"
+	},
+	{
+		"name": "The Garden of Words",
+		"ogName": "Garden of Words",
+		"author": "Makoto Shinkai",
+		"year": "2013",
+		"rating": "",
+		"rewatch": "",
+		"review": "",
+		"tags": "",
+		"when": "2017-03-10"
+	},
+	{
+		"name": "Parasyte",
+		"ogName": "Parasyte, Vol. 10",
+		"author": "Hitoshi Iwaaki",
+		"year": "1995",
+		"rating": "",
+		"rewatch": "",
+		"review": "",
+		"tags": "",
+		"when": "2017-01-23"
+	}
 ]
