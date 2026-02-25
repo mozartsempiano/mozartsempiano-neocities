@@ -503,17 +503,14 @@ s {
 	}
 }
 
-s.spoiler {
+span.spoiler {
+	color: currentColor;
 	background-color: currentColor;
 	user-select: none;
 
 	&:hover {
 		background-color: transparent;
 		user-select: unset;
-	}
-
-	&::before {
-		all: unset;
 	}
 }
 

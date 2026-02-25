@@ -137,7 +137,9 @@ function loadSourceMeta(slug) {
 function loadRows(filePath) {
   const ext = path.extname(filePath).toLowerCase();
   if (ext === ".json") {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const raw = fs.readFileSync(filePath, "utf8");
+    const normalized = raw.charCodeAt(0) === 0xfeff ? raw.slice(1) : raw;
+    return JSON.parse(normalized);
   }
 
   delete require.cache[require.resolve(filePath)];
@@ -244,3 +246,4 @@ module.exports = (() => {
 
   return pages;
 })();
+

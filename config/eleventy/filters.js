@@ -167,6 +167,21 @@ module.exports = function configureFilters(eleventyConfig) {
     return d.toISOString().slice(11, 16);
   });
 
+  const formatSeason = (value) => {
+    if (value === null || value === undefined) return "";
+
+    const season = String(value).trim();
+    if (!season) return "";
+
+    if (/^\d+$/.test(season)) {
+      return `S${season.padStart(2, "0")}`;
+    }
+
+    return season;
+  };
+  eleventyConfig.addFilter("formatSeason", formatSeason);
+  eleventyConfig.addNunjucksFilter("formatSeason", formatSeason);
+
   eleventyConfig.addFilter("backlinksForUrl", (collectionItems, url) => {
     if (!Array.isArray(collectionItems)) return [];
     const target = normalizeTrailingSlashUrl(url);
