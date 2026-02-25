@@ -1,9 +1,13 @@
-﻿const fs = require("fs");
+const fs = require("fs");
 const path = require("path");
+const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const DATA_DIR = __dirname;
 const CONTENT_DIR = path.join(__dirname, "..", "content");
 const LOG_DATA_RE = /-log\.(js|json)$/i;
+const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/";
+const TMDB_BACKDROP_CACHE_PATH = path.join(process.cwd(), ".cache", "tmdb-backdrops.json");
+const TMDB_CACHE_VERSION = 1;
 const LOG_POSTER_PROVIDERS = {
   "cinema-log": "tmdb",
   "series-log": "tmdb",
@@ -18,6 +22,298 @@ const LOG_TITLES = {
   "series-log": "Diário de Séries",
   "leitura-log": "Diário de Leitura",
 };
+const LOG_DYNAMIC_HEADER_SLUGS = new Set(["cinema-log", "series-log", "anime-log"]);
+const LOG_BACKDROP_DIR = path.join(process.cwd(), "assets", "img", "tmdb-backdrops");
+
+function toPositiveNumber(value, fallback) {
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
+
+const TMDB_CACHE_DAYS = toPositiveNumber(process.env.TMDB_CACHE_DAYS, 30);
+const TMDB_NOT_FOUND_CACHE_DAYS = toPositiveNumber(process.env.TMDB_NOT_FOUND_CACHE_DAYS, 7);
+const TMDB_FORCE_REFRESH = process.env.TMDB_FORCE_REFRESH === "1";
+
+function resolveLogHeaderImage(slug) {
+  const fileName = `${slug}-header.jpg`;
+  const fsPath = path.join(__dirname, "..", "assets", "img", fileName);
+  if (!fs.existsSync(fsPath)) return "";
+  return `/assets/img/${fileName}`;
+}
+
+function normalizeTmdbMediaTypeSafe(value) {
+  const normalized = normalizeTmdbMediaType(value);
+  return normalized || "movie";
+}
+
+function normalizeTmdbCacheKey(title, year, mediaType) {
+  const safeTitle = String(title || "").trim().toLowerCase();
+  const safeYear = String(year || "").trim();
+  const safeMediaType = normalizeTmdbMediaTypeSafe(mediaType);
+  return `${safeTitle}|${safeYear}|${safeMediaType}`;
+}
+
+function loadCache(cachePath) {
+  try {
+    if (!fs.existsSync(cachePath)) {
+      return { version: TMDB_CACHE_VERSION, items: {} };
+    }
+    const raw = fs.readFileSync(cachePath, "utf8");
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") {
+      return { version: TMDB_CACHE_VERSION, items: {} };
+    }
+    const items = parsed.items && typeof parsed.items === "object" ? parsed.items : {};
+    return { version: TMDB_CACHE_VERSION, items };
+  } catch {
+    return { version: TMDB_CACHE_VERSION, items: {} };
+  }
+}
+
+function saveCache(cachePath, cache) {
+  try {
+    fs.mkdirSync(path.dirname(cachePath), { recursive: true });
+    fs.writeFileSync(
+      cachePath,
+      JSON.stringify(
+        {
+          version: TMDB_CACHE_VERSION,
+          updatedAt: new Date().toISOString(),
+          items: cache.items || {},
+        },
+        null,
+        2,
+      ),
+      "utf8",
+    );
+  } catch {}
+}
+
+function isEntryFresh(entry, forceRefresh, cacheDays, notFoundCacheDays) {
+  if (!entry || forceRefresh) return false;
+  const fetchedAt = Date.parse(entry.fetchedAt || "");
+  if (!Number.isFinite(fetchedAt)) return false;
+  const ageMs = Date.now() - fetchedAt;
+  const maxAgeDays = entry.status === "not_found" ? notFoundCacheDays : cacheDays;
+  return ageMs <= maxAgeDays * 24 * 60 * 60 * 1000;
+}
+
+async function fetchTmdbBackdropEntry(title, year, mediaType, tmdbKey, useYearFilter = true) {
+  const safeTitle = String(title || "").trim();
+  const safeMediaType = normalizeTmdbMediaTypeSafe(mediaType);
+  if (!safeTitle || !tmdbKey) {
+    return { status: "not_found", fetchedAt: new Date().toISOString() };
+  }
+
+  const params = new URLSearchParams({
+    api_key: tmdbKey,
+    language: "en",
+    query: safeTitle,
+  });
+
+  const yearNum = Number.parseInt(String(year || "").trim(), 10);
+  if (useYearFilter && Number.isFinite(yearNum)) {
+    if (safeMediaType === "tv") {
+      params.set("first_air_date_year", String(yearNum));
+    } else {
+      params.set("year", String(yearNum));
+    }
+  }
+
+  const url = `https://api.themoviedb.org/3/search/${safeMediaType}?${params.toString()}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`TMDB HTTP ${res.status}`);
+  }
+
+  const data = await res.json();
+  const results = Array.isArray(data.results) ? data.results : [];
+  const result = results.find((item) => item && item.backdrop_path) || results[0];
+
+  if (!result || !result.backdrop_path) {
+    return {
+      status: "not_found",
+      fetchedAt: new Date().toISOString(),
+    };
+  }
+
+  return {
+    status: "ok",
+    backdropPath: result.backdrop_path,
+    title: result.title || result.name || safeTitle,
+    mediaType: safeMediaType,
+    fetchedAt: new Date().toISOString(),
+  };
+}
+
+async function resolveTmdbBackdropEntry(title, year, mediaType, tmdbKey, cache, inFlight) {
+  const safeMediaType = normalizeTmdbMediaTypeSafe(mediaType);
+  const key = normalizeTmdbCacheKey(title, year, safeMediaType);
+  const cached = cache.items[key];
+
+  if (isEntryFresh(cached, TMDB_FORCE_REFRESH, TMDB_CACHE_DAYS, TMDB_NOT_FOUND_CACHE_DAYS)) {
+    return cached;
+  }
+
+  if (inFlight.has(key)) {
+    return inFlight.get(key);
+  }
+
+  const hasYear = Number.isFinite(Number.parseInt(String(year || "").trim(), 10));
+
+  const job = (async () => {
+    try {
+      let next = await fetchTmdbBackdropEntry(title, year, safeMediaType, tmdbKey, true);
+      if (next?.status === "not_found" && hasYear) {
+        next = await fetchTmdbBackdropEntry(title, year, safeMediaType, tmdbKey, false);
+      }
+      cache.items[key] = next;
+      saveCache(TMDB_BACKDROP_CACHE_PATH, cache);
+      return next;
+    } catch (e) {
+      if (cached) return cached;
+      console.error("[tmdb] erro ao atualizar backdrop:", e.message);
+      return null;
+    } finally {
+      inFlight.delete(key);
+    }
+  })();
+
+  inFlight.set(key, job);
+  return job;
+}
+
+async function resolveTmdbBackdropWithFallback(title, year, mediaType, tmdbKey, cache, inFlight) {
+  const primaryMediaType = normalizeTmdbMediaTypeSafe(mediaType);
+  const mediaTypes =
+    primaryMediaType === "tv"
+      ? ["tv", "movie"]
+      : primaryMediaType === "movie"
+        ? ["movie", "tv"]
+        : [primaryMediaType];
+
+  for (const currentType of mediaTypes) {
+    const entry = await resolveTmdbBackdropEntry(title, year, currentType, tmdbKey, cache, inFlight);
+    if (entry?.status === "ok" && entry.backdropPath) {
+      return {
+        ...entry,
+        mediaType: currentType,
+      };
+    }
+  }
+
+  return null;
+}
+
+function getBackdropLocalPaths(backdropPath, mediaType) {
+  const cleanPath = String(backdropPath || "").replace(/^\/+/, "");
+  if (!cleanPath) return null;
+
+  const safeFileName = path.basename(cleanPath).replace(/[^a-zA-Z0-9._-]/g, "");
+  if (!safeFileName) return null;
+
+  const safeMediaType = normalizeTmdbMediaTypeSafe(mediaType);
+  const fsPath = path.join(LOG_BACKDROP_DIR, safeMediaType, safeFileName);
+  const webPath = `/assets/img/tmdb-backdrops/${safeMediaType}/${safeFileName}`;
+  return { fsPath, webPath };
+}
+
+async function downloadFile(url, destinationPath) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+  const bytes = await response.arrayBuffer();
+  await fs.promises.mkdir(path.dirname(destinationPath), { recursive: true });
+  await fs.promises.writeFile(destinationPath, Buffer.from(bytes));
+}
+
+function getHeaderFallback(meta, slug) {
+  const explicitImage = String(meta?.imgPrincipal || "").trim();
+  const explicitCaption = String(meta?.imgPrincipalCaption || "").trim();
+  if (explicitImage) {
+    return {
+      imgPrincipal: explicitImage,
+      imgPrincipalCaption: explicitCaption,
+      hasExplicitImage: true,
+    };
+  }
+  return {
+    imgPrincipal: resolveLogHeaderImage(slug),
+    imgPrincipalCaption: explicitCaption,
+    hasExplicitImage: false,
+  };
+}
+
+function formatHeaderCaption(item) {
+  const title = String(item?.name || "").trim();
+  const year = String(item?.year || "").trim();
+  if (!title) return "";
+  return year ? `${title} (${year})` : title;
+}
+
+async function resolveDynamicHeaderForYear({
+  slug,
+  items,
+  tmdbMediaType,
+  fallbackHeader,
+  tmdbKey,
+  shouldSkipTmdbLookup,
+  cache,
+  inFlight,
+}) {
+  if (!LOG_DYNAMIC_HEADER_SLUGS.has(slug)) return fallbackHeader;
+  if (fallbackHeader.hasExplicitImage) return fallbackHeader;
+  if (!Array.isArray(items) || items.length === 0) return fallbackHeader;
+
+  if (!tmdbKey || shouldSkipTmdbLookup) return fallbackHeader;
+
+  for (let i = items.length - 1; i >= 0; i -= 1) {
+    const candidate = items[i];
+    const title = String(candidate?.name || "").trim();
+    const year = String(candidate?.year || "").trim();
+    if (!title) continue;
+
+    const caption = formatHeaderCaption(candidate);
+    const entry = await resolveTmdbBackdropWithFallback(
+      title,
+      year,
+      tmdbMediaType,
+      tmdbKey,
+      cache,
+      inFlight,
+    );
+
+    if (!entry?.backdropPath) continue;
+
+    const remoteUrl = `${TMDB_IMAGE_BASE}w1280${entry.backdropPath}`;
+    const localPaths = getBackdropLocalPaths(entry.backdropPath, entry.mediaType);
+    if (!localPaths) {
+      return {
+        imgPrincipal: remoteUrl,
+        imgPrincipalCaption: caption,
+      };
+    }
+
+    try {
+      if (!fs.existsSync(localPaths.fsPath)) {
+        await downloadFile(remoteUrl, localPaths.fsPath);
+      }
+      return {
+        imgPrincipal: localPaths.webPath,
+        imgPrincipalCaption: caption,
+      };
+    } catch (e) {
+      console.error("[tmdb] erro ao baixar backdrop:", e.message);
+      return {
+        imgPrincipal: remoteUrl,
+        imgPrincipalCaption: caption,
+      };
+    }
+  }
+
+  return fallbackHeader;
+}
 
 function parseFrontMatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -170,7 +466,14 @@ function byWhenDesc(a, b) {
   return bSafe - aSafe;
 }
 
-module.exports = (() => {
+module.exports = (async () => {
+  const tmdbKey = process.env.TMDB_API_KEY;
+  const isServeMode = process.env.ELEVENTY_RUN_MODE === "serve";
+  const tmdbDisabledInServe = process.env.ELEVENTY_DISABLE_TMDB_IN_SERVE === "1";
+  const shouldSkipTmdbLookup = isServeMode && tmdbDisabledInServe;
+  const tmdbBackdropCache = loadCache(TMDB_BACKDROP_CACHE_PATH);
+  const tmdbBackdropInFlight = new Map();
+
   const files = fs
     .readdirSync(DATA_DIR)
     .filter((name) => LOG_DATA_RE.test(name))
@@ -211,29 +514,42 @@ module.exports = (() => {
 
     const years = [...byYear.keys()].sort((a, b) => Number(b) - Number(a));
 
-    years.forEach((year, index) => {
+    for (let index = 0; index < years.length; index += 1) {
+      const year = years[index];
       const newestYear = years[0];
       const isNewestYear = year === newestYear;
       const newerYear = index > 0 ? years[index - 1] : null;
       const olderYear = index + 1 < years.length ? years[index + 1] : null;
+      const yearItems = byYear.get(year) || [];
 
       const permalink = isNewestYear ? `/${slug}/` : `/${slug}/${year}/`;
       const newerUrl = newerYear ? (newerYear === newestYear ? `/${slug}/` : `/${slug}/${newerYear}/`) : null;
       const olderUrl = olderYear ? `/${slug}/${olderYear}/` : null;
+      const fallbackHeader = getHeaderFallback(meta, slug);
+      const dynamicHeader = await resolveDynamicHeaderForYear({
+        slug,
+        items: yearItems,
+        tmdbMediaType: meta.tmdbMediaType,
+        fallbackHeader,
+        tmdbKey,
+        shouldSkipTmdbLookup,
+        cache: tmdbBackdropCache,
+        inFlight: tmdbBackdropInFlight,
+      });
 
       pages.push({
         slug,
         title: meta.title,
         subtitulo: meta.subtitulo,
-        imgPrincipal: meta.imgPrincipal,
-        imgPrincipalCaption: meta.imgPrincipalCaption,
+        imgPrincipal: dynamicHeader.imgPrincipal || fallbackHeader.imgPrincipal,
+        imgPrincipalCaption: dynamicHeader.imgPrincipalCaption || fallbackHeader.imgPrincipalCaption,
         posterProvider: meta.posterProvider,
         tmdbMediaType: meta.tmdbMediaType,
         noBacklinks: meta.noBacklinks,
         introMarkdown: meta.introMarkdown,
         year,
         years,
-        items: byYear.get(year) || [],
+        items: yearItems,
         isNewestYear,
         permalink,
         newerYear,
@@ -241,7 +557,7 @@ module.exports = (() => {
         olderYear,
         olderUrl,
       });
-    });
+    }
   }
 
   return pages;
