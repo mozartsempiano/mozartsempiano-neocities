@@ -7,7 +7,7 @@ draft: true
 
 Isso é uma página [now](https://nownownow.com/about), que diz o que estou fazendo agora.
 
-## Música
+## [Música](/musica/)
 
 <div style="display: flex; flex-direction: row; gap: var(--gap-padrao); justify-content: flex-start;">
 

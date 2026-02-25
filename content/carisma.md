@@ -6,7 +6,7 @@ created: 2026-02-06T20:39
 
 ## "Como eu quero ser percebido e o que eu devo fazer pra alcançar isso?"
 
-- Quase ninguém lembra das coisas que você disse, mas sobre como você fez eles se sentirem. As pessoas gostam se você as faz se sentirem importantes e valorizadas.
+- Quase ninguém lembra das coisas que você disse, mas sobre como você fez eles se sentirem. As [pessoas](/humanidade/) gostam se você as faz se sentirem importantes e valorizadas.
 - Sempre tome iniciativa.
 - Compartilhe suas imperfeições e constrangimentos como se não fossem nada demais, pra ajudar a crescer a sua confiança; não trate como se fosse vergonhoso, mas natural. Honestidade é a chave.
 - Assuma o que você fizer ou não faça.
@@ -30,7 +30,7 @@ created: 2026-02-06T20:39
 - Divida o elogio; elogie os outros sem se desmerecer; e elogie não só uma pessoa, mas todos, quando genuíno, pra não parecer puxa-saco.
 - Não perca a linha em situações nas quais a maioria perderia. Mantenha contato visual mesmo em conflito pra demonstrar confiança, mas olhe para os lados às vezes se quiser desescalar a situação.
 - Não faça afirmações em tom de pergunta, porque mostra falta de confiança em si mesmo.
-- Fale devagar e use pausas entre palavras.
+- Fale devagar e use pausas entre [palavras](/linguagem/).
 - Se não correr bem, siga com a suaa vida. O que se foi, se foi; o que restou, valorize e preserve.
 - Busque algo pra ser grato todos os dias, independente do momento no qual você estiver na vida, por menor que seja.
 - Sorria.

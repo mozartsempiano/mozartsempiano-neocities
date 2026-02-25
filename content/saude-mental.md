@@ -10,7 +10,7 @@ created: 2026-02-04T16:33
 >
 > Abraham Lincoln
 
-As pessoas vão tolerar até um certo ponto a autocrítica, porque mostra que você tem consciência de si, mas o ódio a si mesmo é só sabotagem contínua.
+As [pessoas](/humanidade/) vão tolerar até um certo ponto a autocrítica, porque mostra que você tem consciência de si, mas o ódio a si mesmo é só sabotagem contínua.
 
 Você tem que fazer o possível pra se manter otimista, esperançoso e forte com relação a essas emoções na sua vida.
 
@@ -64,7 +64,7 @@ Você tem que fazer o possível pra se manter otimista, esperançoso e forte com
 
 - Silêncio e paz
 - Escrever
-- Ouvir música
+- Ouvir [música](/musica/)
 
 ### Coisas que me fazem mal
 

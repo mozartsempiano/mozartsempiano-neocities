@@ -26,11 +26,11 @@ Isso é uma página [uses](https://uses.tech/), que cita tudo aquilo que uso de 
 
 ## Software
 
-### Design
+### [Design](/design/)
 
 - Adobe Creative Cloud, mas especialmente Photoshop e Illustrator
 
-### Desenvolvimento
+### [Desenvolvimento](/programacao/)
 
 - VS Code
 
@@ -46,8 +46,8 @@ Isso é uma página [uses](https://uses.tech/), que cita tudo aquilo que uso de 
 - [Duck Duck Go](https://duckduckgo.com/) para pesquisas
 - [Fonts Ninja](https://www.fonts.ninja/) para ver detalhes sobre fontes em qualquer site
 
-## Fotografia
+## [Fotografia](/fotografia/)
 
 - Sony Cyber-shot DSC-W180
-- [Leitor de Cartão Memória Ugreen pra Usb 3.0 Externo Portátil](https://ugreendobrasil.com.br/produto/leitor-de-cartao-memoria-ugreen-pra-usb-3-0-externo-portatil/) para transferir as fotos da câmera para o computador
+- [Leitor de Cartão Memória Ugreen pra Usb 3.0 Externo Portátil](https://ugreendobrasil.com.br/produto/leitor-de-cartao-memoria-ugreen-pra-usb-3-0-externo-portatil/) para transferir as fotos da câmera para o [computador](/computador/)
 - Pós-produção no Camera Raw do Photoshop

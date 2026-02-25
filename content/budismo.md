@@ -8,7 +8,7 @@ imgPrincipal: /assets/img/buda_gato.jpg
 ## Dokkōdō
 
 1. Aceite a vida como ela é.
-   - As pessoas tendem a criar estresse para si mesmas ao desejar que as coisas e as circunstâncias fossem diferentes do que são. Em vez de se obcecar com o motivo pelo qual a vida deveria ser diferente, aceite-a pelo que ela é, aceite as coisas como elas são. Estresse, preocupações e ansiedades são uma parte natural da vida e, em vez de atacar seus sentimentos naturais, aceite-os e você se tornará mais forte.
+   - As [pessoas](/humanidade/) tendem a criar estresse para si mesmas ao desejar que as coisas e as circunstâncias fossem diferentes do que são. Em vez de se obcecar com o motivo pelo qual a vida deveria ser diferente, aceite-a pelo que ela é, aceite as coisas como elas são. Estresse, preocupações e ansiedades são uma parte natural da vida e, em vez de atacar seus sentimentos naturais, aceite-os e você se tornará mais forte.
 
 2. Não busque o prazer por si só.
    - Os seres humanos tendem a passar grande parte de seu tempo na Terra perseguindo prazeres passageiros, tornando-se escravos de seus desejos internos. Em vez disso, viva no momento; não persiga o prazer, mas aprecie-o quando ele surgir naturalmente.
@@ -37,7 +37,7 @@ imgPrincipal: /assets/img/buda_gato.jpg
    - As pessoas frequentemente tendem a reclamar quando surgem problemas, mas o ensinamento de Musashi era que isso pode prejudicar nossa força mental e nos manter presos ao passado. Em vez de reclamar, deixe que seus problemas passem por você enquanto sua mente permanece calma no momento.
 
 10. Não deixe que a luxúria controle sua vida.
-    - Os seres humanos são sexuais por natureza, mas muitas pessoas passam suas vidas em um estado de desejo constante. Musashi acreditava que não deveríamos buscar a luxúria, mas sim buscar o amor e relacionamentos duradouros, pois, a longo prazo, eles são muito mais benéficos para a vida de uma pessoa.
+    - Os seres humanos são sexuais por natureza, mas muitas pessoas passam suas vidas em um estado de desejo constante. Musashi acreditava que não deveríamos buscar a luxúria, mas sim buscar o [amor](/romance/) e relacionamentos duradouros, pois, a longo prazo, eles são muito mais benéficos para a vida de uma pessoa.
 
 11. Mantenha suas opções abertas.
     - Não se torne de mente estreita e não fique preso a apenas um futuro possível. Mantenha a mente aberta e permita as possibilidades da vida.

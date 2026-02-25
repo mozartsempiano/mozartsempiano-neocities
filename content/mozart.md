@@ -9,7 +9,7 @@ created: 2026-02-21T16:29
 >
 > Albert Camus, The Rebel
 
-## Pessoas que já disseram que parecem comigo
+## [Pessoas](/humanidade/) que já disseram que parecem comigo
 
 Em ordem cronológica:
 

@@ -76,7 +76,7 @@ created: 2026-02-04T16:33
 ## Shows em que fui
 
 - **15 & 16.01.2020 - Alex G - Sesc Pompéia**
-  - Acredito de verdade que esses foram os melhores dias da minha vida até hoje. Foi no Sesc Pompéia, e o espaço não era muito grande (acho ótimo) e, na época, o Alex G não era tão popular, então não tinha tanta gente. Também consegui ficar bem na frente, as pessoas estavam sendo respeitosas e o Alex G em si performou excelentemente. É um cara super simpático! Ele chegou até a dar a sua paleta à minha amiga, que me acompanhou. Na verdade, a gente era a fim um do outro e, depois do show do segundo dia, acabamos nos beijando. Foi a última vez que a vi.
+  - Acredito de verdade que esses foram os melhores dias da minha vida até hoje. Foi no Sesc Pompéia, e o espaço não era muito grande (acho ótimo) e, na época, o Alex G não era tão popular, então não tinha tanta gente. Também consegui ficar bem na frente, as [pessoas](/humanidade/) estavam sendo respeitosas e o Alex G em si performou excelentemente. É um cara super simpático! Ele chegou até a dar a sua paleta à minha amiga, que me acompanhou. Na verdade, a gente era a fim um do outro e, depois do show do segundo dia, acabamos nos beijando. Foi a última vez que a vi.
 - **26.04.2025 - Machine Girl - Hangar 110**
 - **17.09.2025 - Boogarins - Sesc Bauru**
 - **08.11.2025 - Cap'n Jazz - Cine Joia**

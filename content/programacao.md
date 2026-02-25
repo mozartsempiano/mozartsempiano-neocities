@@ -43,7 +43,7 @@ npx eleventy --serve
 
 Para abrir localhost:8080.
 
-Caso não tenha Node no computador e não tenha permissão de administrador pra baixar, baixar o .zip dele pelo site oficial, extrair em alguma pasta, como C:\Users\User, e usar:
+Caso não tenha Node no [computador](/computador/) e não tenha permissão de administrador pra baixar, baixar o .zip dele pelo site oficial, extrair em alguma pasta, como C:\Users\User, e usar:
 
 ```
 $env:PATH = "C:\Users[User]\node;" + $env:PATH

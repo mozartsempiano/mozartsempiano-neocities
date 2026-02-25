@@ -15,7 +15,7 @@ God will bless you if you stop hating
 
 ![](/assets/img/i-love-public-transport.jpg)
 
-marketing é genuinamente uma das áreas mais abomináveis que existem. não tem paixão nenhuma por trás, só um desejo patético por vencer, independentemente do custo. pessoas artificiais reproduzindo seu artifício e estudando "dicas" pra atrair as pessoas usando psicologia. é manipulador, exploratório e desalmado. se não vem do coração, eu não quero.
+marketing é genuinamente uma das áreas mais abomináveis que existem. não tem paixão nenhuma por trás, só um desejo patético por vencer, independentemente do custo. [pessoas](/humanidade/) artificiais reproduzindo seu artifício e estudando "dicas" pra atrair as pessoas usando psicologia. é manipulador, exploratório e desalmado. se não vem do coração, eu não quero.
 
 ![](/assets/img/fassod.jpg)
 

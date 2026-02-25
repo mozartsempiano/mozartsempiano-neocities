@@ -54,7 +54,7 @@ Quanto mais o tempo passa, mais eu me convenço de que ninguem nunca vai ser dig
 - Ser capaz de ser flexível e quebrar minhas próprias regras em prol do bem-estar do outro.
 - Não se preocupar com reputação ou "personagem" → Parece bobo, mas não negar colocar arroba na bio ou ícone combinando.
 - Pedir desculpas quando necessário; reconhecer o meu erro.
-- O ponto não deve ser "vencer" uma discussão, mas sim entender o outro e ajudar um ao outro a se tornarem suas melhores versões. - Mesmo que você esteja certo, talvez a forma como você se expressa não é a mais adequada e pode ser vista como um ataque. As pessoas não mudam quando são ditas o que há de errado com elas, elas mudam quando se sentem apoiadas para realizar a mudança que já sabem que é necessária. Não há prêmio em "vencer" uma discussão além da merecida solidão.
+- O ponto não deve ser "vencer" uma discussão, mas sim entender o outro e ajudar um ao outro a se tornarem suas melhores versões. - Mesmo que você esteja certo, talvez a forma como você se expressa não é a mais adequada e pode ser vista como um ataque. As [pessoas](/humanidade/) não mudam quando são ditas o que há de errado com elas, elas mudam quando se sentem apoiadas para realizar a mudança que já sabem que é necessária. Não há prêmio em "vencer" uma discussão além da merecida solidão.
 - Não usar os defeitos do outro contra ele mesmo.
 - Não agir como se o outro estivesse me envergonhando ou como se eu fosse superior a eles.
 - Dizer à pessoa o que eu aprecio nela. Maneirar no sarcasmo, e ter certeza de que eu uso ele pra demonstrar amor, e não zombar a pessoa.
@@ -110,7 +110,7 @@ Red Flags que são mais difíceis de conversar sobre, mas ainda são negociávei
 
 4. Tem medo de comprometimento; fica nervosa, resistente ou preocupada demais quando eu demonstro que quero algo sério. → Pode surgir de traumas passados não-resolvidos e inseguranças. Indica que a pessoa tá incerta em relação a mim ou que ela não tá pronta pra um relacionamento sério. → Por outro lado, dependendo do contexto, talvez a pessoa tenha um ritmo diferente do meu. Entretanto, é importante prestar atenção se a pessoa continua sendo recíproca, mesmo que num ritmo lento.
 
-5. Parece não valorizar o nosso tempo juntos: fica no celular; não inicia conversas e só responde; dorme no meio do date; não parece animada pra me ver ou conversar comigo. → Reflete desinteresse e desrespeito com o meu tempo.
+5. Parece não valorizar o nosso tempo juntos: fica no celular; não inicia conversas e só responde; [dormir](/sonhos-log/) no meio do date; não parece animada pra me ver ou conversar comigo. → Reflete desinteresse e desrespeito com o meu tempo.
 
 6. Me deixa de lado quando saímos com outras pessoas; não é tranquilizadora ou atenciosa; não parece se importar se eu tô preocupado. → Indica desinteresse, falta de empatia e falta de habilidade de equilibrar atenção em ambientes sociais.
 
