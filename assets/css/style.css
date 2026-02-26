@@ -677,11 +677,6 @@ iframe {
 	overflow: hidden;
 }
 
-/* Mostrar imagem original nÃ£o-ditherizada no hover */
-/* figure .dither-hover-wrap:has(img.dither-hover-base):hover {
-	cursor: help;
-} */
-
 .runtime-dither-wrap {
 	position: relative;
 	display: inline-block;
@@ -713,8 +708,6 @@ iframe {
 .runtime-dither-wrap > .runtime-dither-canvas {
 	position: absolute;
 	inset: 0;
-	width: 100%;
-	height: 100%;
 	opacity: 0;
 	pointer-events: none;
 	image-rendering: pixelated;
