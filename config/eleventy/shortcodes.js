@@ -97,11 +97,16 @@ function enableHoverOriginalOnImgHtml(html) {
   if (!markup) return "";
   if (!/^<img\b/i.test(markup)) return markup;
   if (/\balt\s*=/i.test(markup)) {
-    return markup.replace(/\balt\s*=\s*(['"])([^'"]*)\1/i, (full, quote, altValue) => {
-      if (/\bhover-original\b/i.test(altValue)) return full;
-      const nextAlt = altValue ? `${altValue} hover-original` : "hover-original";
-      return `alt=${quote}${nextAlt}${quote}`;
-    });
+    return markup.replace(
+      /\balt\s*=\s*(?:"([^"]*)"|'([^']*)')/i,
+      (full, doubleQuotedAlt, singleQuotedAlt) => {
+        const quote = doubleQuotedAlt != null ? '"' : "'";
+        const altValue = doubleQuotedAlt != null ? doubleQuotedAlt : singleQuotedAlt;
+        if (/\bhover-original\b/i.test(altValue)) return full;
+        const nextAlt = altValue ? `${altValue} hover-original` : "hover-original";
+        return `alt=${quote}${nextAlt}${quote}`;
+      },
+    );
   }
   return markup.replace(/^<img\b/i, '<img alt="hover-original"');
 }
