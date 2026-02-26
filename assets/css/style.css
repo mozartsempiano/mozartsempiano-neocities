@@ -514,7 +514,8 @@ span.spoiler {
 	}
 }
 
-code {
+code,
+pre:not(:has(code)) {
 	font-family: var(--fonte-monospace);
 	font-size: 0.84rem;
 	line-height: normal !important;
@@ -523,6 +524,9 @@ code {
 	outline: 0;
 	padding: 0.4rem 0.8rem;
 	overflow: auto;
+}
+
+code {
 	transition: box-shadow var(--transition-time-short);
 }
 
@@ -541,6 +545,12 @@ code:hover {
 
 pre code {
 	display: block;
+}
+
+.scroll {
+	min-height: 300px;
+	max-height: 48vh;
+	overflow-y: scroll;
 }
 
 @keyframes bounce {

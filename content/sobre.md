@@ -6,6 +6,12 @@ created: 2026-02-26T09:11
 
 ## Licença
 
+{% if license %}
+
+<pre class="scroll">{{ license | escape }}</pre>
+
+{% endif %}
+
 ## Atribuições
 
 This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
