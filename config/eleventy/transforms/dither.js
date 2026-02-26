@@ -17,7 +17,7 @@ module.exports = function configureDitherTransform(eleventyConfig) {
 	const frontMatterCache = new Map();
 	const HOVER_ALT_KEYWORD = "hover-original";
 	const siteData = require(path.join(process.cwd(), "_data", "site.json"));
-	const BAYER = Number(siteData?.dither?.bayerSize ?? 16);
+	const BAYER = Number(siteData?.dither?.bayerSize ?? siteData?.bayerSize ?? 16);
 	if (![2, 4, 8, 16].includes(BAYER)) {
 		throw new Error(
 			`BAYER inválido no site.json: ${BAYER}. Use 2, 4, 8 ou 16.`,

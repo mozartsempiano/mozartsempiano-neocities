@@ -92,6 +92,20 @@ function escapeAttr(value) {
     .replace(/>/g, "&gt;");
 }
 
+function enableHoverOriginalOnImgHtml(html) {
+  const markup = String(html || "");
+  if (!markup) return "";
+  if (!/^<img\b/i.test(markup)) return markup;
+  if (/\balt\s*=/i.test(markup)) {
+    return markup.replace(/\balt\s*=\s*(['"])([^'"]*)\1/i, (full, quote, altValue) => {
+      if (/\bhover-original\b/i.test(altValue)) return full;
+      const nextAlt = altValue ? `${altValue} hover-original` : "hover-original";
+      return `alt=${quote}${nextAlt}${quote}`;
+    });
+  }
+  return markup.replace(/^<img\b/i, '<img alt="hover-original"');
+}
+
 function loadCache(cachePath) {
   try {
     if (!fs.existsSync(cachePath)) {
@@ -492,12 +506,16 @@ module.exports = function configureShortcodes(eleventyConfig) {
 
       // For series logs, try TV first and fallback to movie only when TV has no match.
       if (!primaryPoster && primaryMediaType === "tv") {
-        return await renderTmdbPosterHtml(title, year, "w154", "movie");
+        return enableHoverOriginalOnImgHtml(
+          await renderTmdbPosterHtml(title, year, "w154", "movie"),
+        );
       }
-      return primaryPoster;
+      return enableHoverOriginalOnImgHtml(primaryPoster);
     }
     if (normalizedProvider === "openlibrary") {
-      return await renderOpenLibraryPosterHtml(title, year, ogName, author);
+      return enableHoverOriginalOnImgHtml(
+        await renderOpenLibraryPosterHtml(title, year, ogName, author),
+      );
     }
     return "";
     },

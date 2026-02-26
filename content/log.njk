@@ -33,10 +33,10 @@ eleventyComputed:
         {% if logPage.posterProvider != "none" and item.review and(item.review | trim) != '' %}
             {% if item.posterUrl %}
                 <img src="{{ item.posterUrl | escape }}"
-                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %}" />
+                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %} hover-original" />
             {% elseif item.tmdbPoster %}
                 <img src="https://image.tmdb.org/t/p/w154{{ item.tmdbPoster | escape }}"
-                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %}" />
+                     alt="{{ item.name | escape }}{% if item.year %} ({{ item.year }}){% endif %} hover-original" />
             {% else %}
                 {% logPoster item.name,
                 item.year,

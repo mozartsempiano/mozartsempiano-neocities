@@ -672,6 +672,97 @@ iframe {
 	cursor: help;
 } */
 
+.runtime-dither-wrap {
+	position: relative;
+	display: inline-block;
+	isolation: isolate;
+	border-radius: inherit;
+	overflow: hidden;
+	max-width: 100%;
+	line-height: 0;
+	vertical-align: middle;
+	flex: 0 0 auto;
+	align-self: flex-start;
+}
+
+.runtime-dither-wrap.runtime-dither-block {
+	display: block;
+}
+
+.runtime-dither-wrap.runtime-dither-inline {
+	display: inline-block;
+}
+
+.runtime-dither-wrap > .runtime-dither-source {
+	max-width: 100%;
+	transition:
+		opacity var(--transition-time),
+		filter var(--transition-time);
+}
+
+.runtime-dither-wrap > .runtime-dither-canvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	image-rendering: pixelated;
+	transition: opacity var(--transition-time);
+}
+
+.runtime-dither-wrap.runtime-dither-ready > .runtime-dither-canvas {
+	opacity: 1;
+}
+
+.runtime-dither-wrap.runtime-dither-ready > .runtime-dither-source {
+	opacity: 0;
+}
+
+.runtime-dither-wrap.runtime-dither-fallback > .runtime-dither-source {
+	filter: grayscale(1) contrast(1.45) brightness(1.03);
+}
+
+.runtime-dither-wrap.runtime-dither-fallback::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: url("/assets/img/matrix.webp");
+	background-repeat: repeat;
+	background-attachment: local;
+	mix-blend-mode: soft-light;
+	opacity: 0.65;
+	pointer-events: none;
+	image-rendering: pixelated;
+	transition: opacity var(--transition-time);
+}
+
+.runtime-dither-wrap.runtime-dither-hover-original:hover
+	> .runtime-dither-source,
+.runtime-dither-wrap.runtime-dither-hover-original:focus-within
+	> .runtime-dither-source {
+	opacity: 1;
+}
+
+.runtime-dither-wrap.runtime-dither-hover-original:hover
+	> .runtime-dither-canvas,
+.runtime-dither-wrap.runtime-dither-hover-original:focus-within
+	> .runtime-dither-canvas {
+	opacity: 0;
+}
+
+.runtime-dither-wrap.runtime-dither-hover-original.runtime-dither-fallback:hover
+	> .runtime-dither-source,
+.runtime-dither-wrap.runtime-dither-hover-original.runtime-dither-fallback:focus-within
+	> .runtime-dither-source {
+	filter: none;
+}
+
+.runtime-dither-wrap.runtime-dither-hover-original.runtime-dither-fallback:hover::after,
+.runtime-dither-wrap.runtime-dither-hover-original.runtime-dither-fallback:focus-within::after {
+	opacity: 0;
+}
+
 .dither-hover-wrap > .dither-hover-base {
 	display: block;
 	width: 100%;
@@ -752,9 +843,19 @@ div.banners {
 		}
 	}
 
-	& a:has(img):hover img {
-		animation: bounce 0.5s;
+	& a:has(img):hover {
+		& > span,
+		> img {
+			animation: bounce 0.5s;
+		}
 	}
+}
+
+svg.smallSvg {
+	min-width: 20px;
+	min-height: 20px;
+	width: auto;
+	height: 50px;
 }
 
 /* ----------------------------------------------
