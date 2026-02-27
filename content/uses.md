@@ -10,14 +10,15 @@ Isso é uma página [uses](https://uses.tech/), que cita tudo aquilo que uso de 
 
 ### Display
 
-- Monitor Bluecase BM24FFH1GC 23,6" Full HD (Preto)
+- [Monitor Bluecase BM24FFH1GC 23,6" Full HD (Preto)](https://www.bluecase.com.br/media/laminas/monitor-gamer-BM24FFH1GC-BM24FFH1GCW/index.html)
 
 ### Som
 
-- Microfone FIFINE AmpliGame AM8
-- Headset Havitz (Preto)
-- Headphone Bluetooth QCY H3 (Branco)
-- Fone Bluetooth QCY T13X (Preto)
+- [Microfone FIFINE AmpliGame AM8](https://fifinemicrophone.com/products/fifine-ampligame-am8-microphone)
+- [Headset HAVIT H2002C (Preto)](https://havitsmart.com/pt/products/havit-gamenote-h2002c-fones-de-ouvido-gamer)
+- [Headphone Bluetooth QCY H3 (Branco)](https://qcy.com.br/pages/shoph3)
+- [Fone Bluetooth QCY T13X (Preto)](https://qcy.com.br/pages/shopt13xfg)
+- [Portable HD Lossless Music Player-ECHO MINI](https://www.fiio.com/echomini)
 
 ### Geral
 
