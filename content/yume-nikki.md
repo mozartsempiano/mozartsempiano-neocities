@@ -6,7 +6,7 @@ imgPrincipal: /assets/img/yume-nikki-01.png
 imgPrincipalCaption: Yume Nikki (2004)
 ---
 
-**Yume Nikki** é um [videogame](/videogames/) de 2004 criado por [KIKIYAMA](https://www3.nns.ne.jp/~tk-mto/). Nele, você controla Madotsuki, uma garota que se recusa a sair do próprio quarto, e explora os seus [sonhos](/sonhos-log/). Ao longo desses sonhos, estão espalhados ~~24~~ efeitos, itens especiais que alteram a aparência do jogador e o garantem habilidades únicas, que podem ajudá-lo a acessar áreas novas.
+**Yume Nikki** é um [videogame](/videogames/) de 2004 criado por [KIKIYAMA](https://www3.nns.ne.jp/~tk-mto/). Nele, você controla Madotsuki, uma garota que se recusa a sair do próprio quarto, e explora os seus [sonhos](/sonhos-log/). Ao longo desses sonhos, estão espalhados <span class="spoiler">24</span> efeitos, itens especiais que alteram a aparência do jogador e o garantem habilidades únicas, que podem ajudá-lo a acessar áreas novas.
 
 ## Ver também
 
