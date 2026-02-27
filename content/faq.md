@@ -16,6 +16,12 @@ Esse site foi feito do zero, inteiramente em HTML, CSS e Javascript, usando [11t
 
 Atualmente, esse site é hospedado no [Neocities](https://neocities.org/site/mozartsempiano) e o código-fonte está disponibilizado no [Github](https://github.com/mozartsempiano/neocities-mozartsempiano). Ao fazer push no repositório do Github, uma action também faz push no Neocities automaticamente, mantendo ambos sincronizados.
 
+## O que é esse efeito pixelizado nas imagens do seu site?
+
+Isso é um efeito dithering! Ele é um método pra aplicar ruído digital em imagens, diminuindo o número de cores nela, sem perder a sua coerência e elegância. Opto por esse processo não só porque gosto do visual, como também porque ele diminui o tamanho das imagens.
+
+Alguns sites que fazem esse processo são [DitherMark](https://app.dithermark.com/), [Dither Me This](https://doodad.dev/dither-me-this/) e [Dither it!](https://ditherit.com/).
+
 ## Qual é o seu hardware/software/câmera/etc?
 
 Veja a página [uses](/uses/).
